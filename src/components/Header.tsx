@@ -4,7 +4,7 @@ import { MdOutlineQuestionAnswer } from "react-icons/md";
 import { FaPeopleGroup } from "react-icons/fa6";
 import { BsCart2 } from "react-icons/bs";
 
-const NavBar = () => {
+const Header = () => {
     const [dropdownVisible, setDropdownVisible]= useState<number | null>(null);
 
     const produtos = [
@@ -13,15 +13,17 @@ const NavBar = () => {
         opcoes: [
           {nome:"Detalhes", link:"/produto-a/detalhes", imagem: ""},
           {nome:"Compra", link:"/produto-a/compra", imagem: ""},
-          {nome: "comparar", link:"/produto-a/comparar", imagem: ""}
+          {nome: "comparar", link:"/produto-a/comparar", imagem: ""},
+          {nome: "comparar", link:"/produto-a/comparar", imagem: ""},
         ],
       },
       {
         nome: "Produto 2",
         opcoes: [
-          {nome: "Ver estoque", link: "/produto-b/estoque", imagem: ""},
-          {nome: "ver estoque 2", link: "/produto-b/carrinho", imagem: ""},
+          {nome: " estoque", link: "/produto-b/estoque", imagem: ""},
+          {nome: " estoque ", link: "/produto-b/carrinho", imagem: ""},
           {nome: "Avaliações", link: "/produto-b/carrinho", imagem: ""},
+          {nome: "comparar", link:"/produto-a/comparar", imagem: ""},
         ],
       },
       {
@@ -30,6 +32,7 @@ const NavBar = () => {
           { nome: "Configurações", link: "/produto-c/configuracoes", imagem: "" },
           { nome: "Promoções", link: "/produto-c/promocoes", imagem: "" },
           { nome: "Personalizar", link: "/produto-c/personalizar", imagem: "" },
+          {nome: "comparar", link:"/produto-a/comparar", imagem: ""},
         ],
       },
       {
@@ -38,6 +41,7 @@ const NavBar = () => {
           {nome: "Ver estoque", link: "/produto-b/estoque", imagem: ""},
           {nome: "ver estoque 2", link: "/produto-b/carrinho", imagem: ""},
           {nome: "Avaliações", link: "/produto-b/carrinho", imagem: ""},
+          {nome: "comparar", link:"/produto-a/comparar", imagem: ""},
         ],
       },
       {
@@ -46,6 +50,7 @@ const NavBar = () => {
           {nome: "Ver estoque", link: "/produto-b/estoque", imagem: ""},
           {nome: "ver estoque 2", link: "/produto-b/carrinho", imagem: ""},
           {nome: "Avaliações", link: "/produto-b/carrinho", imagem: ""},
+          {nome: "comparar", link:"/produto-a/comparar", imagem: ""},
         ],
       },
       {
@@ -54,6 +59,7 @@ const NavBar = () => {
           {nome: "Ver estoque", link: "/produto-b/estoque", imagem: ""},
           {nome: "ver estoque 2", link: "/produto-b/carrinho", imagem: ""},
           {nome: "Avaliações", link: "/produto-b/carrinho", imagem: ""},
+          {nome: "comparar", link:"/produto-a/comparar", imagem: ""},
         ],
       },
       {
@@ -62,6 +68,7 @@ const NavBar = () => {
           {nome: "Ver estoque", link: "/produto-b/estoque", imagem: ""},
           {nome: "ver estoque 2", link: "/produto-b/carrinho", imagem: ""},
           {nome: "Avaliações", link: "/produto-b/carrinho",imagem: ""},
+          {nome: "comparar", link:"/produto-a/comparar", imagem: ""},
         ],
       },
       {
@@ -70,6 +77,7 @@ const NavBar = () => {
           {nome: "Ver estoque", link: "/produto-b/estoque", imagem: ""},
           {nome: "ver estoque 2", link: "/produto-b/carrinho", imagem: ""},
           {nome: "Avaliações", link: "/produto-b/carrinho", imagem: ""},
+          {nome: "comparar", link:"/produto-a/comparar", imagem: ""},
         ],
       },
       {
@@ -78,6 +86,7 @@ const NavBar = () => {
           {nome: "Ver estoque", link: "/produto-b/estoque", imagem: ""},
           {nome: "ver estoque 2", link: "/produto-b/carrinho", imagem: ""},
           {nome: "Avaliações", link: "/produto-b/carrinho", imagem: ""},
+          {nome: "comparar", link:"/produto-a/comparar", imagem: ""},
         ],
       },
       {
@@ -86,6 +95,7 @@ const NavBar = () => {
           {nome: "Ver estoque", link: "/produto-b/estoque", imagem: ""},
           {nome: "ver estoque 2", link: "/produto-b/carrinho", imagem: ""},
           {nome: "Avaliações", link: "/produto-b/carrinho", imagem: ""},
+          {nome: "comparar", link:"/produto-a/comparar", imagem: ""},
         ],
       },
     ]
@@ -168,4 +178,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Header;
