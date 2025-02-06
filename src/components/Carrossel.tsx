@@ -38,6 +38,7 @@ const Carrossel = () => {
     // }, [])
 
   return (
+    // md:w-full
     <div className=" max-w-[1270px]  mx-auto lg:w-full md:w-[765px]  md:mt-20 ">
       
 

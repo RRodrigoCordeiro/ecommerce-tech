@@ -4,6 +4,8 @@ import { MdOutlineQuestionAnswer } from "react-icons/md";
 import { FaPeopleGroup } from "react-icons/fa6";
 import { IoPerson } from "react-icons/io5";
 import { BsCart2 } from "react-icons/bs";
+import { IoSearchOutline } from "react-icons/io5";
+import { IoMdMic } from "react-icons/io";
 
 const Header = () => {
     const [dropdownVisible, setDropdownVisible]= useState<number | null>(null);
@@ -114,11 +116,17 @@ const Header = () => {
           
         </div>
 
+        <div className='relative w-80 md:ml-8 lg:w-96'> 
           <input
             type="text"
             className="border border-gray-300 rounded px-4 py-4 w-80 md:ml-8 lg:w-96"
             placeholder='Buscar'
           />
+          <IoSearchOutline className='absolute right-8 top-1/2 transform -translate-y-1/2 ' />
+          <IoMdMic className="absolute right-1 top-1/2 transform -translate-y-1/2 "/>
+
+        </div>
+
 
         <div className='flex flex-row gap-10 mt-8 mb-3 md:mt-0 md:mb-0 md:gap-5 lg:gap-12'>
           <div className='flex flex-col items-center'>
