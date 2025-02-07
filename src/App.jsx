@@ -4,6 +4,9 @@ import axios from "axios"
 import Header from './components/Header'
 import Carrossel from './components/Carrossel'
 
+import Depoimentos from './components/Depoimentos'
+
+
 
 
 const App = () => {
@@ -28,13 +31,14 @@ const App = () => {
   if(loading) return <p>Carregando...</p>
   if (error) return <p>Ocorreu um erro: {error.message}</p>
 
-  
+
   return (
     <div>
       <Header/>
       <Carrossel/>
+    
       <div>
-        <ul>
+        <ul className=''>
           {products.map((product)=> (
             <li
               key={product.id}
@@ -55,6 +59,7 @@ const App = () => {
           </li>
         </ul>
       </div>
+      <Depoimentos/>
      
     </div>
   )
