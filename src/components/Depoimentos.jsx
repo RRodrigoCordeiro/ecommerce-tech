@@ -9,7 +9,7 @@ import { MdDescription } from "react-icons/md";
 const Depoimentos = () => {
   const depoimentos = [
     {
-      title: "fewfewfw",
+      title: "Depoimento 1 ",
       description: "fghjklç",
       duration: "1h",
       linkText: "dfghjkl",
