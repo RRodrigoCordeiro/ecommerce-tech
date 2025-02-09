@@ -35,7 +35,8 @@ const Carrossel = () => {
 
   return (
     // md:w-full
-    <div className="max-w-[1270px] mx-auto lg:w-full md:w-[765px] md:mt-20">
+    // bg-[#E8E8E8]
+    <div className="max-w-[1270px] mx-auto lg:w-full md:w-full md:mt-20  " >
       <Swiper
         modules={[EffectFade]}
         effect="fade"

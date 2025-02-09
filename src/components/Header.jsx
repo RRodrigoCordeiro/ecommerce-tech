@@ -106,7 +106,7 @@ const Header = () => {
 
   return (
     <div>
-      <div className="flex flex-col bg-green-600 items-center mb-16 justify-evenly md:bg-white md:flex-row md:mt-11">
+      <div className="flex flex-col bg-green-600 items-center mb-16 justify-evenly md:bg-[#F2F2F2] md:flex-row md:mt-11">
         <div className="flex flex-row justify-around items-center w-full mt-3 mb-3 md:mt-0 md:mb-0 md:w-0">
           <IoMdMenu size={40} className="md:hidden" />
           <p>LOGO</p>
