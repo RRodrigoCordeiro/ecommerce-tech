@@ -39,7 +39,7 @@ const App = () => {
     align: "start",
     slidesToScroll: 1,
     breakpoints: {
-      "(min-width: 768px)": { slidesToScroll: 2 },
+      "(min-width: 768px)": { slidesToScroll: 1 },
     },
   });
 
