@@ -11,12 +11,14 @@ import Header from './components/Header'
 import Carrossel from './components/Carrossel'
 
 import Depoimentos from './components/Depoimentos'
+import { data } from "react-router-dom";
 
 
 
 
 const App = () => {
   const [products, setProducts] = useState([]);
+  const [notebooks, setNotebooks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -34,6 +36,24 @@ const App = () => {
       });
   },[])
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("https://api.mercadolibre.com/sites/MLB/search?q=notebook")
+        setNotebooks(response.data.results)
+      }
+      catch(error) {
+        console.log("Erro ao buscar API", error)
+      }
+    };
+
+    fetchData()
+  },[])
+
+    
+
+
+
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: false,
     align: "start",
@@ -42,6 +62,17 @@ const App = () => {
       "(min-width: 768px)": { slidesToScroll: 1 },
     },
   });
+
+  
+
+
+
+
+
+
+
+
+
 
   function scrollPrev() {
     emblaApi?.scrollPrev();
@@ -55,14 +86,13 @@ const App = () => {
   if(loading) return <p>Carregando...</p>
   if (error) return <p>Ocorreu um erro: {error.message}</p>
   
-
-
   return (
     <div className="" >
       <Header/>
       <Carrossel/>
 
       <div className="container mx-auto bg-[#F2F2F2] mt-28">
+
         <div className="relative"> 
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex ">
@@ -115,7 +145,6 @@ const App = () => {
               ))}
 
             </div>
-
           </div>
           <button
               className="bg-white flex items-center rounded-full shadow-lg w-8 h-8 absolute left-4 -translate-y-1/2 -translate-x-1/2 top-1/2 z-10"
@@ -130,10 +159,113 @@ const App = () => {
             >
               <FaChevronCircleRight className="w-8 h-8 text-gray-600" />
             </button>
-
         </div>
-        
       </div>
+
+      
+      <div className="flex flex-col lg:flex-row justify-center gap-4 mt-28 mb-28 ">
+          <img 
+            src="/images/banner05.png"
+            alt="imagem do banner"
+            className="lg:w-xl"
+
+          />
+          <img 
+            src="/images/banner06.png"
+            alt="imagem do banner"
+            className="lg:w-xl"
+          />
+      </div>
+
+      <div className="relative"> 
+        
+          <div className="overflow-hidden" ref={emblaRef}>
+            <div className="flex ">
+              {notebooks.map((item) => (
+                <div
+                  key={item.id}
+                  className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(100%/2)] lg:flex-[0_0_calc(100%/3)] px-3"
+                >
+                   <article className="bg-white text-white rounded-2xl p-6 space-y-2 h-full flex flex-col w-full ">
+                      <div className=" flex items-start justify-between">
+                        <div className="flex gap-3">
+                          <h3 className="text-black font-bold text-xl mb-8">
+                            {item.title}
+                          </h3>
+                        </div>
+                      </div>
+                      <img
+                        src={item.thumbnail}
+                        alt={item.title}
+                        width="100"
+                        className="m-auto mb-16"
+                      >
+                      </img>
+                      <div className="bg-green-600 flex items-center gap-2 w-32 p-0.5 mb-5 rounded-md ">
+                        <FaTruck 
+                          className="ml-2"
+                        />
+                        <p>
+                          Frete Grátis
+                        </p>
+
+                      </div>
+
+                      <p className="text-gray-800 text-sm mb-4">
+                        {item.description}
+                      </p>
+                      <p className="text-green-600 font-bold text-lg ">
+                        R$ {item.price}
+                      </p>
+                      <p className="text-gray-400 text-sm -mt-2">
+                        À vista no PIX
+                      </p>
+                     
+                      <button className="bg-green-600 rounded-md h-10 font-bold flex items-center justify-center gap-3"> 
+                        <FaShoppingCart />
+                        COMPRAR
+                      </button>                   
+                    </article>
+                </div>
+              ))}
+
+            </div>
+          </div>
+          <button
+              className="bg-white flex items-center rounded-full shadow-lg w-8 h-8 absolute left-4 -translate-y-1/2 -translate-x-1/2 top-1/2 z-10"
+              onClick={scrollPrev}
+            >
+              <FaCircleChevronLeft className="w-8 h-8 text-gray-600" />
+            </button>
+
+            <button
+              className="bg-white flex items-center rounded-full shadow-lg w-8 h-8 absolute -right-4 -translate-y-1/2 -translate-x-1/2 top-1/2 z-10"
+              onClick={scrollNext}
+            >
+              <FaChevronCircleRight className="w-8 h-8 text-gray-600" />
+            </button>
+        </div>
+
+
+
+
+      <div>
+        <h2>Notebooks disponíveis</h2>
+        <ul>
+          {notebooks.map((item) => (
+            <li
+              key={item.id}
+            >
+              <strong>{item.title}</strong> - {item.price}
+              <img src={item.thumbnail} alt={item.title} />
+
+            </li>
+          ))}
+        </ul>
+      </div>
+
+
+      
 
     
 

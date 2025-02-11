@@ -4,7 +4,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { FaCircleChevronLeft } from "react-icons/fa6";
 import { FaChevronCircleRight } from "react-icons/fa";
 import React from "react";
-import banner01 from "../../public/images/banner01.png";
+import banner01 from "/images/banner01.png";
 
 
 
