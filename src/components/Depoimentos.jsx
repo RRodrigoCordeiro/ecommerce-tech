@@ -56,7 +56,7 @@ const Depoimentos = () => {
     <div className="bg-green-600 mt-8 mb-8">
       <section className=" py-16">
         <div className="container mx-auto px-4">
-          <h1 className="text-2xl text-white rounded-md m-auto text-center font-bold mb-12">
+          <h1 className="text-2xl text-white rounded-md text-center font-bold mb-12">
             Depoimentos dos nossos clientes
           </h1>
           <div className="relative max-w-4xl mx-auto">

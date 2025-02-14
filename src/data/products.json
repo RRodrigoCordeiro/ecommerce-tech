@@ -1,0 +1,49 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Notebook Gamer X500",
+        "description": "Notebook potente para jogos com 16GB de RAM e placa gráfica RTX 3070.",
+        "price": 7500.00,
+        "launch": true,
+        "promotion": false,
+        "image": "/assets/images/notebook-gamer-x500.jpg",
+        "rating": 4.5,
+        "stock": 10
+      },
+      {
+        "id": 2,
+        "name": "Smartphone Super 10",
+        "description": "Smartphone com câmera de 108MP e bateria de longa duração.",
+        "price": 3000.00,
+        "launch": true,
+        "promotion": true,
+        "image": "/assets/images/smartphone-super-10.jpg",
+        "rating": 4.7,
+        "stock": 20
+      },
+      {
+        "id": 3,
+        "name": "Cadeira Ergonômica",
+        "description": "Cadeira ergonômica confortável para longas horas de uso.",
+        "price": 800.00,
+        "launch": false,
+        "promotion": true,
+        "image": "/assets/images/cadeira-ergonomica.jpg",
+        "rating": 4.0,
+        "stock": 5
+      },
+      {
+        "id": 4,
+        "name": "Tablet Pro 8",
+        "description": "Tablet com tela de 12.9 polegadas e excelente desempenho.",
+        "price": 2500.00,
+        "launch": false,
+        "promotion": false,
+        "image": "/assets/images/tablet-pro-8.jpg",
+        "rating": 4.3,
+        "stock": 8
+      }
+    ]
+  }
+  
