@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { IoMdMenu } from "react-icons/io";
 import { MdOutlineQuestionAnswer } from "react-icons/md";
 import { FaPeopleGroup } from "react-icons/fa6";
@@ -65,43 +65,6 @@ const Header = () => {
         { nome: "comparar", link: "/produto-a/comparar", imagem: "" },
       ],
     },
-    // Caso queira reativar os produtos 7, 8, 9 e 10, basta descomentar as linhas abaixo:
-    // {
-    //   nome: "Produto 7",
-    //   opcoes: [
-    //     { nome: "Ver estoque", link: "/produto-b/estoque", imagem: "" },
-    //     { nome: "ver estoque 2", link: "/produto-b/carrinho", imagem: "" },
-    //     { nome: "Avaliações", link: "/produto-b/carrinho", imagem: "" },
-    //     { nome: "comparar", link: "/produto-a/comparar", imagem: "" },
-    //   ],
-    // },
-    // {
-    //   nome: "Produto 8",
-    //   opcoes: [
-    //     { nome: "Ver estoque", link: "/produto-b/estoque", imagem: "" },
-    //     { nome: "ver estoque 2", link: "/produto-b/carrinho", imagem: "" },
-    //     { nome: "Avaliações", link: "/produto-b/carrinho", imagem: "" },
-    //     { nome: "comparar", link: "/produto-a/comparar", imagem: "" },
-    //   ],
-    // },
-    // {
-    //   nome: "Produto 9",
-    //   opcoes: [
-    //     { nome: "Ver estoque", link: "/produto-b/estoque", imagem: "" },
-    //     { nome: "ver estoque 2", link: "/produto-b/carrinho", imagem: "" },
-    //     { nome: "Avaliações", link: "/produto-b/carrinho", imagem: "" },
-    //     { nome: "comparar", link: "/produto-a/comparar", imagem: "" },
-    //   ],
-    // },
-    // {
-    //   nome: "Produto 10",
-    //   opcoes: [
-    //     { nome: "Ver estoque", link: "/produto-b/estoque", imagem: "" },
-    //     { nome: "ver estoque 2", link: "/produto-b/carrinho", imagem: "" },
-    //     { nome: "Avaliações", link: "/produto-b/carrinho", imagem: "" },
-    //     { nome: "comparar", link: "/produto-a/comparar", imagem: "" },
-    //   ],
-    // },
   ];
 
   return (

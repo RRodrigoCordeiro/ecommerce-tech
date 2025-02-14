@@ -328,40 +328,7 @@ const App = () => {
         </button>
       </div>
 
-      <div>
-        {computador.map((pc) => (
-          <li key={pc.id}>
-            {pc.title}
-            <img src={pc.thumbnail} />
-          </li>
-        ))}
-      </div>
-
-      {/* <div>
-        <h2>Notebooks disponíveis</h2>
-        <ul>
-          {notebooks.map((item) => (
-            <li key={item.id}>
-              <strong>{item.title}</strong> - {item.price}
-              <img src={item.thumbnail} alt={item.title} />
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <div>
-        <ul className="">
-          {products.map((product) => (
-            <li key={product.id}>
-              <h2>{product.title}</h2>
-              <img src={product.image} alt={product.title} width="100"></img>
-              <p>{product.descriptoon}</p>
-              <p>Preço: R$ {product.price}</p>
-            </li>
-          ))}
-          <li></li>
-        </ul>
-      </div> */}
+    
       <Depoimentos />
     </div>
   );
