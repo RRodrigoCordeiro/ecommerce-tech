@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import productsData from '../data/products.json';
 
 const Products = () => {
-  const [filter, setFilter] = useState('all');
+const [filter, setFilter] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
   const getFilteredProducts = () => {
@@ -23,10 +23,9 @@ const Products = () => {
 
     return filteredProducts;
   };
-
-
   return (
-    <div className="container mx-auto p-4">
+    <div>
+        <div className="container mx-auto p-4">
     
     <div className="mb-4">
       <button onClick={() => setFilter('launch')} className="bg-blue-500 text-white py-2 px-4 rounded mr-4">
@@ -62,6 +61,8 @@ const Products = () => {
       ))}
     </div>
   </div>
+
+    </div>
   )
 }
 

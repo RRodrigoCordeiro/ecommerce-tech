@@ -13,6 +13,8 @@ import Carrossel from "../components/Carrossel";
 import Depoimentos from "../components/Depoimentos";
 import Products from "../pages/products";
 import { useNavigate, useParams } from 'react-router-dom'
+import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -122,9 +124,7 @@ const Home = () => {
     emblaApi3?.scrollNext();
   }
 
-  const fecharModal = () => {
-    navigate("/product")
-}
+
   
   if (loading) return <p>Carregando...</p>;
   if (error) return <p>Ocorreu um erro: {error.message}</p>;
@@ -354,10 +354,15 @@ const Home = () => {
           />
         </div>
 
-      <p className="bg-green-600 text-white font-bold w-44 m-auto p-1 rounded-md text-center mb-8 ">
-          CONHECER MAIS 
-      </p> 
-      <button onClick={fecharModal} className="btn-success">Fechar</button> 
+      <Link to={"/products"}>
+        <button className="bg-green-600 text-white font-bold w-44 m-auto p-1 rounded-md text-center mb-8 block">
+          CONHECER MAIS
+        </button>
+            
+      
+      </Link>
+
+      
     
      </div>
 
@@ -378,7 +383,8 @@ const Home = () => {
       </div> */}
 
       <Depoimentos />
-      <Products />
+   
+      <Footer/>
     </div>
   );
 };
