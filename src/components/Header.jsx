@@ -9,6 +9,27 @@ import { IoMdMic } from "react-icons/io";
 
 const Header = () => {
   const [dropdownVisible, setDropdownVisible] = useState(null);
+  const [filter, setFilter] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const getFilteredProducts = () => {
+    let filteredProducts = productsData.products;
+
+    if (filter === 'launch') {
+      filteredProducts = filteredProducts.filter(product => product.launch);
+    } else if (filter === 'promotion') {
+      filteredProducts = filteredProducts.filter(product => product.promotion);
+    }
+
+    if (searchQuery) {
+      filteredProducts = filteredProducts.filter(product =>
+        product.name.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+      
+    }
+
+    return filteredProducts;
+  };
 
   const produtos = [
     {
@@ -74,6 +95,9 @@ const Header = () => {
           <IoMdMenu size={40} className="md:hidden" />
           <p>LOGO</p>
         </div>
+            <div>
+              
+            </div>
 
         <div className="relative w-80 md:ml-8 lg:w-96">
           <input

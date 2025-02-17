@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import productsData from '../data/products.json';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const Products = () => {
 const [filter, setFilter] = useState('all');
@@ -25,6 +27,7 @@ const [filter, setFilter] = useState('all');
   };
   return (
     <div>
+        <Header/>
         <div className="container mx-auto p-4">
     
     <div className="mb-4">
@@ -61,7 +64,8 @@ const [filter, setFilter] = useState('all');
       ))}
     </div>
   </div>
-
+      
+     <Footer/>
     </div>
   )
 }

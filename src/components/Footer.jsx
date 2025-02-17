@@ -5,7 +5,7 @@ const Footer = () => {
     <div className="flex justify-center md:gap-9  lg:gap-28 mt-28 p-20  bg-[#D9D9D9]">
       <div>
         <div>
-          <p className="font-bold text-blue-600 lg:text-lg ">Mídias Sociais</p>
+          <p className="font-bold text-blue-600 text-sm lg:text-lg ">Mídias Sociais</p>
           <div className="mb-8 mt-8 space-y-2  grid grid-cols-2 ">
             <img 
                 src="/images/LogoInstagram.png"
@@ -37,17 +37,17 @@ const Footer = () => {
                 alt="Logo do instagram"
                 className="w-10 "
             />
-            <p>LOGO FACEBOOK</p>
+            {/* <p>LOGO FACEBOOK</p>
             <p>LOGO INSTAGRAM</p>
             <p>LOGO TWITTER</p>
             <p>LOGO YOUTUBER</p>
             <p>LOGO LINKEDLIN</p>
-            <p>LOGO TIKTOK</p>
+            <p>LOGO TIKTOK</p> */}
           </div>
         </div>
 
         <div>
-          <p className="font-bold text-blue-600 lg:text-lg">Baixe os aplicativos</p>
+          <p className="font-bold text-blue-600  lg:text-lg">Baixe os aplicativos</p>
           <div className="mb-8 mt-8 space-y-8">
             <img
               src="/images/GooglePlay.png"
