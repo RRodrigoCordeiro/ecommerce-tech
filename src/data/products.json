@@ -7,7 +7,7 @@
         "price": 7500.00,
         "launch": true,
         "promotion": false,
-        "image": "/assets/images/notebook-gamer-x500.jpg",
+        "image": "/images/notebook-gamer-x500.jpg",
         "rating": 4.5,
         "stock": 10
       },
@@ -18,7 +18,7 @@
         "price": 3000.00,
         "launch": true,
         "promotion": true,
-        "image": "/assets/images/smartphone-super-10.jpg",
+        "image": "/images/smartphone-super-10.jpg",
         "rating": 4.7,
         "stock": 20
       },
@@ -29,7 +29,7 @@
         "price": 800.00,
         "launch": false,
         "promotion": true,
-        "image": "/assets/images/cadeira-ergonomica.jpg",
+        "image": "/images/cadeira-ergonomica.jpg",
         "rating": 4.0,
         "stock": 5
       },
@@ -38,9 +38,52 @@
         "name": "Tablet Pro 8",
         "description": "Tablet com tela de 12.9 polegadas e excelente desempenho.",
         "price": 2500.00,
-        "launch": false,
+        "launch": true,
         "promotion": false,
-        "image": "/assets/images/tablet-pro-8.jpg",
+        "image": "/images/tablet-pro-8.jpg",
+        "rating": 4.3,
+        "stock": 8
+      }, {
+        "id": 5,
+        "name": "Tablet Pro 8",
+        "description": "Tablet com tela de 12.9 polegadas e excelente desempenho.",
+        "price": 2500.00,
+        "launch": false,
+        "promotion": true,
+        "image": "/images/tablet-pro-8.jpg",
+        "rating": 4.3,
+        "stock": 8
+      },
+      {
+        "id": 6,
+        "name": "Tablet Pro 8",
+        "description": "Tablet com tela de 12.9 polegadas e excelente desempenho.",
+        "price": 2500.00,
+        "launch": true,
+        "promotion": false,
+        "image": "/images/tablet-pro-8.jpg",
+        "rating": 4.3,
+        "stock": 8
+      },
+      {
+        "id": 7,
+        "name": "Tablet Pro 8",
+        "description": "Tablet com tela de 12.9 polegadas e excelente desempenho.",
+        "price": 2500.00,
+        "launch": false,
+        "promotion": true,
+        "image": "/images/tablet-pro-8.jpg",
+        "rating": 4.3,
+        "stock": 8
+      },
+      {
+        "id": 8,
+        "name": "Tablet Pro 8",
+        "description": "Tablet com tela de 12.9 polegadas e excelente desempenho.",
+        "price": 2500.00,
+        "launch": true,
+        "promotion": false,
+        "image": "/images/tablet-pro-8.jpg",
         "rating": 4.3,
         "stock": 8
       }

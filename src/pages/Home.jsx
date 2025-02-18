@@ -354,7 +354,7 @@ const Home = () => {
           />
         </div>
 
-      <Link to={"/products"}>
+      <Link to={"/launch"}>
         <button className="bg-green-600 text-white font-bold w-44 m-auto p-1 rounded-md text-center mb-8 block">
           CONHECER MAIS
         </button>

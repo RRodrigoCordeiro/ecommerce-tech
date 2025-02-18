@@ -1,9 +1,10 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
-import Products from './pages/Products'
+// import Products from './pages/Products'
+import Launch from './pages/Launch'
 
-
+// Launch
 
 
 const App = () => {
@@ -12,7 +13,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home/>} />
-        <Route path='/products' element={<Products/>} />
+        <Route path='/launch' element={<Launch/>} />
         <Route path='*' element={<h1>Not Found</h1>} />
       </Routes>
     </BrowserRouter>
