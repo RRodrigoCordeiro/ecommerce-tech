@@ -1,6 +1,6 @@
-// /src/hooks/useProductFilter.js
+
 import { useState } from "react";
-import productsData from "../data/products.json";  // Ajuste o caminho se necessário
+import productsData from "../data/products.json";  
 
 const useLaunchFilter = () => {
   const [filter, setFilter] = useState("all");

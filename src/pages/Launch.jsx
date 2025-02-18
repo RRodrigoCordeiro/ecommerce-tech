@@ -7,18 +7,18 @@ import Footer from "../components/Footer";
 import useLaunchFilter from "../hooks/useLaunchFilter";
 
 const Launch = () => {
-    const {
-        filter,
-        setFilter,
-        searchQuery,
-        setSearchQuery,
-        getFilteredProducts,
-      } = useLaunchFilter();
-    
+  const {
+    filter,
+    setFilter,
+    searchQuery,
+    setSearchQuery,
+    getFilteredProducts,
+  } = useLaunchFilter();
+
   return (
-     <div>
-      <Header  searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
-    
+    <div>
+      <Header searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+
       <div className="container mx-auto p-4">
         <div className="mb-4">
           <button
@@ -42,7 +42,9 @@ const Launch = () => {
               className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(100%/2)] lg:flex-[0_0_calc(100%/3)]  px-3 mb-16"
             >
               <article className="bg-white text-white rounded-2xl p-6 space-y-2 h-full flex flex-col w-full">
-                <h3 className="text-black font-bold text-xl mb-8">{product.name}</h3>
+                <h3 className="text-black font-bold text-xl mb-8">
+                  {product.name}
+                </h3>
                 <img
                   src={product.image}
                   alt={product.name}
@@ -55,7 +57,9 @@ const Launch = () => {
                 </div>
 
                 <p className="text-gray-800 text-sm mb-4">{product.rating}</p>
-                <p className="text-green-600 font-bold text-lg">R$ {product.price}</p>
+                <p className="text-green-600 font-bold text-lg">
+                  R$ {product.price}
+                </p>
                 <p className="text-gray-400 text-sm -mt-2">À vista no PIX</p>
 
                 <button className="bg-green-600 rounded-md h-10 font-bold flex items-center justify-center gap-3">
@@ -69,7 +73,7 @@ const Launch = () => {
       </div>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Launch
+export default Launch;

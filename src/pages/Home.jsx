@@ -12,7 +12,7 @@ import Carrossel from "../components/Carrossel";
 
 import Depoimentos from "../components/Depoimentos";
 import Products from "../pages/products";
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 
@@ -22,7 +22,7 @@ const Home = () => {
   const [computador, setComputador] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -124,8 +124,6 @@ const Home = () => {
     emblaApi3?.scrollNext();
   }
 
-
-  
   if (loading) return <p>Carregando...</p>;
   if (error) return <p>Ocorreu um erro: {error.message}</p>;
 
@@ -335,56 +333,37 @@ const Home = () => {
       </div>
 
       <div className="bg-white m-auto mt-28 mb-28 py-8 container ">
-        <h1 className="font-bold text-center text-1xl ">CONHEÇA OS NOSSOS LANÇAMENTOS E PRODUTOS</h1>
-        <div className="flex flex-col md:flex-row items-center justify-center md:gap-28 mt-16 mb-16">
-          <img 
-            src="/images/computadorPromocao1.jpg" 
-            alt="Imagem do computador"
-            className="w-40"
-          />
-          <img 
-            src="/images/notebookPromocao.jpg" 
-            alt="Imagem do computador"
-            className="w-40"
-          />
-          <img 
-            src="/images/computadorPromocao1.jpg" 
-            alt="Imagem do computador"
-            className="w-40"
-          />
-        </div>
-
-      <Link to={"/launch"}>
-        <button className="bg-green-600 text-white font-bold w-44 m-auto p-1 rounded-md text-center mb-8 block">
-          CONHECER MAIS
-        </button>
-            
-      
-      </Link>
-
-      
-    
-     </div>
-
-
-
-
-      {/* <div className="bg-white  mb-8 ">
-        <h1 className="font-bold text-center mb-8 mt-
-         ">
-          CONHEÇA NOSSO LANÇAMENTOS E PRODUTOS
+        <h1 className="font-bold text-center text-1xl ">
+          CONHEÇA OS NOSSOS LANÇAMENTOS E PRODUTOS
         </h1>
-        <img src="/images/computadorPromocao1.jpg" alt="" />
-        <div>
-          <p className="bg-green-600 text-white font-bold w-44 m-auto p-1 rounded-md text-center">
-            CONHECER MAIS
-          </p>
+        <div className="flex flex-col md:flex-row items-center justify-center md:gap-28 mt-16 mb-16">
+          <img
+            src="/images/computadorPromocao1.jpg"
+            alt="Imagem do computador"
+            className="w-40"
+          />
+          <img
+            src="/images/notebookPromocao.jpg"
+            alt="Imagem do computador"
+            className="w-40"
+          />
+          <img
+            src="/images/computadorPromocao1.jpg"
+            alt="Imagem do computador"
+            className="w-40"
+          />
         </div>
-      </div> */}
+
+        <Link to={"/launch"}>
+          <button className="bg-green-600 text-white font-bold w-44 m-auto p-1 rounded-md text-center mb-8 block">
+            CONHECER MAIS
+          </button>
+        </Link>
+      </div>
 
       <Depoimentos />
-   
-      <Footer/>
+
+      <Footer />
     </div>
   );
 };
