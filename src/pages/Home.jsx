@@ -24,6 +24,19 @@ const Home = () => {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
+  const [searchTerm, setSearchTerm] = useState("");
+  const handleSearch = (event) => {
+    setSearchTerm(event.target.value.toLowerCase());
+  };
+
+  const filteredProducts = products.filter((product) =>
+    product.title.toLowerCase().includes(searchTerm)
+  );
+
+  const filteredNotebook = notebooks.filter((notebook) =>
+    notebook.title.toLowerCase().includes(searchTerm)
+  );
+
   useEffect(() => {
     axios
       .get("https://fakestoreapi.com/products/category/electronics")
@@ -131,6 +144,25 @@ const Home = () => {
     <div>
       <Header />
       <Carrossel />
+      <input
+        type="text"
+        placeholder="Buscar produtos..."
+        className="p-2 border rounded-md mb-4"
+        value={searchTerm}
+        onChange={handleSearch}
+      />
+      {filteredProducts.map((product) => (
+        <div key={product.id}>
+          <h3>{product.title}</h3>
+          <img src={product.image} alt={product.title} width="100" />
+          <p>{product.price}</p>
+        </div>
+      ))}
+      {filteredNotebook.map((notebook) => (
+        <div key={notebook.id}>
+          <h3>{notebook.title}</h3>
+        </div>
+      ))}
 
       <div className="container mx-auto bg-[#F2F2F2] mt-28">
         <div className="relative">
@@ -364,6 +396,25 @@ const Home = () => {
       <Depoimentos />
 
       <Footer />
+      <input
+        type="text"
+        placeholder="Buscar produtos..."
+        className="p-2 border rounded-md mb-4"
+        value={searchTerm}
+        onChange={handleSearch}
+      />
+      {filteredProducts.map((product) => (
+        <div key={product.id}>
+          <h3>{product.title}</h3>
+          <img src={product.image} alt={product.title} width="100" />
+          <p>{product.price}</p>
+        </div>
+      ))}
+      {filteredNotebook.map((notebook) => (
+        <div key={notebook.id}>
+          <h3>{notebook.title}</h3>
+        </div>
+      ))}
     </div>
   );
 };

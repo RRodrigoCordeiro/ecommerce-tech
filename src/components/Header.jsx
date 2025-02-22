@@ -8,7 +8,7 @@ import { IoSearchOutline } from "react-icons/io5";
 import { IoMdMic } from "react-icons/io";
 import { Link } from "react-router-dom";
 
-const Header = ({ searchQuery, setSearchQuery }) => {
+const Header = ({ searchQuery, setSearchQuery}) => {
   const [dropdownVisible, setDropdownVisible] = useState(null);
 
 

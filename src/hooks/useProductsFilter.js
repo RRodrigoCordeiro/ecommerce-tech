@@ -3,27 +3,23 @@ import { useState } from "react";
 import productsData from "../data/products.json";  
 
 const useProductsFilter = () => {
-  const [filter, setFilter] = useState("all");
-  const [searchQuery, setSearchQuery] = useState("");
+   const [searchTerm, setSearchTerm] = useState("");
+   const handleSearch = (event) => {
+    setSearchTerm(event.target.value.toLowerCase());
+   };
+   const filteredProducts = products.filter((product) =>
+    product.title.toLowerCase().includes(searchTerm)
+  );
 
-  const getFilteredProducts = () => {
-    let filteredProducts = productsData.products;
-
-    if (searchQuery) {
-      filteredProducts = filteredProducts.filter((product) =>
-        product.name.toLowerCase().includes(searchQuery.toLowerCase())
-      );
-    }
-
-    return filteredProducts;
-  };
-
+  const filteredNotebook = notebooks.filter((notebook) =>
+    notebook.title.toLowerCase().includes(searchTerm)
+  );
+  
   return {
-    filter,
-    setFilter,
-    searchQuery,
-    setSearchQuery,
-    getFilteredProducts,
+    searchTerm,
+    setSearchTerm,
+    filteredProducts,
+    filteredNotebook
   };
 };
 
