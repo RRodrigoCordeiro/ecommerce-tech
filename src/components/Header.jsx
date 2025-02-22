@@ -6,6 +6,7 @@ import { IoPerson } from "react-icons/io5";
 import { BsCart2 } from "react-icons/bs";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoMdMic } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const Header = ({ searchQuery, setSearchQuery }) => {
   const [dropdownVisible, setDropdownVisible] = useState(null);
@@ -93,8 +94,11 @@ const Header = ({ searchQuery, setSearchQuery }) => {
             <p>Sobre nós</p>
           </div>
           <div className="flex flex-col items-center">
-            <FaPeopleGroup size={28} />
-            <p>SAC</p>
+            <Link to="sac">
+              <FaPeopleGroup size={28} />
+              <p>SAC</p>
+
+            </Link>
           </div>
           <div className="flex flex-col items-center">
             <BsCart2 size={28} />

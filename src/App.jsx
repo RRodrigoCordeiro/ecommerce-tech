@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Launch from './pages/Launch'
-
+import Sac from './pages/Sac'
 
 
 const App = () => {
@@ -12,6 +12,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/launch' element={<Launch/>} />
+        <Route path='/sac' element={<Sac/>} />
         <Route path='*' element={<h1>Not Found</h1>} />
       </Routes>
     </BrowserRouter>
