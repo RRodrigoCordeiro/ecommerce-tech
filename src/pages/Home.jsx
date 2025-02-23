@@ -15,6 +15,7 @@ import Products from "../pages/products";
 import { useNavigate, useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
+import useLaunchFilter from "../hooks/useLaunchFilter";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -30,11 +31,15 @@ const Home = () => {
   };
 
   const filteredProducts = products.filter((product) =>
-    product.title.toLowerCase().includes(searchTerm)
+    product.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   const filteredNotebook = notebooks.filter((notebook) =>
     notebook.title.toLowerCase().includes(searchTerm)
+  );
+
+  const filterComputador = computador.filter((computador) =>
+    computador.title.toLowerCase().includes(searchTerm)
   );
 
   useEffect(() => {
@@ -142,33 +147,14 @@ const Home = () => {
 
   return (
     <div>
-      <Header />
+      <Header searchQuery={searchTerm} setSearchQuery={setSearchTerm} />
       <Carrossel />
-      <input
-        type="text"
-        placeholder="Buscar produtos..."
-        className="p-2 border rounded-md mb-4"
-        value={searchTerm}
-        onChange={handleSearch}
-      />
-      {filteredProducts.map((product) => (
-        <div key={product.id}>
-          <h3>{product.title}</h3>
-          <img src={product.image} alt={product.title} width="100" />
-          <p>{product.price}</p>
-        </div>
-      ))}
-      {filteredNotebook.map((notebook) => (
-        <div key={notebook.id}>
-          <h3>{notebook.title}</h3>
-        </div>
-      ))}
 
       <div className="container mx-auto bg-[#F2F2F2] mt-28">
         <div className="relative">
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex ">
-              {products.map((product) => (
+              {filteredProducts.map((product) => (
                 <div
                   key={product.id}
                   className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(100%/2)] lg:flex-[0_0_calc(100%/3)] px-3"
@@ -243,7 +229,7 @@ const Home = () => {
       <div className="relative">
         <div className="overflow-hidden" ref={emblaRef2}>
           <div className="flex ">
-            {notebooks.map((item) => (
+            {filteredNotebook.map((item) => (
               <div
                 key={item.id}
                 className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(100%/2)] lg:flex-[0_0_calc(100%/3)] px-3"
@@ -310,7 +296,7 @@ const Home = () => {
       <div className="relative">
         <div className="overflow-hidden" ref={emblaRef3}>
           <div className="flex ">
-            {computador.map((pc) => (
+            {filterComputador.map((pc) => (
               <div
                 key={pc.id}
                 className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(100%/2)] lg:flex-[0_0_calc(100%/3)] px-3"
@@ -396,25 +382,6 @@ const Home = () => {
       <Depoimentos />
 
       <Footer />
-      <input
-        type="text"
-        placeholder="Buscar produtos..."
-        className="p-2 border rounded-md mb-4"
-        value={searchTerm}
-        onChange={handleSearch}
-      />
-      {filteredProducts.map((product) => (
-        <div key={product.id}>
-          <h3>{product.title}</h3>
-          <img src={product.image} alt={product.title} width="100" />
-          <p>{product.price}</p>
-        </div>
-      ))}
-      {filteredNotebook.map((notebook) => (
-        <div key={notebook.id}>
-          <h3>{notebook.title}</h3>
-        </div>
-      ))}
     </div>
   );
 };
