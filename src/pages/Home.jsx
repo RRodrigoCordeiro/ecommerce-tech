@@ -23,7 +23,7 @@ const Home = () => {
   const [computador, setComputador] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const navigate = useNavigate();
+
 
   const [searchTerm, setSearchTerm] = useState("");
   const handleSearch = (event) => {
