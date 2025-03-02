@@ -6,6 +6,9 @@ const Sac = () => {
   const [isOpen, setIsOpen] = useState(null);
   const [isOpenGarantia, setIsOpenGarantia] = useState(null);
   const [isOpenPagamento, setIsOpenPagamento] = useState(null);
+  const [isOpenPreVenda, setIsOpenPreVenda] = useState(null);
+  const [isOpenCadastro, setIsOpenCadastro] = useState(null);
+
 
   const toggleAccordion = (index) => {
     setIsOpen(isOpen === index ? null : index);
@@ -155,17 +158,32 @@ const Sac = () => {
           title: "Como funciona o estorno e qual é o prazo?",
           content: (
             <div>
-              <p>O estorno do pagamento ocorre quando um pedido é cancelado ou quando há aglum probekma com o pagemento</p>
-              <p>O processo funciona da seguinte forma:</p>
-              <ol>
-                <li>Solicitação de Estorno</li>
-                <ul>
+              <p className="max-w-80 m-auto md:max-w-2xl">O estorno do pagamento ocorre quando um pedido é cancelado ou quando há aglum problema com o pagemento</p>
+              <p className="text-center mt-8 mb-8">O processo funciona da seguinte forma:</p>
+              <ol className=" flex flex-col justify-center  items-center space-y-10 list-decimal pl-5">
+                <li className="" >Solicitação de Estorno:</li>
+                <ul className="max-w-60  m-auto mb-8 list-disc space-y-3">
                   <li>O estorno será realizado após a confirmação do cancelamento ou da solicitação de devolução</li>
                   <li>Para pedidios pagos com cartão de crédito, o valor serpa estornado diretamente para a fatura do cartão</li>
                   <li>No caso de boleto bancário ou PIX, o estorno será feiro por meio de depósito bancário na conta do cliente</li>
                 </ul>
-                <li>Prazo para Estorno </li>
+                <li>Prazo para Estorno: </li>
+                <ul className="list-disc max-w-80">
+                  <li><span className="font-bold">Cartão de Crédito: </span>O estorno pode ser processado em até 10 dias úteis, mas o crédito pode demorar até 2 faturas para aprecer no extrato do seu cartão.</li>
+                  <li><span className="font-bold" >Boleto ou PIX: </span>O estorno geralemnte ocorre em até 7 dias úteis,dependendo do banco</li>
+                </ul>
+
+
               </ol>
+              <p className="max-w-80 m-auto md:max-w-2xl mt-8">lembre-se de que o prazo pode cariar dependendo da operadora de pagamento ou instiruição bancparia envolvida. Se o estorno não aparecer dentro do prazo, entre em contato com nosso SAC para que possamos verificar a situação.</p>
+            </div>
+          )
+        },
+        {
+          title: "Como comprar usando o PIX?",
+          content: (
+            <div>
+              <p>Para realizar uma compra utilizando o pix, siga os passos abaixo</p>
             </div>
           )
         }
