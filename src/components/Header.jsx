@@ -89,9 +89,11 @@ const Header = ({ searchQuery, setSearchQuery}) => {
         </div>
 
         <div className="flex flex-row gap-10 mt-8 mb-3 md:mt-0 md:mb-0 md:gap-5 lg:gap-12">
-          <div className="flex flex-col items-center">
-            <MdOutlineQuestionAnswer size={28} />
-            <p>Sobre nós</p>
+          <div className="flex flex-col items-center ">
+            <Link to="sobre">
+              <MdOutlineQuestionAnswer size={28}  className="ml-5"/>
+              <p>Sobre nós</p>
+            </Link>
           </div>
           <div className="flex flex-col items-center">
             <Link to="sac">

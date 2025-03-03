@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Launch from './pages/Launch'
 import Sac from './pages/Sac'
+import Sobre from './pages/Sobre'
 
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
         <Route path='/' element={<Home/>} />
         <Route path='/launch' element={<Launch/>} />
         <Route path='/sac' element={<Sac/>} />
+        <Route path='/sobre' element={<Sobre/>} />
         <Route path='*' element={<h1>Not Found</h1>} />
       </Routes>
     </BrowserRouter>

@@ -1,8 +1,14 @@
 import React from 'react'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 const Sobre = () => {
   return (
-    <div>Sobre</div>
+    <div>
+      <Header/>
+      <p>dsd</p>
+      <Footer/>
+    </div>
   )
 }
 

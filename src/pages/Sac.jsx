@@ -2,32 +2,35 @@ import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
+const Accordion = ({ title, content, isOpen, toggle }) => (
+  <div>
+    <button
+      onClick={toggle}
+      className="w-full p-4 text-left flex justify-between items-center bg-gray-100 hover:bg-gray-200 gap-12"
+    >
+      <span>{title}</span>
+      <span>{isOpen ? "-" : "+"}</span>
+    </button>
+    {isOpen && <p className="p-4">{content}</p>}
+  </div>
+);  
+
 const Sac = () => {
-  const [isOpenPedidos, setIsOpenPedidos] = useState(null);
-  const [isOpenGarantia, setIsOpenGarantia] = useState(null);
-  const [isOpenPagamento, setIsOpenPagamento] = useState(null);
-  const [isOpenPreVenda, setIsOpenPreVenda] = useState(null);
-  const [isOpenCadastro, setIsOpenCadastro] = useState(null);
+   const [openAccordion, setOpenAccordion] = useState({
+    pedidos: null,
+    garantia: null,
+    pagamentos: null,
+    prevenda: null,
+    cadastro: null,
+   });
 
-  const toggleAccordion = (index) => {
-    setIsOpenPedidos(isOpenPedidos === index ? null : index);
+  const toggleAccordion = (section, index) => {
+    setOpenAccordion(prevState => ({
+      ...prevState,
+      [section]: prevState[section] === index ? null : index,
+    }));
   };
-
-  const toggleAccordionGarantia = (indx) => {
-    setIsOpenGarantia(isOpenGarantia === indx ? null : indx);
-  };
-
-  const toggleAccordionPagamento = (ind) => {
-    setIsOpenPagamento(isOpenPagamento === ind ? null : ind);
-  };
-
-  const toggleAccordionPreVenda = (indexPrevenda) => {
-    setIsOpenPreVenda(isOpenPreVenda === indexPrevenda ? null : indexPrevenda);
-  };
-
-  const toggleAccordionCadastro = (indexCadastro) =>
-    setIsOpenCadastro(isOpenCadastro === indexCadastro ? null : indexCadastro);
-
+  
   const items = [
     {
       pedidos: [
@@ -395,7 +398,6 @@ const Sac = () => {
       ],
     },
   ];
-
   return (
     <div>
       <Header />
@@ -407,101 +409,71 @@ const Sac = () => {
         {items.map((item, idx) => (
           <div key={idx}>
             {item.pedidos.map((pedido, index) => (
-              <div key={index}>
-                <button
-                  className="w-full p-4 text-left flex justify-between items-center bg-gray-100 hover:bg-gray-200 gap-12"
-                  onClick={() => toggleAccordion(index)}
-                >
-                  <span>{pedido.title}</span>
-                  {isOpenPedidos === index ? "-" : "+"}
-                </button>
-                <span className="p-4">
-                  {isOpenPedidos === index && <p>{pedido.content}</p>}
-                </span>
-              </div>
+              <Accordion
+                  key={index}
+                  title={pedido.title}
+                  isOpen={openAccordion.pedidos === index}
+                  content={pedido.content}
+                  toggle={() => toggleAccordion("pedidos",index)}
+              />
             ))}
             <h2 className="mt-20 text-2xl mb-14 ml-8">
               GARANTIA OU ARREPENDIMENTO
             </h2>
             <div>
               {item.garantia.map((garantia, indx) => (
-                <div key={indx}>
-                  <button
-                    className="w-full p-4 text-left flex justify-between items-center bg-gray-100 hover:bg-gray-200 gap-12"
-                    onClick={() => toggleAccordionGarantia(indx)}
-                  >
-                    <span>{garantia.title}</span>
-                    <span>{isOpenGarantia === indx ? "-" : "+"}</span>
-                  </button>
-                  <span>
-                    {isOpenGarantia === indx && <p>{garantia.content}</p>}
-                  </span>
-                </div>
+                <Accordion 
+                  key={indx}
+                  title={garantia.title}
+                  isOpen={openAccordion.garantia === indx}
+                  content={garantia.content}
+                  toggle={() => toggleAccordion("garantia",indx)}
+                
+                />
               ))}
             </div>
             <h3 className="mt-20 text-2xl mb-14 ml-8">Pagamento e Estorno</h3>
             <div>
               {item.pagamentos.map((pagamento, ind) => (
-                <div key={ind}>
-                  <button
-                    className="w-full p-4 text-left flex justify-between items-center bg-gray-100 hover:bg-gray-200 gap-12"
-                    onClick={() => toggleAccordionPagamento(ind)}
-                  >
-                    <span>{pagamento.title}</span>
-                    <span>{isOpenPagamento === ind ? "-" : "+"}</span>
-                  </button>
-                  <span>
-                    {isOpenPagamento === ind && <p>{pagamento.content}</p>}
-                  </span>
-                </div>
+                <Accordion 
+                  key={ind}
+                  title={pagamento.title}
+                  isOpen={openAccordion.pagamentos=== ind}
+                  content={pagamento.content}
+                  toggle={() => toggleAccordion("pagamentos",ind)}
+                />
               ))}
             </div>
             <h3 className="mt-20 text-2xl mb-14 ml-8">Produtos pré-venda</h3>
             <div>
               {item.prevenda.map((prevendas, indexPrevenda) => (
-                <div key={indexPrevenda}>
-                  <button
-                    className="w-full p-4 text-left flex justify-between items-center bg-gray-100 hover:bg-gray-200 gap-12"
-                    onClick={() => toggleAccordionPreVenda(indexPrevenda)}
-                  >
-                    <span>{prevendas.title}</span>
-                    <span>{isOpenPreVenda === indexPrevenda ? "-" : "+"}</span>
-                  </button>
-                  <span>
-                    {isOpenPreVenda === indexPrevenda && (
-                      <p>{prevendas.content}</p>
-                    )}
-                  </span>
-                </div>
+                <Accordion 
+                  key={indexPrevenda}
+                  title={prevendas.title}
+                  isOpen={openAccordion.prevenda === indexPrevenda}
+                  content={prevendas.content}
+                  toggle={() => toggleAccordion("prevenda",indexPrevenda)}
+                
+                />
               ))}
             </div>
             <h3 className="mt-20 text-2xl mb-14 ml-8">Cadastro</h3>
             <div>
               {item.cadastro.map((cadastros, indexCadastro) => (
-                <div key={indexCadastro}>
-                  <button
-                    className="w-full p-4 text-left flex justify-between items-center bg-gray-100 hover:bg-gray-200 gap-12"
-                    onClick={() => toggleAccordionCadastro(indexCadastro)}
-                  >
-                    <span>{cadastros.title}</span>
-                    <span>{isOpenCadastro === indexCadastro ? "-" : "+"}</span>
-                  </button>
-
-                  <span>
-                    {isOpenCadastro === indexCadastro && (
-                      <p>{cadastros.content}</p>
-                    )}
-                  </span>
-                </div>
+                <Accordion 
+                  key={indexCadastro}
+                  title={cadastros.title}
+                  isOpen={openAccordion.cadastro === indexCadastro}
+                  content={cadastros.content}
+                  toggle={() => toggleAccordion("cadastro",indexCadastro)}
+                />
               ))}
             </div>
           </div>
         ))}
       </div>
-
       <Footer />
     </div>
   );
 };
-
 export default Sac;
