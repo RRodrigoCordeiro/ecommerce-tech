@@ -3,6 +3,7 @@ import { IoMdMenu } from "react-icons/io";
 import { MdOutlineQuestionAnswer } from "react-icons/md";
 import { FaPeopleGroup } from "react-icons/fa6";
 import { IoPerson } from "react-icons/io5";
+import { BsPersonCircle } from "react-icons/bs";
 import { BsCart2 } from "react-icons/bs";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoMdMic } from "react-icons/io";
@@ -90,13 +91,13 @@ const Header = ({ searchQuery, setSearchQuery}) => {
 
         <div className="flex flex-row gap-10 mt-8 mb-3 md:mt-0 md:mb-0 md:gap-5 lg:gap-12">
           <div className="flex flex-col items-center ">
-            <Link to="sobre">
+            <Link to="/sobre">
               <MdOutlineQuestionAnswer size={28}  className="ml-5"/>
               <p>Sobre nós</p>
             </Link>
           </div>
           <div className="flex flex-col items-center">
-            <Link to="sac">
+            <Link to="/sac">
               <FaPeopleGroup size={28} />
               <p>SAC</p>
 
@@ -107,7 +108,7 @@ const Header = ({ searchQuery, setSearchQuery}) => {
             <p>Carrinho</p>
           </div>
           <div className="flex flex-col items-center">
-            <IoPerson size={28} />
+            <BsPersonCircle size={28} />
             <p>Login</p>
           </div>
         </div>

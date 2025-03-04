@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -123,7 +124,9 @@ const Footer = () => {
         <div>
           <div>
             <p className="font-bold text-blue-600 lg:text-lg">SAC</p>
-            <p className="mt-8 mb-8">Clique aqui</p>
+            <Link to="/sac"> 
+                <p className="mt-8 mb-8">Clique aqui</p>
+            </Link>
           </div>
           <div>
             <p className="font-bold text-blue-600 text-lg mt-36">
