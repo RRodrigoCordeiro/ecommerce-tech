@@ -1,21 +1,19 @@
 "use client";
+import React from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 import useEmblaCarousel from "embla-carousel-react";
 import { FaCircleChevronLeft } from "react-icons/fa6";
 import { FaChevronCircleRight } from "react-icons/fa";
-import React from "react";
-import { useEffect, useState } from "react";
 import { FaTruck } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
-import axios from "axios";
-import Header from "../components/Header";
-import Carrossel from "../components/Carrossel";
-
-import Depoimentos from "../components/Depoimentos";
-import Products from "../pages/products";
+import Header from "../../components/Header";
+import Carrossel from "../../components/Carrossel";
+import Depoimentos from "../../components/Depoimentos";
 import { useNavigate, useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import Footer from "../components/Footer";
-import useLaunchFilter from "../hooks/useLaunchFilter";
+import Footer from "../../components/Footer";
+import useLaunchFilter from "../../hooks/useLaunchFilter";
 
 const Home = () => {
   const [products, setProducts] = useState([]);

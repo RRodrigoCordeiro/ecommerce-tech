@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { FaTruck } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
-import productsData from "../data/products.json";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import useLaunchFilter from "../hooks/useLaunchFilter";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+import useLaunchFilter from "../../hooks/useLaunchFilter";
 
 const Launch = () => {
   const {

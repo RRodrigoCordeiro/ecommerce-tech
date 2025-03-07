@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 const Accordion = ({ title, content, isOpen, toggle }) => (
   <div>

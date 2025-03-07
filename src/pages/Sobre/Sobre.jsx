@@ -1,11 +1,11 @@
 import React from 'react'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 import { FaPeopleGroup } from "react-icons/fa6";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaBoxOpen } from "react-icons/fa6";
 import { IoPerson } from "react-icons/io5";
-import InfiniteScroll from '../components/InfiniteScroll';
+import InfiniteScroll from '../../components/InfiniteScroll';
 
 
 
