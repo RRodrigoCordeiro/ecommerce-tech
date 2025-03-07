@@ -4,10 +4,27 @@ import Footer from '../components/Footer'
 import { FaPeopleGroup } from "react-icons/fa6";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaBoxOpen } from "react-icons/fa6";
-import { BsPersonCircle } from "react-icons/bs";
 import { IoPerson } from "react-icons/io5";
+import InfiniteScroll from '../components/InfiniteScroll';
+
+
 
 const Sobre = () => {
+  let imgsCarrosel = [
+    { srcImagem: "/images/GoogleLogo.png", altImagem: "logo do Google" },
+    { srcImagem: "/images/ClaroLogo.png", altImagem: "logo da claro" },
+    { srcImagem: "/images/NikeLogo.png", altImagem: "Logo da Nike" },
+    { srcImagem: "/images/AdidasLogo.png.png", altImagem: "Logo da Adidas" },
+    { srcImagem: "/images/CocaColalogo.png", altImagem: "Logo da Coca-Cola" },
+    { srcImagem: "/images/PumaLogo.png", altImagem: "escola de saude PB" },
+    { srcImagem: "/images/timLogo.png", altImagem: "Logo da TIM" },
+
+
+    
+    
+  ];
+  
+
   return (
     <div>
       <Header/>
@@ -47,6 +64,20 @@ const Sobre = () => {
             <h1 className='text-green-600 font-bold  mb-8 text-2xl'>Nossos clientes</h1>
            
         </div>
+
+        
+       
+      <InfiniteScroll
+        className="mt-[35px] "
+        imgs={imgsCarrosel}
+        widthImg={350}
+        heightMaxImg={100}
+        paddingLR={100}
+        duration={15}
+        maskStart={10}
+        maskEnd={90}
+      />
+
 
       <Footer/>
     </div>

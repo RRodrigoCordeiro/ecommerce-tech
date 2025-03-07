@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Launch from './pages/Launch'
 import Sac from './pages/Sac'
 import Sobre from './pages/Sobre'
+import Carrinho from "./pages/Carrinho/Carrinho"
 
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
         <Route path='/launch' element={<Launch/>} />
         <Route path='/sac' element={<Sac/>} />
         <Route path='/sobre' element={<Sobre/>} />
+        <Route path='/carrinho' element={<Carrinho/>} />
         <Route path='*' element={<h1>Not Found</h1>} />
       </Routes>
     </BrowserRouter>

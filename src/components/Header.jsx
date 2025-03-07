@@ -104,8 +104,10 @@ const Header = ({ searchQuery, setSearchQuery}) => {
             </Link>
           </div>
           <div className="flex flex-col items-center">
-            <BsCart2 size={28} />
-            <p>Carrinho</p>
+            <Link to="/carrinho">
+              <BsCart2 size={28} className="ml-4" />
+              <p>Carrinho</p>
+            </Link>
           </div>
           <div className="flex flex-col items-center">
             <BsPersonCircle size={28} />
