@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import useElement from "../../hooks/useElement";
 
 const Accordion = ({ title, content, isOpen, toggle }) => (
   <div>
@@ -16,13 +17,21 @@ const Accordion = ({ title, content, isOpen, toggle }) => (
 );  
 
 const Sac = () => {
-   const [openAccordion, setOpenAccordion] = useState({
+  const {
+    filtro,
+    setFiltro,
+    filtrarTexto,
+  } = useElement();
+
+    const [openAccordion, setOpenAccordion] = useState({
     pedidos: null,
     garantia: null,
     pagamentos: null,
     prevenda: null,
     cadastro: null,
    });
+
+
 
   const toggleAccordion = (section, index) => {
     setOpenAccordion(prevState => ({
@@ -400,12 +409,18 @@ const Sac = () => {
   ];
   return (
     <div>
-      <Header />
+      <Header searchQuery={filtro} setSearchQuery={setFiltro} />
+      
+
       <h1 className="font-bold text-center mt-28 text-xl md:text-lg">
         SAC - Serviço de Atendimento ao Consumidor
       </h1>
-      <h2 className="mt-20 text-2xl md:text-2xl mb-14 ml-8">MEU PEDIDO</h2>
       <div>
+        {(filtrarTexto("MEU PEDIDO")  && (
+              <h2 className="mt-20 text-2xl mb-14 ml-8">
+                MEU PEDIDIO
+              </h2>
+        ))}
         {items.map((item, idx) => (
           <div key={idx}>
             {item.pedidos.map((pedido, index) => (
@@ -417,9 +432,11 @@ const Sac = () => {
                   toggle={() => toggleAccordion("pedidos",index)}
               />
             ))}
-            <h2 className="mt-20 text-2xl mb-14 ml-8">
-              GARANTIA OU ARREPENDIMENTO
-            </h2>
+            {(filtrarTexto("garantia ou arrependimento")  && (
+              <h2 className="mt-20 text-2xl mb-14 ml-8">
+                GARANTIA OU ARREPENDIMENTO
+              </h2>
+            ))}
             <div>
               {item.garantia.map((garantia, indx) => (
                 <Accordion 
