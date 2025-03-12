@@ -14,32 +14,26 @@ const Accordion = ({ title, content, isOpen, toggle }) => (
     </button>
     {isOpen && <p className="p-4">{content}</p>}
   </div>
-);  
+);
 
 const Sac = () => {
-  const {
-    filtro,
-    setFiltro,
-    filtrarTexto,
-  } = useElement();
+  const { filtro, setFiltro, filtrarTexto } = useElement();
 
-    const [openAccordion, setOpenAccordion] = useState({
+  const [openAccordion, setOpenAccordion] = useState({
     pedidos: null,
     garantia: null,
     pagamentos: null,
     prevenda: null,
     cadastro: null,
-   });
-
-
+  });
 
   const toggleAccordion = (section, index) => {
-    setOpenAccordion(prevState => ({
+    setOpenAccordion((prevState) => ({
       ...prevState,
       [section]: prevState[section] === index ? null : index,
     }));
   };
-  
+
   const items = [
     {
       pedidos: [
@@ -410,85 +404,214 @@ const Sac = () => {
   return (
     <div>
       <Header searchQuery={filtro} setSearchQuery={setFiltro} />
-      
 
       <h1 className="font-bold text-center mt-28 text-xl md:text-lg">
         SAC - Serviço de Atendimento ao Consumidor
       </h1>
       <div>
-        {(filtrarTexto("MEU PEDIDO")  && (
-              <h2 className="mt-20 text-2xl mb-14 ml-8">
-                MEU PEDIDIO
-              </h2>
-        ))}
+        {filtrarTexto("MEU PEDIDO") && (
+          <div>
+            <h2 className="mt-20 text-2xl mb-14 ml-8">MEU PEDIDO</h2>
+            {items.map((item, idx) => (
+              <div key={idx}>
+                {item.pedidos.map((pedido, index) => (
+                  <Accordion
+                    key={index}
+                    title={pedido.title}
+                    isOpen={openAccordion.pedidos === index}
+                    content={pedido.content}
+                    toggle={() => toggleAccordion("pedidos", index)}
+                  />
+                ))}
+              </div>
+            ))}
+          </div>
+        )}
+
+        {filtrarTexto("GARANTIA OU ARREPENDIMENTO") && (
+          <div>
+            <h2 className="mt-20 text-2xl mb-14 ml-8">
+              GARANTIA OU ARREPENDIMENTO
+            </h2>
+            {items.map((item, idx) => (
+              <div key={idx}>
+                {item.garantia.map((garantia, indx) => (
+                  <Accordion
+                    key={indx}
+                    title={garantia.title}
+                    isOpen={openAccordion.garantia === indx}
+                    content={garantia.content}
+                    toggle={() => toggleAccordion("garantia", indx)}
+                  />
+                ))}
+              </div>
+            ))}
+          </div>
+        )}
+
+        {filtrarTexto("PAGAMENTO") && (
+          <div>
+            <h3 className="mt-20 text-2xl mb-14 ml-8">PAGAMENTO E ESTORNO</h3>
+            {items.map((item, idx) => (
+              <div key={idx}>
+                {item.pagamentos.map((pagamento, ind) => (
+                  <Accordion
+                    key={ind}
+                    title={pagamento.title}
+                    isOpen={openAccordion.pagamentos === ind}
+                    content={pagamento.content}
+                    toggle={() => toggleAccordion("pagamentos", ind)}
+                  />
+                ))}
+              </div>
+            ))}
+          </div>
+        )}
+
+        {filtrarTexto("PRÉ-VENDA") && (
+          <div>
+            <h3 className="mt-20 text-2xl mb-14 ml-8">PRODUTOS PRÉ-VENDA</h3>
+            {items.map((item, idx) => (
+              <div key={idx}>
+                {item.prevenda.map((prevendas, indexPrevenda) => (
+                  <Accordion
+                    key={indexPrevenda}
+                    title={prevendas.title}
+                    isOpen={openAccordion.prevenda === indexPrevenda}
+                    content={prevendas.content}
+                    toggle={() => toggleAccordion("prevenda", indexPrevenda)}
+                  />
+                ))}
+              </div>
+            ))}
+          </div>
+        )}
+
+        {filtrarTexto("CADASTRO") && (
+          <div>
+            <h3 className="mt-20 text-2xl mb-14 ml-8">CADASTRO</h3>
+            {items.map((item, idx) => (
+              <div key={idx}>
+                {item.cadastro.map((cadastros, indexCadastro) => (
+                  <Accordion
+                    key={indexCadastro}
+                    title={cadastros.title}
+                    isOpen={openAccordion.cadastro === indexCadastro}
+                    content={cadastros.content}
+                    toggle={() => toggleAccordion("cadastro", indexCadastro)}
+                  />
+                ))}
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* <h2 className="mt-20 text-2xl mb-14 ml-8">MEU PEDIDIO</h2>
+
         {items.map((item, idx) => (
           <div key={idx}>
             {item.pedidos.map((pedido, index) => (
               <Accordion
-                  key={index}
-                  title={pedido.title}
-                  isOpen={openAccordion.pedidos === index}
-                  content={pedido.content}
-                  toggle={() => toggleAccordion("pedidos",index)}
+                key={index}
+                title={pedido.title}
+                isOpen={openAccordion.pedidos === index}
+                content={pedido.content}
+                toggle={() => toggleAccordion("pedidos", index)}
               />
             ))}
-            {(filtrarTexto("garantia ou arrependimento")  && (
-              <h2 className="mt-20 text-2xl mb-14 ml-8">
-                GARANTIA OU ARREPENDIMENTO
-              </h2>
-            ))}
+
+            <h2 className="mt-20 text-2xl mb-14 ml-8">
+              GARANTIA OU ARREPENDIMENTO
+            </h2>
+
             <div>
               {item.garantia.map((garantia, indx) => (
-                <Accordion 
+                <Accordion
                   key={indx}
                   title={garantia.title}
                   isOpen={openAccordion.garantia === indx}
                   content={garantia.content}
-                  toggle={() => toggleAccordion("garantia",indx)}
-                
+                  toggle={() => toggleAccordion("garantia", indx)}
                 />
               ))}
             </div>
             <h3 className="mt-20 text-2xl mb-14 ml-8">Pagamento e Estorno</h3>
             <div>
               {item.pagamentos.map((pagamento, ind) => (
-                <Accordion 
+                <Accordion
                   key={ind}
                   title={pagamento.title}
-                  isOpen={openAccordion.pagamentos=== ind}
+                  isOpen={openAccordion.pagamentos === ind}
                   content={pagamento.content}
-                  toggle={() => toggleAccordion("pagamentos",ind)}
+                  toggle={() => toggleAccordion("pagamentos", ind)}
                 />
               ))}
             </div>
             <h3 className="mt-20 text-2xl mb-14 ml-8">Produtos pré-venda</h3>
             <div>
               {item.prevenda.map((prevendas, indexPrevenda) => (
-                <Accordion 
+                <Accordion
                   key={indexPrevenda}
                   title={prevendas.title}
                   isOpen={openAccordion.prevenda === indexPrevenda}
                   content={prevendas.content}
-                  toggle={() => toggleAccordion("prevenda",indexPrevenda)}
-                
+                  toggle={() => toggleAccordion("prevenda", indexPrevenda)}
                 />
               ))}
             </div>
             <h3 className="mt-20 text-2xl mb-14 ml-8">Cadastro</h3>
             <div>
               {item.cadastro.map((cadastros, indexCadastro) => (
-                <Accordion 
+                <Accordion
                   key={indexCadastro}
                   title={cadastros.title}
                   isOpen={openAccordion.cadastro === indexCadastro}
                   content={cadastros.content}
-                  toggle={() => toggleAccordion("cadastro",indexCadastro)}
+                  toggle={() => toggleAccordion("cadastro", indexCadastro)}
                 />
               ))}
             </div>
           </div>
-        ))}
+        ))} */}
       </div>
+      {/* {filtrarTexto("MEU PEDIDO") && (
+        <div>
+          <h2 className="mt-20 text-2xl mb-14 ml-8">MEU PEDIDO</h2>
+          {items.map((item, idx) => (
+            <div key={idx}>
+              {item.pedidos.map((pedido, index) => (
+                <Accordion
+                  key={index}
+                  title={pedido.title}
+                  isOpen={openAccordion.pedidos === index}
+                  content={pedido.content}
+                  toggle={() => toggleAccordion("pedidos", index)}
+                />
+              ))}
+            </div>
+          ))}
+        </div>
+      )} */}
+      {/* {filtrarTexto("GARANTIA") && (
+        <div>
+          <h2 className="mt-20 text-2xl mb-14 ml-8">
+            GARANTIA OU ARREPENDIMENTO
+          </h2>
+          {items.map((item, idx) => (
+            <div key={idx}>
+              {item.garantia.map((garantia, indx) => (
+                <Accordion
+                  key={indx}
+                  title={garantia.title}
+                  isOpen={openAccordion.garantia === indx}
+                  content={garantia.content}
+                  toggle={() => toggleAccordion("garantia", indx)}
+                />
+              ))}
+            </div>
+          ))}
+        </div>
+      )} */}
       <Footer />
     </div>
   );
