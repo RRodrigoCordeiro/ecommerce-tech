@@ -5,9 +5,9 @@ import Footer from '../../components/Footer'
 const Carrinho = () => {
   return (
     <div>
-        <Header/>
-        Carrinho
-        <Footer/>
+      <Header/>
+      < p className='text-2xl text-center mt-28 font-bold'>Carrinho de Compras</p>
+      <Footer/>
     </div>
   )
 }
