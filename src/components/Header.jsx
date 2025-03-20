@@ -9,9 +9,8 @@ import { IoSearchOutline } from "react-icons/io5";
 import { IoMdMic } from "react-icons/io";
 import { Link } from "react-router-dom";
 
-const Header = ({ searchQuery, setSearchQuery}) => {
+const Header = ({ searchQuery, setSearchQuery }) => {
   const [dropdownVisible, setDropdownVisible] = useState(null);
-
 
   const produtos = [
     {
@@ -92,7 +91,7 @@ const Header = ({ searchQuery, setSearchQuery}) => {
         <div className="flex flex-row gap-10 mt-8 mb-3 md:mt-0 md:mb-0 md:gap-5 lg:gap-12">
           <div className="flex flex-col items-center ">
             <Link to="/sobre">
-              <MdOutlineQuestionAnswer size={28}  className="ml-5"/>
+              <MdOutlineQuestionAnswer size={28} className="ml-5" />
               <p>Sobre nós</p>
             </Link>
           </div>
@@ -100,7 +99,6 @@ const Header = ({ searchQuery, setSearchQuery}) => {
             <Link to="/sac">
               <FaPeopleGroup size={28} />
               <p>SAC</p>
-
             </Link>
           </div>
           <div className="flex flex-col items-center">

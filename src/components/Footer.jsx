@@ -124,8 +124,8 @@ const Footer = () => {
         <div>
           <div>
             <p className="font-bold text-blue-600 lg:text-lg">SAC</p>
-            <Link to="/sac"> 
-                <p className="mt-8 mb-8">Clique aqui</p>
+            <Link to="/sac">
+              <p className="mt-8 mb-8">Clique aqui</p>
             </Link>
           </div>
           <div>
