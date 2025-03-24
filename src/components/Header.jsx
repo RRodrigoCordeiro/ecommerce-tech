@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+
 import { IoMdMenu } from "react-icons/io";
 import { MdOutlineQuestionAnswer } from "react-icons/md";
 import { FaPeopleGroup } from "react-icons/fa6";
@@ -8,9 +9,13 @@ import { BsCart2 } from "react-icons/bs";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoMdMic } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { FiShoppingCart } from "react-icons/fi";
+
+import { CartContext } from "../contexts/CartContext"
 
 const Header = ({ searchQuery, setSearchQuery }) => {
   const [dropdownVisible, setDropdownVisible] = useState(null);
+  const {cartAmount} = useContext(CartContext)
 
   const produtos = [
     {
@@ -103,6 +108,9 @@ const Header = ({ searchQuery, setSearchQuery }) => {
           </div>
           <div className="flex flex-col items-center">
             <Link to="/carrinho">
+              {cartAmount > 0 && (
+                <span className="absolute    px-2.5 bg-sky-500 rounded-full w-6 h-6 flex items-center justify-center text-white text-xs">{cartAmount}</span>
+              )}
               <BsCart2 size={28} className="ml-4" />
               <p>Carrinho</p>
             </Link>
@@ -148,6 +156,14 @@ const Header = ({ searchQuery, setSearchQuery }) => {
           </div>
         ))}
       </div>
+      <Link className="relative" to="/" >
+                        <FiShoppingCart size={24}  color="#121212"/>
+                        {cartAmount > 0 && (
+                           <span className="absolute -top-3 -right-3  px-2.5 bg-sky-500 rounded-full w-6 h-6 flex items-center justify-center text-white text-xs">
+                           {cartAmount}
+                           </span>
+                        )}
+                    </Link>
     </div>
   );
 };

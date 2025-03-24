@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useContext } from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import useEmblaCarousel from "embla-carousel-react";
@@ -13,6 +13,7 @@ import Depoimentos from "../../components/Depoimentos";
 import { useNavigate, useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Footer from "../../components/Footer";
+import { CartContext } from "../../contexts/CartContext";
 import useLaunchFilter from "../../hooks/useLaunchFilter";
 
 const Home = () => {
@@ -140,6 +141,13 @@ const Home = () => {
     emblaApi3?.scrollNext();
   }
 
+  const { addItemCart } = useContext(CartContext)
+
+  function handleAddCartItem(product){
+    addItemCart(product)
+    console.log(product)
+ }
+
   if (loading) return <p>Carregando...</p>;
   if (error) return <p>Ocorreu um erro: {error.message}</p>;
 
@@ -186,7 +194,7 @@ const Home = () => {
                       À vista no PIX
                     </p>
 
-                    <button className="bg-green-600 rounded-md h-10 font-bold flex items-center justify-center gap-3">
+                    <button className="bg-green-600 rounded-md h-10 font-bold flex items-center justify-center gap-3" onClick={() => handleAddCartItem(product)}>
                       <FaShoppingCart />
                       COMPRAR
                     </button>
