@@ -109,7 +109,7 @@ const Header = ({ searchQuery, setSearchQuery }) => {
           <div className="flex flex-col items-center">
             <Link to="/carrinho">
               {cartAmount > 0 && (
-                <span className="absolute -mt-5 right-72  px-2.5 bg-sky-500 rounded-full w-6 h-6 flex items-center justify-center text-white text-xs">{cartAmount}</span>
+                <span className="-mt-5 ml-7 px-2.5 bg-sky-500 rounded-full w-6 h-6 flex items-center justify-center text-white text-xs">{cartAmount}</span>
               )}
               <BsCart2 size={28} className="ml-4" />
               <p>Carrinho</p>

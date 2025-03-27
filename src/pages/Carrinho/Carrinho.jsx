@@ -34,10 +34,12 @@ const Carrinho = () => {
         </div>
       )}
 
+      
+
       {cart.map((item) => (
         <section
           key={item.id}
-          className="flex items-center justify-around border-b-2 border-gray-300 space-y-10"
+          className="flex flex-col md:flex-row items-center justify-around border-b-2 border-gray-300 space-y-10"
         >
           <img src={item.image} alt={item.title} className="w-28 mt-8" />
           <strong> Preço: {item.price}</strong>
@@ -62,7 +64,16 @@ const Carrinho = () => {
         </section>
       ))}
 
+
+
       {cart.length !== 0 && <p className="font-bold mt-4">Total: R$ 1.000</p>}
+      
+      {cart.length !== 0 && (
+        <div>
+          <p className="font-bold mt-4 ml-10">Total: R$ 1.000</p>
+          <p className="text-center text-white bg-green-600 rounded-md w-40 m-auto p-2 mt-28">Finalizar compras</p>
+        </div> 
+      )}
 
       <Footer />
     </div>
