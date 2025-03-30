@@ -66,11 +66,11 @@ const Carrinho = () => {
 
 
 
-      {cart.length !== 0 && <p className="font-bold mt-4">Total: R$ 1.000</p>}
+      {/* {cart.length !== 0 && <p className="font-bold mt-4">Total: {total}</p>} */}
       
       {cart.length !== 0 && (
         <div>
-          <p className="font-bold mt-4 ml-10">Total: R$ 1.000</p>
+          <p className="font-bold mt-4 ml-10">Total: {total}</p>
           <p className="text-center text-white bg-green-600 rounded-md w-40 m-auto p-2 mt-28">Finalizar compras</p>
         </div> 
       )}

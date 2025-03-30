@@ -30,7 +30,7 @@ export const CartContext = createContext()
         }
 
         setCart(products => [...products, data])
-        // totalResultCart[...cart,data]
+        totalResultCart(...cart, data)
     }
 
     function  removeItemCart(product){
@@ -45,6 +45,7 @@ export const CartContext = createContext()
             cartList[indexItem].total = cartList[indexItem].total - cartList[indexItem].price
 
             setCart(cartList);
+            totalResultCart(cartList)
             return;
         }
         
@@ -67,7 +68,7 @@ export const CartContext = createContext()
             cartAmount: cart.length,
             addItemCart,
             removeItemCart,
-            totalResultCart
+            total
          }}
         >
             {children}
