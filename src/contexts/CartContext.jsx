@@ -7,6 +7,7 @@ export const CartContext = createContext()
  function CartProvider({ children }){
 
     const [cart, setCart] = useState([])
+    const [total, setTotal] = useState("")
 
     function addItemCart(newItem){
         const indexItem = cart.findIndex(item => item.id ===  newItem.id) 
@@ -18,6 +19,7 @@ export const CartContext = createContext()
             cartList[indexItem].total = cartList[indexItem].amount * cartList[indexItem].price
 
             setCart(cartList)
+            totalResultCart(cartList)
             return;
         }
 
@@ -28,14 +30,44 @@ export const CartContext = createContext()
         }
 
         setCart(products => [...products, data])
+        // totalResultCart[...cart,data]
+    }
+
+    function  removeItemCart(product){
+        const indexItem = cart.findIndex(item => item.id === product.id)
+
+        if(cart[indexItem]?.amount > 1){
+            // Diminuir apenas um amount do que você tem
+
+            let cartList = cart;
+
+            cartList[indexItem].amount = cartList[indexItem].amount - 1;
+            cartList[indexItem].total = cartList[indexItem].total - cartList[indexItem].price
+
+            setCart(cartList);
+            return;
+        }
+        
+        const romoveItem = cart.filter(item => item.id !== product.id)
+        setCart(romoveItem);
+        totalResultCart(romoveItem);
     }
 
     
+    function totalResultCart(items){
+        let myCart = items;
+        let result = myCart.reduce((acc, obj) => {return acc + obj.total},0)
+        const resultFormated = result.toLocaleString("pt-BR",{style:"currency", currency:"BRL"})
+        setTotal(resultFormated)
+    }
+
     return(
         <CartContext.Provider value={{ 
             cart,
             cartAmount: cart.length,
-            addItemCart
+            addItemCart,
+            removeItemCart,
+            totalResultCart
          }}
         >
             {children}

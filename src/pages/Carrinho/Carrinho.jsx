@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 const Carrinho = () => {
-  const { cart } = useContext(CartContext);
+  const { cart, total, addItemCart,  removeItemCart } = useContext(CartContext);
   const [hasItems, setHasItems] = useState();
 
   useEffect(() => {
@@ -45,11 +45,11 @@ const Carrinho = () => {
           <strong> Preço: {item.price}</strong>
 
           <div className="flex items-center justify-center gap-3 ">
-            <button className="bg-slate-600 px-2 rounded text-white font-medium flex items-center justify-center">
+            <button className="bg-slate-600 px-2 rounded text-white font-medium flex items-center justify-center" onClick={() => removeItemCart(item)}>
               -
             </button>
             {item.amount}
-            <button className="bg-slate-600 px-2 rounded text-white font-medium flex items-center justify-center">
+            <button className="bg-slate-600 px-2 rounded text-white font-medium flex items-center justify-center" onClick={() => addItemCart(item)}>
               +
             </button>
           </div>
