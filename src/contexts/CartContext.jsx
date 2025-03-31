@@ -1,13 +1,15 @@
 
 import { Children, createContext, ReactNode, useState } from 'react'
+import { toast } from 'react-hot-toast';
 
 
 export const CartContext = createContext()
 
  function CartProvider({ children }){
 
-    const [cart, setCart] = useState([])
-    const [total, setTotal] = useState("")
+    const [cart, setCart] = useState([]);
+    const [total, setTotal] = useState("");
+    
 
     function addItemCart(newItem){
         const indexItem = cart.findIndex(item => item.id ===  newItem.id) 
@@ -23,6 +25,7 @@ export const CartContext = createContext()
             return;
         }
 
+        // Adicionar o item na lista
         let data = {
             ...newItem,
             amount: 1,
@@ -30,36 +33,37 @@ export const CartContext = createContext()
         }
 
         setCart(products => [...products, data])
-        totalResultCart(...cart, data)
+        totalResultCart([...cart, data])
     }
 
-    function  removeItemCart(product){
+
+    function removeItemCart(product){
         const indexItem = cart.findIndex(item => item.id === product.id)
-
-        if(cart[indexItem]?.amount > 1){
-            // Diminuir apenas um amount do que você tem
-
+       
+        if(cart[indexItem]?.amount > 1 ){
+            // Diminuir apenas 1 amount do que você tem
             let cartList = cart;
 
-            cartList[indexItem].amount = cartList[indexItem].amount - 1;
+            cartList[indexItem].amount = cartList[indexItem].amount - 1
             cartList[indexItem].total = cartList[indexItem].total - cartList[indexItem].price
 
-            setCart(cartList);
+            setCart(cartList)
             totalResultCart(cartList)
-            return;
+            return
         }
-        
-        const romoveItem = cart.filter(item => item.id !== product.id)
-        setCart(romoveItem);
-        totalResultCart(romoveItem);
+
+        const removeItem = cart.filter(item => item.id !== product.id)
+        setCart(removeItem)
+        totalResultCart(removeItem)
+        toast.success("Produto removido do carrinho")
+
     }
 
-    
     function totalResultCart(items){
         let myCart = items;
-        let result = myCart.reduce((acc, obj) => {return acc + obj.total},0)
-        const resultFormated = result.toLocaleString("pt-BR",{style:"currency", currency:"BRL"})
-        setTotal(resultFormated)
+        let result = myCart.reduce((acumulador, itemAtual) => {return acumulador + itemAtual.total}, 0);
+        const resultFormated = result.toLocaleString("pt-br",{style:"currency", currency: "BRL"})
+        setTotal(resultFormated);
     }
 
     return(

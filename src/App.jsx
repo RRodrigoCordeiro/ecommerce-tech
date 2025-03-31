@@ -5,6 +5,7 @@ import Launch from './pages/Launch/Launch'
 import Sac from './pages/SAC/Sac'
 import Sobre from './pages/Sobre/Sobre'
 import Carrinho from "./pages/Carrinho/Carrinho"
+import ProductDetail from './pages/detail/ProductDetail' 
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
         <Route path='/sac' element={<Sac/>} />
         <Route path='/sobre' element={<Sobre/>} />
         <Route path='/carrinho' element={<Carrinho/>} />
+        <Route path='/detail/:id' element={<ProductDetail/>} />
         <Route path='*' element={<h1>Not Found</h1>} />
       </Routes>
     </BrowserRouter>

@@ -15,6 +15,8 @@ import { Link } from "react-router-dom";
 import Footer from "../../components/Footer";
 import { CartContext } from "../../contexts/CartContext";
 import useLaunchFilter from "../../hooks/useLaunchFilter";
+import toast from "react-hot-toast";
+
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -145,6 +147,7 @@ const Home = () => {
 
   function handleAddCartItem(product){
     addItemCart(product)
+    toast.success("Produto adicionado no carrinho")
     console.log(product)
  }
 
@@ -165,40 +168,42 @@ const Home = () => {
                   key={product.id}
                   className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(100%/2)] lg:flex-[0_0_calc(100%/3)] px-3"
                 >
-                  <article className="bg-white text-white rounded-2xl p-6 space-y-2 h-full flex flex-col w-full ">
-                    <div className=" flex items-start justify-between">
-                      <div className="flex gap-3">
-                        <h3 className="text-black font-bold text-xl mb-8">
-                          {product.title}
-                        </h3>
-                      </div>
-                    </div>
-                    <img
-                      src={product.image}
-                      alt={product.title}
-                      width="100"
-                      className="m-auto mb-16"
-                    ></img>
-                    <div className="bg-green-600 flex items-center gap-2 w-32 p-0.5 mb-5 rounded-md ">
-                      <FaTruck className="ml-2" />
-                      <p>Frete Grátis</p>
-                    </div>
+                    <article className="bg-white text-white rounded-2xl p-6 space-y-2 h-full flex flex-col w-full ">
+                      <Link to={`/detail/${product.id}`}>
+                        <div className=" flex items-start justify-between">
+                          <div className="flex gap-3">
+                            <h3 className="text-black font-bold text-xl mb-8">
+                              {product.title}
+                            </h3>
+                          </div>
+                        </div>
+                        <img
+                          src={product.image}
+                          alt={product.title}
+                          width="100"
+                          className="m-auto mb-16"
+                        ></img>
+                        <div className="bg-green-600 flex items-center gap-2 w-32 p-0.5 mb-5 rounded-md ">
+                          <FaTruck className="ml-2" />
+                          <p>Frete Grátis</p>
+                        </div>
 
-                    <p className="text-gray-800 text-sm mb-4">
-                      {product.description}
-                    </p>
-                    <p className="text-green-600 font-bold text-lg ">
-                      R$ {product.price}
-                    </p>
-                    <p className="text-gray-400 text-sm -mt-2">
-                      À vista no PIX
-                    </p>
-
-                    <button className="bg-green-600 rounded-md h-10 font-bold flex items-center justify-center gap-3" onClick={() => handleAddCartItem(product)}>
-                      <FaShoppingCart />
-                      COMPRAR
-                    </button>
-                  </article>
+                        <p className="text-gray-800 text-sm mb-4">
+                          {product.description}
+                        </p>
+                        <p className="text-green-600 font-bold text-lg ">
+                          R$ {product.price}
+                        </p>
+                        <p className="text-gray-400 text-sm -mt-2">
+                          À vista no PIX
+                        </p>
+                      </Link>
+                      <button className="bg-green-600 rounded-md h-10 font-bold flex items-center justify-center gap-3" onClick={() => handleAddCartItem(product)}>
+                        <FaShoppingCart />
+                        COMPRAR
+                      </button>
+                    </article>
+               
                 </div>
               ))}
             </div>

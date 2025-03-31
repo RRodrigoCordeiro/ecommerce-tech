@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 const Carrinho = () => {
-  const { cart, total, addItemCart,  removeItemCart } = useContext(CartContext);
+  const { cart, total, addItemCart,  removeItemCart, discount } = useContext(CartContext);
   const [hasItems, setHasItems] = useState();
 
   useEffect(() => {
@@ -65,15 +65,33 @@ const Carrinho = () => {
       ))}
 
 
-
       {/* {cart.length !== 0 && <p className="font-bold mt-4">Total: {total}</p>} */}
       
       {cart.length !== 0 && (
         <div>
           <p className="font-bold mt-4 ml-10">Total: {total}</p>
+          <p  className="font-light mt-4 ml-10">No seu carrinho contém {cart.length} itens</p>
           <p className="text-center text-white bg-green-600 rounded-md w-40 m-auto p-2 mt-28">Finalizar compras</p>
         </div> 
       )}
+
+      {cart.length !== 0 && total > 250  && (
+        <p>ATENÇÃO </p>
+
+      )}
+
+      {discount > 0 && (
+        <p>desconto feito {discount}</p>
+      )}
+
+      
+
+
+
+
+   
+
+     
 
       <Footer />
     </div>
