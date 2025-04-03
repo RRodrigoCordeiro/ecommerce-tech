@@ -16,6 +16,7 @@ import Footer from "../../components/Footer";
 import { CartContext } from "../../contexts/CartContext";
 import useLaunchFilter from "../../hooks/useLaunchFilter";
 import toast from "react-hot-toast";
+import Modal from "../../components/modal/Modal"; 
 
 
 const Home = () => {
@@ -24,7 +25,9 @@ const Home = () => {
   const [computador, setComputador] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
+  const [open, setOpen] = useState(false)
+  const [isOpen, setModalOpened] = useState(false);
+  const [data, setData] = useState(null); // Estado para armazenar os dados da API
 
   const [searchTerm, setSearchTerm] = useState("");
   const handleSearch = (event) => {
@@ -166,10 +169,10 @@ const Home = () => {
               {filteredProducts.map((product) => (
                 <div
                   key={product.id}
-                  className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(100%/2)] lg:flex-[0_0_calc(100%/3)] px-3"
+                  className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(100%/2)] lg:flex-[0_0_calc(100%/3)] px-3 bg-b"
                 >
-                    <article className="bg-white text-white rounded-2xl p-6 space-y-2 h-full flex flex-col w-full ">
-                      <Link to={`/detail/${product.id}`}>
+                    <article className="bg-white text-white rounded-2xl p-6 space-y-2 h-full flex flex-col w-full  ">
+                      <Link to={`/detail/${product.id}`} className="flex flex-col flex-grow">
                         <div className=" flex items-start justify-between">
                           <div className="flex gap-3">
                             <h3 className="text-black font-bold text-xl mb-8">
@@ -188,9 +191,9 @@ const Home = () => {
                           <p>Frete Grátis</p>
                         </div>
 
-                        <p className="text-gray-800 text-sm mb-4">
+                        {/* <p className="text-gray-800 text-sm mb-4">
                           {product.description}
-                        </p>
+                        </p> */}
                         <p className="text-green-600 font-bold text-lg ">
                           R$ {product.price}
                         </p>
@@ -202,8 +205,17 @@ const Home = () => {
                         <FaShoppingCart />
                         COMPRAR
                       </button>
-                    </article>
+                      <button onClick={() => setModalOpened(true)} className="text-black">Clique Aqui</button>
+
+{isOpen && (
+  <Modal isOpen={isOpen} setModalOpened={setModalOpened}>
+    <h2 className="W-8 text-center">{product.title}</h2>
+    <p>{data?.body}</p>
+  </Modal>
+)}
+
                
+                    </article>
                 </div>
               ))}
             </div>
