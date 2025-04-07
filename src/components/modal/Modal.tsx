@@ -33,7 +33,7 @@ export default function Modal({
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-BLU bg-opacity-70 w-80 m-auto h-80" />
+            <div className="fixed inset-0 bg-BLU bg-opacity-70 " />
           </Transition.Child>
 
           <div className="fixed inset-0 w-auto overflow-y-auto">
@@ -49,7 +49,7 @@ export default function Modal({
               >
                 <Dialog.Panel
                   className={twMerge(
-                    'w-full transform overflow-hidden rounded-2x text-left align-middle shadow-xl transition-all bg-background-modal',
+                    'w-full transform overflow-hidden rounded-2x text-left align-middle shadow-xl transition-all bg-background-modal  bg-white',
                     className,
                   )}
                 >

@@ -16,7 +16,7 @@ import Footer from "../../components/Footer";
 import { CartContext } from "../../contexts/CartContext";
 import useLaunchFilter from "../../hooks/useLaunchFilter";
 import toast from "react-hot-toast";
-import Modal from "../../components/modal/Modal"; 
+import Modal from "../../components/modal/modal"; 
 
 
 const Home = () => {
@@ -28,7 +28,7 @@ const Home = () => {
   const [open, setOpen] = useState(false)
   const [isOpen, setModalOpened] = useState(false);
   const [data, setData] = useState(null); // Estado para armazenar os dados da API
-
+  const [selectedProduct, setSelectedProduct] = useState(null); // novo estado 
   const [searchTerm, setSearchTerm] = useState("");
   const handleSearch = (event) => {
     setSearchTerm(event.target.value.toLowerCase());
@@ -154,6 +154,11 @@ const Home = () => {
     console.log(product)
  }
 
+ function openModal(product) {
+  setSelectedProduct(product);
+  setModalOpened(true)
+ }
+
   if (loading) return <p>Carregando...</p>;
   if (error) return <p>Ocorreu um erro: {error.message}</p>;
 
@@ -205,16 +210,31 @@ const Home = () => {
                         <FaShoppingCart />
                         COMPRAR
                       </button>
-                      <button onClick={() => setModalOpened(true)} className="text-black">Clique Aqui</button>
+                      <button onClick={() => openModal(product)} className="text-black">Clique Aqui</button>
+                      {isOpen && selectedProduct && (
+                         <Modal  isOpen={isOpen} setModalOpened={setModalOpened}>
+                            <div className="flex flex-col justify-center items-center gap-8 p-6">
+                                <img
+                                  src={selectedProduct.image}
+                                  alt={selectedProduct.title}
+                                  
+                                  className=" mb-16 w-40 h-40 "
+                                >
+                                </img>
+                                <div>
+                                  <h3 className="text-center font-bold mb-8 w-52 m-auto">{selectedProduct.title}</h3>
+                                  <p className="max-w-2xl text-justify m-auto mb-8">{selectedProduct.description}</p>
+                                  <button className="bg-green-600 text-white m-auto w-2xl rounded-md h-10 font-bold flex items-center justify-center gap-3" onClick={() => handleAddCartItem(product)}>
+                                    <FaShoppingCart />
+                                    COMPRAR
+                                  </button>
+                                  
 
-{isOpen && (
-  <Modal isOpen={isOpen} setModalOpened={setModalOpened}>
-    <h2 className="W-8 text-center">{product.title}</h2>
-    <p>{data?.body}</p>
-  </Modal>
-)}
+                                </div>
+                            </div>
+                         </Modal>
+                      )}
 
-               
                     </article>
                 </div>
               ))}
