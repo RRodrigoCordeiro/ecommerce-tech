@@ -7,7 +7,7 @@ import { FaCircleChevronLeft } from "react-icons/fa6";
 import { FaChevronCircleRight } from "react-icons/fa";
 import { FaTruck } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
-import Header from "../../components/Header";
+import Header from "../../components/Header"; 
 import Carrossel from "../../components/Carrossel";
 import Depoimentos from "../../components/Depoimentos";
 import { useNavigate, useParams } from "react-router-dom";
@@ -16,7 +16,7 @@ import Footer from "../../components/Footer";
 import { CartContext } from "../../contexts/CartContext";
 import useLaunchFilter from "../../hooks/useLaunchFilter";
 import toast from "react-hot-toast";
-import Modal from "../../components/modal/modal"; 
+import Modal from "../../components/modal"; 
 
 
 const Home = () => {

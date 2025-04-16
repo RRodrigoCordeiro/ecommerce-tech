@@ -2,7 +2,7 @@
     "products": [
       {
         "id": 1,
-        "name": "Notebook Gamer X500",
+        "title": "Notebook Gamer X500",
         "description": "Notebook potente para jogos com 16GB de RAM e placa gráfica RTX 3070.",
         "price": 7500.00,
         "launch": true,
@@ -13,7 +13,7 @@
       },
       {
         "id": 2,
-        "name": "Smartphone Super 10",
+        "title": "Smartphone Super 10",
         "description": "Smartphone com câmera de 108MP e bateria de longa duração.",
         "price": 3000.00,
         "launch": true,
@@ -24,7 +24,7 @@
       },
       {
         "id": 3,
-        "name": "Cadeira Ergonômica",
+        "title": "Cadeira Ergonômica",
         "description": "Cadeira ergonômica confortável para longas horas de uso.",
         "price": 800.00,
         "launch": false,
@@ -35,7 +35,7 @@
       },
       {
         "id": 4,
-        "name": "Tablet Pro 8",
+        "title": "Tablet Pro 8",
         "description": "Tablet com tela de 12.9 polegadas e excelente desempenho.",
         "price": 2500.00,
         "launch": true,
@@ -45,7 +45,7 @@
         "stock": 8
       }, {
         "id": 5,
-        "name": "Tablet Pro 8",
+        "title": "Tablet Pro 8",
         "description": "Tablet com tela de 12.9 polegadas e excelente desempenho.",
         "price": 2500.00,
         "launch": false,
@@ -56,7 +56,7 @@
       },
       {
         "id": 6,
-        "name": "Tablet Pro 8",
+        "title": "Tablet Pro 8",
         "description": "Tablet com tela de 12.9 polegadas e excelente desempenho.",
         "price": 2500.00,
         "launch": true,
@@ -67,7 +67,7 @@
       },
       {
         "id": 7,
-        "name": "Tablet Pro 8",
+        "title": "Tablet Pro 8",
         "description": "Tablet com tela de 12.9 polegadas e excelente desempenho.",
         "price": 2500.00,
         "launch": false,
@@ -78,7 +78,7 @@
       },
       {
         "id": 8,
-        "name": "Tablet Pro 8",
+        "title": "Tablet Pro 8",
         "description": "Tablet com tela de 12.9 polegadas e excelente desempenho.",
         "price": 2500.00,
         "launch": true,

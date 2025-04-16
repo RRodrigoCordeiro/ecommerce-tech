@@ -1,11 +1,14 @@
 import React, { useState,useContext  } from "react";
 import { FaTruck } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
+import Header from "../../components/Header"; 
+import Footer from "../../components/Footer"; 
 import useLaunchFilter from "../../hooks/useLaunchFilter";
 import { CartContext } from "../../contexts/CartContext";
 import toast from "react-hot-toast";
+import { FiVideo } from "react-icons/fi";
+import Modal from "../../components/modal";
+
 
 const Launch = () => {
   const {
@@ -16,16 +19,23 @@ const Launch = () => {
     getFilteredProducts,
   } = useLaunchFilter();
   const { addItemCart } = useContext(CartContext)
+  const [isOpen, setModalOpened] = useState(false)
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
   function handleAddCartItem(product){
     addItemCart(product)
     toast.success("Produto adicionado no carrinho")
     console.log(product)
  }
+ function openModal(product) {
+  setSelectedProduct(product);
+  setModalOpened(true)
+ }
 
   return (
     <div>
       <Header searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+ 
 
       <div className="container mx-auto p-4">
         <div className="mb-4">
@@ -51,11 +61,11 @@ const Launch = () => {
             >
               <article className="bg-white text-white rounded-2xl p-6 space-y-2 h-full flex flex-col w-full">
                 <h3 className="text-black font-bold text-xl mb-8">
-                  {product.name}
+                  {product.title}
                 </h3>
                 <img
                   src={product.image}
-                  alt={product.name}
+                  alt={product.title}
                   width="100"
                   className="m-auto mb-16"
                 />
@@ -74,9 +84,34 @@ const Launch = () => {
                   <FaShoppingCart />
                   COMPRAR
                 </button>
+                <button className="text-black" onClick={() => openModal(product)}>
+                    Clique aqui
+               </button>
               </article>
+              {isOpen && selectedProduct && (
+                <Modal  isOpen={isOpen} setModalOpened={setModalOpened}>
+                  <div>
+                    <img
+                        src={selectedProduct.image}
+                        alt={selectedProduct.title}
+                    />
+                    <div>
+                      <h3 className="text-center font-bold mb-8 w-56  m-auto">{selectedProduct.title}</h3>
+                      <p className="max-w-2xl text-center  md:w-full block m-auto mb-8">{selectedProduct.description}</p>
+                      <button 
+                         className="bg-green-600 text-white m-auto  w-56 md:w-2xl rounded-md h-10 font-bold flex items-center justify-center gap-3 mb-8" 
+                         onClick={() => handleAddCartItem(selectedProduct)}>
+                         Comprar
+                      </button>
+                    </div>
+                  </div>
+    
+    
+                </Modal>
+              )}
             </div>
           ))}
+          
         </div>
       </div>
       <Footer />

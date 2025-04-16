@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "../App.css";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade } from "swiper/modules";
 

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
+import Header from "../../components/Header"; 
+import Footer from "../../components/Footer"; 
 import { CartContext } from "../../contexts/CartContext";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";

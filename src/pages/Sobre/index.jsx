@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
+import Header from "../../components/Header"; 
+import Footer from "../../components/Footer"; 
 import { FaPeopleGroup, FaLocationDot, FaBoxOpen } from "react-icons/fa6";
 import { IoPerson } from "react-icons/io5";
-import InfiniteScroll from "../../components/InfiniteScroll";
+import InfiniteScroll from "../../components/InfiniteScroll"; 
 import useElement from "../../hooks/useElement";
 
 const Sobre = () => {

@@ -11,7 +11,7 @@ import { IoMdMic } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 
-import { CartContext } from "../contexts/CartContext"
+import { CartContext } from "../../contexts/CartContext"; 
 
 const Header = ({ searchQuery, setSearchQuery }) => {
   const [dropdownVisible, setDropdownVisible] = useState(null);

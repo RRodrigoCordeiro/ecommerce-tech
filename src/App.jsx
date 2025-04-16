@@ -1,11 +1,11 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from './pages/Home/Home'
-import Launch from './pages/Launch/Launch'
-import Sac from './pages/SAC/Sac'
-import Sobre from './pages/Sobre/Sobre'
-import Carrinho from "./pages/Carrinho/Carrinho"
-import ProductDetail from './pages/detail/ProductDetail' 
+import Home from './pages/Home'
+import Launch from './pages/Launch'
+import Sac from './pages/SAC'
+import Sobre from './pages/Sobre'
+import Carrinho from "./pages/Carrinho"
+import ProductDetail from './pages/detail' 
 
 
 const App = () => {
