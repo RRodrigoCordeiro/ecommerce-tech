@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState,useContext  } from "react";
 import { FaTruck } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import useLaunchFilter from "../../hooks/useLaunchFilter";
+import { CartContext } from "../../contexts/CartContext";
+import toast from "react-hot-toast";
 
 const Launch = () => {
   const {
@@ -13,6 +15,13 @@ const Launch = () => {
     setSearchQuery,
     getFilteredProducts,
   } = useLaunchFilter();
+  const { addItemCart } = useContext(CartContext)
+
+  function handleAddCartItem(product){
+    addItemCart(product)
+    toast.success("Produto adicionado no carrinho")
+    console.log(product)
+ }
 
   return (
     <div>
@@ -61,7 +70,7 @@ const Launch = () => {
                 </p>
                 <p className="text-gray-400 text-sm -mt-2">À vista no PIX</p>
 
-                <button className="bg-green-600 rounded-md h-10 font-bold flex items-center justify-center gap-3">
+                <button className="bg-green-600 rounded-md h-10 font-bold flex items-center justify-center gap-3" onClick={() => handleAddCartItem(product)}>
                   <FaShoppingCart />
                   COMPRAR
                 </button>

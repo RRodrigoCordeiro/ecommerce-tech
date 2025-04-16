@@ -2,6 +2,7 @@ import { Dialog, Transition } from '@headlessui/react'
 import { twMerge } from 'tailwind-merge'
 import { Dispatch, Fragment, SetStateAction } from 'react'
 import React from 'react'
+import { FaTimes } from 'react-icons/fa'
 
 type Props = {
   children: React.ReactNode
@@ -19,6 +20,7 @@ export default function Modal({
   function closeModal() {
     setModalOpened(false)
   }
+  console.log("Renderizou Modal")
 
   return (
     <>
@@ -49,10 +51,16 @@ export default function Modal({
               >
                 <Dialog.Panel
                   className={twMerge(
-                    'w-full transform overflow-hidden rounded-2x text-left align-middle shadow-xl transition-all bg-background-modal  bg-white',
+                    'w-4xl transform overflow-hidden rounded-2x text-left align-middle shadow-xl transition-all bg-background-modal  bg-white',
                     className,
                   )}
                 >
+                  <button
+                  className="absolute top-2 right-2 text-2xl text-gray-500 hover:text-gray-800"
+                  onClick={closeModal}
+                >
+                  <FaTimes />
+                </button>
                   {children}
                 </Dialog.Panel>
               </Transition.Child>
