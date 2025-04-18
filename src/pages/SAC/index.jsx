@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer"; 
-import useElement from "../../hooks/useElement";
+import Header from "../../components/Header"; 
+import useElement from "../../hooks/filter/useElement";
 
 const Accordion = ({ title, content, isOpen, toggle }) => (
   <div>
@@ -612,7 +611,7 @@ const Sac = () => {
           ))}
         </div>
       )} */}
-      <Footer />
+     
     </div>
   );
 };

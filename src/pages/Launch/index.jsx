@@ -2,12 +2,11 @@ import React, { useState,useContext  } from "react";
 import { FaTruck } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import Header from "../../components/Header"; 
-import Footer from "../../components/Footer"; 
-import useLaunchFilter from "../../hooks/useLaunchFilter";
-import { CartContext } from "../../contexts/CartContext";
+import useLaunchFilter from "../../hooks/filter/useLaunchFilter";
+import { CartContext } from "../../contexts/CartContext"; 
 import toast from "react-hot-toast";
 import { FiVideo } from "react-icons/fi";
-import Modal from "../../components/modal";
+import Modal from "../../components/modal"; 
 
 
 const Launch = () => {
@@ -18,6 +17,7 @@ const Launch = () => {
     setSearchQuery,
     getFilteredProducts,
   } = useLaunchFilter();
+
   const { addItemCart } = useContext(CartContext)
   const [isOpen, setModalOpened] = useState(false)
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -26,11 +26,12 @@ const Launch = () => {
     addItemCart(product)
     toast.success("Produto adicionado no carrinho")
     console.log(product)
- }
- function openModal(product) {
-  setSelectedProduct(product);
-  setModalOpened(true)
- }
+  }
+
+  function openModal(product) {
+    setSelectedProduct(product);
+    setModalOpened(true)
+  }
 
   return (
     <div>
@@ -105,16 +106,12 @@ const Launch = () => {
                       </button>
                     </div>
                   </div>
-    
-    
                 </Modal>
               )}
             </div>
           ))}
-          
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

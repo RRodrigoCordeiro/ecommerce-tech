@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import Header from "../../components/Header"; 
-import Footer from "../../components/Footer"; 
 import { CartContext } from "../../contexts/CartContext";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -34,16 +33,17 @@ const Carrinho = () => {
         </div>
       )}
 
-      
-
       {cart.map((item) => (
         <section
           key={item.id}
           className="flex flex-col md:flex-row items-center justify-around border-b-2 border-gray-300 space-y-10"
         >
-          <img src={item.image} alt={item.title} className="w-28 mt-8" />
+          <img
+            src={item.image} 
+            alt={item.title} 
+            className="w-28 mt-8"
+          />
           <strong> Preço: {item.price}</strong>
-
           <div className="flex items-center justify-center gap-3 ">
             <button className="bg-slate-600 px-2 rounded text-white font-medium flex items-center justify-center" onClick={() => removeItemCart(item)}>
               -
@@ -55,7 +55,7 @@ const Carrinho = () => {
           </div>
 
           <strong className="float-right">
-            SubTotal: {" "}
+            SubTotal:
             {item.total.toLocaleString("pt-BR", {
               style: "currency",
               currency: "BRL",
@@ -64,9 +64,6 @@ const Carrinho = () => {
         </section>
       ))}
 
-
-      {/* {cart.length !== 0 && <p className="font-bold mt-4">Total: {total}</p>} */}
-      
       {cart.length !== 0 && (
         <div>
           <p className="font-bold mt-4 ml-10">Total: {total}</p>
@@ -74,26 +71,6 @@ const Carrinho = () => {
           <p className="text-center text-white bg-green-600 rounded-md w-40 m-auto p-2 mt-28">Finalizar compras</p>
         </div> 
       )}
-
-      {cart.length !== 0 && total > 250  && (
-        <p>ATENÇÃO </p>
-
-      )}
-
-      {discount > 0 && (
-        <p>desconto feito {discount}</p>
-      )}
-
-      
-
-
-
-
-   
-
-     
-
-      <Footer />
     </div>
   );
 };

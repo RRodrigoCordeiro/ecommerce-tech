@@ -1,15 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import Header from "../../components/Header"; 
-import Footer from "../../components/Footer"; 
 import { FaPeopleGroup, FaLocationDot, FaBoxOpen } from "react-icons/fa6";
 import { IoPerson } from "react-icons/io5";
 import InfiniteScroll from "../../components/InfiniteScroll"; 
-import useElement from "../../hooks/useElement";
+import useElement from "../../hooks/filter/useElement";
 
 const Sobre = () => {
-  // const [filtro, setFiltro] = useState('');
-
-  const { filtro, setFiltro, filtrarTexto } = useElement();
+  const { 
+    filtro,
+    setFiltro,
+    filtrarTexto
+  } = useElement();
 
   let imgsCarrosel = [
     { srcImagem: "/images/GoogleLogo.png", altImagem: "logo do Google" },
@@ -108,7 +109,7 @@ const Sobre = () => {
         />
       )}
 
-      <Footer />
+     
     </div>
   );
 };

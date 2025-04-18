@@ -6,6 +6,7 @@ import Sac from './pages/SAC'
 import Sobre from './pages/Sobre'
 import Carrinho from "./pages/Carrinho"
 import ProductDetail from './pages/detail' 
+import { Layout } from './layout'
 
 
 const App = () => {
@@ -13,13 +14,15 @@ const App = () => {
 
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/launch' element={<Launch/>} />
-        <Route path='/sac' element={<Sac/>} />
-        <Route path='/sobre' element={<Sobre/>} />
-        <Route path='/carrinho' element={<Carrinho/>} />
-        <Route path='/detail/:id' element={<ProductDetail/>} />
-        <Route path='*' element={<h1>Not Found</h1>} />
+        <Route element={<Layout/>} >
+          <Route path='/' element={<Home/>} />
+          <Route path='/launch' element={<Launch/>} />
+          <Route path='/sac' element={<Sac/>} />
+          <Route path='/sobre' element={<Sobre/>} />
+          <Route path='/carrinho' element={<Carrinho/>} />
+          <Route path='/detail/:id' element={<ProductDetail/>} />
+        </Route>
+          <Route path='*' element={<h1>Not Found</h1>} />
       </Routes>
     </BrowserRouter>
     

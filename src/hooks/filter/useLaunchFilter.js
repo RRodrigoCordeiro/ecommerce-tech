@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import productsData from "../data/products.json";  
+import productsData from "../../data/products.json";  
 
 const useLaunchFilter = () => {
   const [filter, setFilter] = useState("all");
@@ -17,7 +17,7 @@ const useLaunchFilter = () => {
 
     if (searchQuery) {
       filteredProducts = filteredProducts.filter((product) =>
-        product.name.toLowerCase().includes(searchQuery.toLowerCase())
+        product.title.toLowerCase().includes(searchQuery.toLowerCase())
       );
     }
 

@@ -10,11 +10,9 @@ import { FaShoppingCart } from "react-icons/fa";
 import Header from "../../components/Header"; 
 import Carrossel from "../../components/Carrossel";
 import Depoimentos from "../../components/Depoimentos";
-import { useNavigate, useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import Footer from "../../components/Footer";
 import { CartContext } from "../../contexts/CartContext";
-import useLaunchFilter from "../../hooks/useLaunchFilter";
+import useLaunchFilter from "../../hooks/filter/useLaunchFilter"; 
 import toast from "react-hot-toast";
 import Modal from "../../components/modal"; 
 
@@ -421,7 +419,7 @@ const Home = () => {
 
       <Depoimentos />
 
-      <Footer />
+      
     </div>
   );
 };
