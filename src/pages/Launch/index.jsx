@@ -5,7 +5,6 @@ import Header from "../../components/Header";
 import useLaunchFilter from "../../hooks/filter/useLaunchFilter";
 import { CartContext } from "../../contexts/CartContext"; 
 import toast from "react-hot-toast";
-import { FiVideo } from "react-icons/fi";
 import Modal from "../../components/modal"; 
 
 
