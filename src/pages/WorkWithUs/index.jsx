@@ -1,9 +1,9 @@
 import React from 'react'
 
-const TrabalheConosco = () => {
+const WorkWithUs = () => {
   return (
     <div>TrabalheConosco</div>
   )
 }
 
-export default TrabalheConosco
+export default WorkWithUs

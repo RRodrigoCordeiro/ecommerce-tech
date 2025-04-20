@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade } from "swiper/modules";
 
-const Carrossel = () => {
+const Carousel = () => {
   const [slidesPerView, setSlidesPerView] = useState(1);
 
   const data = [
@@ -53,4 +53,4 @@ const Carrossel = () => {
   );
 };
 
-export default Carrossel;
+export default Carousel;

@@ -6,7 +6,7 @@ import { FaChevronCircleRight } from "react-icons/fa";
 import React from "react";
 import banner01 from "/images/banner01.png";
 
-const Depoimentos = () => {
+const Testimonials = () => {
   const testimonials = [
     {
       content:
@@ -106,4 +106,4 @@ const Depoimentos = () => {
   );
 };
 
-export default Depoimentos;
+export default Testimonials;

@@ -18,8 +18,8 @@ const PageRoutes = () => {
           <Route path='/' element={<Home/>} />
           <Route path='/launch' element={<Launch/>} />
           <Route path='/sac' element={<Sac/>} />
-          <Route path='/sobre' element={<Sobre/>} />
-          <Route path='/carrinho' element={<Carrinho/>} />
+          <Route path='/about' element={<Sobre/>} />
+          <Route path='/cart' element={<Carrinho/>} />
           <Route path='/detail/:id' element={<ProductDetail/>} />
         </Route>
           <Route path='*' element={<h1>Not Found</h1>} />

@@ -4,7 +4,7 @@ import { CartContext } from "../../contexts/CartContext";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-const Carrinho = () => {
+const Cart = () => {
   const { cart, total, addItemCart,  removeItemCart, discount } = useContext(CartContext);
   const [hasItems, setHasItems] = useState();
 
@@ -75,4 +75,4 @@ const Carrinho = () => {
   );
 };
 
-export default Carrinho;
+export default Cart;

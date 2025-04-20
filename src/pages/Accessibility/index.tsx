@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Acessibilidade = () => {
+const Accessibility = () => {
   return (
     <div>Acessibilidade</div>
   )
 }
 
-export default Acessibilidade
+export default Accessibility

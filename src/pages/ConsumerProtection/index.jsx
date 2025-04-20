@@ -1,9 +1,9 @@
 import React from 'react'
 
-const DefesaConsumidor = () => {
+const ConsumerProtection = () => {
   return (
     <div>DefesaConsumidor</div>
   )
 }
 
-export default DefesaConsumidor
+export default ConsumerProtection

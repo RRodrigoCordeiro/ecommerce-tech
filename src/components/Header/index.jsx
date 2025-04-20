@@ -95,7 +95,7 @@ const Header = ({ searchQuery, setSearchQuery }) => {
 
         <div className="flex flex-row gap-10 mt-8 mb-3 md:mt-0 md:mb-0 md:gap-5 lg:gap-12">
           <div className="flex flex-col items-center ">
-            <Link to="/sobre">
+            <Link to="/about">
               <MdOutlineQuestionAnswer size={28} className="ml-5" />
               <p>Sobre nós</p>
             </Link>
@@ -107,7 +107,7 @@ const Header = ({ searchQuery, setSearchQuery }) => {
             </Link>
           </div>
           <div className="flex flex-col items-center">
-            <Link to="/carrinho">
+            <Link to="/cart">
               {cartAmount > 0 && (
                 <span className="-mt-5 ml-7 px-2.5 bg-sky-500 rounded-full w-6 h-6 flex items-center justify-center text-white text-xs">{cartAmount}</span>
               )}

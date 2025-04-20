@@ -8,13 +8,14 @@ import { FaChevronCircleRight } from "react-icons/fa";
 import { FaTruck } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import Header from "../../components/Header"; 
-import Carrossel from "../../components/Carousel";
-import Depoimentos from "../../components/Testimonials"; 
+import Carousel from "../../components/Carousel";
+import Testimonials from "../../components/Testimonials"; 
 import { Link } from "react-router-dom";
 import { CartContext } from "../../contexts/CartContext";
 import useLaunchFilter from "../../hooks/filter/useLaunchFilter"; 
 import toast from "react-hot-toast";
 import Modal from "../../components/modal"; 
+import Attendant from "../Attendant";
 
 
 const Home = () => {
@@ -163,7 +164,7 @@ const Home = () => {
   return (
     <div>
       <Header searchQuery={searchTerm} setSearchQuery={setSearchTerm} />
-      <Carrossel />
+      <Carousel />
 
       <div className="container mx-auto bg-[#F2F2F2] mt-28">
         <div className="relative">
@@ -417,7 +418,9 @@ const Home = () => {
         </Link>
       </div>
 
-      <Depoimentos />
+      <Testimonials />
+      <Attendant/>
+      
 
       
     </div>
