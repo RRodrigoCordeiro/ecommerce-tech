@@ -1,0 +1,199 @@
+{
+    "notebook": [
+      {
+        "id": 1,
+        "title": "Notebook Gamer X500",
+        "description": "Notebook potente para jogos com 16GB de RAM e placa gráfica RTX 3070.",
+        "price": 7500.00,
+        "launch": true,
+        "promotion": false,
+        "image": "/images/notebook-gamer-x500.jpg",
+        "rating": 4.5,
+        "stock": 10
+      },
+      {
+        "id": 2,
+        "title": "Smartphone Super 10",
+        "description": "Smartphone com câmera de 108MP e bateria de longa duração.",
+        "price": 3000.00,
+        "launch": true,
+        "promotion": true,
+        "image": "/images/smartphone-super-10.jpg",
+        "rating": 4.7,
+        "stock": 20
+      },
+      {
+        "id": 3,
+        "title": "Cadeira Ergonômica",
+        "description": "Cadeira ergonômica confortável para longas horas de uso.",
+        "price": 800.00,
+        "launch": false,
+        "promotion": true,
+        "image": "/images/cadeira-ergonomica.jpg",
+        "rating": 4.0,
+        "stock": 5
+      },
+      {
+        "id": 4,
+        "title": "Tablet Pro 8",
+        "description": "Tablet com tela de 12.9 polegadas e excelente desempenho.",
+        "price": 2500.00,
+        "launch": true,
+        "promotion": false,
+        "image": "/images/tablet-pro-8.jpg",
+        "rating": 4.3,
+        "stock": 8
+      }, {
+        "id": 5,
+        "title": "Tablet Pro 8",
+        "description": "Tablet com tela de 12.9 polegadas e excelente desempenho.",
+        "price": 2500.00,
+        "launch": false,
+        "promotion": true,
+        "image": "/images/tablet-pro-8.jpg",
+        "rating": 4.3,
+        "stock": 8
+      },
+      {
+        "id": 6,
+        "title": "Tablet Pro 8",
+        "description": "Tablet com tela de 12.9 polegadas e excelente desempenho.",
+        "price": 2500.00,
+        "launch": true,
+        "promotion": false,
+        "image": "/images/tablet-pro-8.jpg",
+        "rating": 4.3,
+        "stock": 8
+      },
+      {
+        "id": 7,
+        "title": "Tablet Pro 8",
+        "description": "Tablet com tela de 12.9 polegadas e excelente desempenho.",
+        "price": 2500.00,
+        "launch": false,
+        "promotion": true,
+        "image": "/images/tablet-pro-8.jpg",
+        "rating": 4.3,
+        "stock": 8
+      },
+      {
+        "id": 8,
+        "title": "Tablet Pro 8",
+        "description": "Tablet com tela de 12.9 polegadas e excelente desempenho.",
+        "price": 2500.00,
+        "launch": true,
+        "promotion": false,
+        "image": "/images/tablet-pro-8.jpg",
+        "rating": 4.3,
+        "stock": 8
+      }
+    ],
+
+    "computer": [
+        {
+            "id": 1,
+            "title": "Computador Gamer X2000",
+            "description": "Computador de alta performance para jogos, equipado com Intel i9 e placa gráfica RTX 4080.",
+            "price": 12000.00,
+            "launch": true,
+            "promotion": false,
+            "image": "/images/computador-gamer-x2000.jpg",
+            "rating": 4.8,
+            "stock": 15
+        },
+        {
+            "id": 2,
+            "title": "Desktop Executivo 5000",
+            "description": "Computador ideal para escritórios e produtividade, com processador Intel i7 e 16GB de RAM.",
+            "price": 5000.00,
+            "launch": true,
+            "promotion": true,
+            "image": "/images/desktop-executivo-5000.jpg",
+            "rating": 4.6,
+            "stock": 25
+        },
+        {
+            "id": 3,
+            "title": "All-in-One 27\" Pro",
+            "description": "Computador all-in-one com tela de 27 polegadas, perfeito para ambientes corporativos.",
+            "price": 4500.00,
+            "launch": false,
+            "promotion": true,
+            "image": "/images/all-in-one-27-pro.jpg",
+            "rating": 4.3,
+            "stock": 10
+        },
+        {
+            "id": 4,
+            "title": "MacBook Pro 16\"",
+            "description": "MacBook Pro de 16 polegadas, com chip M1 Pro e 32GB de RAM, ideal para profissionais criativos.",
+            "price": 15000.00,
+            "launch": true,
+            "promotion": false,
+            "image": "/images/macbook-pro-16.jpg",
+            "rating": 4.9,
+            "stock": 8
+        },
+        {
+            "id": 5,
+            "title": "PC Gamer Ultra 2025",
+            "description": "PC gamer com configurações topo de linha para jogos 4K, com RTX 4090 e 64GB de RAM.",
+            "price": 20000.00,
+            "launch": false,
+            "promotion": true,
+            "image": "/images/pc-gamer-ultra-2025.jpg",
+            "rating": 5.0,
+            "stock": 5
+        }
+    ],
+
+    "attendant": [
+        {
+            "id": 1,
+            "name": "Marcelo Silva",
+            "role": "Atendente de Vendas",
+            "email": "Marcelosilva@loja.com",
+            "phone": "(11) 98765-4321",
+            "image": "/images/atendente-joao.jpg",
+            "rating": 4.7,
+            "working_hours": "09:00 - 18:00"
+            
+        },
+        {
+            "id": 2,
+            "name": "Henrique Oliveira",
+            "role": "Atendente de Suporte",
+            "email": "Henrique.oliveira@loja.com",
+            "phone": "(11) 99876-5432",
+            "image": "/images/atendente-maria.jpg",
+            "rating": 4.9,
+            "working_hours": "10:00 - 19:00"
+           
+        },
+        {
+            "id": 3,
+            "name": "Fernada Pereira",
+            "role": "Atendente de Vendas",
+            "email": "Fernada.pereira@loja.com",
+            "phone": "(11) 91234-5678",
+            "image": "/images/atendente-carlos.jpg",
+            "rating": 4.3,
+            "working_hours": "08:00 - 17:00"
+            
+        },
+        {
+            "id": 4,
+            "name": "Joana Martins",
+            "role": "Atendente de Suporte",
+            "email": "Joana Martins@loja.com",
+            "phone": "(11) 93456-7890",
+            "image": "/images/atendente-fernanda.jpg",
+            "rating": 4.6,
+            "working_hours": "11:00 - 20:00"
+            
+        }
+    ]
+
+
+  }
+  
