@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import productsData from "../../../public/data/storeData.json"
+import productsData from "../../../public/data/products.json"
 
 const useLaunchFilter = () => {
   const [filter, setFilter] = useState("all");

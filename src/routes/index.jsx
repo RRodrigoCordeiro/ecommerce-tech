@@ -7,7 +7,7 @@ import Sobre from "../pages/About"
 import Carrinho from "../pages/Cart" 
 import ProductDetail from "../pages/detail" 
 import { Layout } from "../layout"
-
+import AttendantDetails from '../pages/Attendant/details'
 
 const PageRoutes = () => {
   return (
@@ -21,6 +21,7 @@ const PageRoutes = () => {
           <Route path='/about' element={<Sobre/>} />
           <Route path='/cart' element={<Carrinho/>} />
           <Route path='/detail/:id' element={<ProductDetail/>} />
+          <Route path='/attendantDetails/:id' element={<AttendantDetails/>} />
         </Route>
           <Route path='*' element={<h1>Not Found</h1>} />
       </Routes>

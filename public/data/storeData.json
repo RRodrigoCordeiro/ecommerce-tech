@@ -154,7 +154,7 @@
             "role": "Atendente de Vendas",
             "email": "Marcelosilva@loja.com",
             "phone": "(11) 98765-4321",
-            "image": "/images/atendente-joao.jpg",
+            "image": "/images/attendant1.png",
             "rating": 4.7,
             "working_hours": "09:00 - 18:00"
             
@@ -165,7 +165,7 @@
             "role": "Atendente de Suporte",
             "email": "Henrique.oliveira@loja.com",
             "phone": "(11) 99876-5432",
-            "image": "/images/atendente-maria.jpg",
+            "image": "/images/attendant2.png",
             "rating": 4.9,
             "working_hours": "10:00 - 19:00"
            
@@ -176,7 +176,7 @@
             "role": "Atendente de Vendas",
             "email": "Fernada.pereira@loja.com",
             "phone": "(11) 91234-5678",
-            "image": "/images/atendente-carlos.jpg",
+            "image": "/images/attendant3.png",
             "rating": 4.3,
             "working_hours": "08:00 - 17:00"
             
@@ -187,7 +187,7 @@
             "role": "Atendente de Suporte",
             "email": "Joana Martins@loja.com",
             "phone": "(11) 93456-7890",
-            "image": "/images/atendente-fernanda.jpg",
+            "image": "/images/attendant4.png",
             "rating": 4.6,
             "working_hours": "11:00 - 20:00"
             

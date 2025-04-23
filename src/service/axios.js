@@ -13,13 +13,3 @@ export const fetchComputer = async () => {
 };
 
 
-
-// export const getImagemRelacaoRvp = async (): Promise<ImagemRelacao[]> => {
-  
-//     const response = await axios.get(`${baseUrl}/rvp/sp/vincular/`, {
-      
-//     })
-  
-//     return response.data
-//   }
-  

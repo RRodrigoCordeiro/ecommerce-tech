@@ -1,11 +1,11 @@
 import React, { useState,useContext  } from "react";
 import { FaTruck } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
-import Header from "../../components/Header"; 
-import useLaunchFilter from "../../hooks/filter/useLaunchFilter";
-import { CartContext } from "../../contexts/CartContext"; 
+import Header from "../../components/Header";
+import useLaunchFilter from "../../hooks/filter/useLaunchFilter"
+import { CartContext } from "../../contexts/CartContext";  
 import toast from "react-hot-toast";
-import Modal from "../../components/modal"; 
+import Modal from "../../components/modal" 
 
 
 const Launch = () => {
