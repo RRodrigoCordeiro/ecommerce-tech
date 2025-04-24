@@ -1,7 +1,7 @@
 import { useState } from "react";
 import React from "react";
 import { useAttendant } from "../../hooks/useAttendant";
-import { useComputer } from "../../hooks/useComputer";
+import { Link } from 'react-router-dom';
 
 const Attendant = () => {
   const { data: attendants } = useAttendant();
@@ -17,6 +17,7 @@ const Attendant = () => {
       <div className="flex flex-col md:flex-row items-center justify-center md:gap-28 mt-16 mb-16">
         {attendants?.map((attendant) => (
           <div key={attendant.id}>
+             <Link to={`/attendantDetails/${attendant.id}`}>
             <div>
               <img
                 src={attendant.image}
@@ -25,6 +26,7 @@ const Attendant = () => {
               />
               <p className="text-center mt-3 mb-3">{attendant.name}</p>
             </div>
+            </Link>
           </div>
         ))}
       </div>
