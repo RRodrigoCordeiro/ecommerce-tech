@@ -14,9 +14,6 @@ export const fetchAttendantById = async (id) => {
 };
 
 
-
-
-
 export const fetchComputer = async () => {
   const response = await axiosInstance.get("/storeData.json");
   return response.data.computer;

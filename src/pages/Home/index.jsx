@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../../contexts/CartContext";
 import useLaunchFilter from "../../hooks/filter/useLaunchFilter"; 
 import toast from "react-hot-toast";
-import Modal from "../../components/modal"; 
+import Modal from "../../components/Modal"; 
 import Attendant from "../Attendant";
 
 
