@@ -12,67 +12,50 @@ import Carousel from "../../components/Carousel";
 import Testimonials from "../../components/Testimonials"; 
 import { Link } from "react-router-dom";
 import { CartContext } from "../../contexts/CartContext";
-import useLaunchFilter from "../../hooks/filter/useLaunchFilter"; 
 import toast from "react-hot-toast";
 import Modal from "../../components/Modal"; 
 import Attendant from "../Attendant";
+import {useComputer} from "../../hooks/useComputer"
+import {useNotebook} from "../../hooks/useNotebook"
+
 
 
 const Home = () => {
   const [products, setProducts] = useState([]);
-  const [notebooks, setNotebooks] = useState([]);
-  const [computador, setComputador] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [open, setOpen] = useState(false)
   const [isOpen, setModalOpened] = useState(false);
-  const [data, setData] = useState(null); // Estado para armazenar os dados da API
   const [selectedProduct, setSelectedProduct] = useState(null); // novo estado 
   const [searchTerm, setSearchTerm] = useState("");
-  const handleSearch = (event) => {
-    setSearchTerm(event.target.value.toLowerCase());
-  };
+  const {data: computers, isLoading, error} = useComputer();
+  const {data: notebooks} = useNotebook();
+  
+  
 
   const filteredProducts = products.filter((product) =>
     product.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  const filteredNotebook = notebooks.filter((notebook) =>
-    notebook.title.toLowerCase().includes(searchTerm)
+  const filteredNotebook = notebooks?.filter((notebook) =>
+    notebook.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  const filterComputador = computador.filter((computador) =>
-    computador.title.toLowerCase().includes(searchTerm)
+  const filterComputador = computers?.filter((computador) =>
+    computador.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
-
-  useEffect(() => {
-    axios
-      .get("https://fakestoreapi.com/products/category/electronics")
-      .then((response) => {
-        setProducts(response.data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error(err);
-        setError(err);
-        setLoading(false);
-      });
-  }, []);
 
   useEffect(() => {
     const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          "https://api.mercadolibre.com/sites/MLB/search?q=notebook"
-        );
-        setNotebooks(response.data.results);
-      } catch (error) {
-        console.log("Erro ao buscar API", error);
+      try{
+        const response = await axios.get("https://fakestoreapi.com/products/category/electronics")
+        setProducts(response.data)
+        setLoading(false);
+      } catch (error){
+        console.log("Erro ao buscar API", error)
       }
-    };
+    }
+    fetchData()
+  },[])
 
-    fetchData();
-  }, []);
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: false,
@@ -91,25 +74,6 @@ const Home = () => {
     emblaApi?.scrollNext();
   }
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          "https://api.mercadolibre.com/sites/MLB/search?q=computador"
-        );
-
-        const itensFiltrados = response.data.results.filter(
-          (item) =>
-            item.title.toLowerCase().includes("computador") ||
-            item.title.toLowerCase().includes("pc")
-        );
-        setComputador(itensFiltrados);
-      } catch (error) {
-        console.log("erro ao buscar API", error);
-      }
-    };
-    fetchData();
-  }, []);
 
   const [emblaRef2, emblaApi2] = useEmblaCarousel({
     loop: false,
@@ -175,8 +139,7 @@ const Home = () => {
                   key={product.id}
                   className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(100%/2)] lg:flex-[0_0_calc(100%/3)] px-3 bg-b"
                 >
-                    <article className="bg-white text-white rounded-2xl p-6 space-y-2 h-full flex flex-col w-full  ">
-                      <Link to={`/detail/${product.id}`} className="flex flex-col flex-grow">
+                    <article className="bg-white text-white rounded-2xl p-6 space-y-2 h-full flex flex-col w-full  " onClick={() => openModal(product)}>
                         <div className=" flex items-start justify-between">
                           <div className="flex gap-3">
                             <h3 className="text-black font-bold text-xl mb-8">
@@ -204,14 +167,11 @@ const Home = () => {
                         <p className="text-gray-400 text-sm -mt-2">
                           À vista no PIX
                         </p>
-                      </Link>
+                     
                       <button className="bg-green-600 rounded-md h-10 font-bold flex items-center justify-center gap-3" onClick={() => handleAddCartItem(product)}>
                         <FaShoppingCart />
                         COMPRAR
-                      </button>
-                      <button onClick={() => openModal(product)} className="text-black">Clique Aqui</button>
-                     
-
+                      </button>           
                     </article>
                 </div>
               ))}
@@ -268,22 +228,22 @@ const Home = () => {
       <div className="relative">
         <div className="overflow-hidden" ref={emblaRef2}>
           <div className="flex ">
-            {filteredNotebook.map((item) => (
+            {filterComputador.map((computer) => (
               <div
-                key={item.id}
+                key={computer.id}
                 className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(100%/2)] lg:flex-[0_0_calc(100%/3)] px-3"
               >
                 <article className="bg-white text-white rounded-2xl p-6 space-y-2 h-full flex flex-col w-full ">
                   <div className=" flex items-start justify-between">
                     <div className="flex gap-3">
                       <h3 className="text-black font-bold text-xl mb-8">
-                        {item.title}
+                        {computer.title}
                       </h3>
                     </div>
                   </div>
                   <img
-                    src={item.thumbnail}
-                    alt={item.title}
+                    src={computer.image}
+                    alt={computer.title}
                     width="100"
                     className="m-auto mb-16"
                   ></img>
@@ -292,15 +252,13 @@ const Home = () => {
                     <p>Frete Grátis</p>
                   </div>
 
-                  <p className="text-gray-800 text-sm mb-4">
-                    {item.description}
-                  </p>
+
                   <p className="text-green-600 font-bold text-lg ">
-                    R$ {item.price}
+                    R$ {computer.price}
                   </p>
                   <p className="text-gray-400 text-sm -mt-2">À vista no PIX</p>
 
-                  <button className="bg-green-600 rounded-md h-10 font-bold flex items-center justify-center gap-3">
+                  <button className="bg-green-600 rounded-md h-10 font-bold flex items-center justify-center gap-3"  onClick={() => handleAddCartItem(computer)}>
                     <FaShoppingCart />
                     COMPRAR
                   </button>
@@ -335,7 +293,7 @@ const Home = () => {
       <div className="relative">
         <div className="overflow-hidden" ref={emblaRef3}>
           <div className="flex ">
-            {filterComputador.map((pc) => (
+            {filteredNotebook.map((pc) => (
               <div
                 key={pc.id}
                 className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(100%/2)] lg:flex-[0_0_calc(100%/3)] px-3"
@@ -349,7 +307,7 @@ const Home = () => {
                     </div>
                   </div>
                   <img
-                    src={pc.thumbnail}
+                    src={pc.image}
                     alt={pc.title}
                     width="100"
                     className="m-auto mb-16"
@@ -359,13 +317,12 @@ const Home = () => {
                     <p>Frete Grátis</p>
                   </div>
 
-                  <p className="text-gray-800 text-sm mb-4">{pc.description}</p>
                   <p className="text-green-600 font-bold text-lg ">
                     R$ {pc.price}
                   </p>
                   <p className="text-gray-400 text-sm -mt-2">À vista no PIX</p>
 
-                  <button className="bg-green-600 rounded-md h-10 font-bold flex items-center justify-center gap-3">
+                  <button className="bg-green-600 rounded-md h-10 font-bold flex items-center justify-center gap-3"  onClick={() => handleAddCartItem(pc)}>
                     <FaShoppingCart />
                     COMPRAR
                   </button>

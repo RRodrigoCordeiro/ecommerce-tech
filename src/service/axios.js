@@ -1,4 +1,4 @@
-import { useQuery } from '@tanstack/react-query';
+
 import axiosInstance from './api' ;  
 
 export const fetchAttendants =  async () => {
@@ -19,4 +19,9 @@ export const fetchComputer = async () => {
   return response.data.computer;
 };
 
+
+export const fetchNotebook = async () => {
+  const response = await axiosInstance.get("/storeData.json")
+  return response.data.notebook;
+}
 
