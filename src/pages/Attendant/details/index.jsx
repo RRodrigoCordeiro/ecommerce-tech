@@ -28,7 +28,6 @@ const AttendantDetails = () => {
                 <p  className='font-light'><span className='font-semibold'>Telefone:</span> {attendants.phone}</p>
                 <p  className='font-light'><span className='font-semibold'>Nível de Satisfação:</span> {attendants.rating}</p>
                 <p  className='font-light'><span className='font-semibold'>Horário de Trabalho: </span>{attendants.working_hours}</p>
-
               </div>
             </div>
            )}

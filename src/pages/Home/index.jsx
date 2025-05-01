@@ -25,6 +25,8 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
   const [isOpen, setModalOpened] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null); // novo estado 
+  const [selectedProductComputer, setSelectedProductComputer] = useState(null); // novo estado
+  const [selectedProductNotebook, setSelectedProductNotebook] = useState(null); // novo estado 
   const [searchTerm, setSearchTerm] = useState("");
   const {data: computers, isLoading, error} = useComputer();
   const {data: notebooks} = useNotebook();
@@ -117,8 +119,10 @@ const Home = () => {
     console.log(product)
   }
 
- function openModal(product) {
+ function openModal(product,computer,notebook) {
   setSelectedProduct(product);
+  setSelectedProductComputer(computer);
+  setSelectedProductNotebook(notebook)
   setModalOpened(true)
  }
 
@@ -157,10 +161,6 @@ const Home = () => {
                           <FaTruck className="ml-2" />
                           <p>Frete Grátis</p>
                         </div>
-
-                        {/* <p className="text-gray-800 text-sm mb-4">
-                          {product.description}
-                        </p> */}
                         <p className="text-green-600 font-bold text-lg ">
                           R$ {product.price}
                         </p>
@@ -233,7 +233,7 @@ const Home = () => {
                 key={computer.id}
                 className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(100%/2)] lg:flex-[0_0_calc(100%/3)] px-3"
               >
-                <article className="bg-white text-white rounded-2xl p-6 space-y-2 h-full flex flex-col w-full ">
+                <article className="bg-white text-white rounded-2xl p-6 space-y-2 h-full flex flex-col w-full " onClick={() => openModal(computer)}>
                   <div className=" flex items-start justify-between">
                     <div className="flex gap-3">
                       <h3 className="text-black font-bold text-xl mb-8">
@@ -258,13 +258,33 @@ const Home = () => {
                   </p>
                   <p className="text-gray-400 text-sm -mt-2">À vista no PIX</p>
 
-                  <button className="bg-green-600 rounded-md h-10 font-bold flex items-center justify-center gap-3"  onClick={() => handleAddCartItem(computer)}>
+                  <button className="bg-green-600 rounded-md h-10 font-bold flex items-center justify-center gap-3">
                     <FaShoppingCart />
                     COMPRAR
                   </button>
                 </article>
               </div>
             ))}
+             {isOpen && selectedProductComputer && (
+                <Modal  isOpen={isOpen} setModalOpened={setModalOpened} >
+                    <div className="p-8">
+                        <img
+                          src={selectedProductComputer.image}
+                          alt={selectedProductComputer.title}
+                          className=" mb-11 w-40 h-40 m-auto"
+                        />
+                        <div>
+                          <h3 className="text-center font-bold mb-8 w-56  m-auto">{selectedProductComputer.title}</h3>
+                          <p className="max-w-2xl text-justify w-56 md:w-full m-auto mb-8">{selectedProductComputer.description}</p>
+                          <button className="bg-green-600 text-white m-auto  w-56 md:w-2xl rounded-md h-10 font-bold flex items-center justify-center gap-3" onClick={() => handleAddCartItem(selectedProductComputer)}>
+                            <FaShoppingCart />
+                            COMPRAR
+                          </button>
+                        </div>
+                    </div>
+                  </Modal>
+               )}
+            
           </div>
         </div>
         <button
@@ -298,7 +318,7 @@ const Home = () => {
                 key={pc.id}
                 className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(100%/2)] lg:flex-[0_0_calc(100%/3)] px-3"
               >
-                <article className="bg-white text-white rounded-2xl p-6 space-y-2 h-full flex flex-col w-full ">
+                <article className="bg-white text-white rounded-2xl p-6 space-y-2 h-full flex flex-col w-full " onClick={() => openModal(pc)}>
                   <div className=" flex items-start justify-between">
                     <div className="flex gap-3">
                       <h3 className="text-black font-bold text-xl mb-8">
@@ -322,13 +342,32 @@ const Home = () => {
                   </p>
                   <p className="text-gray-400 text-sm -mt-2">À vista no PIX</p>
 
-                  <button className="bg-green-600 rounded-md h-10 font-bold flex items-center justify-center gap-3"  onClick={() => handleAddCartItem(pc)}>
+                  <button className="bg-green-600 rounded-md h-10 font-bold flex items-center justify-center gap-3">
                     <FaShoppingCart />
                     COMPRAR
                   </button>
                 </article>
               </div>
             ))}
+             {isOpen && selectedProductNotebook && (
+                <Modal  isOpen={isOpen} setModalOpened={setModalOpened} >
+                    <div className="p-8">
+                        <img
+                          src={selectedProductNotebook.image}
+                          alt={selectedProductNotebook.title}
+                          className=" mb-11 w-40 h-40 m-auto"
+                        />
+                        <div>
+                          <h3 className="text-center font-bold mb-8 w-56  m-auto">{selectedProductNotebook.title}</h3>
+                          <p className="max-w-2xl text-justify w-56 md:w-full m-auto mb-8">{selectedProductNotebook.description}</p>
+                          <button className="bg-green-600 text-white m-auto  w-56 md:w-2xl rounded-md h-10 font-bold flex items-center justify-center gap-3" onClick={() => handleAddCartItem(selectedProductNotebook)}>
+                            <FaShoppingCart />
+                            COMPRAR
+                          </button>
+                        </div>
+                    </div>
+                  </Modal>
+               )}
           </div>
         </div>
         <button
