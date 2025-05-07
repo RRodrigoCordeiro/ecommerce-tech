@@ -3,6 +3,7 @@ import Header from "../../components/Header";
 import { CartContext } from "../../contexts/CartContext";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import emailjs from "@emailjs/browser"
 
 const Cart = () => {
   const { cart, total, addItemCart,  removeItemCart, discount } = useContext(CartContext);
@@ -11,6 +12,19 @@ const Cart = () => {
   useEffect(() => {
     setHasItems(cart.length !==0)
   }, [cart])
+
+  function sendEmail(e){
+    e.preventDefault();
+
+   
+    emailjs.send("service_80xcn0y","service_80xcn0y","zrCeQk46nSfSsvtRV")
+    .then((response) => {
+      console.log("email eniado", response.status, response.text)
+
+    },(err) => {
+      console.log("erro",err)
+    })
+  }
   
 
 
@@ -68,7 +82,7 @@ const Cart = () => {
         <div>
           <p className="font-bold mt-4 ml-10">Total: {total}</p>
           <p  className="font-light mt-4 ml-10">No seu carrinho contém {cart.length} itens</p>
-          <p className="text-center text-white bg-green-600 rounded-md w-40 m-auto p-2 mt-28">Finalizar compras</p>
+          <p className="text-center text-white bg-green-600 rounded-md w-40 m-auto p-2 mt-28" onClick={sendEmail}>Finalizar compras</p>
         </div> 
       )}
     </div>

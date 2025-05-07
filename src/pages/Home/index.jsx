@@ -143,7 +143,11 @@ const Home = () => {
                   key={product.id}
                   className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(100%/2)] lg:flex-[0_0_calc(100%/3)] px-3 bg-b"
                 >
-                    <article className="bg-white text-white rounded-2xl p-6 space-y-2 h-full flex flex-col w-full  " onClick={() => openModal(product)}>
+                    <article className="bg-white text-white rounded-2xl p-6 space-y-2 h-full flex flex-col w-full  " >
+                      <div 
+                          className="h-full flex flex-col w-full"
+                          onClick={() => openModal(product)}
+                       > 
                         <div className=" flex items-start justify-between">
                           <div className="flex gap-3">
                             <h3 className="text-black font-bold text-xl mb-8">
@@ -167,6 +171,8 @@ const Home = () => {
                         <p className="text-gray-400 text-sm -mt-2">
                           À vista no PIX
                         </p>
+
+                      </div>
                      
                       <button className="bg-green-600 rounded-md h-10 font-bold flex items-center justify-center gap-3" onClick={() => handleAddCartItem(product)}>
                         <FaShoppingCart />
@@ -233,32 +239,35 @@ const Home = () => {
                 key={computer.id}
                 className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(100%/2)] lg:flex-[0_0_calc(100%/3)] px-3"
               >
-                <article className="bg-white text-white rounded-2xl p-6 space-y-2 h-full flex flex-col w-full " onClick={() => openModal(computer)}>
-                  <div className=" flex items-start justify-between">
-                    <div className="flex gap-3">
-                      <h3 className="text-black font-bold text-xl mb-8">
-                        {computer.title}
-                      </h3>
+                <article className="bg-white text-white rounded-2xl p-6 space-y-2 h-full flex flex-col w-full ">
+                  <div className="bg-white text-white rounded-2xl p-6 space-y-2 h-full flex flex-col w-full " onClick={() => openModal(computer)}>
+                    <div className=" flex items-start justify-between">
+                      <div className="flex gap-3">
+                        <h3 className="text-black font-bold text-xl mb-8">
+                          {computer.title}
+                        </h3>
+                      </div>
                     </div>
+                    <img
+                      src={computer.image}
+                      alt={computer.title}
+                      width="100"
+                      className="m-auto mb-16"
+                    ></img>
+                    <div className="bg-green-600 flex items-center gap-2 w-32 p-0.5 mb-5 rounded-md ">
+                      <FaTruck className="ml-2" />
+                      <p>Frete Grátis</p>
+                    </div>
+
+
+                    <p className="text-green-600 font-bold text-lg ">
+                      R$ {computer.price}
+                    </p>
+                    <p className="text-gray-400 text-sm -mt-2">À vista no PIX</p>
+
                   </div>
-                  <img
-                    src={computer.image}
-                    alt={computer.title}
-                    width="100"
-                    className="m-auto mb-16"
-                  ></img>
-                  <div className="bg-green-600 flex items-center gap-2 w-32 p-0.5 mb-5 rounded-md ">
-                    <FaTruck className="ml-2" />
-                    <p>Frete Grátis</p>
-                  </div>
 
-
-                  <p className="text-green-600 font-bold text-lg ">
-                    R$ {computer.price}
-                  </p>
-                  <p className="text-gray-400 text-sm -mt-2">À vista no PIX</p>
-
-                  <button className="bg-green-600 rounded-md h-10 font-bold flex items-center justify-center gap-3">
+                  <button className="bg-green-600 rounded-md h-10 font-bold flex items-center justify-center gap-3"  onClick={() => handleAddCartItem(computer)}>
                     <FaShoppingCart />
                     COMPRAR
                   </button>
@@ -318,31 +327,34 @@ const Home = () => {
                 key={pc.id}
                 className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(100%/2)] lg:flex-[0_0_calc(100%/3)] px-3"
               >
-                <article className="bg-white text-white rounded-2xl p-6 space-y-2 h-full flex flex-col w-full " onClick={() => openModal(pc)}>
-                  <div className=" flex items-start justify-between">
-                    <div className="flex gap-3">
-                      <h3 className="text-black font-bold text-xl mb-8">
-                        {pc.title}
-                      </h3>
+                <article className="bg-white text-white rounded-2xl p-6 space-y-2 h-full flex flex-col w-full " >
+                  <div  className="h-full flex flex-col w-full " onClick={() => openModal(pc)}> 
+                    <div className=" flex items-start justify-between">
+                      <div className="flex gap-3">
+                        <h3 className="text-black font-bold text-xl mb-8">
+                          {pc.title}
+                        </h3>
+                      </div>
                     </div>
-                  </div>
-                  <img
-                    src={pc.image}
-                    alt={pc.title}
-                    width="100"
-                    className="m-auto mb-16"
-                  ></img>
-                  <div className="bg-green-600 flex items-center gap-2 w-32 p-0.5 mb-5 rounded-md ">
-                    <FaTruck className="ml-2" />
-                    <p>Frete Grátis</p>
+                    <img
+                      src={pc.image}
+                      alt={pc.title}
+                      width="100"
+                      className="m-auto mb-16"
+                    ></img>
+                    <div className="bg-green-600 flex items-center gap-2 w-32 p-0.5 mb-5 rounded-md ">
+                      <FaTruck className="ml-2" />
+                      <p>Frete Grátis</p>
+                    </div>
+
+                    <p className="text-green-600 font-bold text-lg ">
+                      R$ {pc.price}
+                    </p>
+                    <p className="text-gray-400 text-sm -mt-2">À vista no PIX</p>
+
                   </div>
 
-                  <p className="text-green-600 font-bold text-lg ">
-                    R$ {pc.price}
-                  </p>
-                  <p className="text-gray-400 text-sm -mt-2">À vista no PIX</p>
-
-                  <button className="bg-green-600 rounded-md h-10 font-bold flex items-center justify-center gap-3">
+                  <button className="bg-green-600 rounded-md h-10 font-bold flex items-center justify-center gap-3" onClick={() => handleAddCartItem(pc)}>
                     <FaShoppingCart />
                     COMPRAR
                   </button>
