@@ -16,14 +16,23 @@ const Cart = () => {
   function sendEmail(e){
     e.preventDefault();
 
+    var templateParams = {
+      from_total: total,
+      message: 'Check this out!',
+      
+    };
+
    
-    emailjs.send("service_80xcn0y","service_80xcn0y","zrCeQk46nSfSsvtRV")
+    emailjs.send("service_yib8h7h","template_wcm4age", templateParams, "od3sxoc3hgGz0tKkv")
     .then((response) => {
       console.log("email eniado", response.status, response.text)
+      alert("Email enviado com sucesso!");
 
     },(err) => {
       console.log("erro",err)
     })
+
+    alert(response.status)
   }
   
 
@@ -82,7 +91,7 @@ const Cart = () => {
         <div>
           <p className="font-bold mt-4 ml-10">Total: {total}</p>
           <p  className="font-light mt-4 ml-10">No seu carrinho contém {cart.length} itens</p>
-          <p className="text-center text-white bg-green-600 rounded-md w-40 m-auto p-2 mt-28" onClick={sendEmail}>Finalizar compras</p>
+          <button className="text-center text-white bg-green-600 rounded-md w-40 m-auto p-2 mt-28" onClick={sendEmail}>Finalizar compras</button>
         </div> 
       )}
     </div>
