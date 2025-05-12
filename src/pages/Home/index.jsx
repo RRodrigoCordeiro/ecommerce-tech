@@ -428,10 +428,7 @@ const Home = () => {
 
       <Testimonials />
       <Attendant/>
-      
-      
-
-      
+ 
     </div>
   );
 };
