@@ -9,11 +9,15 @@ import Modal from "../../components/Modal";
 
 
 const Cart = () => {
-  const { cart, total, addItemCart, removeItemCart, discount } =
-    useContext(CartContext);
+  const { cart, total, addItemCart, removeItemCart, discount } = useContext(CartContext);
   const [hasItems, setHasItems] = useState();
   const [itemProduct, setitemProduct] = useState();
   const [isOpen, setModalOpened] = useState(false);
+  const [userName, setUserName] = useState("");
+  const [userEmail, setUserEmail] = useState("");
+  const [userCity, setUserCity] = useState("");
+  const [userTelephone, setUserTelephone] = useState("");
+
 
   useEffect(() => {
     setHasItems(cart.length !== 0);
@@ -23,27 +27,26 @@ const Cart = () => {
     e.preventDefault();
 
     const orderId = Math.floor(Math.random() * 1000000);
+    const shippingCost = 50;
+    const taxCost = 8;
+    const totalCost = total + shippingCost + taxCost;
 
     const mappedOrders = cart.map((item) => ({
       name: item.title,
       units: item.amount,
       price: item.price * item.amount,
       image_url: item.image,
-      name_user: item.name,
-      email:  item.email,
-      telephone: item.telephone,
     }));
-
-    const shippingCost = 50;
-    const taxCost = 8;
-    const totalCost = total + shippingCost + taxCost;
 
     var templateParams = {
       order_id: orderId,
       orders: mappedOrders,
       cost_shipping: shippingCost,
       cost_tax: taxCost,
-      cost_total: totalCost,
+      cost_total: totalCost.toLocaleString("pt-br",{style:"currency", currency: "BRL"}),
+      user: userName,
+      email:  userEmail,
+      telephone: userTelephone,
     };
 
     emailjs
@@ -56,9 +59,8 @@ const Cart = () => {
       .then(
         (response) => {
           console.log("Email enviado", response.status, response.text);
-          toast.success("o seu Pedido foi enviado com sucesso!");
+          toast.success("O seu pedido foi enviado com sucesso!");
 
-          alert("Email enviado com sucesso!");
         },
         (err) => {
           console.log("Erro", err);
@@ -124,7 +126,7 @@ const Cart = () => {
 
       {cart.length !== 0 && (
         <div>
-          <p className="font-bold mt-4 ml-10">Total: {total}</p>
+          <p className="font-bold mt-4 ml-10">Total: {total.toLocaleString("pt-br",{style:"currency", currency: "BRL"})}</p>
           <p className="font-light mt-4 ml-10">
             No seu carrinho contém {cart.length} itens
           </p>
@@ -142,28 +144,29 @@ const Cart = () => {
             <h1 className="text-center font-medium mt-8 mb-8">
               Preecha as informações para finalizar o pedido
             </h1>
-            <form className="grid grid-cols-2 gap-3 ">
+            <form className="grid grid-cols-2 gap-3 " >
               <div className="flex flex-col">
-                <label htmlFor="name">Nome:</label>
-                <input type="text" id="name" className="border-1 w-96 h-8" />
+                <label htmlFor="name" >Nome:</label>
+                <input type="text" id="name"  value={userName} onChange={(e) => setUserName(e.target.value)} className="border-1 w-96 h-8" />
               </div>
               <div className="flex flex-col">
                 <label htmlFor="email">E-mail:</label>
-                <input type="email" id="email" className="border-1 w-96 h-8" />
+                <input type="email" id="email" value={userEmail} onChange={(e) => setUserEmail(e.target.value)} className="border-1 w-96 h-8" />
               </div>
               <div className="flex flex-col">
                 <label htmlFor="city">Cidade:</label>
-                <input type="text" id="city" className="border-1  w-96 h-8" />
+                <input type="text" id="city" value={userCity} onChange={(e) => setUserCity(e.target.value)} className="border-1  w-96 h-8" />
               </div>
               <div className="flex flex-col">
                 <label htmlFor="number">Telefone:</label>
-                <input type="tel" id="number" className="border-1 w-96 h-8" />
+                <input type="tel" id="number"  value={userTelephone} onChange={(e) => setUserTelephone(e.target.value)} className="border-1 w-96 h-8" />
               </div>
               <div className="flex justify-center  col-span-2">
                 <button
                   type="submit"
                   className="bg-green-600 rounded-md p-1 font-bold mt-8 mb-8  w-48 text-white block m-auto"
                   onClick={sendEmail}
+                  
                 >
                   Finalizar o pedido
                 </button>

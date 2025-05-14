@@ -62,8 +62,8 @@ export const CartContext = createContext()
     function totalResultCart(items){
         let myCart = items;
         let result = myCart.reduce((acumulador, itemAtual) => {return acumulador + itemAtual.total}, 0);
-        const resultFormated = result.toLocaleString("pt-br",{style:"currency", currency: "BRL"})
-        setTotal(resultFormated);
+        // const resultFormated = result.toLocaleString("pt-br",{style:"currency", currency: "BRL"})
+        setTotal(result);
     }
 
     return(
