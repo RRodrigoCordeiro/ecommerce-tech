@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const WorkWithUs = () => {
-  return (
-    <div>TrabalheConosco</div>
-  )
-}
+  return <div>TrabalheConosco</div>;
+};
 
-export default WorkWithUs
+export default WorkWithUs;

@@ -29,6 +29,9 @@ const Cart = () => {
       units: item.amount,
       price: item.price * item.amount,
       image_url: item.image,
+      name_user: item.name,
+      email:  item.email,
+      telephone: item.telephone,
     }));
 
     const shippingCost = 50;
