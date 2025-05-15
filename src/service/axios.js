@@ -1,4 +1,3 @@
-
 import axiosInstance from './api' ;  
 
 export const fetchAttendants =  async () => {

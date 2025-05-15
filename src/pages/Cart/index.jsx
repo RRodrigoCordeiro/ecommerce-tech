@@ -6,6 +6,9 @@ import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
 import Modal from "../../components/Modal";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { userSchema } from "../../schemas/userSchema";
 
 
 const Cart = () => {
@@ -13,18 +16,21 @@ const Cart = () => {
   const [hasItems, setHasItems] = useState();
   const [itemProduct, setitemProduct] = useState();
   const [isOpen, setModalOpened] = useState(false);
-  const [userName, setUserName] = useState("");
-  const [userEmail, setUserEmail] = useState("");
-  const [userCity, setUserCity] = useState("");
-  const [userTelephone, setUserTelephone] = useState("");
+
+  const {
+    register,
+    handleSubmit,
+    formState: {errors},
+  } = useForm({
+    resolver:zodResolver(userSchema)
+  })
 
 
   useEffect(() => {
     setHasItems(cart.length !== 0);
   }, [cart]);
 
-  function sendEmail(e) {
-    e.preventDefault();
+  function sendEmail(data) {
 
     const orderId = Math.floor(Math.random() * 1000000);
     const shippingCost = 50;
@@ -44,9 +50,9 @@ const Cart = () => {
       cost_shipping: shippingCost,
       cost_tax: taxCost,
       cost_total: totalCost.toLocaleString("pt-br",{style:"currency", currency: "BRL"}),
-      user: userName,
-      email:  userEmail,
-      telephone: userTelephone,
+      user: data.userName,
+      email:  data.userEmail,
+      telephone: data.userTelephone,
     };
 
     emailjs
@@ -144,29 +150,31 @@ const Cart = () => {
             <h1 className="text-center font-medium mt-8 mb-8">
               Preecha as informações para finalizar o pedido
             </h1>
-            <form className="grid grid-cols-2 gap-3 " >
+            <form className="grid grid-cols-2 gap-3 "  onSubmit={handleSubmit(sendEmail)}>
               <div className="flex flex-col">
                 <label htmlFor="name" >Nome:</label>
-                <input type="text" id="name"  value={userName} onChange={(e) => setUserName(e.target.value)} className="border-1 w-96 h-8" />
+                <input type="text" id="name" {...register("name")} className="border-1 w-96 h-8" />
+                {errors.name && <span className="text-red-500">{errors.name.message}</span>}
               </div>
               <div className="flex flex-col">
                 <label htmlFor="email">E-mail:</label>
-                <input type="email" id="email" value={userEmail} onChange={(e) => setUserEmail(e.target.value)} className="border-1 w-96 h-8" />
+                <input type="email" id="email" {...register("email")} className="border-1 w-96 h-8" />
+                {errors.email && <span className="text-red-500">{errors.email.message}</span>}
               </div>
               <div className="flex flex-col">
                 <label htmlFor="city">Cidade:</label>
-                <input type="text" id="city" value={userCity} onChange={(e) => setUserCity(e.target.value)} className="border-1  w-96 h-8" />
+                <input type="text" id="city" {...register("city")} className="border-1  w-96 h-8" />
+                {errors.city && <span className="text-red-500">{errors.city.message}</span>}
               </div>
               <div className="flex flex-col">
                 <label htmlFor="number">Telefone:</label>
-                <input type="tel" id="number"  value={userTelephone} onChange={(e) => setUserTelephone(e.target.value)} className="border-1 w-96 h-8" />
+                <input type="tel" id="number"  {...register("phone")} className="border-1 w-96 h-8" />
+                 {errors.phone && <span className="text-red-500">{errors.phone.message}</span>}
               </div>
               <div className="flex justify-center  col-span-2">
                 <button
                   type="submit"
                   className="bg-green-600 rounded-md p-1 font-bold mt-8 mb-8  w-48 text-white block m-auto"
-                  onClick={sendEmail}
-                  
                 >
                   Finalizar o pedido
                 </button>
