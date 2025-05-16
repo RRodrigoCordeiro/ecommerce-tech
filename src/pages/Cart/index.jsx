@@ -14,7 +14,6 @@ import { userSchema } from "../../schemas/userSchema";
 const Cart = () => {
   const { cart, total, addItemCart, removeItemCart } = useContext(CartContext);
   const [hasItems, setHasItems] = useState();
-  const [itemProduct, setitemProduct] = useState();
   const [isOpen, setModalOpened] = useState(false);
 
   const {
@@ -162,14 +161,50 @@ const Cart = () => {
                 {errors.email && <span className="text-red-500">{errors.email.message}</span>}
               </div>
               <div className="flex flex-col">
-                <label htmlFor="city">Cidade:</label>
-                <input type="text" id="city" {...register("city")} className="border-1  w-96 h-8" />
-                {errors.city && <span className="text-red-500">{errors.city.message}</span>}
-              </div>
-              <div className="flex flex-col">
                 <label htmlFor="number">Telefone:</label>
                 <input type="tel" id="number"  {...register("phone")} className="border-1 w-96 h-8" />
                  {errors.phone && <span className="text-red-500">{errors.phone.message}</span>}
+              </div>
+               <div className="flex flex-col">
+                <label htmlFor="cep">CEP:</label>
+                <input type="text" id="cep" {...register("cep")} className="border-1  w-96 h-8" />
+                {errors.cep && <span className="text-red-500">{errors.cep.message}</span>}
+              </div>
+               <div className="flex flex-col">
+                <label htmlFor="state">Estado:</label>
+                <input type="text" id="state" {...register("state")}  className="border-1  w-96 h-8" />
+                {errors.state && <span className="text-red-500">{errors.state.message}</span>}
+                
+              </div>
+               <div className="flex flex-col">
+                <label htmlFor="patio">logradouro</label>
+                <input type="text" id="patio" {...register("patio")} className="border-1  w-96 h-8" />
+                {errors.patio && <span className="text-red-500">{errors.state.message}</span>}
+               
+              </div>
+               <div className="flex flex-col">
+                <label htmlFor="complement">Complemento</label>
+                <input type="text" id="complement" {...register("complement")} className="border-1  w-96 h-8" />
+                {errors.complement && <span className="text-red-500">{errors.complement.message}</span>}
+                
+              </div>
+               <div className="flex flex-col">
+                <label htmlFor="neighborhood">Bairro</label>
+                <input type="text" id="neighborhood" {...register("neighborhood")}  className="border-1  w-96 h-8" />
+                {errors.neighborhood && <span className="text-red-500">{errors.neighborhood.message}</span>}
+               
+              </div>
+               <div className="flex flex-col">
+                <label htmlFor="locality">Localidade</label>
+                <input type="text" id="locality" {...register("locality")}  className="border-1  w-96 h-8" />
+                {errors.locality && <span className="text-red-500">{errors.locality.message}</span>}
+                
+              </div>
+               <div className="flex flex-col">
+                <label htmlFor="uf">UF</label>
+                <input type="text" id="uf" {...register("uf")} className="border-1  w-96 h-8" />
+                {errors.uf && <span className="text-red-500">{errors.uf.message}</span>}
+                
               </div>
               <div className="flex justify-center  col-span-2">
                 <button
