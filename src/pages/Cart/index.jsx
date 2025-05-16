@@ -12,7 +12,7 @@ import { userSchema } from "../../schemas/userSchema";
 
 
 const Cart = () => {
-  const { cart, total, addItemCart, removeItemCart, discount } = useContext(CartContext);
+  const { cart, total, addItemCart, removeItemCart } = useContext(CartContext);
   const [hasItems, setHasItems] = useState();
   const [itemProduct, setitemProduct] = useState();
   const [isOpen, setModalOpened] = useState(false);
