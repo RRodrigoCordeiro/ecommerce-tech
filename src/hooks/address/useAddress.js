@@ -1,8 +1,8 @@
 import { useQuery } from '@tanstack/react-query';
-import { fetchCep } from '../service/axios';
+import { fetchCep } from '../../service/axios';
 
 
-export const useAttendant = () => {
+export const useAddress = () => {
     return useQuery({
         queryKey: ['address'],
         queryFn: fetchCep,

@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { fetchAttendants } from '../service/axios';
+import { fetchAttendants } from '../../service/axios';
 
 export const useAttendant = () => {
     return useQuery({

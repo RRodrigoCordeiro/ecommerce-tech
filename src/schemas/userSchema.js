@@ -6,12 +6,12 @@ export const userSchema = z.object({
     email: z.string()
         .email("O email é inválido"),
     phone: z.string()
-        .min(10,"Número de telefone incompleto")
-        .max(11,"Número de telefoone inválido")
-        .regex(/^\d+$/, 'Telefone deve conter apenas números'),
+        .min(13,"Número de telefone incompleto")
+        .max(18,"Número de telefone inválido"),
+        
     cep: z.string()
-        .min(8,"É necessário ter pelo menos 8 caracteres")
-        .max(9,"CEP inválido"),
+        .min(9,"É necessário ter pelo menos 9 caracteres")
+        .max(10,"CEP inválido"),
     state: z.string()
         .min(4, "É necessário ter pelo menos 4 caracteres")
         .max(18, "É necessário ter no máximo 18 caracteres"),

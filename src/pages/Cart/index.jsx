@@ -9,12 +9,13 @@ import Modal from "../../components/Modal";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { userSchema } from "../../schemas/userSchema";
+import InputMask from 'react-input-mask';
 
 
 const Cart = () => {
   const { cart, total, addItemCart, removeItemCart } = useContext(CartContext);
   const [hasItems, setHasItems] = useState();
-  const [isOpen, setModalOpened] = useState(false);
+  const [isOpen, setModalOpened] = useState(true);
 
   const {
     register,
@@ -162,12 +163,13 @@ const Cart = () => {
               </div>
               <div className="flex flex-col">
                 <label htmlFor="number">Telefone:</label>
-                <input type="tel" id="number"  {...register("phone")} className="border-1 w-96 h-8" />
+                 <InputMask mask="(99) 99999-9999" type="tel" id="number"  {...register("phone")} className="border-1 w-96 h-8" ></InputMask>
                  {errors.phone && <span className="text-red-500">{errors.phone.message}</span>}
               </div>
                <div className="flex flex-col">
-                <label htmlFor="cep">CEP:</label>
-                <input type="text" id="cep" {...register("cep")} className="border-1  w-96 h-8" />
+                <label htmlFor="cep">CEP:</label> 
+                <InputMask mask="99999-999" type="text" id="cep" {...register("cep")} className="border-1  w-96 h-8"></InputMask>
+                {/* <input type="text" id="cep" {...register("cep")} className="border-1  w-96 h-8" /> */}
                 {errors.cep && <span className="text-red-500">{errors.cep.message}</span>}
               </div>
                <div className="flex flex-col">

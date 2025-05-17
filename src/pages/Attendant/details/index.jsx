@@ -1,5 +1,5 @@
 import React from 'react'
-import { useAttendantById } from '../../../hooks/useAttendantById'; 
+import { useAttendantById } from '../../../hooks/attendant/useAttendantById'; 
 import { useParams } from 'react-router-dom';
 import Header from '../../../components/Header';
 const AttendantDetails = () => {

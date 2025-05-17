@@ -15,8 +15,8 @@ import { CartContext } from "../../contexts/CartContext";
 import toast from "react-hot-toast";
 import Modal from "../../components/Modal"; 
 import Attendant from "../Attendant";
-import {useComputer} from "../../hooks/useComputer"
-import {useNotebook} from "../../hooks/useNotebook"
+import { useComputer } from "../../hooks/computer/useComputer";  
+import { useNotebook } from "../../hooks/notebook/useNotebook";   
 
 
 
