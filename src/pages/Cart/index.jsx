@@ -10,20 +10,43 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { userSchema } from "../../schemas/userSchema";
 import InputMask from 'react-input-mask';
+import { useAddress } from "../../hooks/address/useAddress";
 
 
 const Cart = () => {
   const { cart, total, addItemCart, removeItemCart } = useContext(CartContext);
   const [hasItems, setHasItems] = useState();
   const [isOpen, setModalOpened] = useState(true);
+  const [cepInput, setCepInput] = useState('');
 
+  
   const {
     register,
+    setValue,
     handleSubmit,
+    watch,
     formState: {errors},
   } = useForm({
     resolver:zodResolver(userSchema)
   })
+
+ const cepValue = watch("cep")?.replace(/\D/g, '');
+const { data: cep } = useAddress(cepValue);
+
+  
+
+ useEffect(() => {
+  console.log("cepValue:", cepValue);
+  console.log("cep:", cep);
+  if (cep) {
+    setValue("neighborhood", cep.bairro || "");
+    setValue("state", cep.uf || "");
+    setValue("patio", cep.logradouro || "");
+    setValue("locality", cep.localidade || "");
+    setValue("complement", cep.complemento || "");
+    setValue("uf", cep.uf || "");
+  }
+}, [cep, setValue]);
 
 
   useEffect(() => {
@@ -75,7 +98,7 @@ const Cart = () => {
         }
       );
   }
-
+ 
   return (
     <div>
       <Header />
@@ -168,8 +191,8 @@ const Cart = () => {
               </div>
                <div className="flex flex-col">
                 <label htmlFor="cep">CEP:</label> 
-                <InputMask mask="99999-999" type="text" id="cep" {...register("cep")} className="border-1  w-96 h-8"></InputMask>
-                {/* <input type="text" id="cep" {...register("cep")} className="border-1  w-96 h-8" /> */}
+                {/* <InputMask mask="99999-999" type="text" id="cep" {...register("cep")} className="border-1  w-96 h-8"></InputMask> */}
+                <input type="text" id="cep" {...register("cep")} className="border-1  w-96 h-8" />
                 {errors.cep && <span className="text-red-500">{errors.cep.message}</span>}
               </div>
                <div className="flex flex-col">
@@ -181,7 +204,7 @@ const Cart = () => {
                <div className="flex flex-col">
                 <label htmlFor="patio">logradouro</label>
                 <input type="text" id="patio" {...register("patio")} className="border-1  w-96 h-8" />
-                {errors.patio && <span className="text-red-500">{errors.state.message}</span>}
+                {errors.patio && <span className="text-red-500">{errors.patio.message}</span>}
                
               </div>
                <div className="flex flex-col">

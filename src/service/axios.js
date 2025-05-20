@@ -24,10 +24,11 @@ export const fetchNotebook = async () => {
   return response.data.notebook;
 }
 
-export const fetchCep =  async () => {
-
-  const response = await axios.get(`viacep.com.br/ws/${cep}/json/`)
-  return response.data
+export const fetchCep =  async (cep) => {
+  console.log("Buscando CEP:", cep); 
+  const response = await axios.get(`https://viacep.com.br/ws/${cep}/json/`)
+  console.log("🟢 Dados do CEP:", response.data);
+  return response.data;
 
 }
 

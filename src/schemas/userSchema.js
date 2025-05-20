@@ -10,7 +10,7 @@ export const userSchema = z.object({
         .max(18,"Número de telefone inválido"),
         
     cep: z.string()
-        .min(9,"É necessário ter pelo menos 9 caracteres")
+        .min(8,"É necessário ter pelo menos 9 caracteres")
         .max(10,"CEP inválido"),
     state: z.string()
         .min(4, "É necessário ter pelo menos 4 caracteres")
