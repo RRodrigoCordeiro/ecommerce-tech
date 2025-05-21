@@ -1,3 +1,4 @@
+import axios from 'axios';
 import axiosInstance from './api' ;  
 
 export const fetchAttendants =  async () => {
@@ -25,9 +26,8 @@ export const fetchNotebook = async () => {
 }
 
 export const fetchCep =  async (cep) => {
-  console.log("Buscando CEP:", cep); 
   const response = await axios.get(`https://viacep.com.br/ws/${cep}/json/`)
-  console.log("🟢 Dados do CEP:", response.data);
+  console.log(" Dados do CEP:", response.data);
   return response.data;
 
 }

@@ -17,9 +17,7 @@ const Cart = () => {
   const { cart, total, addItemCart, removeItemCart } = useContext(CartContext);
   const [hasItems, setHasItems] = useState();
   const [isOpen, setModalOpened] = useState(true);
-  const [cepInput, setCepInput] = useState('');
-
-  
+ 
   const {
     register,
     setValue,
@@ -31,23 +29,19 @@ const Cart = () => {
   })
 
  const cepValue = watch("cep")?.replace(/\D/g, '');
-const { data: cep } = useAddress(cepValue);
+ const { data: cep, } = useAddress(cepValue);
 
-  
 
  useEffect(() => {
-  console.log("cepValue:", cepValue);
-  console.log("cep:", cep);
   if (cep) {
     setValue("neighborhood", cep.bairro || "");
-    setValue("state", cep.uf || "");
+    setValue("region", cep.regiao || "");
     setValue("patio", cep.logradouro || "");
     setValue("locality", cep.localidade || "");
     setValue("complement", cep.complemento || "");
     setValue("uf", cep.uf || "");
   }
 }, [cep, setValue]);
-
 
   useEffect(() => {
     setHasItems(cart.length !== 0);
@@ -76,6 +70,12 @@ const { data: cep } = useAddress(cepValue);
       user: data.userName,
       email:  data.userEmail,
       telephone: data.userTelephone,
+      neighborhood: data.bairro,
+      region: data.regiao,
+      patio: data.logradouro,
+      locality: data.localidade,
+      complement: data.complemento,
+      uf: data.uf
     };
 
     emailjs
@@ -191,14 +191,14 @@ const { data: cep } = useAddress(cepValue);
               </div>
                <div className="flex flex-col">
                 <label htmlFor="cep">CEP:</label> 
-                {/* <InputMask mask="99999-999" type="text" id="cep" {...register("cep")} className="border-1  w-96 h-8"></InputMask> */}
-                <input type="text" id="cep" {...register("cep")} className="border-1  w-96 h-8" />
+                <InputMask mask="99999-999" type="text" id="cep" {...register("cep")} className="border-1  w-96 h-8"></InputMask>
+                {/* <input type="text" id="cep" {...register("cep")} className="border-1  w-96 h-8" /> */}
                 {errors.cep && <span className="text-red-500">{errors.cep.message}</span>}
               </div>
                <div className="flex flex-col">
-                <label htmlFor="state">Estado:</label>
-                <input type="text" id="state" {...register("state")}  className="border-1  w-96 h-8" />
-                {errors.state && <span className="text-red-500">{errors.state.message}</span>}
+                <label htmlFor="region">Estado:</label>
+                <input type="text" id="region" {...register("region")}  className="border-1  w-96 h-8" />
+                {errors.region && <span className="text-red-500">{errors.region.message}</span>}
                 
               </div>
                <div className="flex flex-col">

@@ -12,7 +12,7 @@ export const userSchema = z.object({
     cep: z.string()
         .min(8,"É necessário ter pelo menos 9 caracteres")
         .max(10,"CEP inválido"),
-    state: z.string()
+    region: z.string()
         .min(4, "É necessário ter pelo menos 4 caracteres")
         .max(18, "É necessário ter no máximo 18 caracteres"),
     patio: z.string()
