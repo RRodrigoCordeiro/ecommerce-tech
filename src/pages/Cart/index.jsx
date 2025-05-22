@@ -69,12 +69,12 @@ const Cart = () => {
       cost_total: totalCost.toLocaleString("pt-br",{style:"currency", currency: "BRL"}),
       user: data.userName,
       email:  data.userEmail,
-      telephone: data.userTelephone,
-      neighborhood: data.bairro,
-      region: data.regiao,
-      patio: data.logradouro,
-      locality: data.localidade,
-      complement: data.complemento,
+      telephone: data.userTelephoe,
+      neighborhood: data.bairr,
+      region: data.regia,
+      patio: data.logradour,
+      locality: data.localidad,
+      complement: data.complement,
       uf: data.uf
     };
 
@@ -99,6 +99,7 @@ const Cart = () => {
       );
   }
  
+  
   return (
     <div>
       <Header />
