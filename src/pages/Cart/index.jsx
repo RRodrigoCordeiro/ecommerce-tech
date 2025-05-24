@@ -179,28 +179,28 @@ const Cart = () => {
               onSubmit={handleSubmit(sendEmail)}
             >
               <div className="flex  flex-col">
-                <label htmlFor="name" className="md:ml-7  " >Nome:</label>
+                <label htmlFor="name"  className="w-19 text-right md:w-23 lg:w-20">Nome:</label>
                 <input 
                   type="text" 
                   id="name" 
                   {...register("name")} 
-                  className="w-80 lg:w-96 block m-auto  border h-8 px-2"
+                  className="w-80 lg:w-96 block m-auto border h-8 px-2"
                 />
-                {errors.name && <span className="text-red-500">{errors.name.message}</span>}
+                {errors.name && <span className="text-red-500 text-center">{errors.name.message}</span>}
               </div>
 
               <div className="flex flex-col">
-                <label htmlFor="email">E-mail:</label>
+                <label htmlFor="email" className="w-20 md:w-25 lg:w-20 text-right">E-mail:</label>
                 <input 
                   type="email" 
                   id="email" 
                   {...register("email")} 
                   className="w-80 lg:w-96 block m-auto  border h-8 px-2"/>
-                {errors.email && <span className="text-red-500">{errors.email.message}</span>}
+                {errors.email && <span className="text-red-500 text-center">{errors.email.message}</span>}
               </div>
 
               <div className="flex flex-col">
-                <label htmlFor="number">Telefone:</label>
+                <label htmlFor="number" className="w-23 md:w-27 lg:w-23 text-right">Telefone:</label>
                  <InputMask 
                     mask="(99) 99999-9999" 
                     type="tel" 
@@ -208,79 +208,79 @@ const Cart = () => {
                     {...register("phone")} 
                     className="w-80 lg:w-96 block m-auto  border h-8 px-2">
                  </InputMask>
-                 {errors.phone && <span className="text-red-500">{errors.phone.message}</span>}
+                 {errors.phone && <span className="text-red-500 text-center">{errors.phone.message}</span>}
               </div>
 
                <div className="flex flex-col">
-                  <label htmlFor="cep">CEP:</label> 
+                  <label htmlFor="cep" className="w-15 md:w-20 lg:w-16 text-right">CEP:</label> 
                   <InputMask 
                     mask="99999-999" 
                     type="text" 
                     id="cep" 
                     {...register("cep")} 
-                    className="w-80 md:w-96 block m-auto  border h-8 px-2">
+                    className="w-80 lg:w-96 block m-auto  border h-8 px-2">
                   </InputMask>
-                  {errors.cep && <span className="text-red-500">{errors.cep.message}</span>}
+                  {errors.cep && <span className="text-red-500 text-center">{errors.cep.message}</span>}
               </div>
 
                <div className="flex flex-col">
-                  <label htmlFor="region">Estado:</label>
+                  <label htmlFor="region" className="w-20 md:w-25 lg:w-20 text-right">Estado:</label>
                   <input 
                     type="text" 
                     id="region" 
                     {...register("region")}  
-                    className="w-80 md:w-96 block m-auto  border h-8 px-2"/>
-                  {errors.region && <span className="text-red-500">{errors.region.message}</span>}
+                    className="w-80 lg:w-96 block m-auto  border h-8 px-2"/>
+                  {errors.region && <span className="text-red-500 text-center">{errors.region.message}</span>}
               </div>
 
                <div className="flex flex-col">
-                  <label htmlFor="patio">logradouro</label>
+                  <label htmlFor="patio" className="w-27 md:w-33 lg:w-28 text-right">logradouro:</label>
                   <input 
                     type="text" 
                     id="patio" 
                     {...register("patio")} 
-                    className="w-80 md:w-96 block m-auto  border h-8 px-2"/>  
-                  {errors.patio && <span className="text-red-500">{errors.patio.message}</span>}
+                    className="w-80 lg:w-96 block m-auto  border h-8 px-2"/>  
+                  {errors.patio && <span className="text-red-500 text-center">{errors.patio.message}</span>}
               </div>
 
                <div className="flex flex-col">
-                  <label htmlFor="complement">Complemento</label>
+                  <label htmlFor="complement" className="w-32 md:w-38 lg:w-33 text-right">Complemento:</label>
                   <input 
                     type="text" 
                     id="complement" 
                     {...register("complement")} 
-                    className="w-80 md:w-96 block m-auto  border h-8 px-2"/>
-                  {errors.complement && <span className="text-red-500">{errors.complement.message}</span>}
+                    className="w-80 lg:w-96 block m-auto  border h-8 px-2"/>
+                  {errors.complement && <span className="text-red-500 text-center">{errors.complement.message}</span>}
                </div>
 
                <div className="flex flex-col">
-                <label htmlFor="neighborhood">Bairro</label>
+                <label htmlFor="neighborhood" className="w-18 md:w-23 lg:w-20 text-right">Bairro:</label>
                 <input 
                   type="text" 
                   id="neighborhood" 
                   {...register("neighborhood")}  
-                  className="w-80 md:w-96 block m-auto  border h-8 px-2"/>
-                {errors.neighborhood && <span className="text-red-500">{errors.neighborhood.message}</span>}
+                  className="w-80 lg:w-96 block m-auto  border h-8 px-2"/>
+                {errors.neighborhood && <span className="text-red-500 text-center">{errors.neighborhood.message}</span>}
               </div>
 
                <div className="flex flex-col">
-                <label htmlFor="locality">Localidade</label>
+                <label htmlFor="locality" className="w-26 md:w-33 lg:w-28 text-right">Localidade:</label>
                 <input 
                   type="text" 
                   id="locality" 
                   {...register("locality")}  
-                 className="w-80 md:w-96 block m-auto  border h-8 px-2"/>
-                {errors.locality && <span className="text-red-500">{errors.locality.message}</span>}
+                 className="w-80 lg:w-96 block m-auto  border h-8 px-2"/>
+                {errors.locality && <span className="text-red-500 text-center">{errors.locality.message}</span>}
               </div>
 
                <div className="flex flex-col">
-                <label htmlFor="uf">UF</label>
+                <label htmlFor="uf" className="w-13 md:w-18 lg:w-14 text-right">UF:</label>
                 <input 
                   type="text" 
                   id="uf" 
                   {...register("uf")} 
-                  className="w-80 md:w-96 block m-auto  border h-8 px-2"/>
-                {errors.uf && <span className="text-red-500">{errors.uf.message}</span>}
+                  className="w-80 lg:w-96 block m-auto  border h-8 px-2"/>
+                {errors.uf && <span className="text-red-500 text-center">{errors.uf.message}</span>}
               </div>
 
               <div className="flex justify-center col-span-1 md:col-span-2">
