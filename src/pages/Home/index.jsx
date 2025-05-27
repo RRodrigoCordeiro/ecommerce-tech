@@ -251,8 +251,9 @@ const Home = () => {
                     <img
                       src={computer.image}
                       alt={computer.title}
-                      width="100"
-                      className="m-auto mb-16"
+                       
+                      
+                      className="m-auto mb-16 h-28"
                     ></img>
                     <div className="bg-green-600 flex items-center gap-2 w-32 p-0.5 mb-5 rounded-md ">
                       <FaTruck className="ml-2" />
@@ -339,8 +340,8 @@ const Home = () => {
                     <img
                       src={pc.image}
                       alt={pc.title}
-                      width="100"
-                      className="m-auto mb-16"
+                    
+                      className="m-auto mb-16 h-28"
                     ></img>
                     <div className="bg-green-600 flex items-center gap-2 w-32 p-0.5 mb-5 rounded-md ">
                       <FaTruck className="ml-2" />
@@ -403,19 +404,19 @@ const Home = () => {
         </h1>
         <div className="flex flex-col md:flex-row items-center justify-center md:gap-28 mt-16 mb-16">
           <img
-            src="/images/computadorPromocao1.jpg"
-            alt="Imagem do computador"
-            className="w-40"
+            src="/images/computer-promotion.png"
+            alt="Image computador"
+            className="w-60"
           />
           <img
-            src="/images/notebookPromocao.jpg"
-            alt="Imagem do computador"
-            className="w-40"
+            src="/images/notebook-promotion.png"
+            alt="Imagem do notebook"
+            className="w-48"
           />
           <img
-            src="/images/computadorPromocao1.jpg"
+            src="/images/computer-promotion2.png"
             alt="Imagem do computador"
-            className="w-40"
+            className="w-60"
           />
         </div>
 
