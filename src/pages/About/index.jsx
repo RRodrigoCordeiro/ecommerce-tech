@@ -13,13 +13,13 @@ const Sobre = () => {
   } = useElement();
 
   let imgsCarrosel = [
-    { srcImagem: "/images/GoogleLogo.png", altImagem: "logo do Google" },
-    { srcImagem: "/images/ClaroLogo.png", altImagem: "logo da Claro" },
-    { srcImagem: "/images/NikeLogo.png", altImagem: "Logo da Nike" },
-    { srcImagem: "/images/AdidasLogo.png", altImagem: "Logo da Adidas" },
-    { srcImagem: "/images/CocaColalogo.png", altImagem: "Logo da Coca-Cola" },
-    { srcImagem: "/images/PumaLogo.png", altImagem: "Logo da Puma" },
-    { srcImagem: "/images/timLogo.png", altImagem: "Logo da TIM" },
+    { srcImagem: "/images/customers/GoogleLogo.png", altImagem: "logo do Google" },
+    { srcImagem: "/images/customers/ClaroLogo.png", altImagem: "logo da Claro" },
+    { srcImagem: "/images/customers/NikeLogo.png", altImagem: "Logo da Nike" },
+    { srcImagem: "/images/customers/AdidasLogo.png", altImagem: "Logo da Adidas" },
+    { srcImagem: "/images/customers/CocaColalogo.png", altImagem: "Logo da Coca-Cola" },
+    { srcImagem: "/images/customers/PumaLogo.png", altImagem: "Logo da Puma" },
+    { srcImagem: "/images/customers/timLogo.png", altImagem: "Logo da TIM" },
   ];
 
   return (

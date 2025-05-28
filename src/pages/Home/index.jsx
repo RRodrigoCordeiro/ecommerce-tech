@@ -220,12 +220,12 @@ const Home = () => {
 
       <div className="flex flex-col lg:flex-row justify-center gap-4 mt-28 mb-28 ">
         <img
-          src="/images/banner05.png"
+          src="/images/banners/banner05.png"
           alt="imagem do banner"
           className="lg:w-xl"
         />
         <img
-          src="/images/banner06.png"
+          src="/images/banners/banner06.png"
           alt="imagem do banner"
           className="lg:w-xl"
         />
@@ -314,7 +314,7 @@ const Home = () => {
 
       <div>
         <img
-          src="/images/banner07.png"
+          src="/images/banners/banner07.png"
           alt="Imagem do banner"
           className="m-auto h-40 md:h-52  lg:w-1xl  mt-28 mb-28"
         />

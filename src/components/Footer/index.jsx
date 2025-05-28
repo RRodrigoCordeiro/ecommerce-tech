@@ -51,32 +51,32 @@ const Footer = () => {
             </p>
             <div className="mb-8 mt-8 space-y-2  grid grid-cols-2 ">
               <img
-                src="/images/LogoInstagram.png"
+                src="/images/socialMedia/LogoInstagram.png"
                 alt="Logo do instagram"
                 className="w-10 "
               />
               <img
-                src="/images/LogoFacebook.png"
+                src="/images/socialMedia/LogoFacebook.png"
                 alt="Logo do instagram"
                 className="w-10 "
               />
               <img
-                src="/images/LogoTwitter.png"
+                src="/images/socialMedia/LogoTwitter.png"
                 alt="Logo do instagram"
                 className="w-10 "
               />
               <img
-                src="/images/LogoYoutuber.png"
+                src="/images/socialMedia/LogoYoutuber.png"
                 alt="Logo do instagram"
                 className="w-10 "
               />
               <img
-                src="/images/Logolinkedin.png"
+                src="/images/socialMedia/Logolinkedin.png"
                 alt="Logo do instagram"
                 className="w-10 "
               />
               <img
-                src="/images/LogoInstagram.png"
+                src="/images/socialMedia/LogoInstagram.png"
                 alt="Logo do instagram"
                 className="w-10 "
               />
@@ -185,32 +185,32 @@ const Footer = () => {
           </h1>
           <div className="mb-8 mt-8 space-y-2 grid grid-cols-3 justify-items-center items-center ">
             <img
-              src="/images/LogoInstagram.png"
+              src="/images/socialMedia/LogoInstagram.png"
               alt="Logo do instagram"
               className="w-10 "
             />
             <img
-              src="/images/LogoFacebook.png"
+              src="/images/socialMedia/LogoFacebook.png"
               alt="Logo do instagram"
               className="w-10 "
             />
             <img
-              src="/images/LogoTwitter.png"
+              src="/images/socialMedia/LogoTwitter.png"
               alt="Logo do instagram"
               className="w-10 "
             />
             <img
-              src="/images/LogoYoutuber.png"
+              src="/images/socialMedia/LogoYoutuber.png"
               alt="Logo do instagram"
               className="w-10 "
             />
             <img
-              src="/images/Logolinkedin.png"
+              src="/images/socialMedia/Logolinkedin.png"
               alt="Logo do instagram"
               className="w-10 "
             />
             <img
-              src="/images/LogoInstagram.png"
+              src="/images/socialMedia/LogoInstagram.png"
               alt="Logo do instagram"
               className="w-10 "
             />

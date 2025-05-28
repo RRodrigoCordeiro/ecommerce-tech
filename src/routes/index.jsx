@@ -11,7 +11,7 @@ import AttendantDetails from '../pages/Attendant/details'
 
 const PageRoutes = () => {
   return (
-
+    // use navigation no modal para quando adicionar o item no carinho ele navegar para o cart
     <BrowserRouter>
       <Routes>
         <Route element={<Layout/>} >

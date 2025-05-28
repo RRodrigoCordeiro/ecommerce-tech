@@ -101,6 +101,7 @@ const Launch = () => {
                   <img
                     src={selectedProduct.image}
                     alt={selectedProduct.title}
+                    className=" mb-11 w-40 h-40 m-auto"
                   />
                   <div>
                     <h3 className="text-center font-bold mb-8 w-56  m-auto">
