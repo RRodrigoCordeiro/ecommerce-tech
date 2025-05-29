@@ -220,13 +220,13 @@ const Home = () => {
 
       <div className="flex flex-col lg:flex-row justify-center gap-4 mt-28 mb-28 ">
         <img
-          src="/images/banners/banner05.png"
-          alt="imagem do banner"
+          src="/images/banners/banner-announcement-discount.png"
+          alt="imagem do anúncio de desconto"
           className="lg:w-xl"
         />
         <img
-          src="/images/banners/banner06.png"
-          alt="imagem do banner"
+          src="/images/banners/banner-announcement-discount2.png"
+          alt="imagem do anúncio de desconto"
           className="lg:w-xl"
         />
       </div>
@@ -314,7 +314,7 @@ const Home = () => {
 
       <div>
         <img
-          src="/images/banners/banner07.png"
+          src="/images/banners/banner-announcement-discount3.png"
           alt="Imagem do banner"
           className="m-auto h-40 md:h-52  lg:w-1xl  mt-28 mb-28"
         />
@@ -404,17 +404,17 @@ const Home = () => {
         </h1>
         <div className="flex flex-col md:flex-row items-center justify-center md:gap-28 mt-16 mb-16">
           <img
-            src="/images/computer-promotion.png"
+            src="/images/launch/computer-promotion.png"
             alt="Image computador"
             className="w-60"
           />
           <img
-            src="/images/notebook-promotion.png"
+            src="/images/launch/notebook-promotion.png"
             alt="Imagem do notebook"
             className="w-48"
           />
           <img
-            src="/images/computer-promotion2.png"
+            src="/images/launch/computer-promotion2.png"
             alt="Imagem do computador"
             className="w-60"
           />

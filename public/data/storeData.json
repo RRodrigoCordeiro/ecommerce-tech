@@ -3,7 +3,7 @@
       {
         "id": 1,
         "title": "Notebook Gamer Lenovo Gaming 3i ",
-        "description": "Lenovo ideapad Gaming 3i\nNovo design com 11ª Geração de Processadores Intel Core i5-11300H e placa de vídeo NVIDIA GeForce GTX 1650 4GB. Ideal para gamers e usuários que também precisam de alta performance. Com tela de 15.6'' Full HD WVA Antirreflexo para melhor definição de imagem e cores. O armanezamento SSD PCIe NVMe é 10x mais rápido* que um HDD 2.5” SATA, você terá mais segurança ao armazenar seus dados. O teclado retroiluminado em LED branco, deixa o computador mais atraente e também favorece a performance para jogos em lugares com pouca iluminação.",
+        "description": "Lenovo ideapad Gaming 3i\nNovo design com 11ª Geração de Processadores Intel Core i5-11300H e placa de vídeo NVIDIA GeForce GTX 1650 4GB. Ideal para gamers e usuários que também precisam de alta performance. Com tela de 15.6'' Full HD WVA Antirreflexo para melhor definição de imagem e cores. ",
         "price": 2500.00,
         "launch": false,
         "promotion": true,
@@ -14,7 +14,7 @@
       {
         "id": 2,
         "title": "Notebook Asus TUF Gaming A15",
-        "description": "Tablet com tela de 12.9 polegadas e excelente desempenho.",
+        "description": "Projetado para oferecer potência e resistência em qualquer situação. Equipado com processador AMD Ryzen 7 ou Ryzen 9 (dependendo da versão), placa de vídeo NVIDIA GeForce RTX série 30, até 16 GB de memória RAM DDR5 e SSD NVMe de alta velocidade, garante desempenho superior para jogos pesados e tarefas de produtividade.",
         "price": 2500.00,
         "launch": true,
         "promotion": false,
@@ -24,67 +24,67 @@
       },
       {
         "id": 3,
-        "title": "Notebook ASUS TFU Gaming",
-        "description": "Tablet com tela de 12.9 polegadas e excelente desempenho.",
+        "title": "Notebook TFU Gaming",
+        "description": "um notebook ultrafino, ideal para quem busca mobilidade e elegância. Equipado com processador Intel Core i7, tela de 14 polegadas com resolução Full HD e bateria de até 12 horas, é perfeito para profissionais e estudantes que precisam de performance e praticidade no dia a dia",
         "price": 2500.00,
         "launch": true,
         "promotion": false,
-        "image": "/images/notebook-asus-tfu-gaming-f15.png",
+        "image": "/images/notebooks/notebook-tfu-gaming-f15.png",
         "rating": 4.3,
         "stock": 8
       },
       {
         "id": 4,
         "title": "Asus Zen Book-14",
-        "description": "Tablet com tela de 12.9 polegadas e excelente desempenho.",
+        "description": "Combina potência com um design sofisticado. Conta com processador AMD Ryzen 7, 16 GB de RAM e armazenamento SSD de 1 TB, garantindo rapidez em todas as tarefas. Sua tela antirreflexo de 15,6” e o teclado retroiluminado tornam a experiência ainda mais confortável",
         "price": 2500.00,
         "launch": false,
         "promotion": true,
-        "image": "/images/asus-zenbook-14.png",
+        "image": "/images/notebooks/notebook-asus-zenbook-14.png",
         "rating": 4.3,
         "stock": 8
       },
       {
         "id": 5,
         "title": "Notebook Executivo 5000",
-        "description": "Notebook ideal para escritórios e produtividade, com processador Intel i7 e 16GB de RAM.",
+        "description": "Notebook 2 em 1 que oferece versatilidade total. Sua tela touchscreen de 13,3” pode ser girada em 360°, transformando o notebook em tablet rapidamente. Ideal para quem trabalha com design, criação de conteúdo ou gosta de consumir mídia com conforto e praticidade.",
         "price": 5000.00,
         "launch": true,
         "promotion": true,
-        "image": "/images/notebook-executivo.png",
+        "image": "/images/notebooks/notebook-executivo.png",
         "rating": 4.6,
         "stock": 25
       },
       {
        "id": 6,
         "title": "Notebook ASUS pro",
-        "description": "Notebook all-in-one com tela de 27 polegadas, perfeito para ambientes corporativos.",
+        "description": "Sinônimo de leveza e eficiência. Pesando menos de 1 kg, é ideal para quem está sempre em movimento. Com processador Intel Core i5, SSD de 512 GB e bateria de longa duração, oferece desempenho estável e silencioso, com um design premium em alumínio escovado.",
         "price": 4500.00,
         "launch": false,
         "promotion": true,
-        "image": "/images/notebook-asus-pro.png",
+        "image": "/images/notebooks/notebook-asus-pro.png",
         "rating": 4.3,
         "stock": 10
       },
       {
         "id": 7,
-        "title": "MacBook Pro 16",
-        "description": "MacBook Pro de 16 polegadas, com chip M1 Pro e 32GB de RAM, ideal para profissionais criativos.",
+        "title": "StormBook G7",
+        "description": "O StormBook G7 é um notebook gamer compacto, mas poderoso. Equipado com processador Intel Core i9, placa de vídeo NVIDIA RTX 4060, tela de 17,3” com taxa de atualização de 144Hz e sistema de resfriamento otimizado, garante uma experiência imersiva nos jogos mais pesados, sem comprometer a mobilidade.",
         "price": 15000.00,
         "launch": true,
         "promotion": false,
-        "image": "/images/macbook-pro-16.png",
+        "image": "/images/notebooks/notebook-stormBook.png",
         "rating": 4.9,
         "stock": 8
       }, 
       {
        "id": 8,
         "title": "Notebook Gamer X500",
-        "description": "Notebook potente para jogos com 16GB de RAM e placa gráfica RTX 3070.",
+        "description": "um notebook gamer criado para quem busca velocidade e gráficos de alta qualidade. Equipado com processador AMD Ryzen 9, placa de vídeo NVIDIA GeForce RTX 4070, e tela de 15,6” com taxa de atualização de 165Hz, oferece uma experiência imersiva e fluida, ideal para jogos e criação de conteúdo.",
         "price": 7500.00,
         "launch": true,
         "promotion": false,
-        "image": "/images/notebook-gamer-x500.png",
+        "image": "/images/notebooks/notebook-gamer-x500.png",
         "rating": 4.5,
         "stock": 10
       }
@@ -93,109 +93,103 @@
 
     "computer": [
         {
-            "id": 1,
-            "title": "Computador Gamer X2000",
-            "description": "Computador de alta performance para jogos, equipado com Intel i9 e placa gráfica RTX 4080.",
-            "price": 12000.00,
-            "launch": true,
-            "promotion": false,
-            "image": "/images/Computador-Gamer.png",
-            "rating": 4.8,
-            "stock": 15
+          "id": 1,
+          "title": "Computador Gamer X2000",
+          "description": "Computador de alto desempenho, ideal para gamers e profissionais criativos. Equipado com processador Intel Core i9 de 13ª geração, placa de vídeo NVIDIA RTX 4090 e sistema de refrigeração líquida, oferece potência e estabilidade para rodar os softwares e jogos mais pesados com fluidez máxima.",
+          "price": 12000.00,
+          "launch": true,
+          "promotion": false,
+          "image": "/images/computers/computador-gamer.png",
+          "rating": 4.8,
+          "stock": 15
         },
         {
-            "id": 2,
-            "title": "Computador Executivo 5000",
-            "description": "Computador ideal para escritórios e produtividade, com processador Intel i7 e 16GB de RAM.",
-            "price": 5000.00,
-            "launch": true,
-            "promotion": true,
-            "image": "/images/computador-executivo.png",
-            "rating": 4.6,
-            "stock": 25
+          "id": 2,
+          "title": "Computador Executivo 5000",
+          "description": "Computador Executivo 5000 combina design minimalista com hardware robusto. Perfeito para quem busca produtividade e estilo, conta com processador AMD Ryzen 7, 32 GB de memória RAM e armazenamento SSD NVMe de 1 TB. Seu chassi ultrafino em alumínio escovado proporciona um visual sofisticado e elegante",
+          "price": 5000.00,
+          "launch": true,
+          "promotion": true,
+          "image": "/images/computers/computador-executivo.png",
+          "rating": 4.6,
+          "stock": 25
         },
         {
-            "id": 3,
-            "title": "Computador ASUS pro",
-            "description": "Computador all-in-one com tela de 27 polegadas, perfeito para ambientes corporativos.",
-            "price": 4500.00,
-            "launch": false,
-            "promotion": true,
-            "image": "/images/computador-pro-asus.png",
-            "rating": 4.3,
-            "stock": 10
+          "id": 3,
+          "title": "Computador Vortex Z7",
+          "description": "Projetado para quem exige performance extrema, o Vortex Z7 é um desktop modular que facilita upgrades. Equipado com processador Intel Xeon, até 128 GB de RAM ECC e suporte para múltiplas GPUs, é ideal para trabalhos de renderização, inteligência artificial e desenvolvimento de softwares complexos.",
+          "price": 4500.00,
+          "launch": false,
+          "promotion": true,
+          "image": "/images/computers/computador-vortex.png",
+          "rating": 4.3,
+          "stock": 10
         },
         {
-            "id": 4,
-            "title": "iMAC Pro ",
-            "description": "iMAC Pro de 16 polegadas, com chip M1 Pro e 32GB de RAM, ideal para profissionais criativos.",
-            "price": 15000.00,
-            "launch": true,
-            "promotion": false,
-            "image": "/images/apple-imac.png",
-            "rating": 4.9,
-            "stock": 8
+          "id": 4,
+          "title": " Computador Pulse AirBook",
+          "description": "O Pulse AirBook é um notebook ultraleve e compacto, perfeito para quem está sempre em movimento. Com apenas 1,2 kg, traz um processador Intel Core i5, bateria de longa duração de até 12 horas e tela Full HD com tecnologia IPS, garantindo qualidade de imagem e conforto visual.",
+          "price": 15000.00,
+          "launch": true,
+          "promotion": false,
+          "image": "/images/computers/computador-pulse-airBook.png",
+          "rating": 4.9,
+          "stock": 8
         },
         {
-            "id": 5,
-            "title": "Computador Gamer Ultra 2025",
-            "description": "Computador gamer com configurações topo de linha para jogos 4K, com RTX 4090 e 64GB de RAM.",
-            "price": 20000.00,
-            "launch": false,
-            "promotion": true,
-            "image": "/images/computador-gamer-ultra.png",
-            "rating": 5.0,
-            "stock": 5
+          "id": 5,
+          "title": "Computador StormTech G5",
+          "description": "O StormTech G5 é um computador focado no público gamer, trazendo um visual arrojado com iluminação RGB personalizável. Conta com processador AMD Ryzen 9, placa gráfica Radeon RX 7900 XT, 16 GB de RAM DDR5 e SSD de 1 TB, garantindo alta performance e velocidades de carregamento ultrarrápidas.",
+          "price": 20000.00,
+          "launch": false,
+          "promotion": true,
+          "image": "/images/computers/computador-stormTech.png",
+          "rating": 5.0,
+          "stock": 5
         }
     ],
 
     "attendant": [
         {
-            "id": 1,
-            "name": "Marcelo Silva",
-            "role": "Atendente de Vendas",
-            "email": "Marcelosilva@techzone.com",
-            "phone": "(11) 98765-4321",
-            "image": "/images/attendants/attendant-marcelo.png",
-            "rating": 4.7,
-            "working_hours": "09:00 - 18:00"
-            
+          "id": 1,
+          "name": "Marcelo Silva",
+          "role": "Atendente de Vendas",
+          "email": "Marcelosilva@techzone.com",
+          "phone": "(11) 98765-4321",
+          "image": "/images/attendants/attendant-marcelo.png",
+          "rating": 4.7,
+          "working_hours": "09:00 - 18:00"  
         },
         {
-            "id": 2,
-            "name": "Henrique Oliveira",
-            "role": "Atendente de Vendas",
-            "email": "Henrique.oliveira@techzone.com",
-            "phone": "(11) 99876-5432",
-            "image": "/images/attendants/attendant-henrique.png",
-            "rating": 4.9,
-            "working_hours": "10:00 - 19:00"
-           
+          "id": 2,
+          "name": "Henrique Oliveira",
+          "role": "Atendente de Vendas",
+          "email": "Henrique.oliveira@techzone.com",
+          "phone": "(11) 99876-5432",
+          "image": "/images/attendants/attendant-henrique.png",
+          "rating": 4.9,
+          "working_hours": "10:00 - 19:00" 
         },
         {
-            "id": 3,
-            "name": "Fernada Pereira",
-            "role": "Atendente de Vendas",
-            "email": "Fernada.pereira@techzone.com",
-            "phone": "(11) 91234-5678",
-            "image": "/images/attendants/attendant-fernanda.png",
-            "rating": 4.3,
-            "working_hours": "08:00 - 17:00"
-            
+          "id": 3,
+          "name": "Fernada Pereira",
+          "role": "Atendente de Vendas",
+          "email": "Fernada.pereira@techzone.com",
+          "phone": "(11) 91234-5678",
+          "image": "/images/attendants/attendant-fernanda.png",
+          "rating": 4.3,
+          "working_hours": "08:00 - 17:00" 
         },
         {
-            "id": 4,
-            "name": "Joana Martins",
-            "role": "Atendente de Vendas",
-            "email": "Joana Martins@techzone.com",
-            "phone": "(11) 93456-7890",
-            "image": "/images/attendants/attendant-joana.png",
-            "rating": 4.6,
-            "working_hours": "11:00 - 20:00"
-            
+          "id": 4,
+          "name": "Joana Martins",
+          "role": "Atendente de Vendas",
+          "email": "Joana Martins@techzone.com",
+          "phone": "(11) 93456-7890",
+          "image": "/images/attendants/attendant-joana.png",
+          "rating": 4.6,
+          "working_hours": "11:00 - 20:00"  
         }
     ]
-
-
   }
   

@@ -4,7 +4,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { FaCircleChevronLeft } from "react-icons/fa6";
 import { FaChevronCircleRight } from "react-icons/fa";
 import React from "react";
-import banner01 from "/images/banner01.png";
+import banner02 from "/images/banners/banner02.png";
 
 const Testimonials = () => {
   const testimonials = [
@@ -12,31 +12,31 @@ const Testimonials = () => {
       content:
         "Comprei um notebook gamer na loja e fiquei impressionado com a qualidade do atendimento! O suporte foi super atencioso, tirou todas as minhas dúvidas e me ajudou a escolher o melhor modelo para minhas necessidades. A entrega foi rápida e o produto veio muito bem embalado. Estou muito satisfeito com a compra e com certeza voltarei a comprar aqui!",
       author: "Lucas Almeida",
-      image: banner01,
+      image: banner02,
     },
     {
       content:
         "Tive uma experiência incrível comprando meu novo smartphone! A equipe foi extremamente prestativa e me ajudou a escolher o modelo ideal dentro do meu orçamento. A entrega foi feita antes do prazo e o celular chegou em perfeito estado. Recomendo demais essa loja, pois prezam pela qualidade e pelo bom atendimento!",
       author: "Mariana Souza",
-      image: banner01,
+      image: banner02,
     },
     {
       content:
         "Adquiri um monitor ultrawide para o meu home office e estou encantado! Além da excelente qualidade do produto, a loja me proporcionou um atendimento impecável, com informações detalhadas sobre as especificações e a garantia. A entrega foi super rápida e sem nenhum problema. Certamente voltarei a comprar!",
       author: "Ricardo Oliveira",
-      image: banner01,
+      image: banner02,
     },
     {
       content:
         "Finalmente encontrei uma loja confiável para comprar meus eletrônicos! Comprei uma smart TV e fiquei impressionada com a qualidade do atendimento. O site é fácil de navegar, os preços são justos e a entrega foi muito rápida. Sem dúvidas, essa foi a melhor experiência de compra que já tive!",
       author: "Ana Beatriz Lima",
-      image: banner01,
+      image: banner02,
     },
     {
       content:
         "Comprei um fone de ouvido Bluetooth e fiquei surpreso com a eficiência da loja! O atendimento foi ágil e atencioso, e o produto chegou bem antes do prazo. A qualidade do fone é excepcional, e o preço foi muito justo. Com certeza farei novas compras aqui!",
       author: "Eduardo Martins",
-      image: banner01,
+      image: banner02,
     },
   ];
 

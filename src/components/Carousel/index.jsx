@@ -7,9 +7,9 @@ const Carousel = () => {
 
   const data = [
     // { id: '1', image: '/images/banner01.png' },
-    { id: "2", image: "/images/banners/banner02.png" },
-    { id: "3", image: "/images/banners/banner03.png" },
-    { id: "4", image: "/images/banners/banner02.png" },
+    { id: "2", image: "/images/banners/banner-notebook-and-computer.png" },
+    { id: "3", image: "/images/banners/banner-offers.png" },
+    { id: "4", image: "/images/banners/banner-notebook-and-computer.png" },
   ];
 
   // useEffect(() => {

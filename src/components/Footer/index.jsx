@@ -57,22 +57,22 @@ const Footer = () => {
               />
               <img
                 src="/images/socialMedia/LogoFacebook.png"
-                alt="Logo do instagram"
+                alt="Logo do Facebook"
                 className="w-10 "
               />
               <img
                 src="/images/socialMedia/LogoTwitter.png"
-                alt="Logo do instagram"
+                alt="Logo do Twitter"
                 className="w-10 "
               />
               <img
                 src="/images/socialMedia/LogoYoutuber.png"
-                alt="Logo do instagram"
+                alt="Logo do Youtuber"
                 className="w-10 "
               />
               <img
                 src="/images/socialMedia/Logolinkedin.png"
-                alt="Logo do instagram"
+                alt="Logo do Linkedin"
                 className="w-10 "
               />
               <img
@@ -89,12 +89,12 @@ const Footer = () => {
             </p>
             <div className="mb-8 mt-8 space-y-8">
               <img
-                src="/images/GooglePlay.png"
+                src="/images/downloadsApp/GooglePlay.png"
                 alt="Imagem da logo do Google Play"
               />
               <img
-                src="/images/AppStore.png"
-                alt="Imagem da logo do Google Play"
+                src="/images/downloadsApp/AppStore.png"
+                alt="Imagem da logo da App Store"
               />
             </div>
           </div>
@@ -191,22 +191,22 @@ const Footer = () => {
             />
             <img
               src="/images/socialMedia/LogoFacebook.png"
-              alt="Logo do instagram"
+              alt="Logo do Facebook"
               className="w-10 "
             />
             <img
               src="/images/socialMedia/LogoTwitter.png"
-              alt="Logo do instagram"
+              alt="Logo do Twitter"
               className="w-10 "
             />
             <img
               src="/images/socialMedia/LogoYoutuber.png"
-              alt="Logo do instagram"
+              alt="Logo do Youtuber"
               className="w-10 "
             />
             <img
               src="/images/socialMedia/Logolinkedin.png"
-              alt="Logo do instagram"
+              alt="Logo do Linkedin"
               className="w-10 "
             />
             <img
@@ -222,13 +222,13 @@ const Footer = () => {
           </h1>
           <div className="mb-8 mt-8 flex flex-col items-center justify-center gap-8 ">
             <img
-              src="/images/GooglePlay.png"
-              alt="Logo do instagram"
+              src="/images/downloadsApp/GooglePlay.png"
+              alt="Logo do Google Play"
               className="w-48"
             />
             <img
-              src="/images/AppStore.png"
-              alt="Logo do instagram"
+              src="/images/downloadsApp/AppStore.png"
+              alt="Logo do App Store"
               className="w-48 "
             />
           </div>
