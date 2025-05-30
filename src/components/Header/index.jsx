@@ -77,9 +77,15 @@ const Header = ({ searchQuery, setSearchQuery }) => {
   return (
     <div>
       <div className="flex flex-col bg-green-600 items-center mb-16 justify-evenly md:bg-[#F2F2F2] md:flex-row md:mt-11">
-        <div className="flex flex-row justify-around items-center w-full mt-3 mb-3 md:mt-0 md:mb-0 md:w-0">
+        <div className="flex flex-row space-x-44 items-center  mt-3 mb-3 md:mt-0 md:mb-0 ">
           <IoMdMenu size={40} className="md:hidden" />
-          <p>LOGO</p>
+          <Link to="/">
+            <img
+                src="/images/logos/transparent-brand-logo.png"
+                alt="Logo da tech zone"
+                className="w-12 md:w-28 block "
+              />
+          </Link>
         </div>
         <div className="relative w-80 md:ml-8 lg:w-96">
           <input

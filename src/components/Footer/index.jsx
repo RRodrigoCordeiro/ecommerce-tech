@@ -133,10 +133,18 @@ const Footer = () => {
               Institucional
             </p>
             <div className="mb-8 mt-8 space-y-2">
-              <p>Segurança & Privacidade</p>
-              <p>Políticas de Privacidade</p>
-              <p>Código de Defesa do Consumidor</p>
-              <p>Sobre Nós</p>
+              <Link className="block">
+                <p>Segurança & Privacidade</p>
+              </Link>
+              <Link className="block">
+                <p>Políticas de Privacidade</p>
+              </Link>
+              <Link className="block">
+                <p>Código de Defesa do Consumidor</p>
+              </Link>
+              <Link to="/about" className="block">
+                <p>Sobre Nós</p>
+              </Link>
               <p>Trabalhe Conosco</p>
             </div>
           </div>
