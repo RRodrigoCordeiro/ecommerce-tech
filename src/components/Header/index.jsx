@@ -19,34 +19,43 @@ const Header = ({ searchQuery, setSearchQuery }) => {
 
   const produtos = [
     {
-      nome: "Produto 1",
+      nome: "Computador",
       opcoes: [
-        { nome: "Detalhes", link: "/produto-a/detalhes", imagem: "" },
-        { nome: "Compra", link: "/produto-a/compra", imagem: "" },
-        { nome: "comparar", link: "/produto-a/comparar", imagem: "" },
-        { nome: "comparar", link: "/produto-a/comparar", imagem: "" },
+        { nome: "All in One I7", link: "/produto-a/detalhes", imagem: "/images/productsHeader/computers/all-in-one-intel-core-17.png" },
+        { nome: "PC Gamer AMD Ryzen 5", link: "/produto-a/compra", imagem: "/images/productsHeader/computers/pc-gamer-amd-ryzen5-5600g.png" },
+        { nome: "Gamer completo RGB ", link: "/produto-a/comparar", imagem: "/images/productsHeader/computers/gamer-completo-rgb-intel-corei5.png" },
+        { nome: "Cpu Completo I5 ", link: "/produto-a/comparar", imagem: "/images/productsHeader/computers/cpu-completo-i5.png" },
       ],
     },
     {
-      nome: "Produto 2",
+      nome: "Notebook",
       opcoes: [
-        { nome: " estoque", link: "/produto-b/estoque", imagem: "" },
-        { nome: " estoque ", link: "/produto-b/carrinho", imagem: "" },
-        { nome: "Avaliações", link: "/produto-b/carrinho", imagem: "" },
-        { nome: "comparar", link: "/produto-a/comparar", imagem: "" },
+        { nome: "VAIO FE15", link: "/produto-b/estoque", imagem: "/images/productsHeader/notebooks/notebook-vaio-fe15.png" },
+        { nome: "Lenovo Ideapad 1 ", link: "/produto-b/carrinho", imagem: "/images/productsHeader/notebooks/notebook-lenovo-ideapad1.png" },
+        { nome: "ASUS VivoBook 16", link: "/produto-b/carrinho", imagem: "/images/productsHeader/notebooks/notebook-asus-vivobook16.png" },
+        { nome: "XU156 Celeron", link: "/produto-a/comparar", imagem: "/images/productsHeader/notebooks/notebook-xu156-celeron.png" },
       ],
     },
     {
-      nome: "Produto 3",
+      nome: "Smartphone",
       opcoes: [
-        { nome: "Configurações", link: "/produto-c/configuracoes", imagem: "" },
-        { nome: "Promoções", link: "/produto-c/promocoes", imagem: "" },
-        { nome: "Personalizar", link: "/produto-c/personalizar", imagem: "" },
-        { nome: "comparar", link: "/produto-a/comparar", imagem: "" },
+        { nome: "Iphone 15", link: "/produto-c/configuracoes", imagem: "/images/productsHeader/smartphone/iphone15.png" },
+        { nome: "Iphone 16 Pro Max", link: "/produto-c/promocoes", imagem: "images/productsHeader/smartphone/iphone16-promax.png" },
+        { nome: "Motorola Moto G55", link: "/produto-c/personalizar", imagem: "images/productsHeader/smartphone/motorola-motog55.png" },
+        { nome: "Samsung Galaxy A15", link: "/produto-a/comparar", imagem: "images/productsHeader/smartphone/samsung-galaxya15.png" },
       ],
     },
     {
-      nome: "Produto 4",
+      nome: "Monitor",
+      opcoes: [
+        { nome: "Ver estoque", link: "/produto-b/estoque", imagem: "/images/productsHeader/monitor/monitor-gamer-samsung-t350.png" },
+        { nome: "ver estoque 2", link: "/produto-b/carrinho", imagem: "/images/productsHeader/monitor/mointor-dell-24.png" },
+        { nome: "Avaliações", link: "/produto-b/carrinho", imagem: "/images/productsHeader/monitor/monitor-gamer-curvo-samsung.png" },
+        { nome: "comparar", link: "/produto-a/comparar", imagem: "/images/productsHeader/monitor/teste.png" },
+      ],
+    },
+    {
+      nome: "Hardware",
       opcoes: [
         { nome: "Ver estoque", link: "/produto-b/estoque", imagem: "" },
         { nome: "ver estoque 2", link: "/produto-b/carrinho", imagem: "" },
@@ -55,16 +64,7 @@ const Header = ({ searchQuery, setSearchQuery }) => {
       ],
     },
     {
-      nome: "Produto 5",
-      opcoes: [
-        { nome: "Ver estoque", link: "/produto-b/estoque", imagem: "" },
-        { nome: "ver estoque 2", link: "/produto-b/carrinho", imagem: "" },
-        { nome: "Avaliações", link: "/produto-b/carrinho", imagem: "" },
-        { nome: "comparar", link: "/produto-a/comparar", imagem: "" },
-      ],
-    },
-    {
-      nome: "Produto 6",
+      nome: "TV",
       opcoes: [
         { nome: "Ver estoque", link: "/produto-b/estoque", imagem: "" },
         { nome: "ver estoque 2", link: "/produto-b/carrinho", imagem: "" },
@@ -150,9 +150,9 @@ const Header = ({ searchQuery, setSearchQuery }) => {
                         <img
                           src={opcao.imagem}
                           // alt={opcao.nome}
-                          className="w-12 h-12 object-cover mr-2"
+                          className="w-12 h-12 lg:w-20 md:h-full object-cover mr-2 md:m-auto"
                         />
-                        {opcao.nome}
+                        <p className="">{opcao.nome}</p>
                       </a>
                     </li>
                   ))}
