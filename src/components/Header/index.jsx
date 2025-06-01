@@ -21,8 +21,8 @@ const Header = ({ searchQuery, setSearchQuery }) => {
     {
       nome: "Computador",
       opcoes: [
-        { nome: "All in One I7", link: "/produto-a/detalhes", imagem: "/images/productsHeader/computers/all-in-one-intel-core-17.png" },
-        { nome: "PC Gamer AMD Ryzen 5", link: "/produto-a/compra", imagem: "/images/productsHeader/computers/pc-gamer-amd-ryzen5-5600g.png" },
+        { nome: "All in One I7", link: `/header${1}`, imagem: "/images/productsHeader/computers/all-in-one-intel-core-17.png",id:1 },
+        { nome: "PC Gamer AMD Ryzen 5", link: `/header${2}`, imagem: "/images/productsHeader/computers/pc-gamer-amd-ryzen5-5600g.png",id:2 },
         { nome: "Gamer completo RGB ", link: "/produto-a/comparar", imagem: "/images/productsHeader/computers/gamer-completo-rgb-intel-corei5.png" },
         { nome: "Cpu Completo I5 ", link: "/produto-a/comparar", imagem: "/images/productsHeader/computers/cpu-completo-i5.png" },
       ],
@@ -48,19 +48,19 @@ const Header = ({ searchQuery, setSearchQuery }) => {
     {
       nome: "Monitor",
       opcoes: [
-        { nome: "Ver estoque", link: "/produto-b/estoque", imagem: "/images/productsHeader/monitor/monitor-gamer-samsung-t350.png" },
-        { nome: "ver estoque 2", link: "/produto-b/carrinho", imagem: "/images/productsHeader/monitor/mointor-dell-24.png" },
-        { nome: "Avaliações", link: "/produto-b/carrinho", imagem: "/images/productsHeader/monitor/monitor-gamer-curvo-samsung.png" },
-        { nome: "comparar", link: "/produto-a/comparar", imagem: "/images/productsHeader/monitor/teste.png" },
+        { nome: "Gamer Samsung T350", link: "/produto-b/estoque", imagem: "/images/productsHeader/monitor/monitor-gamer-samsung-t350.png" },
+        { nome: "Dell 24", link: "/produto-b/carrinho", imagem: "/images/productsHeader/monitor/mointor-dell-24.png" },
+        { nome: "Gamer Curvo Samsung", link: "/produto-b/carrinho", imagem: "/images/productsHeader/monitor/monitor-gamer-curvo-samsung.png" },
+        { nome: "UHD Samsung 32", link: "/produto-a/comparar", imagem: "/images/productsHeader/monitor/monitor-uhd-samsung-32.png" },
       ],
     },
     {
       nome: "Hardware",
       opcoes: [
-        { nome: "Ver estoque", link: "/produto-b/estoque", imagem: "" },
-        { nome: "ver estoque 2", link: "/produto-b/carrinho", imagem: "" },
-        { nome: "Avaliações", link: "/produto-b/carrinho", imagem: "" },
-        { nome: "comparar", link: "/produto-a/comparar", imagem: "" },
+        { nome: " CPU GAMER INTEL CORE I7", link: "/produto-b/estoque", imagem: "/images/productsHeader/hardware/3.png" },
+        { nome: "Pc Cpu Intel Core I7", link: "/produto-b/carrinho", imagem: "/images/productsHeader/hardware/e.png" },
+        { nome: "Pc Cpu Intel Core I5", link: "/produto-a/comparar", imagem: "/images/productsHeader/hardware/t.png" },
+        { nome: " CPU GAMER INTEL CORE I7 3770", link: "/produto-b/carrinho", imagem: "/images/productsHeader/hardware/GAMER INTEL CORE I7 3770.png" },
       ],
     },
     {
@@ -146,14 +146,15 @@ const Header = ({ searchQuery, setSearchQuery }) => {
                 <ul className="flex flex-row items-center justify-center space-x-10">
                   {produto.opcoes.map((opcao, idx) => (
                     <li key={idx}>
-                      <a className="hover:text-green-500 cursor-pointer block">
+                      <Link className="hover:text-green-500 cursor-pointer block" to={opcao.link}>
                         <img
                           src={opcao.imagem}
+                          
                           // alt={opcao.nome}
                           className="w-12 h-12 lg:w-20 md:h-full object-cover mr-2 md:m-auto"
                         />
                         <p className="">{opcao.nome}</p>
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
