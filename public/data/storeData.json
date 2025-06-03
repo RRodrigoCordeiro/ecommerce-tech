@@ -190,6 +190,145 @@
           "rating": 4.6,
           "working_hours": "11:00 - 20:00"  
         }
-    ]
+    ],
+
+    "productsHeader": {
+        "Computador":[
+          {
+            "id":1,
+            "name": "All in One I7",
+            "image": "/images/productsHeader/computers/all-in-one-intel-core-17.png"
+          },
+          {
+            "id":2,
+            "name": "PC Gamer AMD Ryzen 5",
+            "image": "/images/productsHeader/computers/pc-gamer-amd-ryzen5-5600g.png"
+          },
+          {
+            "id":3,
+            "name": "Gamer completo RGB",
+            "image": "/images/productsHeader/computers/gamer-completo-rgb-intel-corei5.png"
+          },
+          {
+            "id":4,
+            "name": "Cpu Completo I5",
+            "image": "/images/productsHeader/computers/cpu-completo-i5.png"
+          }
+        ],
+        "Notebook": [
+          {
+            "id":1,
+            "name": "AIO FE15",
+            "image": "/images/productsHeader/notebooks/notebook-vaio-fe15.png"
+          },
+          {
+            "id":2,
+            "name": "Lenovo Ideapad 1",
+            "image": "/images/productsHeader/notebooks/notebook-lenovo-ideapad1.png"
+            
+          },
+          {
+            "id":3,
+            "name": "ASUS VivoBook 16",
+            "image": "/images/productsHeader/notebooks/notebook-asus-vivobook16.png"
+            
+          },
+          {
+            "id":4,
+            "name": "XU156 Celeron",
+            "image": "/images/productsHeader/notebooks/notebook-xu156-celeron.png"
+            
+          } 
+        ],
+        "Smartphone": [
+           {
+              "id":1,
+              "name": "Iphone 15",
+              "image": "/images/productsHeader/smartphone/iphone15.png"
+            },
+            {
+              "id":2,
+              "name": "Iphone 16 Pro Max",
+              "image": "images/productsHeader/smartphone/iphone16-promax.png"  
+            },
+            {
+              "id":3,
+              "name": "Motorola Moto G55",
+              "image": "images/productsHeader/smartphone/motorola-motog55.png"   
+            },
+            {
+              "id":4,
+              "name": "Samsung Galaxy A15",
+              "image": "images/productsHeader/smartphone/samsung-galaxya15.png"
+            } 
+        ],
+        "Monitor":[
+            {
+              "id":1,
+              "name": "Gamer Samsung T350",
+              "image": "/images/productsHeader/monitor/monitor-gamer-samsung-t350.png"
+            },
+            {
+              "id":2,
+              "name": "Monitor Dell 24",
+              "image": "/images/productsHeader/monitor/mointor-dell-24.png"  
+            },
+            {
+              "id":3,
+              "name": "Gamer Curvo Samsung",
+              "image": "/images/productsHeader/monitor/monitor-gamer-curvo-samsung.png"   
+            },
+            {
+              "id":4,
+              "name": "UHD Samsung 32",
+              "image": "/images/productsHeader/monitor/monitor-uhd-samsung-32.png"
+            } 
+        ],
+        "Hardware":[
+            {
+              "id":1,
+              "name": "CPU Gamer Intel Core I7",
+              "image": "/images/productsHeader/hardware/cpu-gamer-intel-core-i7.png"
+            },
+            {
+              "id":2,
+              "name": "Pc Cpu Intel Core I7",
+              "image": "/images/productsHeader/hardware/cpu-intel-core-i7.png"  
+            },
+            {
+              "id":3,
+              "name": "Pc Cpu Intel Core I5",
+              "image": "/images/productsHeader/hardware/cpu-intel-core-i5.png"   
+            },
+            {
+              "id":4,
+              "name": "CPU Gamer Intel Core I7 3770",
+              "image": "/images/productsHeader/hardware/gamer-intel-corei7-3770.png"
+            } 
+        ],
+        "TV":[
+            {
+              "id":1,
+              "name": "Samsung Smart TV 55",
+              "image": "/images/productsHeader/tv/samsung-smart-TV55.png"
+            },
+            {
+              "id":2,
+              "name": "Smart TV 32” HD D-LED",
+              "image": "/images/productsHeader/tv/smart-tv-32-hd-d-led.png"  
+            },
+            {
+              "id":3,
+              "name": "Smart TV 65” 4K DLED",
+              "image": "/images/productsHeader/tv/smart-tv-65-4k-dled.png"   
+            },
+            {
+              "id":8,
+              "name": "Smart TV 8K QLED 82” Samsung",
+              "image": "/images/productsHeader/tv/smart-tv-8kled-82.png"
+            } 
+        ]
+
+      }
   }
   

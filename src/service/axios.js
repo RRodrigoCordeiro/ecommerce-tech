@@ -32,3 +32,14 @@ export const fetchCep =  async (cep) => {
 
 }
 
+export const fetchProductHeader = async() => {
+  const response = await axiosInstance.get("/storeData.json")
+  return response.data.productsHeader;
+}
+
+export const fetchProductHeaderComputer = async(id) => {
+  const response = await axiosInstance.get("/storeData.json");
+  const computer = response.data.productsHeader.computer
+  return computer.find((computer) => computer.id === Number(id));
+}
+

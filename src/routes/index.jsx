@@ -8,7 +8,7 @@ import Carrinho from "../pages/Cart"
 import ProductDetail from "../pages/detail" 
 import { Layout } from "../layout"
 import AttendantDetails from '../pages/Attendant/details'
-import ProductHeader from '../pages/productsHeaderDetail/computers'
+import HeaderDetail from '../pages/productsHeaderDetail'
 
 const PageRoutes = () => {
   return (
@@ -21,7 +21,7 @@ const PageRoutes = () => {
           <Route path='/sac' element={<Sac/>} />
           <Route path='/about' element={<Sobre/>} />
           <Route path='/cart' element={<Carrinho/>} />
-          <Route path='/header/:id' element={<ProductHeader/>} />
+          <Route path='/header/:id' element={<HeaderDetail/>} />
           <Route path='/detail/:id' element={<ProductDetail/>} />
           <Route path='/attendantDetails/:id' element={<AttendantDetails/>} />
         </Route>
