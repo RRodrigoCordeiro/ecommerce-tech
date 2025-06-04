@@ -207,7 +207,27 @@
           {
             "id":3,
             "name": "Gamer completo RGB",
-            "image": "/images/productsHeader/computers/gamer-completo-rgb-intel-corei5.png"
+            "title":"Computador Gamer Completo RGB Intel Core I5 8GB SSD 480GB Kit Gamer comHeadeset Monitor 20 Windows 10 3green Premium",
+            "specification": {
+                "Marca": "3Green Technology",
+                "Sistema operacional": "Windows 10",
+                "Modelo da CPU": "Core i5 3470",
+                "Velocidade da CPU": "3,6 GHz",
+                "Capacidade de armazenamento da memória": "480 GB",
+                "Usos específicos do produto": "Uso diário",
+                "Tipo de design de computador pessoal": "Torre do computador",
+                "Tamanho da tela": "20 Polegadas",
+                "Tamanho instalado da memória RAM": "8 GB",
+                "Nome do modelo": "3green Premium"
+              },
+              "about":[
+                "Monitor LED 20\" com 75Hz de taxa de atualização",
+                "Gabinete Gamer com 3 LED Fans RGB e controle remoto para gerenciar as cores e efeitos",
+                "Kit Gamer RGB completo com mouse, teclado semi mecânico, headset e mousepad",
+                "PC Gamer com Microsoft Windows 10 original e vitalício",
+                "GARANTIA: 1 ANO"
+              ],
+             "image": "/images/productsHeader/computers/gamer-completo-rgb-intel-corei5.png"
           },
           {
             "id":4,
@@ -217,24 +237,24 @@
         ],
         "Notebook": [
           {
-            "id":1,
+            "id":5,
             "name": "AIO FE15",
             "image": "/images/productsHeader/notebooks/notebook-vaio-fe15.png"
           },
           {
-            "id":2,
+            "id":6,
             "name": "Lenovo Ideapad 1",
             "image": "/images/productsHeader/notebooks/notebook-lenovo-ideapad1.png"
             
           },
           {
-            "id":3,
+            "id":7,
             "name": "ASUS VivoBook 16",
             "image": "/images/productsHeader/notebooks/notebook-asus-vivobook16.png"
             
           },
           {
-            "id":4,
+            "id":8,
             "name": "XU156 Celeron",
             "image": "/images/productsHeader/notebooks/notebook-xu156-celeron.png"
             
@@ -242,88 +262,88 @@
         ],
         "Smartphone": [
            {
-              "id":1,
+              "id":9,
               "name": "Iphone 15",
               "image": "/images/productsHeader/smartphone/iphone15.png"
             },
             {
-              "id":2,
+              "id":10,
               "name": "Iphone 16 Pro Max",
-              "image": "images/productsHeader/smartphone/iphone16-promax.png"  
+              "image": "/images/productsHeader/smartphone/iphone16-promax.png"  
             },
             {
-              "id":3,
+              "id":11,
               "name": "Motorola Moto G55",
-              "image": "images/productsHeader/smartphone/motorola-motog55.png"   
+              "image": "/images/productsHeader/smartphone/motorola-motog55.png"   
             },
             {
-              "id":4,
+              "id":12,
               "name": "Samsung Galaxy A15",
-              "image": "images/productsHeader/smartphone/samsung-galaxya15.png"
+              "image": "/images/productsHeader/smartphone/samsung-galaxya15.png"
             } 
         ],
         "Monitor":[
             {
-              "id":1,
+              "id":13,
               "name": "Gamer Samsung T350",
               "image": "/images/productsHeader/monitor/monitor-gamer-samsung-t350.png"
             },
             {
-              "id":2,
+              "id":14,
               "name": "Monitor Dell 24",
               "image": "/images/productsHeader/monitor/mointor-dell-24.png"  
             },
             {
-              "id":3,
+              "id":15,
               "name": "Gamer Curvo Samsung",
               "image": "/images/productsHeader/monitor/monitor-gamer-curvo-samsung.png"   
             },
             {
-              "id":4,
+              "id":16,
               "name": "UHD Samsung 32",
               "image": "/images/productsHeader/monitor/monitor-uhd-samsung-32.png"
             } 
         ],
         "Hardware":[
             {
-              "id":1,
+              "id":17,
               "name": "CPU Gamer Intel Core I7",
               "image": "/images/productsHeader/hardware/cpu-gamer-intel-core-i7.png"
             },
             {
-              "id":2,
+              "id":18,
               "name": "Pc Cpu Intel Core I7",
               "image": "/images/productsHeader/hardware/cpu-intel-core-i7.png"  
             },
             {
-              "id":3,
+              "id":19,
               "name": "Pc Cpu Intel Core I5",
               "image": "/images/productsHeader/hardware/cpu-intel-core-i5.png"   
             },
             {
-              "id":4,
+              "id":20,
               "name": "CPU Gamer Intel Core I7 3770",
               "image": "/images/productsHeader/hardware/gamer-intel-corei7-3770.png"
             } 
         ],
         "TV":[
             {
-              "id":1,
+              "id":21,
               "name": "Samsung Smart TV 55",
               "image": "/images/productsHeader/tv/samsung-smart-TV55.png"
             },
             {
-              "id":2,
+              "id":22,
               "name": "Smart TV 32” HD D-LED",
               "image": "/images/productsHeader/tv/smart-tv-32-hd-d-led.png"  
             },
             {
-              "id":3,
+              "id":23,
               "name": "Smart TV 65” 4K DLED",
               "image": "/images/productsHeader/tv/smart-tv-65-4k-dled.png"   
             },
             {
-              "id":8,
+              "id":24,
               "name": "Smart TV 8K QLED 82” Samsung",
               "image": "/images/productsHeader/tv/smart-tv-8kled-82.png"
             } 

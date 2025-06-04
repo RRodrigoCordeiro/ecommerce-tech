@@ -21,7 +21,7 @@ const PageRoutes = () => {
           <Route path='/sac' element={<Sac/>} />
           <Route path='/about' element={<Sobre/>} />
           <Route path='/cart' element={<Carrinho/>} />
-          <Route path='/header/:id' element={<HeaderDetail/>} />
+          <Route path='/header/:category/:id' element={<HeaderDetail/>} />
           <Route path='/detail/:id' element={<ProductDetail/>} />
           <Route path='/attendantDetails/:id' element={<AttendantDetails/>} />
         </Route>

@@ -37,9 +37,9 @@ export const fetchProductHeader = async() => {
   return response.data.productsHeader;
 }
 
-export const fetchProductHeaderComputer = async(id) => {
+export const fetchProductByCategoryAndId = async (category, id) => {
   const response = await axiosInstance.get("/storeData.json");
-  const computer = response.data.productsHeader.computer
-  return computer.find((computer) => computer.id === Number(id));
+  const products = response.data.productsHeader[category];
+  return products.find((product) => product.id === Number(id));
 }
 
