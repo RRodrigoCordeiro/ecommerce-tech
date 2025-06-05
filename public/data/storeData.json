@@ -197,17 +197,58 @@
           {
             "id":1,
             "name": "All in One I7",
+            "title": "All In One Intel Core I7 16gb Ssd 512gb 21,5 Wifi",
+            "specification": {
+                "Marca": "American",
+                "Sistema operacional": "Windows 10",
+                "Modelo da CPU": "Intel HD Graphics",
+                "Velocidade da CPU": "2.40 GHz",
+                "Capacidade de armazenamento da memória": "512GB",
+                "Usos específicos do produto": "Uso diário",
+                "Tipo de design de computador pessoal": "Torre do computador",
+                "Tamanho da tela": "21,5 Polegadas",
+                "Tamanho instalado da memória RAM": "16 GB",
+                "Nome do modelo": "All in One"
+            },
+            "about": [
+                "Assinatura de 1 ano do Microsoft 365 Personal incluída – Acesse as ferramentas do Office, como Word, Excel e PowerPoint",
+                "Tela FHD para imagens mais nítidas e vivas – Aproveite gráficos de alta qualidade com uma tela que traz mais clareza e definição para suas tarefas e entretenimento",
+                "Design leve e fino, perfeito para qualquer ambiente – Com um visual moderno e compacto",
+                "PC Gamer com Microsoft Windows 10 original e vitalício",
+                "GARANTIA: 1 ANO"
+            ],
             "image": "/images/productsHeader/computers/all-in-one-intel-core-17.png"
           },
           {
             "id":2,
             "name": "PC Gamer AMD Ryzen 5",
+            "title": "PC Gamer Completo AMD Ryzen 5 5600G",
+            "specification": {
+                "Marca": "3Green Technology",
+                "Sistema operacional": "Linux",
+                "Modelo da CPU": "Ryzen 5",
+                "Velocidade da CPU": "4,2 GHz",
+                "Capacidade de armazenamento da memória": "512GB",
+                "Usos específicos do produto": "Jogos",
+                "Tipo de design de computador pessoal": "Torre do computador",
+                "Tamanho da tela": "21,5 Polegadas",
+                "Tamanho instalado da memória RAM": "16 GB",
+                "Nome do modelo": "PC Gamer"
+            },
+            "about": [
+                "Assinatura de 1 ano do Microsoft 365 Personal incluída – Acesse as ferramentas do Office, como Word, Excel e PowerPoint",
+                "Equipado com o processador AMD Ryzen 5 5600G",
+                "Armazenamento ultra veloz via SSD",
+                "Memória com alta frequência",
+                "Excelente taxa de FPS com gráfico Radeon VEGA 7",
+                "GARANTIA: 1 ANO"
+            ],
             "image": "/images/productsHeader/computers/pc-gamer-amd-ryzen5-5600g.png"
           },
           {
             "id":3,
             "name": "Gamer completo RGB",
-            "title":"Computador Gamer Completo RGB Intel Core I5 8GB SSD 480GB Kit Gamer comHeadeset Monitor 20 Windows 10 3green Premium",
+            "title":"Computador Gamer Completo RGB Intel Core I5 8GB SSD 480GB ",
             "specification": {
                 "Marca": "3Green Technology",
                 "Sistema operacional": "Windows 10",
@@ -232,6 +273,26 @@
           {
             "id":4,
             "name": "Cpu Completo I5",
+            "title":"Cpu Completo I5 6ºgeração 16gb Ddr4+ 480gb Monitor 21 + Kit",
+            "specification": {
+                "Marca": "Montatudo",
+                "Sistema operacional": "Windows 10",
+                "Modelo da CPU": "Core i5 3470",
+                "Velocidade da CPU": "3,6 GHz",
+                "Capacidade de armazenamento da memória": "480 GB",
+                "Usos específicos do produto": "Uso diário",
+                "Tipo de design de computador pessoal": "Torre do computador",
+                "Tamanho da tela": "21 Polegadas",
+                "Tamanho instalado da memória RAM": "16 GB",
+                "Nome do modelo": "Core i5 Sexta"
+              },
+              "about":[
+                "Processador Intel Core i5 6500",
+                "Memória RAM 16gb DDR4",
+                "Mouse de conexão USB e 3 botões",
+                "PC Gamer com Microsoft Windows 10 original e vitalício",
+                "GARANTIA: 1 ANO"
+              ],
             "image": "/images/productsHeader/computers/cpu-completo-i5.png"
           }
         ],
@@ -330,21 +391,101 @@
             {
               "id":21,
               "name": "Samsung Smart TV 55",
+              "title":"Computador Gamer Completo RGB Intel Core I5 8GB SSD 480GB ",
+              "specification": {
+                  "Marca": "3Green Technology",
+                  "Sistema operacional": "Windows 10",
+                  "Modelo da CPU": "Core i5 3470",
+                  "Velocidade da CPU": "3,6 GHz",
+                  "Capacidade de armazenamento da memória": "480 GB",
+                  "Usos específicos do produto": "Uso diário",
+                  "Tipo de design de computador pessoal": "Torre do computador",
+                  "Tamanho da tela": "20 Polegadas",
+                  "Tamanho instalado da memória RAM": "8 GB",
+                  "Nome do modelo": "3green Premium"
+                },
+                "about":[
+                  "Monitor LED 20\" com 75Hz de taxa de atualização",
+                  "Gabinete Gamer com 3 LED Fans RGB e controle remoto para gerenciar as cores e efeitos",
+                  "Kit Gamer RGB completo com mouse, teclado semi mecânico, headset e mousepad",
+                  "PC Gamer com Microsoft Windows 10 original e vitalício",
+                  "GARANTIA: 1 ANO"
+                ],
               "image": "/images/productsHeader/tv/samsung-smart-TV55.png"
             },
             {
               "id":22,
               "name": "Smart TV 32” HD D-LED",
+              "title":"Computador Gamer Completo RGB Intel Core I5 8GB SSD 480GB ",
+              "specification": {
+                  "Marca": "3Green Technology",
+                  "Sistema operacional": "Windows 10",
+                  "Modelo da CPU": "Core i5 3470",
+                  "Velocidade da CPU": "3,6 GHz",
+                  "Capacidade de armazenamento da memória": "480 GB",
+                  "Usos específicos do produto": "Uso diário",
+                  "Tipo de design de computador pessoal": "Torre do computador",
+                  "Tamanho da tela": "20 Polegadas",
+                  "Tamanho instalado da memória RAM": "8 GB",
+                  "Nome do modelo": "3green Premium"
+                },
+                "about":[
+                  "Monitor LED 20\" com 75Hz de taxa de atualização",
+                  "Gabinete Gamer com 3 LED Fans RGB e controle remoto para gerenciar as cores e efeitos",
+                  "Kit Gamer RGB completo com mouse, teclado semi mecânico, headset e mousepad",
+                  "PC Gamer com Microsoft Windows 10 original e vitalício",
+                  "GARANTIA: 1 ANO"
+                ],
               "image": "/images/productsHeader/tv/smart-tv-32-hd-d-led.png"  
             },
             {
               "id":23,
               "name": "Smart TV 65” 4K DLED",
+              "title":"Computador Gamer Completo RGB Intel Core I5 8GB SSD 480GB ",
+              "specification": {
+                  "Marca": "3Green Technology",
+                  "Sistema operacional": "Windows 10",
+                  "Modelo da CPU": "Core i5 3470",
+                  "Velocidade da CPU": "3,6 GHz",
+                  "Capacidade de armazenamento da memória": "480 GB",
+                  "Usos específicos do produto": "Uso diário",
+                  "Tipo de design de computador pessoal": "Torre do computador",
+                  "Tamanho da tela": "20 Polegadas",
+                  "Tamanho instalado da memória RAM": "8 GB",
+                  "Nome do modelo": "3green Premium"
+                },
+                "about":[
+                  "Monitor LED 20\" com 75Hz de taxa de atualização",
+                  "Gabinete Gamer com 3 LED Fans RGB e controle remoto para gerenciar as cores e efeitos",
+                  "Kit Gamer RGB completo com mouse, teclado semi mecânico, headset e mousepad",
+                  "PC Gamer com Microsoft Windows 10 original e vitalício",
+                  "GARANTIA: 1 ANO"
+                ],
               "image": "/images/productsHeader/tv/smart-tv-65-4k-dled.png"   
             },
             {
               "id":24,
               "name": "Smart TV 8K QLED 82” Samsung",
+              "title":"Computador Gamer Completo RGB Intel Core I5 8GB SSD 480GB ",
+              "specification": {
+                  "Marca": "3Green Technology",
+                  "Sistema operacional": "Windows 10",
+                  "Modelo da CPU": "Core i5 3470",
+                  "Velocidade da CPU": "3,6 GHz",
+                  "Capacidade de armazenamento da memória": "480 GB",
+                  "Usos específicos do produto": "Uso diário",
+                  "Tipo de design de computador pessoal": "Torre do computador",
+                  "Tamanho da tela": "20 Polegadas",
+                  "Tamanho instalado da memória RAM": "8 GB",
+                  "Nome do modelo": "3green Premium"
+                },
+                "about":[
+                  "Monitor LED 20\" com 75Hz de taxa de atualização",
+                  "Gabinete Gamer com 3 LED Fans RGB e controle remoto para gerenciar as cores e efeitos",
+                  "Kit Gamer RGB completo com mouse, teclado semi mecânico, headset e mousepad",
+                  "PC Gamer com Microsoft Windows 10 original e vitalício",
+                  "GARANTIA: 1 ANO"
+                ],
               "image": "/images/productsHeader/tv/smart-tv-8kled-82.png"
             } 
         ]

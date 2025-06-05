@@ -91,8 +91,7 @@ const Header = ({ searchQuery, setSearchQuery }) => {
                       <Link className="hover:text-green-500 cursor-pointer block" to={`/header/${categoria}/${opcao.id}`}>
                         <img
                           src={opcao.image}
-                          
-                          // alt={opcao.nome}
+                          alt={opcao.name}
                           className="w-12 h-12 lg:w-20 md:h-full object-cover mr-2 md:m-auto"
                         />
                         <p className="">{opcao.name}</p>

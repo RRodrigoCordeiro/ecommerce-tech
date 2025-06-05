@@ -6,15 +6,15 @@ import Header from "../../components/Header";
 const HeaderDetail = () => {
   const { category, id } = useParams();
 
-  // Usa o hook genérico para buscar o produto pelo category e id
+  
   const {
     data: product,
     isLoading,
     error,
   } = useProductByCategoryAndId(category, id);
 
-  if (isLoading) return <p>Carregando...</p>;
-  if (error) return <p>Erro ao carregar produto.</p>;
+  // if (isLoading) return <p>Carregando...</p>;
+  // if (error) return <p>Erro ao carregar produto.</p>;
 
   return (
     <div>
@@ -28,16 +28,16 @@ const HeaderDetail = () => {
             <p className="text-center ">{product.title}</p>
             <img 
               src={product.image} 
-              className="block m-auto w-56 md:w-96 " 
+              className="block m-auto w-56 mt-14 md:mt-18 md:w-96 " 
             />
           </div>
-          <div className=" flex flex-col justify-center items-center  mt-40 ">
+          <div className=" flex flex-col justify-center items-center mt-28 lg:mt-40 ">
             {product.specification && (
               <div>
-                <h2 className="text-green-600 font-bold">
+                <h2 className="text-green-600 font-bold text-center">
                   Escpeficações Técnicas
                 </h2>
-                <ul className="mt-3 list-disc pl-5 space-y-1">
+                <ul className="mt-3 list-disc pl-5 space-y-1 w-80 md:w-full">
                   {Object.entries(product.specification).map(
                     ([chave, valor]) => (
                       <li key={chave}>
@@ -52,13 +52,13 @@ const HeaderDetail = () => {
             <p className="border border-gray-300 mt-8 mb-8 w-96"></p>
 
             {product.about && (
-              <div className="mr-16 ">
-                <h2 className="text-green-600 font-bold mb-3">
+              <div className="md:mr-16 ">
+                <h2 className="text-green-600 font-bold mb-3 text-center">
                   Sobre este item
                 </h2>
                 <ul className="mt-3 list-disc pl-5 space-y-1">
                   {product.about.map((item, index) => (
-                    <li key={index} className="max-w-96">
+                    <li key={index} className="max-w-72 md:max-w-96">
                       {item}
                     </li>
                   ))}
