@@ -12,11 +12,13 @@ import { userSchema } from "../../schemas/userSchema";
 import InputMask from 'react-input-mask';
 import { useAddress } from "../../hooks/address/useAddress";
 
+// to email do comprador do site
+// bcc email do programador
 
 const Cart = () => {
   const { cart, total, addItemCart, removeItemCart } = useContext(CartContext);
   const [hasItems, setHasItems] = useState();
-  const [isOpen, setModalOpened] = useState(true);
+  const [isOpen, setModalOpened] = useState(false);
  
   const {
     register,
@@ -67,15 +69,18 @@ const Cart = () => {
       cost_shipping: shippingCost,
       cost_tax: taxCost,
       cost_total: totalCost.toLocaleString("pt-br",{style:"currency", currency: "BRL"}),
-      user: data.userName,
-      email:  data.userEmail,
-      telephone: data.userTelephoe,
-      neighborhood: data.bairr,
-      region: data.regia,
-      patio: data.logradour,
-      locality: data.localidad,
+      user: data.user,
+      email:  data.email,
+      telephone: data.phone,
+      neighborhood: data.neighborhood,
+      region: data.region,
+      patio: data.patio,
+      locality: data.locality,
       complement: data.complement,
-      uf: data.uf
+      uf: data.uf,
+      reply_to: data.email,    
+      logo_url: "https://i.ibb.co/FkWtyr3W/transparent-brand-logo.png"
+
     };
 
     emailjs
@@ -174,19 +179,20 @@ const Cart = () => {
             <h1 className="text-center font-medium mt-8 mb-8">
               Preecha as informações para finalizar o pedido
             </h1>
+            
             <form 
               className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full"  
               onSubmit={handleSubmit(sendEmail)}
             >
               <div className="flex  flex-col">
-                <label htmlFor="name"  className="w-19 text-right md:w-23 lg:w-20">Nome:</label>
+                <label htmlFor="user"  className="w-19 text-right md:w-23 lg:w-20">Nome:</label>
                 <input 
                   type="text" 
-                  id="name" 
-                  {...register("name")} 
+                  id="user" 
+                  {...register("user")} 
                   className="w-80 lg:w-96 block m-auto border h-8 px-2"
                 />
-                {errors.name && <span className="text-red-500 text-center">{errors.name.message}</span>}
+                {errors.user && <span className="text-red-500 text-center">{errors.user.message}</span>}
               </div>
 
               <div className="flex flex-col">
@@ -200,11 +206,11 @@ const Cart = () => {
               </div>
 
               <div className="flex flex-col">
-                <label htmlFor="number" className="w-23 md:w-27 lg:w-23 text-right">Telefone:</label>
+                <label htmlFor="phone" className="w-23 md:w-27 lg:w-23 text-right">Telefone:</label>
                  <InputMask 
                     mask="(99) 99999-9999" 
                     type="tel" 
-                    id="number" 
+                    id="phone" 
                     {...register("phone")} 
                     className="w-80 lg:w-96 block m-auto  border h-8 px-2">
                  </InputMask>
@@ -224,7 +230,7 @@ const Cart = () => {
               </div>
 
                <div className="flex flex-col">
-                  <label htmlFor="region" className="w-20 md:w-25 lg:w-20 text-right">Estado:</label>
+                  <label htmlFor="region" className="w-20 md:w-25 lg:w-20 text-right">Região:</label>
                   <input 
                     type="text" 
                     id="region" 

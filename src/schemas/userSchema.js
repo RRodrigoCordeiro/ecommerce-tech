@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 export const userSchema = z.object({
-    name: z.string()
+    user: z.string()
         .min(3, "É necessário ter no minimo 3 caracteres"),
     email: z.string()
         .email("O email é inválido"),

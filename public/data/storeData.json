@@ -300,23 +300,115 @@
           {
             "id":5,
             "name": "AIO FE15",
+            "title": "Notebook VAIO FE15 Intel Core i5",
+            "specification": {
+              "Marca": "VAIO",
+              "Tipo de resolução": "Full HD",
+              "Tamanho da tela: ": "15,6",
+              "Sistema operacional": "Windows",
+              "Duração da bateria": "10 horas",
+              "Resolução da tela":"1920 px x 1080 px",
+              "Fabricante do modelo da CPU": "intel Core i7 ",
+              "Ranking dos mais vendidos":"Nº 8 em CPUs de Computadores",
+              "Capacidade total do módulo de memória RAM": "16 GB",
+              "Capacidade de disco SSD:": "512 BG",
+              "Processador:":"Intel Core i5 Intel Core i5- 1235U",
+              "cor":"Preto"
+            },
+            "about":[
+              "Focado em desempenho com alta eficiência, o processador Intel Core i de 12ª geração é perfeito para jogadores entusiastas, produtivos multitarefas e criativos performáticos.",
+              "Experiência visual incrível em alta definição Full HD na tela de 15,6” widescreen, antirreflexiva.",
+              "O VAIO FE15 é fino e leve, companhia ideal onde estiver. Com apenas 1,75kg e 19,8mm fica simples ser produtivo em qualquer lugar.",
+              "O VAIO FE15 é um notebook de alta durabilidade, que entrega o máximo de performance em qualquer atividade",
+              " As portas USB e USB C 3.2 unidas aos Wi-Fi 5, proporcionam a mais rápida transferência de dados já vista",
+              "GARANTIA: 1 ANO"
+            ],
             "image": "/images/productsHeader/notebooks/notebook-vaio-fe15.png"
           },
           {
             "id":6,
             "name": "Lenovo Ideapad 1",
+            "title": "Notebook Lenovo IdeaPad 1 i3",
+            "specification": {
+              "Marca": "Lenovo",
+              "Tipo de resolução": "Full HD",
+              "Tamanho da tela: ": "15,6",
+              "Sistema operacional": "Windows 11",
+              "Duração da bateria": "5 horas",
+              "Resolução da tela":"1366x768",
+              "Fabricante do modelo da CPU": "intel Core i7 ",
+              "Ranking dos mais vendidos":"Nº 7 em CPUs de Computadores",
+              "Capacidade total do módulo de memória RAM": "4 GB",
+              "Capacidade de disco SSD:": "256 GB",
+              "Processador:":"Intel Core i3 12ª geração",
+              "cor":"Cinza"
+            },
+            "about":[
+              "Processador Intel i3 de última geração",
+              "Armazenamento SSD super rápido",
+              "Tela grande de 15.6.",
+              "Um notebook que combina mobilidade e desempenho, perfeito para quem precisa de velocidade sem abrir mão da portabilidade.",
+              " Windows 11 instalado",
+              "GARANTIA: 1 ANO"
+            ],
             "image": "/images/productsHeader/notebooks/notebook-lenovo-ideapad1.png"
             
           },
           {
             "id":7,
             "name": "ASUS VivoBook 16",
+            "title": "Notebook ASUS Vivobook 15 X1504VA",
+            "specification": {
+              "Marca": "ASUS",
+              "Tipo de resolução": "1080p",
+              "Tamanho da tela: ": "15,6",
+              "Sistema operacional": "Linux",
+              "Duração da bateria": "8 horas",
+              "Resolução da tela":"1366x768",
+              "Fabricante do modelo da CPU": "intel Core i5 ",
+              "Ranking dos mais vendidos":"Nº 3 em CPUs de Computadores",
+              "Capacidade total do módulo de memória RAM": "4 GB",
+              "Capacidade de disco SSD:": "256 GB",
+              "Processador:":"Intel Core i5 13ª Geração",
+              "cor":"Prata"
+            },
+            "about":[
+              "Armazenamento 256 GB SSD",
+              "Memória RAM 4 GB (4 GB OnBoard + 0 GB OffBoard) 1 Slot disponível",
+              "Tela grande de 15.6.",
+              "Um notebook que combina mobilidade e desempenho, perfeito para quem precisa de velocidade sem abrir mão da portabilidade.",
+              "Sistema Operacional Linux KeepOS",
+              "GARANTIA: 1 ANO"
+            ],
             "image": "/images/productsHeader/notebooks/notebook-asus-vivobook16.png"
             
           },
           {
             "id":8,
             "name": "XU156 Celeron",
+            "title": "Notebook ASUS Vivobook 15 X1504VA",
+            "specification": {
+              "Marca": "Ultra",
+              "Tipo de resolução": "1080p",
+              "Tamanho da tela: ": "14",
+              "Sistema operacional": " Windows 11 ",
+              "Duração da bateria": "10 horas",
+              "Resolução da tela":"1366x720 Pixels",
+              "Fabricante do modelo da CPU": "Intel Celeron",
+              "Ranking dos mais vendidos":"Nº 18 em CPUs de Computadores",
+              "Capacidade total do módulo de memória RAM": "4 GB",
+              "Capacidade de disco SSD:": "128 GB",
+              "Processador:":"Intel Core i5 13ª Geração",
+              "cor":"Cinza"
+            },
+            "about":[
+              "Tela 14 HD com Cover de Câmera: Experiência visual nítida e privacidade garantida com a tela HD de 14 ",
+              "Processador Intel Celeron N4020C: Desempenho eficiente para tarefas cotidianas.",
+              "Armazenamento 128GB Flash (eMMC): Espaço de armazenamento generoso e resposta rápida do sistema ",
+              "Memória RAM 4GB: Execução fluida de aplicativos e multitarefa eficiente com 4GB de memória RAM.",
+              "Teclas de Atalhos para Acessar Rapidamente Aplicativos Favoritos.",
+              "GARANTIA: 1 ANO"
+            ],
             "image": "/images/productsHeader/notebooks/notebook-xu156-celeron.png"
             
           } 
@@ -325,21 +417,96 @@
            {
               "id":9,
               "name": "Iphone 15",
+              "title": "Apple iPhone 15 (128 GB) — Azul",
+              "specification": {
+                  "Marca": "Apple",
+                  "Sistema Operacional": "IOS 16",
+                  "Capacidade de armazenamento da memória": "128 GB",
+                  "Resolução do sensor fotográfico frontal": "Câmera de 12 MP",
+                  "Potência da bateria": "5000",
+                  "Resolução de captura de vídeo": "Gravação de vídeo 4K",
+                  "Características especiais":"Resistente à Água",
+                  "Número de câmaras traseiras": " Conjunto duplo (2) câmaras",
+                  "cor":"Azul"
+                },
+                "about":[
+                  "A DYNAMIC ISLAND CHEGA AO IPHONE 15 — A Dynamic Island mostra alertas e Atividades ao Vivo para você não perder nenhuma informação enquanto faz outras coisas. ",
+                  "O iPhone 15 tem vidro resistente colorido por infusão e design em alumínio. Ele aguenta o tranco contra respingos, água e poeira.",
+                  "CÂMERA GRANDE-ANGULAR DE 48 MP COM TELEOBJETIVA DE 2X ",
+                  "CONECTIVIDADE USB-C — Com a porta USB‑C, você recarrega o Mac ou o iPad com o mesmo cabo que recarrega o iPhone 15",
+                  "GARANTIA: 1 ANO"
+                ],
               "image": "/images/productsHeader/smartphone/iphone15.png"
             },
             {
               "id":10,
               "name": "Iphone 16 Pro Max",
+              "title": "Apple iPhone 16 Pro Max (256 GB)",
+              "specification": {
+                  "Marca": "Apple",
+                  "Sistema Operacional": "IOS 16",
+                  "Capacidade de armazenamento da memória": "256 GB",
+                  "Resolução do sensor fotográfico frontal": "Câmera de 12 MP",
+                  "Potência da bateria": "Até 105 horas",
+                  "Resolução de captura de vídeo": "Gravação de vídeo 4K  ",
+                  "Características especiais":"Resistente à Água",
+                  "Número de câmaras traseiras": " Conjunto duplo (2) câmaras",
+                  "cor":"Preto"
+                },
+                "about":[
+                  "O Controle da Câmera dá acesso mais fácil e rápido às ferramentas, como zoom ou profundidade de campo, para suas fotos e vídeos ",
+                  "chip A18 Pro está por trás de recursos avançados de foto e vídeo, como o Controle da Câmera, e oferece alto desempenho gráfico em jogos.",
+                  "eficiência energética incrível com até 33 horas de reprodução de vídeo ",
+                  "GARANTIA: 1 ANO"
+                ],
               "image": "/images/productsHeader/smartphone/iphone16-promax.png"  
             },
             {
               "id":11,
               "name": "Motorola Moto G55",
+              "title": "Smartphone Motorola Moto g55 5G ",
+              "specification": {
+                  "Marca": "Motorola",
+                  "Sistema Operacional": "Android 14",
+                  "Tamanho da instalado da memória RAM": "8 GB",
+                  "Resolução do sensor fotográfico frontal": "16 MP",
+                  "Potência da bateria": "5000",
+                  "Resolução de captura de vídeo": "1080p com resolução Full HD",
+                  "Características especiais":"Resistente à Água, Dual SIM",
+                  "Número de câmaras traseiras": " Conjunto duplo (2) câmaras",
+                  "cor":"Preto"
+                },
+                "about":[
+                  "Liso ",
+                  "Fotos e vídeos com AI agora no moto g",
+                  "Experiência imersiva, imagem com ultra brilho, tela super resistente e sensor de camera minimalista",
+                  "Performance inteligente que turbina o desempenho conforme seu uso",
+                  "Bateria Inteligente para mais de um dia",
+                  "GARANTIA: 1 ANO"
+                ],
               "image": "/images/productsHeader/smartphone/motorola-motog55.png"   
             },
             {
               "id":12,
               "name": "Samsung Galaxy A15",
+              "title": "Smartphone Samsung Galaxy A15 4G 128GB",
+              "specification": {
+                  "Marca": "Samsung",
+                  "Sistema Operacional": "Android 14",
+                  "Capacidade de armazenamento da memória": "128 GB",
+                  "Resolução do sensor fotográfico frontal": "Câmera de 13 MP",
+                  "Potência da bateria": " 5000mAh",
+                  "Resolução de captura de vídeo": "Gravação de vídeo 4K  ",
+                  "Características especiais":"Resistente à Água",
+                  "Número de câmaras traseiras": " Câmera Tripla Traseira",
+                  "cor":"Azul escuro"
+                },
+                "about":[
+                  "tela infinita Super AMOLED de 6.5 polegadas, que oferece cores vibrantes, pretos profundos e excelente contraste",
+                  "128GB de Memória Interna(*) e 4GB RAM",
+                  "Cadeado Galaxy Dual Chip, Dual Messenger",
+                  "GARANTIA: 1 ANO"
+                ],
               "image": "/images/productsHeader/smartphone/samsung-galaxya15.png"
             } 
         ],
@@ -347,21 +514,100 @@
             {
               "id":13,
               "name": "Gamer Samsung T350",
+              "title": "Samsung T350 - Monitor Gamer, 24",
+              "specification": {
+                  "Marca": "SAMSUNG",
+                  "Tamanho da tela": "24 Polegadas",
+                  "Tecnologia do visor": "LCD",
+                  "Resolução": "FHD 1080p",
+                  "Taxa de atualização": "60 Hz",
+                  "Características especiais": "  Sincronização adaptativa Freesync",
+                  "Descrição da superfície da tela":" Brilhante",
+                  "Tecnologia de conectividade": "D-Sub, HDMI",
+                  "Consumo de energia": "59 Watt",
+                  "cor":"Preto"
+                },
+                "about":[
+                  "Eco Saving Plus, Eye Saver Mode, Flicker Free, Game mode, Image Size, FreeSync, Off Timer Plus ",
+                  "País de origem do produto: CN",
+                  "Desfrute de uma imagem otimizada para uma nitidez e um detalhe nunca vistos antes ",
+                  "GARANTIA: 1 ANO"
+                ],
               "image": "/images/productsHeader/monitor/monitor-gamer-samsung-t350.png"
             },
             {
               "id":14,
               "name": "Monitor Dell 24",
+              "title": "Monitor Dell de 24 - P2425H",
+              "specification": {
+                  "Marca": "Dell",
+                  "Tamanho da tela": "23,8 Polegadas",
+                  "Tecnologia do visor": "LCD",
+                  "Resolução": "FHD 1080i",
+                  "Taxa de atualização": "60 Hz",
+                  "Características especiais": "Pivô ajustável, Ajuste giratório",
+                  "Descrição da superfície da tela":"Fosco",
+                  "Tecnologia de conectividade": "VGA, USB, DisplayPort, HDMI",
+                  "Consumo de energia": "65 Watt",
+                  "cor":"Preto"
+                },
+                "about":[
+                  "Desenvolvido para longas horas de uso, o monitor oferece maior conforto visual",
+                  "Equipado com ComfortView Plus, uma tecnologia de redução de luz azul de forma contínua e sem distorção de cores ",
+                  "Com alta resolução e excelente definição, este monitor permite trabalhar com nitidez nos mínimos detalhes ",
+                  "Garanta fidelidade visual com consistência de cores em todos os ângulos,",
+                  "Consistência de cores",
+                  "GARANTIA: 1 ANO"
+                ],
               "image": "/images/productsHeader/monitor/mointor-dell-24.png"  
             },
             {
               "id":15,
               "name": "Gamer Curvo Samsung",
+              "title": "Monitor Gamer Curvo Samsung Odyssey 34,",
+              "specification": {
+                  "Marca": "SAMSUNG",
+                  "Tamanho da tela": "34 Polegadas",
+                  "Tecnologia do visor": "LCD",
+                  "Resolução": "UWQHD (3,440 x 1,440)",
+                  "Taxa de atualização": "60 Hz",
+                  "Características especiais": "Ajuste de altura, Curvo",
+                  "Descrição da superfície da tela":"Fosco",
+                  "Tecnologia de conectividade": "Com HDMI e Display Port",
+                  "Consumo de energia": "59 Watt",
+                  "cor":"Preto"
+                },
+                "about":[
+                  "Ultra WQHD Proporcione mais produtividade e imersão com o formato ultrawide e resolução superior",
+                  "Experiência de jogo fluida e responsiva com altíssima taxa de atualização (165Hz) e tempo de resposta de apenas 1ms, ",
+                  "Ultra Wide, Tenha mais espaço de tela para trabalhar com várias janelas ou mergulhar totalmente em filmes ",
+                  "Freesync Premium e a tecnologia que sincroniza a taxa de atualização do monitor com a GPU, eliminando cortes e travamentos em jogos.",
+                  "GARANTIA: 1 ANO"
+                ],
               "image": "/images/productsHeader/monitor/monitor-gamer-curvo-samsung.png"   
             },
             {
               "id":16,
               "name": "UHD Samsung 32",
+              "title": "Monitor UHD Samsung 32, 4K, ",
+              "specification": {
+                  "Marca": "SAMSUNG",
+                  "Tamanho da tela": "31,5 Polegadas",
+                  "Tecnologia do visor": "LCD",
+                  "Resolução": "4K DCI 2160p",
+                  "Taxa de atualização": "60 Hz",
+                  "Características especiais": "Sincronização adaptável",
+                  "Descrição da superfície da tela":"Sincronização adaptável",
+                  "Tecnologia de conectividade": "USB, DisplayPort, HDMI",
+                  "Consumo de energia": "59 Watt",
+                  "cor":"Preto"
+                },
+                "about":[
+                  "Tela Ultra HD A visualização Ultra HD significa que você pode ver cada detalhe intricado na tela com mais nitidez do que nunca ",
+                  "O seu Monitor Samsung UHD oferece uma resolução quatro vezes superior à Full HD, com cores muito reais e precisas",
+                  "Desfrute de uma imagem otimizada para uma nitidez e um detalhe nunca vistos antes ",
+                  "GARANTIA: 1 ANO"
+                ],
               "image": "/images/productsHeader/monitor/monitor-uhd-samsung-32.png"
             } 
         ],
@@ -369,21 +615,110 @@
             {
               "id":17,
               "name": "CPU Gamer Intel Core I7",
+              "title": "CPU GAMER INTEL CORE I7 3770",
+              "specification": {
+                  "Marca": "TOTAL INFO",
+                  "Compatibilidade da placa-mãe": "Micro ATX",
+                  "Tipo de caixa": "Desktop",
+                  "Adequação do controle por rádio": "Jogos",
+                  "Material": "Vidro temperado",
+                  "Placa-mãe compatível":"Micro ATX",
+                  "Características especiais": "PC GAMER INICIANTE ",
+                  "Ranking dos mais vendidos":"Nº 62 em CPUs de Computadores",
+                  "Tecnologia de conectividade": "USB,",
+                  "Consumo de energia": "65 Watt",
+                  "cor":"Preto"
+                },
+                "about":[
+                  "PC GAMER INICIANTE - Com quase 20 anos de excelência atuando no Brasil, criamos soluções completas na área de informática",
+                  "Acompanha Adaptador USB WIFI e Cabo de Força",
+                  "Com alta resolução e excelente definição, este monitor permite trabalhar com nitidez nos mínimos detalhes ",
+                  "SISTEMA OPERACIONAL: WINDOWS 10 PRO TRIAL",
+                  "Consistência de cores",
+                  "GARANTIA: 1 ANO"
+                ],
               "image": "/images/productsHeader/hardware/cpu-gamer-intel-core-i7.png"
             },
             {
               "id":18,
               "name": "Pc Cpu Intel Core I7",
+              "title": "Computador Pc Cpu Intel Core I5 8gb Ssd 128 Gb",
+              "specification": {
+                  "Marca": "Genérico",
+                  "Compatibilidade da placa-mãe": "Micro ATX",
+                  "Tipo de caixa": "Desktop",
+                  "Sistema operacional": "Windows 10",
+                  "Material": "Vidro temperado",
+                  "Tecnologia de memória RAM":"DDR3",
+                  "Fabricante do modelo da CPU": "Intel ",
+                  "Ranking dos mais vendidos":"Nº 80 em CPUs de Computadores",
+                  "Tecnologia de conectividade": "USB,",
+                  "Consumo de energia": "65 Watt",
+
+                  "cor":"Preto"
+                },
+                "about":[
+                  "Computador de escritorio",
+                  "Acompanha Adaptador USB WIFI e Cabo de Força ",
+                  "Com alta resolução e excelente definição, este monitor permite trabalhar com nitidez nos mínimos detalhes ",
+                  "SISTEMA OPERACIONAL: WINDOWS 10 PRO TRIAL",
+                  "Consistência de cores",
+                  "GARANTIA: 1 ANO"
+                ],
               "image": "/images/productsHeader/hardware/cpu-intel-core-i7.png"  
             },
             {
               "id":19,
               "name": "Pc Cpu Intel Core I5",
+              "title": "Computador Intel Core I5 8gb 240gb Ssd",
+              "specification": {
+                  "Marca": "Gmm info",
+                  "Compatibilidade da placa-mãe": "Micro ATX",
+                  "Tipo de caixa": "Desktop",
+                  "Sistema operacional": "Windows 10  Pro",
+                  "Material": "Vidro temperado",
+                  "Tecnologia de memória RAM":"DDR3",
+                  "Fabricante do modelo da CPU": "Intel ",
+                  "Ranking dos mais vendidos":"Nº 9 em CPUs de Computadores",
+                  "Tecnologia de conectividade": "USB",
+                  "Consumo de energia": "90 Watt",
+                  "cor":"Preto"
+                },
+                "about":[
+                  "Processador Potente: Equipado com um processador Intel Core i5 650 ou 2400",
+                  "Memória e Armazenamento Rápidos: Com 8GB de RAM DDR3 e um SSD de 240GB",
+                  "Design Elegantes e Compacto: Com um design minimalista e uma cor preta elegante",
+                  "Conectividade Sem Fio: Este computador vem com tecnologia Wi-Fi integrada, permitindo uma conexão fácil",
+                  "Sistema Operacional Windows 10 Pro: Este computador vem com o Windows 10 Pro pré-instalado",
+                  "GARANTIA: 1 ANO"
+                ],
               "image": "/images/productsHeader/hardware/cpu-intel-core-i5.png"   
             },
             {
               "id":20,
               "name": "CPU Gamer Intel Core I7 3770",
+              "title": "PC CPU Mancer, Intel Core i7",
+              "specification": {
+                  "Marca": "Mancer",
+                  "Compatibilidade da placa-mãe": "Micro ATX",
+                  "Tipo de caixa": "Desktop",
+                  "Sistema operacional": "Windows 10",
+                  "Material": "Vidro temperado",
+                  "Tecnologia de memória RAM":"DDR3",
+                  "Fabricante do modelo da CPU": "intel Core i7 ",
+                  "Ranking dos mais vendidos":"Nº 8 em CPUs de Computadores",
+                  "Tecnologia de conectividade": "Ethernet",
+                  "Consumo de energia": "70 Watt",
+                  "cor":"Preto"
+                },
+                "about":[
+                  "Processador: Intel Core I7 3º | Número de núcleos: 4 | Número de Threads: 8",
+                  "Chip gráfico: Gráficos UHD Intel 4000, Integrada ao Processador",
+                  "Placa Mãe: H61 DDR3",
+                  "Armazenamento: SSD 240GB",
+                  "Fonte: 200W Bivolt",
+                  "GARANTIA: 1 ANO"
+                ],
               "image": "/images/productsHeader/hardware/gamer-intel-corei7-3770.png"
             } 
         ],
@@ -391,24 +726,25 @@
             {
               "id":21,
               "name": "Samsung Smart TV 55",
-              "title":"Computador Gamer Completo RGB Intel Core I5 8GB SSD 480GB ",
+              "title":"Samsung Smart TV 55 Crystal UHD 4K ",
               "specification": {
-                  "Marca": "3Green Technology",
-                  "Sistema operacional": "Windows 10",
-                  "Modelo da CPU": "Core i5 3470",
-                  "Velocidade da CPU": "3,6 GHz",
-                  "Capacidade de armazenamento da memória": "480 GB",
-                  "Usos específicos do produto": "Uso diário",
-                  "Tipo de design de computador pessoal": "Torre do computador",
-                  "Tamanho da tela": "20 Polegadas",
-                  "Tamanho instalado da memória RAM": "8 GB",
-                  "Nome do modelo": "3green Premium"
+                  "Marca": "SAMSUNG",
+                  "Tamanho da tela": "55 Polegadas",
+                  "Tecnologia do visor": "OLED",
+                  "Resolução": "4k",
+                  "Taxa de atualização": "60 Hz",
+                  "Características especiais": "conta com conectividade via Wi-Fi",
+                  "Componentes incluídos":"Power Cable, Remote Control, Stand",
+                  "Tecnologia de conectividade": "Bluetooth, wireless, usb, hdmi",
+                  "Dimensões do produto": "22,6P x 123,2L x 74,9A centímetros",
+                  "cor":"Preto Grafite"
                 },
                 "about":[
-                  "Monitor LED 20\" com 75Hz de taxa de atualização",
-                  "Gabinete Gamer com 3 LED Fans RGB e controle remoto para gerenciar as cores e efeitos",
-                  "Kit Gamer RGB completo com mouse, teclado semi mecânico, headset e mousepad",
-                  "PC Gamer com Microsoft Windows 10 original e vitalício",
+                  "Desfrute de imagens otimizadas em tempo real com o poderoso processador com inteligência artificial",
+                  "Com a Alexa integrada, você controla sua TV e dispositivos inteligentes por comando de voz.",
+                  "Design ultrafino e elegante que se adapta perfeitamente à decoração do seu ambiente",
+                  "Cores mais vivas e realistas com o painel Dynamic Crystal Color",
+                  "Transforme sua TV em uma central de jogos com o Gaming Hub.",
                   "GARANTIA: 1 ANO"
                 ],
               "image": "/images/productsHeader/tv/samsung-smart-TV55.png"
@@ -416,24 +752,24 @@
             {
               "id":22,
               "name": "Smart TV 32” HD D-LED",
-              "title":"Computador Gamer Completo RGB Intel Core I5 8GB SSD 480GB ",
+              "title":"Smart TV 32” HD D-LED AOC 32S5135/78G VA - Wi-Fi 3 HDMI 1 USB ",
               "specification": {
-                  "Marca": "3Green Technology",
-                  "Sistema operacional": "Windows 10",
-                  "Modelo da CPU": "Core i5 3470",
-                  "Velocidade da CPU": "3,6 GHz",
-                  "Capacidade de armazenamento da memória": "480 GB",
-                  "Usos específicos do produto": "Uso diário",
-                  "Tipo de design de computador pessoal": "Torre do computador",
-                  "Tamanho da tela": "20 Polegadas",
-                  "Tamanho instalado da memória RAM": "8 GB",
-                  "Nome do modelo": "3green Premium"
+                 "Marca": "AOC",
+                  "Tamanho da tela": "32 Polegadas",
+                  "Tecnologia do visor": "LCD",
+                  "Resolução": "HD",
+                  "Taxa de atualização": "60 Hz",
+                  "Características especiais": "conta com conectividade via Wi-Fi",
+                  "Componentes incluídos":"Power Cable",
+                  "Tecnologia de conectividade": " Google Assistant, Works with Alexa",
+                  "Dimensões do produto": "2Altura: 47cm, Largura: 72cm, Profundidade: 16cm",
+                  "cor":"Preto  "
                 },
                 "about":[
-                  "Monitor LED 20\" com 75Hz de taxa de atualização",
-                  "Gabinete Gamer com 3 LED Fans RGB e controle remoto para gerenciar as cores e efeitos",
-                  "Kit Gamer RGB completo com mouse, teclado semi mecânico, headset e mousepad",
-                  "PC Gamer com Microsoft Windows 10 original e vitalício",
+                  "conectividade Wi-Fi integrada, permitindo acesso rápido e estável à internet sem a necessidade de cabos",
+                  "om o aplicativo Roku Mobile, transforme seu smartphone em um controle inteligente, acessando comandos de voz e navegação rápida",
+                  "Desfrute de uma experiência sonora imersiva com tecnologia Dolby Digital Audio, que proporciona clareza nos diálogos e graves potente",
+                  "Design sem bordas",
                   "GARANTIA: 1 ANO"
                 ],
               "image": "/images/productsHeader/tv/smart-tv-32-hd-d-led.png"  
@@ -441,18 +777,18 @@
             {
               "id":23,
               "name": "Smart TV 65” 4K DLED",
-              "title":"Computador Gamer Completo RGB Intel Core I5 8GB SSD 480GB ",
+              "title":"Smart TV 65” 4K DLED Rig Vizzion BR65GUA IPS",
               "specification": {
-                  "Marca": "3Green Technology",
-                  "Sistema operacional": "Windows 10",
-                  "Modelo da CPU": "Core i5 3470",
-                  "Velocidade da CPU": "3,6 GHz",
-                  "Capacidade de armazenamento da memória": "480 GB",
-                  "Usos específicos do produto": "Uso diário",
-                  "Tipo de design de computador pessoal": "Torre do computador",
-                  "Tamanho da tela": "20 Polegadas",
-                  "Tamanho instalado da memória RAM": "8 GB",
-                  "Nome do modelo": "3green Premium"
+                  "Marca": "Rig Vizzion",
+                  "Tamanho da tela": "65 Polegadas",
+                  "Tecnologia do visor": "DLED",
+                  "Resolução": "4k UHD (3840x2160)",
+                  "Taxa de atualização": "60 Hz",
+                  "Características especiais": "conta com conectividade via Wi-Fi",
+                  "Componentes incluídos":"Remote Control, Stand",
+                  "Tecnologia de conectividade": "HDMI, 2 USB, AV IN, Cabo Óptico",
+                  "Dimensões do produto": "144,6P x 158,2L x 74,9A centímetros",
+                  "cor":"Preto G"
                 },
                 "about":[
                   "Monitor LED 20\" com 75Hz de taxa de atualização",
@@ -466,24 +802,24 @@
             {
               "id":24,
               "name": "Smart TV 8K QLED 82” Samsung",
-              "title":"Computador Gamer Completo RGB Intel Core I5 8GB SSD 480GB ",
+              "title":"Smart TV 8K QLED 82” Samsung 82Q800TA - Wi-Fi Bluetooth ",
               "specification": {
-                  "Marca": "3Green Technology",
-                  "Sistema operacional": "Windows 10",
-                  "Modelo da CPU": "Core i5 3470",
-                  "Velocidade da CPU": "3,6 GHz",
-                  "Capacidade de armazenamento da memória": "480 GB",
-                  "Usos específicos do produto": "Uso diário",
-                  "Tipo de design de computador pessoal": "Torre do computador",
-                  "Tamanho da tela": "20 Polegadas",
-                  "Tamanho instalado da memória RAM": "8 GB",
-                  "Nome do modelo": "3green Premium"
+                  "Marca": "SAMSUNG",
+                  "Tamanho da tela": "82 Polegadas",
+                  "Tecnologia do visor": "QLED",
+                  "Resolução": "8k",
+                  "Taxa de atualização": "60 Hz",
+                  "Características especiais": "Internet através da conexão Wi-Fi ou cabo",
+                  "Componentes incluídos":"Power Cable, Remote Control, Stand",
+                  "Tecnologia de conectividade": "Wi-fi - Bluetooth",
+                  "Dimensões do produto": "22,6P x 123,2L x 74,9A centímetros",
+                  "cor":"Preto"
                 },
                 "about":[
-                  "Monitor LED 20\" com 75Hz de taxa de atualização",
-                  "Gabinete Gamer com 3 LED Fans RGB e controle remoto para gerenciar as cores e efeitos",
-                  "Kit Gamer RGB completo com mouse, teclado semi mecânico, headset e mousepad",
-                  "PC Gamer com Microsoft Windows 10 original e vitalício",
+                  "Recursos pensados para sua comodidade: o Closed Caption oferece legendas para maior acessibilidade e o Sleep Timer ",
+                  "A TV vem equipada com diversas opções de conectividade: 4 entradas HDMI, 2 portas USB, 1 entrada AV (composto), conexão Ethernet (LAN) para internet cabeada e saída de áudio digital óptica,",
+                  "Navegue de forma fluida e intuitiva com o sistema operacional Tizen, desenvolvido pela Samsung, ",
+                  "Imagens muito mais suaves e nítidas com taxa de atualização de 120Hz",
                   "GARANTIA: 1 ANO"
                 ],
               "image": "/images/productsHeader/tv/smart-tv-8kled-82.png"
