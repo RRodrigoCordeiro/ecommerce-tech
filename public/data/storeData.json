@@ -198,6 +198,7 @@
             "id":1,
             "name": "All in One I7",
             "title": "All In One Intel Core I7 16gb Ssd 512gb 21,5 Wifi",
+            "price": 1958.00,
             "specification": {
                 "Marca": "American",
                 "Sistema operacional": "Windows 10",
@@ -223,6 +224,7 @@
             "id":2,
             "name": "PC Gamer AMD Ryzen 5",
             "title": "PC Gamer Completo AMD Ryzen 5 5600G",
+            "price": 2549.00,
             "specification": {
                 "Marca": "3Green Technology",
                 "Sistema operacional": "Linux",
@@ -249,6 +251,7 @@
             "id":3,
             "name": "Gamer completo RGB",
             "title":"Computador Gamer Completo RGB Intel Core I5 8GB SSD 480GB ",
+            "price": 1700.00,
             "specification": {
                 "Marca": "3Green Technology",
                 "Sistema operacional": "Windows 10",
@@ -273,6 +276,7 @@
           {
             "id":4,
             "name": "Cpu Completo I5",
+            "price": 1790.00,
             "title":"Cpu Completo I5 6ºgeração 16gb Ddr4+ 480gb Monitor 21 + Kit",
             "specification": {
                 "Marca": "Montatudo",
@@ -301,6 +305,7 @@
             "id":5,
             "name": "AIO FE15",
             "title": "Notebook VAIO FE15 Intel Core i5",
+            "price": 3800.00,
             "specification": {
               "Marca": "VAIO",
               "Tipo de resolução": "Full HD",
@@ -329,6 +334,7 @@
             "id":6,
             "name": "Lenovo Ideapad 1",
             "title": "Notebook Lenovo IdeaPad 1 i3",
+            "price": 2349.00,
             "specification": {
               "Marca": "Lenovo",
               "Tipo de resolução": "Full HD",
@@ -358,6 +364,7 @@
             "id":7,
             "name": "ASUS VivoBook 16",
             "title": "Notebook ASUS Vivobook 15 X1504VA",
+            "price": 2349.00,
             "specification": {
               "Marca": "ASUS",
               "Tipo de resolução": "1080p",
@@ -387,6 +394,7 @@
             "id":8,
             "name": "XU156 Celeron",
             "title": "Notebook ASUS Vivobook 15 X1504VA",
+            "price": 2499.00,
             "specification": {
               "Marca": "Ultra",
               "Tipo de resolução": "1080p",
@@ -418,6 +426,7 @@
               "id":9,
               "name": "Iphone 15",
               "title": "Apple iPhone 15 (128 GB) — Azul",
+              "price": 4271.00,
               "specification": {
                   "Marca": "Apple",
                   "Sistema Operacional": "IOS 16",
@@ -442,6 +451,7 @@
               "id":10,
               "name": "Iphone 16 Pro Max",
               "title": "Apple iPhone 16 Pro Max (256 GB)",
+              "price": 9579.00,
               "specification": {
                   "Marca": "Apple",
                   "Sistema Operacional": "IOS 16",
@@ -465,6 +475,7 @@
               "id":11,
               "name": "Motorola Moto G55",
               "title": "Smartphone Motorola Moto g55 5G ",
+              "price": 1319.00,
               "specification": {
                   "Marca": "Motorola",
                   "Sistema Operacional": "Android 14",
@@ -490,6 +501,7 @@
               "id":12,
               "name": "Samsung Galaxy A15",
               "title": "Smartphone Samsung Galaxy A15 4G 128GB",
+              "price": 879.00,
               "specification": {
                   "Marca": "Samsung",
                   "Sistema Operacional": "Android 14",
@@ -515,6 +527,7 @@
               "id":13,
               "name": "Gamer Samsung T350",
               "title": "Samsung T350 - Monitor Gamer, 24",
+              "price": 577.00,
               "specification": {
                   "Marca": "SAMSUNG",
                   "Tamanho da tela": "24 Polegadas",
@@ -539,6 +552,7 @@
               "id":14,
               "name": "Monitor Dell 24",
               "title": "Monitor Dell de 24 - P2425H",
+              "price": 1234.00,
               "specification": {
                   "Marca": "Dell",
                   "Tamanho da tela": "23,8 Polegadas",
@@ -564,7 +578,8 @@
             {
               "id":15,
               "name": "Gamer Curvo Samsung",
-              "title": "Monitor Gamer Curvo Samsung Odyssey 34,",
+              "title": "Monitor Gamer Curvo Samsung Odyssey 34",
+              "price": 2345.00,
               "specification": {
                   "Marca": "SAMSUNG",
                   "Tamanho da tela": "34 Polegadas",
@@ -589,7 +604,8 @@
             {
               "id":16,
               "name": "UHD Samsung 32",
-              "title": "Monitor UHD Samsung 32, 4K, ",
+              "title": "Monitor UHD Samsung 32, 4K",
+              "price": 1490.00,
               "specification": {
                   "Marca": "SAMSUNG",
                   "Tamanho da tela": "31,5 Polegadas",
@@ -616,6 +632,7 @@
               "id":17,
               "name": "CPU Gamer Intel Core I7",
               "title": "CPU GAMER INTEL CORE I7 3770",
+              "price": 1285.00,
               "specification": {
                   "Marca": "TOTAL INFO",
                   "Compatibilidade da placa-mãe": "Micro ATX",
@@ -642,7 +659,8 @@
             {
               "id":18,
               "name": "Pc Cpu Intel Core I7",
-              "title": "Computador Pc Cpu Intel Core I5 8gb Ssd 128 Gb",
+              "title": "Computador Pc Cpu Intel Core I5 8gb Ssd 128 GB",
+              "price": 610.00,
               "specification": {
                   "Marca": "Genérico",
                   "Compatibilidade da placa-mãe": "Micro ATX",
@@ -670,7 +688,8 @@
             {
               "id":19,
               "name": "Pc Cpu Intel Core I5",
-              "title": "Computador Intel Core I5 8gb 240gb Ssd",
+              "title": "Computador Intel Core I5 8gb 240gb SSD",
+              "price":695.00,
               "specification": {
                   "Marca": "Gmm info",
                   "Compatibilidade da placa-mãe": "Micro ATX",
@@ -698,6 +717,7 @@
               "id":20,
               "name": "CPU Gamer Intel Core I7 3770",
               "title": "PC CPU Mancer, Intel Core i7",
+              "price":849.00,
               "specification": {
                   "Marca": "Mancer",
                   "Compatibilidade da placa-mãe": "Micro ATX",
@@ -727,6 +747,7 @@
               "id":21,
               "name": "Samsung Smart TV 55",
               "title":"Samsung Smart TV 55 Crystal UHD 4K ",
+              "price":5505.00,
               "specification": {
                   "Marca": "SAMSUNG",
                   "Tamanho da tela": "55 Polegadas",
@@ -752,7 +773,8 @@
             {
               "id":22,
               "name": "Smart TV 32” HD D-LED",
-              "title":"Smart TV 32” HD D-LED AOC 32S5135/78G VA - Wi-Fi 3 HDMI 1 USB ",
+              "title":"Smart TV 32” HD D-LED AOC 32S5135/78G VA - Wi-Fi 3 HDMI 1 USB",
+              "price":954.00,
               "specification": {
                  "Marca": "AOC",
                   "Tamanho da tela": "32 Polegadas",
@@ -778,6 +800,7 @@
               "id":23,
               "name": "Smart TV 65” 4K DLED",
               "title":"Smart TV 65” 4K DLED Rig Vizzion BR65GUA IPS",
+              "price":3158.00,
               "specification": {
                   "Marca": "Rig Vizzion",
                   "Tamanho da tela": "65 Polegadas",
@@ -803,6 +826,7 @@
               "id":24,
               "name": "Smart TV 8K QLED 82” Samsung",
               "title":"Smart TV 8K QLED 82” Samsung 82Q800TA - Wi-Fi Bluetooth ",
+              "price":42749.00,
               "specification": {
                   "Marca": "SAMSUNG",
                   "Tamanho da tela": "82 Polegadas",

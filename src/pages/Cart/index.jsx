@@ -19,7 +19,7 @@ const Cart = () => {
   const { cart, total, addItemCart, removeItemCart } = useContext(CartContext);
   const [hasItems, setHasItems] = useState();
   const [isOpen, setModalOpened] = useState(false);
- 
+
   const {
     register,
     setValue,

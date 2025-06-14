@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { useProductByCategoryAndId } from "../../hooks/productHeader/useProductByCategoryAndId";
 import Header from "../../components/Header";
+import { CartContext } from "../../contexts/CartContext";
+import toast from "react-hot-toast";
 
 const HeaderDetail = () => {
   const { category, id } = useParams();
-
+  const {  addItemCart } = useContext(CartContext)
   
   const {
     data: product,
@@ -13,6 +15,12 @@ const HeaderDetail = () => {
     error,
   } = useProductByCategoryAndId(category, id);
 
+
+  function handleAddCartItem(product) {
+    addItemCart(product);
+    toast.success("Produto adicionado no carrinho");
+    console.log(product);
+  }
   // if (isLoading) return <p>Carregando...</p>;
   // if (error) return <p>Erro ao carregar produto.</p>;
 
@@ -29,7 +37,10 @@ const HeaderDetail = () => {
             <img 
               src={product.image} 
               className="block m-auto w-56 mt-14 md:mt-18 md:w-96 " 
+              alt="foto da imagem dos produtos"
             />
+            <p>{product.price}</p>
+         
           </div>
           <div className=" flex flex-col justify-center items-center mt-28 lg:mt-40 ">
             {product.specification && (
@@ -68,6 +79,12 @@ const HeaderDetail = () => {
           </div>
         </div>
       )}
+     <button
+        className="bg-green-600 text-white m-auto  w-56 lg:w-2xl rounded-md h-10 font-bold flex items-center justify-center gap-3 mb-8 mt-8"
+        onClick={() => handleAddCartItem(product)}
+     >
+       Comprar
+    </button>
     </div>
   );
 };

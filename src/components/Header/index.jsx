@@ -20,7 +20,7 @@ const Header = ({ searchQuery, setSearchQuery }) => {
     <div>
       <div className="flex flex-col bg-green-600 items-center mb-16 justify-evenly md:bg-[#F2F2F2] md:flex-row md:mt-11">
         <div className="flex flex-row space-x-44 items-center  mt-3 mb-3 md:mt-0 md:mb-0 ">
-          <IoMdMenu size={40} className="md:hidden" />
+          <IoMdMenu size={40} className="md:hidden text-white md:text-black"  />
           <Link to="/">
             <img
                 src="/images/logos/transparent-brand-logo.png"
@@ -37,21 +37,21 @@ const Header = ({ searchQuery, setSearchQuery }) => {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
-          <IoSearchOutline className="absolute right-8 top-1/2 transform -translate-y-1/2" />
-          <IoMdMic className="absolute right-1 top-1/2 transform -translate-y-1/2" />
+          <IoSearchOutline className="absolute right-8 top-1/2 transform -translate-y-1/2 text-[#F2F2F2] md:text-black" />
+          <IoMdMic className="absolute right-1 top-1/2 transform -translate-y-1/2 text-[#F2F2F2] md:text-black" />
         </div>
 
         <div className="flex flex-row gap-10 mt-8 mb-3 md:mt-0 md:mb-0 md:gap-5 lg:gap-12">
           <div className="flex flex-col items-center ">
             <Link to="/about">
-              <MdOutlineQuestionAnswer size={28} className="ml-5" />
-              <p>Sobre nós</p>
+              <MdOutlineQuestionAnswer size={28} className="ml-5 text-[#F2F2F2] md:text-black" />
+              <p className="text-white md:text-black">Sobre nós</p>
             </Link>
           </div>
           <div className="flex flex-col items-center">
             <Link to="/sac">
-              <FaPeopleGroup size={28} />
-              <p>SAC</p>
+              <FaPeopleGroup size={28} className="text-[#F2F2F2] md:text-black"/>
+              <p className="text-white md:text-black">SAC</p>
             </Link>
           </div>
           <div className="flex flex-col items-center">
@@ -59,11 +59,11 @@ const Header = ({ searchQuery, setSearchQuery }) => {
               {cartAmount > 0 && (
                 <span className="-mt-5 ml-7 px-2.5 bg-sky-500 rounded-full w-6 h-6 flex items-center justify-center text-white text-xs">{cartAmount}</span>
               )}
-              <BsCart2 size={28} className="ml-4" />
-              <p>Carrinho</p>
+              <BsCart2 size={28} className="ml-4 text-[#F2F2F2] md:text-black" />
+              <p className="text-white md:text-black">Carrinho</p>
             </Link>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center text-[#F2F2F2] md:text-black ">
             <BsPersonCircle size={28} />
             <p>Login</p>
           </div>
