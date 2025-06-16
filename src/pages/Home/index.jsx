@@ -34,15 +34,15 @@ const Home = () => {
   
 
   const filteredProducts = products.filter((product) =>
-    product.title.toLowerCase().includes(searchTerm.toLowerCase())
+    product.title.toLowerCase().includes(searchTerm.toLowerCase().trim())
   );
 
   const filteredNotebook = notebooks?.filter((notebook) =>
-    notebook.title.toLowerCase().includes(searchTerm.toLowerCase())
+    notebook.title.toLowerCase().includes(searchTerm.toLowerCase().trim())
   );
 
   const filterComputador = computers?.filter((computador) =>
-    computador.title.toLowerCase().includes(searchTerm.toLowerCase())
+    computador.title.toLowerCase().includes(searchTerm.toLowerCase().trim())
   );
 
   useEffect(() => {

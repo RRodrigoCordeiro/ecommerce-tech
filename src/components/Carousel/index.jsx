@@ -43,7 +43,7 @@ const Carousel = () => {
           <SwiperSlide key={item.id}>
             <img
               src={item.image}
-              //   alt="Slider"
+              alt="Slider"
               className="w-full h-39 md:h-[300px] object-cover"
             />
           </SwiperSlide>
