@@ -3,14 +3,14 @@ import Header from "../../components/Header";
 import { FaPeopleGroup, FaLocationDot, FaBoxOpen } from "react-icons/fa6";
 import { IoPerson } from "react-icons/io5";
 import InfiniteScroll from "../../components/InfiniteScroll"; 
-import useElement from "../../hooks/filter/useElement";
+import useTextFilter from "../../hooks/filter/useTextFilter"; 
 
-const Sobre = () => {
+const About = () => {
   const { 
-    filtro,
-    setFiltro,
-    filtrarTexto
-  } = useElement();
+    filter,
+    setFilter,
+    filterText
+  } = useTextFilter();
 
   let imgsCarrosel = [
     { srcImagem: "/images/customers/GoogleLogo.png", altImagem: "logo do Google" },
@@ -24,9 +24,9 @@ const Sobre = () => {
 
   return (
     <div>
-      <Header searchQuery={filtro} setSearchQuery={setFiltro} />
-      {(filtrarTexto("Sobre a Tech Zone") ||
-        filtrarTexto("Fundada em 2020")) && (
+      <Header searchQuery={filter} setSearchQuery={setFilter} />
+      {(filterText("Sobre a Tech Zone") ||
+        filterText("Fundada em 2020")) && (
         <div className="max-w-80 space-y-8 flex flex-col justify-center m-auto md:max-w-2xl lg:max-w-3xl md:mt-28 text-justify">
           <h1 className="text-green-600 font-bold mb-8 text-2xl">
             Sobre a Tech Zone
@@ -52,28 +52,28 @@ const Sobre = () => {
           Desde 2020, o maior E-commerce de tecnologia e Games da América Latina
         </h1>
         <div className="grid grid-cols-2 md:grid-cols-4 space-y-8 md:space-x-4">
-          {filtrarTexto("Colaboradores") && (
+          {filterText("Colaboradores") && (
             <div className="flex flex-col items-center">
               <FaPeopleGroup size={58} className="text-green-600" />
               <p className="font-bold text-md">+1.000</p>
               <p>Colaboradores</p>
             </div>
           )}
-          {filtrarTexto("Cidades Atendidas") && (
+          {filterText("Cidades Atendidas") && (
             <div className="flex flex-col items-center">
               <FaLocationDot size={58} className="text-green-600" />
               <p className="font-bold">+ 5.000</p>
               <p>Cidades Atendidas</p>
             </div>
           )}
-          {filtrarTexto("Clientes") && (
+          {filterText("Clientes") && (
             <div className="flex flex-col items-center">
               <IoPerson size={58} className="text-green-600" />
               <p className="font-bold">+ 8 milhões</p>
               <p>de Clientes</p>
             </div>
           )}
-          {filtrarTexto("Pedidos") && (
+          {filterText("Pedidos") && (
             <div className="flex flex-col items-center">
               <FaBoxOpen size={58} className="text-green-600" />
               <p className="font-bold">+ 15 milhões</p>
@@ -82,21 +82,21 @@ const Sobre = () => {
           )}
         </div>
       </div>
-      {filtrarTexto("Nossos clientes") && (
+      {filterText("Nossos clientes") && (
         <div className="max-w-80 mt-28 space-y-8 flex flex-col justify-center m-auto md:max-w-2xl lg:max-w-3xl md:mt-28 text-justify">
           <h1 className="text-green-600 font-bold mb-8 text-2xl">
             Nossos clientes
           </h1>
         </div>
       )}
-      {(filtrarTexto("Nossos clientes") ||
-        filtrarTexto("Adidas") ||
-        filtrarTexto("cocacola") ||
-        filtrarTexto("puma") ||
-        filtrarTexto("tim") ||
-        filtrarTexto("google") ||
-        filtrarTexto("claro") ||
-        filtrarTexto("nike")) && (
+      {(filterText("Nossos clientes") ||
+        filterText("Adidas") ||
+        filterText("cocacola") ||
+        filterText("puma") ||
+        filterText("tim") ||
+        filterText("google") ||
+        filterText("claro") ||
+        filterText("nike")) && (
         <InfiniteScroll
           className="mt-[35px]"
           imgs={imgsCarrosel}
@@ -114,4 +114,4 @@ const Sobre = () => {
   );
 };
 
-export default Sobre;
+export default About;

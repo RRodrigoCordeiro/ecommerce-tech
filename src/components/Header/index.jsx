@@ -17,8 +17,12 @@ const Header = ({ searchQuery, setSearchQuery }) => {
   const {cartAmount} = useContext(CartContext)
   const {data:product} = useProductHeader();
   const location = useLocation()
-  const pagesWithoutInput = ['/Home', '/cart', `/header/Computador/1`]
+  const isInputHidden = 
+      location.pathname === '/Home' || 
+      location.pathname === '/cart' || 
+      location.pathname.startsWith('/header/');
  
+
   return (
     <div>
       <div className="flex flex-col bg-green-600 items-center mb-16 justify-evenly md:bg-[#F2F2F2] md:flex-row md:mt-11">
@@ -32,24 +36,22 @@ const Header = ({ searchQuery, setSearchQuery }) => {
               />
           </Link>
         </div>
-        {!pagesWithoutInput.includes(location.pathname) && (
-
         
-          
-        <div className="relative w-80 md:ml-8 lg:w-96">
-          <input
-            type="text"
-            className="border border-gray-300 rounded px-4 py-4 w-80 md:ml-8 lg:w-96"
-            placeholder="Buscar"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
-          <IoSearchOutline className="absolute right-8 top-1/2 transform -translate-y-1/2 text-[#F2F2F2] md:text-black" />
-          <TranscriptButton
-            value={searchQuery}
-            setValue={setSearchQuery}
-          />
-        </div>
+        {!isInputHidden && (
+          <div className="relative w-80 md:ml-8 lg:w-96">
+            <input
+              type="text"
+              className="border border-gray-300 rounded px-4 py-4 w-80 md:ml-8 lg:w-96"
+              placeholder="Buscar"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            <IoSearchOutline className="absolute right-8 top-1/2 transform -translate-y-1/2 text-[#F2F2F2] md:text-black" />
+            <TranscriptButton
+              value={searchQuery}
+              setValue={setSearchQuery}
+            />
+          </div>
         )}
 
         <div className="flex flex-row gap-10 mt-8 mb-3 md:mt-0 md:mb-0 md:gap-5 lg:gap-12">

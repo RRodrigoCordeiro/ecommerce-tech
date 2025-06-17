@@ -39,7 +39,7 @@ const HeaderDetail = () => {
               className="block m-auto w-56 mt-14 md:mt-18 md:w-96 " 
               alt="foto da imagem dos produtos"
             />
-            <p>{product.price}</p>
+            
          
           </div>
           <div className=" flex flex-col justify-center items-center mt-28 lg:mt-40 ">
@@ -76,6 +76,15 @@ const HeaderDetail = () => {
                 </ul>
               </div>
             )}
+
+            <div>
+              <h2 className="text-green-600 font-bold mb-3 mt-8 text-center">Valor do produto</h2>
+              <p className="text-center">{product.price.toLocaleString("pt-BR", {
+                style: "currency",
+                currency: "BRL",
+              })}</p>
+            </div>
+             
           </div>
         </div>
       )}

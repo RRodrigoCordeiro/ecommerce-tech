@@ -9,6 +9,7 @@ import ProductDetail from "../pages/detail"
 import { Layout } from "../layout"
 import AttendantDetails from '../pages/Attendant/details'
 import HeaderDetail from '../pages/productsHeaderDetail'
+import Privacy from '../pages/Privacy'
 
 const PageRoutes = () => {
   return (
@@ -21,6 +22,7 @@ const PageRoutes = () => {
           <Route path='/sac' element={<Sac/>} />
           <Route path='/about' element={<Sobre/>} />
           <Route path='/cart' element={<Carrinho/>} />
+          <Route path='/privacy' element={<Privacy/>} />
           <Route path='/header/:category/:id' element={<HeaderDetail/>} />
           <Route path='/detail/:id' element={<ProductDetail/>} />
           <Route path='/attendantDetails/:id' element={<AttendantDetails/>} />

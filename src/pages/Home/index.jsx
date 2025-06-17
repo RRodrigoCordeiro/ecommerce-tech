@@ -17,33 +17,32 @@ import Modal from "../../components/Modal";
 import Attendant from "../Attendant";
 import { useComputer } from "../../hooks/computer/useComputer";  
 import { useNotebook } from "../../hooks/notebook/useNotebook";   
-
-
+import useFilterProductTitle from "../../hooks/filter/useSearchFilter"; 
 
 const Home = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [isOpen, setModalOpened] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState(null); // novo estado 
-  const [selectedProductComputer, setSelectedProductComputer] = useState(null); // novo estado
-  const [selectedProductNotebook, setSelectedProductNotebook] = useState(null); // novo estado 
-  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedProduct, setSelectedProduct] = useState(null);  
+  const [selectedProductComputer, setSelectedProductComputer] = useState(null);  
+  const [selectedProductNotebook, setSelectedProductNotebook] = useState(null); 
+  // const [searchTerm, setSearchTerm] = useState("");
   const {data: computers, isLoading, error} = useComputer();
   const {data: notebooks} = useNotebook();
+  const { searchTerm,setSearchTerm,filterComputador,filteredNotebook  } = useFilterProductTitle()
   
   
-
   const filteredProducts = products.filter((product) =>
     product.title.toLowerCase().includes(searchTerm.toLowerCase().trim())
   );
 
-  const filteredNotebook = notebooks?.filter((notebook) =>
-    notebook.title.toLowerCase().includes(searchTerm.toLowerCase().trim())
-  );
+  // const filteredNotebook = notebooks?.filter((notebook) =>
+  //   notebook.title.toLowerCase().includes(searchTerm.toLowerCase().trim())
+  // );
 
-  const filterComputador = computers?.filter((computador) =>
-    computador.title.toLowerCase().includes(searchTerm.toLowerCase().trim())
-  );
+  // const filterComputador = computers?.filter((computador) =>
+  //   computador.title.toLowerCase().includes(searchTerm.toLowerCase().trim())
+  // );
 
   useEffect(() => {
     const fetchData = async () => {

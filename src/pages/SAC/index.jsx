@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Header from "../../components/Header"; 
-import useElement from "../../hooks/filter/useElement";
+import useTextFilter from "../../hooks/filter/useTextFilter";
 
 const Accordion = ({ title, content, isOpen, toggle }) => (
   <div>
@@ -16,7 +16,7 @@ const Accordion = ({ title, content, isOpen, toggle }) => (
 );
 
 const Sac = () => {
-  const { filtro, setFiltro, filtrarTexto } = useElement();
+  const { filter, setFilter, filterText } = useTextFilter();
 
   const [openAccordion, setOpenAccordion] = useState({
     pedidos: null,
@@ -402,13 +402,13 @@ const Sac = () => {
   ];
   return (
     <div>
-      <Header searchQuery={filtro} setSearchQuery={setFiltro} />
+      <Header searchQuery={filter} setSearchQuery={setFilter} />
 
       <h1 className="font-bold text-center mt-28 text-xl md:text-lg">
         SAC - Serviço de Atendimento ao Consumidor
       </h1>
       <div>
-        {filtrarTexto("MEU PEDIDO") && (
+        {filterText("MEU PEDIDO") && (
           <div>
             <h2 className="mt-20 text-2xl mb-14 ml-8">MEU PEDIDO</h2>
             {items.map((item, idx) => (
@@ -427,7 +427,7 @@ const Sac = () => {
           </div>
         )}
 
-        {filtrarTexto("GARANTIA OU ARREPENDIMENTO") && (
+        {filterText("GARANTIA OU ARREPENDIMENTO") && (
           <div>
             <h2 className="mt-20 text-2xl mb-14 ml-8">
               GARANTIA OU ARREPENDIMENTO
@@ -448,7 +448,7 @@ const Sac = () => {
           </div>
         )}
 
-        {filtrarTexto("PAGAMENTO") && (
+        {filterText("PAGAMENTO") && (
           <div>
             <h3 className="mt-20 text-2xl mb-14 ml-8">PAGAMENTO E ESTORNO</h3>
             {items.map((item, idx) => (
@@ -467,7 +467,7 @@ const Sac = () => {
           </div>
         )}
 
-        {filtrarTexto("PRÉ-VENDA") && (
+        {filterText("PRÉ-VENDA") && (
           <div>
             <h3 className="mt-20 text-2xl mb-14 ml-8">PRODUTOS PRÉ-VENDA</h3>
             {items.map((item, idx) => (
@@ -486,7 +486,7 @@ const Sac = () => {
           </div>
         )}
 
-        {filtrarTexto("CADASTRO") && (
+        {filterText("CADASTRO") && (
           <div>
             <h3 className="mt-20 text-2xl mb-14 ml-8">CADASTRO</h3>
             {items.map((item, idx) => (

@@ -136,7 +136,7 @@ const Footer = () => {
               <Link className="block">
                 <p>Segurança & Privacidade</p>
               </Link>
-              <Link className="block">
+              <Link to="/privacy" className="block" >
                 <p>Políticas de Privacidade</p>
               </Link>
               <Link className="block">
