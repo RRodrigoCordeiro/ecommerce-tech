@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import Header from "../../components/Header"; 
 import useTextFilter from "../../hooks/filter/useTextFilter";
+import { GoChevronUp } from "react-icons/go";
+import { GoChevronDown } from "react-icons/go";
 
+// Accordion quando tem + de uma sessão
 const Accordion = ({ title, content, isOpen, toggle }) => (
   <div>
     <button
@@ -9,7 +12,7 @@ const Accordion = ({ title, content, isOpen, toggle }) => (
       className="w-full p-4 text-left flex justify-between items-center bg-gray-100 hover:bg-gray-200 gap-12"
     >
       <span>{title}</span>
-      <span>{isOpen ? "-" : "+"}</span>
+      <span className='text-2xl text-gray-600'>{isOpen ? <GoChevronUp /> : <GoChevronDown />}</span>
     </button>
     {isOpen && <p className="p-4">{content}</p>}
   </div>

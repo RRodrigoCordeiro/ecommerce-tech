@@ -90,23 +90,23 @@ export default function TranscriptButton({ value, setValue }) {
     <div className="absolute right-1 top-1/2 transform -translate-y-1/2 text-[#F2F2F2] md:text-black">
       {!isRec && (
         <button
-          className="text-black"
+          className="text-black p-3"
           onClick={handleActiveRec}
           ref={btnGravarRef}
           disabled={isButtonDisabled}
           title="Ao retornar a transcrição, alterações manuais serão perdidas."
         >
-          <IoMdMic />
+          <IoMdMic className="h-5 w-5  "/>
         </button>
       )}
       {isRec && (
         <button
-          className="rounded-full bg-[#242422] p-1 text-red-600"
+          className="rounded-full bg-[#242422] p-3 text-red-600"
           onClick={handleDisableRec}
           ref={btnPararRef}
           disabled={isButtonDisabled}
         >
-          <BiSolidMicrophone className="h-3 w-3" />
+          <BiSolidMicrophone className="h-5 w-5" />
         </button>
       )}
       {/* <button

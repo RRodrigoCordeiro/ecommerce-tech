@@ -10,7 +10,7 @@ import { IoMdMic } from "react-icons/io";
 import { Link, useLocation } from 'react-router-dom'
 import { CartContext } from "../../contexts/CartContext"; 
 import { useProductHeader } from "../../hooks/productHeader/useProductHeader";
-import TranscriptButton from "../ui/TranscriptButton";
+import TranscriptButton from "../UI/TranscriptButton";
  
 const Header = ({ searchQuery, setSearchQuery }) => {
   const [dropdownVisible, setDropdownVisible] = useState(null);
@@ -27,7 +27,7 @@ const Header = ({ searchQuery, setSearchQuery }) => {
     <div>
       <div className="flex flex-col bg-green-600 items-center mb-16 justify-evenly md:bg-[#F2F2F2] md:flex-row md:mt-11">
         <div className="flex flex-row space-x-44 items-center  mt-3 mb-3 md:mt-0 md:mb-0 ">
-          <IoMdMenu size={40} className="md:hidden text-white md:text-black"  />
+          <IoMdMenu size={40} className="md:hidden  text-black"  />
           <Link to="/">
             <img
                 src="/images/logos/transparent-brand-logo.png"
@@ -38,15 +38,15 @@ const Header = ({ searchQuery, setSearchQuery }) => {
         </div>
         
         {!isInputHidden && (
-          <div className="relative w-80 md:ml-8 lg:w-96">
+          <div className="relative w-80 md:ml-8 lg:w-96 space-x-4">
             <input
               type="text"
-              className="border border-gray-300 rounded px-4 py-4 w-80 md:ml-8 lg:w-96"
+              className="border border-text-slate-800 rounded px-4 py-4 w-80 md:ml-8 lg:w-full"
               placeholder="Buscar"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
-            <IoSearchOutline className="absolute right-8 top-1/2 transform -translate-y-1/2 text-[#F2F2F2] md:text-black" />
+            <IoSearchOutline className="absolute right-8 top-1/2 transform -translate-y-1/2  text-black w-5 h-5 "/>
             <TranscriptButton
               value={searchQuery}
               setValue={setSearchQuery}
@@ -57,14 +57,14 @@ const Header = ({ searchQuery, setSearchQuery }) => {
         <div className="flex flex-row gap-10 mt-8 mb-3 md:mt-0 md:mb-0 md:gap-5 lg:gap-12">
           <div className="flex flex-col items-center ">
             <Link to="/about">
-              <MdOutlineQuestionAnswer size={28} className="ml-5 text-[#F2F2F2] md:text-black" />
-              <p className="text-white md:text-black">Sobre nós</p>
+              <MdOutlineQuestionAnswer size={28} className="ml-5  text-black" />
+              <p className="text-slate-800">Sobre nós</p>
             </Link>
           </div>
           <div className="flex flex-col items-center">
             <Link to="/sac">
-              <FaPeopleGroup size={28} className="text-[#F2F2F2] md:text-black"/>
-              <p className="text-white md:text-black">SAC</p>
+              <FaPeopleGroup size={28} className="text-black"/>
+              <p className="text-slate-800">SAC</p>
             </Link>
           </div>
           <div className="flex flex-col items-center">
@@ -72,13 +72,13 @@ const Header = ({ searchQuery, setSearchQuery }) => {
               {cartAmount > 0 && (
                 <span className="-mt-5 ml-7 px-2.5 bg-sky-500 rounded-full w-6 h-6 flex items-center justify-center text-white text-xs">{cartAmount}</span>
               )}
-              <BsCart2 size={28} className="ml-4 text-[#F2F2F2] md:text-black" />
-              <p className="text-white md:text-black">Carrinho</p>
+              <BsCart2 size={28} className="ml-4  text-black" />
+              <p className="text-slate-800">Carrinho</p>
             </Link>
           </div>
-          <div className="flex flex-col items-center text-[#F2F2F2] md:text-black ">
+          <div className="flex flex-col items-center  text-black ">
             <BsPersonCircle size={28} />
-            <p>Login</p>
+            <p className="text-slate-800">Login</p>
           </div>
         </div>
       </div>
@@ -92,8 +92,8 @@ const Header = ({ searchQuery, setSearchQuery }) => {
             onMouseLeave={() => setDropdownVisible(null)}
           >
             <div className="flex flex-row gap-5">
-              <p className="cursor-pointer">{categoria}</p>
-              <span className="border-l-2 border-white h-6"></span>
+              <p className="cursor-pointer text-slate-800">{categoria}</p>
+              <span className="border-l-2 border-black h-6"></span>
             </div>
 
             {dropdownVisible === index && (

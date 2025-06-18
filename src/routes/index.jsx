@@ -5,11 +5,11 @@ import Launch from "../pages/Launch"
 import Sac from "../pages/Sac" 
 import Sobre from "../pages/About"
 import Carrinho from "../pages/Cart" 
-import ProductDetail from "../pages/detail" 
 import { Layout } from "../layout"
 import AttendantDetails from '../pages/Attendant/details'
-import HeaderDetail from '../pages/productsHeaderDetail'
+import HeaderDetail from '../pages/ProductsHeaderDetail'  
 import Privacy from '../pages/Privacy'
+import Security from '../pages/Security'
 
 const PageRoutes = () => {
   return (
@@ -23,8 +23,8 @@ const PageRoutes = () => {
           <Route path='/about' element={<Sobre/>} />
           <Route path='/cart' element={<Carrinho/>} />
           <Route path='/privacy' element={<Privacy/>} />
+          <Route path='/security' element={<Security/>} />
           <Route path='/header/:category/:id' element={<HeaderDetail/>} />
-          <Route path='/detail/:id' element={<ProductDetail/>} />
           <Route path='/attendantDetails/:id' element={<AttendantDetails/>} />
         </Route>
           <Route path='*' element={<h1>Not Found</h1>} />

@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { GoChevronUp } from "react-icons/go";
+import { GoChevronDown } from "react-icons/go";
 
 const Footer = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +23,7 @@ const Footer = () => {
         </div>
       ),
     },
-    { title: "SAC", content: "Clique aqui" },
+    { title: "SAC", content: "Serviço de Atendimento ao Cliente " },
     {
       title: "Institucional",
       content: (
@@ -46,7 +48,7 @@ const Footer = () => {
       <div className="hidden md:flex justify-center md:gap-9 lg:gap-28 mt-28 p-20 bg-[#D9D9D9]">
         <div>
           <div>
-            <p className="font-bold text-blue-600 text-sm lg:text-lg ">
+            <p className="font-bold text-[#000000] text-sm lg:text-lg ">
               Mídias Sociais
             </p>
             <div className="mb-8 mt-8 space-y-2  grid grid-cols-2 ">
@@ -84,7 +86,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <p className="font-bold text-blue-600  lg:text-lg">
+            <p className="font-bold text-[#000000]  lg:text-lg">
               Baixe os aplicativos
             </p>
             <div className="mb-8 mt-8 space-y-8">
@@ -102,7 +104,7 @@ const Footer = () => {
 
         <div>
           <div>
-            <p className="font-bold text-blue-600 lg:text-lg">Atendimento</p>
+            <p className="font-bold text-[#000000] lg:text-lg">Atendimento</p>
             <div className="mb-8 mt-8 space-y-2">
               <p>Horário de Atendimento - (Exceto feriados)</p>
               <p className="max-w-36">
@@ -123,40 +125,42 @@ const Footer = () => {
 
         <div>
           <div>
-            <p className="font-bold text-blue-600 lg:text-lg">SAC</p>
+            <p className="font-bold text-[#000000] lg:text-lg">SAC</p>
             <Link to="/sac">
-              <p className="mt-8 mb-8">Clique aqui</p>
+              <p className="mt-8 mb-8">Serviço de Atendimento ao Cliente </p>
             </Link>
           </div>
           <div>
-            <p className="font-bold text-blue-600 text-lg mt-36">
+            <p className="font-bold text-[#000000] text-lg mt-36">
               Institucional
             </p>
             <div className="mb-8 mt-8 space-y-2">
-              <Link className="block">
+              <Link to="/security" className="block">
                 <p>Segurança & Privacidade</p>
               </Link>
               <Link to="/privacy" className="block" >
                 <p>Políticas de Privacidade</p>
               </Link>
-              <Link className="block">
+              <Link to="#" className="block">
                 <p>Código de Defesa do Consumidor</p>
               </Link>
               <Link to="/about" className="block">
                 <p>Sobre Nós</p>
               </Link>
-              <p>Trabalhe Conosco</p>
+              <Link to="#" className="block">
+                 <p>Trabalhe Conosco</p>
+              </Link>
             </div>
           </div>
         </div>
 
         <div>
           <div>
-            <p className="font-bold text-blue-600 lg:text-lg">Acessibilidade</p>
+            <p className="font-bold text-[#000000] lg:text-lg">Acessibilidade</p>
             <p className="mb-8 mt-8">Acessibilidade</p>
           </div>
           <div>
-            <p className="font-bold text-blue-600 text-lg mt-36">
+            <p className="font-bold text-[#000000] text-lg mt-36">
               Pedidos e Compras
             </p>
             <div className="mb-8 mt-8 space-y-2">
@@ -181,14 +185,14 @@ const Footer = () => {
               </button>
               {isOpen === index && (
                 <div className="p-4 text-center bg-white border-t">
-                  {item.content}
+                  <p>{item.content}</p>
                 </div>
               )}
             </div>
           ))}
         </div>
         <div>
-          <h1 className="text-blue-600 text-center mt-12 font-bold text-lg">
+          <h1 className="text-black  text-center mt-12 font-bold text-lg">
             Midias Sociais
           </h1>
           <div className="mb-8 mt-8 space-y-2 grid grid-cols-3 justify-items-center items-center ">
@@ -225,7 +229,7 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <h1 className="text-blue-600 text-center mt-12 font-bold text-lg">
+          <h1 className="text-black text-center mt-12 font-bold text-lg">
             Baixe os aplicativos
           </h1>
           <div className="mb-8 mt-8 flex flex-col items-center justify-center gap-8 ">
