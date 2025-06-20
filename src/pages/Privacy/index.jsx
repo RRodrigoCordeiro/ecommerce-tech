@@ -3,6 +3,7 @@ import Header from '../../components/Header'
 import { GoChevronUp } from "react-icons/go";
 import { GoChevronDown } from "react-icons/go";
 
+
 const Privacy = () => {
   const [isOpen, setisOpen] = useState()
 
