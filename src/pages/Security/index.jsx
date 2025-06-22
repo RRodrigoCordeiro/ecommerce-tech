@@ -4,6 +4,8 @@ import { FaTableCellsColumnLock } from "react-icons/fa6";
 import { FaPix } from "react-icons/fa6";
 import { MdInstallDesktop } from "react-icons/md";
 import { FaUserSecret, FaUserAlt, FaQuestionCircle, FaExclamationTriangle, FaClock } from "react-icons/fa";
+import { RiCellphoneFill } from "react-icons/ri";
+import { MdReportGmailerrorred } from "react-icons/md";
 
 
 const Security = () => {
@@ -11,8 +13,8 @@ const Security = () => {
     <div>
         <Header/>
         <h1 className='text-center mt-16  font-bold '>A Tech Zone acredita na privacidade e na segurança! </h1>
-        <p className='text-justify max-w-sm md:max-w-2xl lg:max-w-3xl m-auto mt-12'>Vivemos em um mundo cada vez mais conectado, onde a tecnologia traz praticidade e agilidade ao nosso dia a dia. Mas, ao mesmo tempo, surgem novas ameaças digitais que exigem atenção redobrada. Pensando nisso, reunimos aqui informações importantes para te ajudar a navegar com mais segurança </p>
-        <p className='text-justify max-w-sm md:max-w-2xl lg:max-w-3xl m-auto mt-3'>A proteção da sua privacidade também é uma prioridade para nós. Adotamos medidas de segurança eficazes e seguimos as melhores práticas para garantir que seus dados sejam tratados com o cuidado e respeito que merecem.</p>
+        <p className='text-justify max-w-80 md:max-w-2xl lg:max-w-3xl m-auto mt-12'>Vivemos em um mundo cada vez mais conectado, onde a tecnologia traz praticidade e agilidade ao nosso dia a dia. Mas, ao mesmo tempo, surgem novas ameaças digitais que exigem atenção redobrada. Pensando nisso, reunimos aqui informações importantes para te ajudar a navegar com mais segurança </p>
+        <p className='text-justify max-w-80 md:max-w-2xl lg:max-w-3xl m-auto mt-3'>A proteção da sua privacidade também é uma prioridade para nós. Adotamos medidas de segurança eficazes e seguimos as melhores práticas para garantir que seus dados sejam tratados com o cuidado e respeito que merecem.</p>
 
         <div className='grid  md:grid-cols-2 lg:grid-cols-4 gap-3 ml-8 mr-8  mt-40 mb-40'> 
             <div className='bg-white h-72   rounded-3xl text-center shadow-lg flex flex-col items-center justify-center'>
@@ -82,12 +84,19 @@ const Security = () => {
         </div>
 
         <div className='bg-green-500'>
-            <p>Denuncie!</p>
-            <p>cdcsdvsdvs</p>
+            <p className='text-center text-2xl font-bold p-3'>Denuncie!</p>
+            <RiCellphoneFill />
+            <MdReportGmailerrorred />
+             <img 
+                    src="../../../images/notebooks/testes.png" 
+                    alt="" 
+                    className='w-80 h-80 rounded-2xl'
+                />
+            <p className='max-w-96 text-justify'>Encontrou um site suspeito ou sofreu uma tentativa de golpe? Não ignore! Nos ajude a combater fraudes digitais denunciando páginas falsas. Sua colaboração é essencial para manter a internet mais segura e proteger outras pessoas de cair em armadilhas online. Juntos, podemos enfrentar esse problema.</p>
         </div>
 
          <div>
-            <h2 className='text-center mt-8 font-bold'>Forma de pagamento</h2>
+            <h2 className='text-center text-2xl font-bold mt-40'>Forma de pagamento</h2>
 
             <div className='grid  md:grid-cols-3 gap-3  mt-12 '> 
                 <div className='bg-white  h-full p-3 m-auto rounded-xl'>
@@ -113,9 +122,6 @@ const Security = () => {
         <div>
             <h2>Entre em contato </h2>
         </div>
-
-
-
     </div>
   )
 }
