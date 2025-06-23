@@ -101,7 +101,7 @@ const Header = ({ searchQuery, setSearchQuery }) => {
                 <ul className="flex flex-row items-center justify-center space-x-10">
                   {listaProdutos.map((opcao, idx) => (
                     <li key={idx}>
-                      <Link className="hover:text-green-500 cursor-pointer block" to={`/header/${categoria}/${opcao.id}`}>
+                      <Link className="hover:text-green-600 cursor-pointer block" to={`/header/${categoria}/${opcao.id}`}>
                         <img
                           src={opcao.image}
                           alt={opcao.name}

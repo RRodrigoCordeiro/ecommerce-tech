@@ -127,7 +127,7 @@ const Footer = () => {
           <div>
             <p className="font-bold text-[#000000] lg:text-lg">SAC</p>
             <Link to="/sac">
-              <p className="mt-8 mb-8">Serviço de Atendimento ao Cliente </p>
+              <span className="mt-8 mb-8">Serviço de Atendimento ao Cliente </span>
             </Link>
           </div>
           <div>
@@ -136,19 +136,24 @@ const Footer = () => {
             </p>
             <div className="mb-8 mt-8 space-y-2">
               <Link to="/security" className="block">
-                <p>Segurança & Privacidade</p>
+                Segurança & Privacidade
               </Link>
               <Link to="/privacy" className="block" >
-                <p>Políticas de Privacidade</p>
+                Políticas de Privacidade
               </Link>
-              <Link to="#" className="block">
-                <p>Código de Defesa do Consumidor</p>
-              </Link>
+              <a
+                href="https://www.procon.df.gov.br/wp-content/uploads/2019/08/Codigo-do-consumidor-FINAL.pdf"
+                className="block"
+                target="_blank"
+    
+              >
+                 Código de Defesa do Consumidor
+              </a>
               <Link to="/about" className="block">
-                <p>Sobre Nós</p>
+                Sobre Nós
               </Link>
-              <Link to="#" className="block">
-                 <p>Trabalhe Conosco</p>
+              <Link to="/workWithUs" className="block">
+                 Trabalhe Conosco
               </Link>
             </div>
           </div>

@@ -10,6 +10,7 @@ import AttendantDetails from '../pages/Attendant/details'
 import HeaderDetail from '../pages/ProductsHeaderDetail'  
 import Privacy from '../pages/Privacy'
 import Security from '../pages/Security'
+import WorkWithUs from '../pages/WorkWithUs'
 
 const PageRoutes = () => {
   return (
@@ -24,6 +25,7 @@ const PageRoutes = () => {
           <Route path='/cart' element={<Carrinho/>} />
           <Route path='/privacy' element={<Privacy/>} />
           <Route path='/security' element={<Security/>} />
+          <Route path='/workWithUs' element={<WorkWithUs/>} />
           <Route path='/header/:category/:id' element={<HeaderDetail/>} />
           <Route path='/attendantDetails/:id' element={<AttendantDetails/>} />
         </Route>

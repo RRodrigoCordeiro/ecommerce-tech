@@ -28,7 +28,7 @@ const About = () => {
       {(filterText("Sobre a Tech Zone") ||
         filterText("Fundada em 2020")) && (
         <div className="max-w-80 space-y-8 flex flex-col justify-center m-auto md:max-w-2xl lg:max-w-3xl md:mt-28 text-justify">
-          <h1 className="text-green-600 font-bold mb-8 text-2xl">
+          <h1 className="font-bold mb-8 text-2xl">
             Sobre a Tech Zone
           </h1>
           <p>
@@ -84,7 +84,7 @@ const About = () => {
       </div>
       {filterText("Nossos clientes") && (
         <div className="max-w-80 mt-28 space-y-8 flex flex-col justify-center m-auto md:max-w-2xl lg:max-w-3xl md:mt-28 text-justify">
-          <h1 className="text-green-600 font-bold mb-8 text-2xl">
+          <h1 className="font-bold mb-8 text-2xl">
             Nossos clientes
           </h1>
         </div>

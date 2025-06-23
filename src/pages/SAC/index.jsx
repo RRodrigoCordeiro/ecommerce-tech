@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import Header from "../../components/Header"; 
 import useTextFilter from "../../hooks/filter/useTextFilter";
-import { GoChevronUp } from "react-icons/go";
-import { GoChevronDown } from "react-icons/go";
-
+import { GoChevronUp,GoChevronDown } from "react-icons/go";
+ 
 // Accordion quando tem + de uma sessão
 const Accordion = ({ title, content, isOpen, toggle }) => (
   <div>

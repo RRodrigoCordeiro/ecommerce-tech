@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
 import Header from '../../components/Header'
-import { GoChevronUp } from "react-icons/go";
-import { GoChevronDown } from "react-icons/go";
-
-
+import { GoChevronUp,GoChevronDown  } from "react-icons/go";
+ 
 const Privacy = () => {
   const [isOpen, setisOpen] = useState()
+  const [searchTerm, setSearchTerm] = useState("")
 
   const toggleAccordion = (index) => {
     setisOpen(isOpen === index ? null : index)
@@ -94,9 +93,14 @@ const Privacy = () => {
 
     },
   ]
+
+  const filteredItems = items.filter((item) => 
+    item.title.toLocaleLowerCase().includes(searchTerm.toLowerCase().trim())
+  )
+
   return (
     <div>
-      <Header searchQuery={undefined} setSearchQuery={undefined}/>
+      <Header searchQuery={searchTerm} setSearchQuery={setSearchTerm}/>
       <div className='flex flex-col md:flex-row items-center justify-center mt-8 space-x-8'>
         <img
           src="images/logos/transparent-brand-logo.png"
@@ -110,7 +114,7 @@ const Privacy = () => {
       </div>
 
       <div className='mt-18'>
-          {items.map((item,index) => (
+          {filteredItems.map((item,index) => (
             <div
               key={index}
             >
