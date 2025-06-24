@@ -6,7 +6,7 @@ export const userSchema = z.object({
     email: z.string()
         .email("O email é inválido"),
     phone: z.string()
-        .min(13,"Número de telefone incompleto")
+        .min(11,"Número de telefone incompleto")
         .max(18,"Número de telefone inválido"),
         
     cep: z.string()
@@ -30,3 +30,4 @@ export const userSchema = z.object({
     uf: z.string()
         .length(2, "A UF deve conter exatamente 2 caracteres"),
 })
+

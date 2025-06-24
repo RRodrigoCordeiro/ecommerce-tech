@@ -20,6 +20,7 @@ const Header = ({ searchQuery, setSearchQuery }) => {
   const isInputHidden = 
       location.pathname === '/Home' || 
       location.pathname === '/cart' || 
+      location.pathname === "/workWithUs"
       location.pathname.startsWith('/header/');
  
 

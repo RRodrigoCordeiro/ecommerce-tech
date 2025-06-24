@@ -98,14 +98,14 @@ const Testimonials = () => {
             </div>
 
             <button
-              className="bg-white flex items-center rounded-full shadow-lg w-8 h-8 absolute left-4 -translate-y-1/2 -translate-x-1/2 top-1/2 z-10"
+              className="bg-white cursor-pointer flex items-center rounded-full shadow-lg w-8 h-8 absolute left-4 -translate-y-1/2 -translate-x-1/2 top-1/2 z-10"
               onClick={scrollPrev}
             >
               <FaCircleChevronLeft className="w-8 h-8 text-gray-600" />
             </button>
 
             <button
-              className="bg-white flex items-center rounded-full shadow-lg w-8 h-8 absolute -right-4 -translate-y-1/2 -translate-x-1/2 top-1/2 z-10"
+              className="bg-white cursor-pointer flex items-center rounded-full shadow-lg w-8 h-8 absolute -right-4 -translate-y-1/2 -translate-x-1/2 top-1/2 z-10"
               onClick={scrollNext}
             >
               <FaChevronCircleRight className="w-8 h-8 text-gray-600" />
