@@ -15,31 +15,83 @@ const Footer = () => {
       title: "Atendimento",
       content: (
         <div>
-          <p>Horários:</p>
+          <p className="font-bold">Horários:</p>
           <ul>
-            <li>Segunda à Sexta - 08:00 às 20:00</li>
-            <li>Sábado e Domingo - 09:00 às 15:00 (Exceto feriados)</li>
+            <li>Segunda à Sexta - <span className="font-extralight">08:00 às 20:00</span></li>
+            <li>Sábado e Domingo - <span className="font-extralight">09:00 às 15:00 (Exceto feriados)</span></li>
           </ul>
         </div>
       ),
     },
-    { title: "SAC", content: "Serviço de Atendimento ao Cliente " },
+    {
+      title: "SAC", 
+      content: (
+        <div>
+           <Link to="/sac">
+             Serviço de Atendimento ao Cliente
+           </Link>
+        </div> 
+      ),
+    },
     {
       title: "Institucional",
       content: (
-        <ul>
-          <li>Segurança & Privacidade</li>
-          <li>Políticas de Privacidade</li>
-          <li>Código de Defesa do Consumidor</li>
-          <li>Sobre nós</li>
-          <li>Trabalhe conosco</li>
+       <ul className="list-disc p-3 text-start">
+          <li className="mb-3">
+            <Link to="/security">Segurança & Privacidade</Link>
+          </li>
+          <li className="mb-3">
+            <Link to="/privacy">Políticas de Privacidade</Link>
+          </li>
+          <li className="mb-3">
+          <a
+              href="https://www.procon.df.gov.br/wp-content/uploads/2019/08/Codigo-do-consumidor-FINAL.pdf"
+              className="block"
+              target="_blank"
+              rel="noopener noreferrer"
+          >
+              Código de Defesa do Consumidor
+          </a>
+          </li>
+          <li className="mb-3">
+            <Link to="/about">Sobre nós</Link>
+          </li>
+          <li className="mb-3">
+            <Link to="/workWithUs">Trabalhe conosco</Link>
+          </li>
         </ul>
       ),
     },
-    { title: "Acessibilidade", content: "Acessibilidade" },
+    { title: "Acessibilidade", 
+      content:(
+        <Link>
+          Acessibilidade
+        </Link>
+      ), 
+    },
     {
       title: "Pedidos e compras",
-      content: "Envio, entrega e coleta; Devoluções e trocas; Contate-nos",
+      content:(
+        <div>
+          <ul className="list-disc p-3 text-start">
+            <li>
+              <Link to="/shippingDeliveryPickup" className="block mb-3">
+                 <p>Envio, entrega e coleta</p>
+              </Link>
+            </li>
+            <li> 
+              <Link to="#" className="block mb-3">
+                <p>Devoluções e trocas</p>
+              </Link>
+            </li>
+            <li> 
+              <Link to="#" className="block mb-3">
+                 <p>Contate-nos</p>
+              </Link>
+            </li>
+          </ul>
+        </div>
+      ), 
     },
   ];
 
@@ -161,15 +213,19 @@ const Footer = () => {
 
         <div>
           <div>
-            <p className="font-bold text-[#000000] lg:text-lg">Acessibilidade</p>
-            <p className="mb-8 mt-8">Acessibilidade</p>
+            <p className="font-bold text-[#000000] lg:text-lg mb-8">Acessibilidade</p>
+            <Link to="/accessibility">
+              <span >Acessibilidade</span>
+            </Link>
           </div>
           <div>
-            <p className="font-bold text-[#000000] text-lg mt-36">
+            <p className="font-bold text-[#000000] text-lg mt-28">
               Pedidos e Compras
             </p>
             <div className="mb-8 mt-8 space-y-2">
-              <p>Envio, entrega e coleta</p>
+               <Link to="/shippingDeliveryPickup" className="block">
+                <p>Envio, entrega e coleta</p>
+              </Link>
               <p>Devoluções e trocas</p>
               <p>Contate-nos</p>
             </div>

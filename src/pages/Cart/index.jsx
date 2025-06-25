@@ -120,7 +120,7 @@ const Cart = () => {
           </p>
           <Link
             to="/"
-            className="bg-green-600 my-3 p-1 px-3  font-medium rounded"
+            className="bg-green-500 my-3 p-1 px-3  font-medium rounded"
           >
             Acessar Produtos
           </Link>
@@ -167,7 +167,7 @@ const Cart = () => {
             No seu carrinho contém {cart.length} itens
           </p>
           <button
-            className="text-center cursor-pointer bg-green-600 rounded-md w-40 p-2 mt-28 block m-auto"
+            className="text-center cursor-pointer bg-green-500 rounded-md w-40 p-2 mt-28 block m-auto"
             onClick={() => setModalOpened(true)}
           >
             Finalizar compras
@@ -293,7 +293,7 @@ const Cart = () => {
               <div className="flex justify-center col-span-1 md:col-span-2">
                 <button
                   type="submit"
-                  className="bg-green-600 cursor-pointer rounded-md p-1 font-bold mt-8 mb-8  w-48 block m-auto"
+                  className="bg-green-500 cursor-pointer rounded-md p-1 font-bold mt-8 mb-8  w-48 block m-auto"
                 >
                   Finalizar o pedido
                 </button>

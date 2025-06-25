@@ -64,10 +64,10 @@ const Testimonials = () => {
   }
 
   return (
-    <div className="bg-green-600 mt-8 mb-8">
+    <div className="bg-green-500 mt-8 mb-8">
       <section className=" py-16">
         <div className="container mx-auto px-4">
-          <h1 className="text-2xl text-white rounded-md text-center font-bold mb-12">
+          <h1 className="text-2xl text-black rounded-md text-center font-bold mb-12">
             Depoimentos dos nossos clientes
           </h1>
           <div className="relative max-w-4xl mx-auto">
@@ -80,13 +80,13 @@ const Testimonials = () => {
                         <div className="relative w-24 h-24 overflow-hidden rounded-full">
                           <img
                             src={item.image}
-                            alt={item.author}
+                            alt={" autor do depoimento sobre atendimento"}
                             className="w-full h-full object-cover"
                           />
                         </div>
                         <div>
                           <p className="text-black  ">{item.content}</p>
-                          <p className="text-sm text-green-600 font-bold mt-8">
+                          <p className="text-sm text-black font-bold mt-8">
                             {item.author}
                           </p>
                         </div>
@@ -100,6 +100,8 @@ const Testimonials = () => {
             <button
               className="bg-white cursor-pointer flex items-center rounded-full shadow-lg w-8 h-8 absolute left-4 -translate-y-1/2 -translate-x-1/2 top-1/2 z-10"
               onClick={scrollPrev}
+              aria-label="Deslizar para a esquerda
+              "
             >
               <FaCircleChevronLeft className="w-8 h-8 text-gray-600" />
             </button>
@@ -107,6 +109,7 @@ const Testimonials = () => {
             <button
               className="bg-white cursor-pointer flex items-center rounded-full shadow-lg w-8 h-8 absolute -right-4 -translate-y-1/2 -translate-x-1/2 top-1/2 z-10"
               onClick={scrollNext}
+              aria-label="Deslizar para a direita"
             >
               <FaChevronCircleRight className="w-8 h-8 text-gray-600" />
             </button>

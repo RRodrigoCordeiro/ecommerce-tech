@@ -142,7 +142,7 @@ const Home = () => {
                   key={product.id}
                   className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(100%/2)] lg:flex-[0_0_calc(100%/3)] px-3 bg-b"
                 >
-                    <article className="bg-white text-white rounded-2xl p-6 space-y-2 h-full flex flex-col w-full  " >
+                    <article className="bg-white text-white cursor-pointer rounded-2xl p-6 space-y-2 h-full flex flex-col w-full  " >
                       <div 
                           className="h-full flex flex-col w-full"
                           onClick={() => openModal(product)}
@@ -160,20 +160,20 @@ const Home = () => {
                           width="100"
                           className="m-auto mb-16"
                         ></img>
-                        <div className="bg-green-600 flex items-center gap-2 w-32 p-0.5 mb-5 rounded-md ">
+                        <div className="bg-green-500 text-slate-800 flex items-center gap-2 w-32 p-0.5 mb-5 rounded-md ">
                           <FaTruck className="ml-2" />
                           <p>Frete Grátis</p>
                         </div>
-                        <p className="text-green-600 font-bold text-lg ">
+                        <p className="text-black font-bold text-lg ">
                           R$ {product.price}
                         </p>
-                        <p className="text-gray-400 text-sm -mt-2">
+                        <p className="text-slate-800 text-sm -mt-2">
                           À vista no PIX
                         </p>
 
                       </div>
                      
-                      <button className="bg-green-600 cursor-pointer rounded-md h-10 font-bold flex items-center justify-center gap-3" onClick={() => handleAddCartItem(product)}>
+                      <button className="bg-green-500 text-black  cursor-pointer rounded-md h-10 font-bold flex items-center justify-center gap-3" onClick={() => handleAddCartItem(product)}>
                         <FaShoppingCart />
                         COMPRAR
                       </button>           
@@ -191,7 +191,7 @@ const Home = () => {
                         <div>
                           <h3 className="text-center font-bold mb-8 w-56  m-auto">{selectedProduct.title}</h3>
                           <p className="max-w-2xl text-justify w-56 md:w-full m-auto mb-8">{selectedProduct.description}</p>
-                          <button className="bg-green-600 cursor-pointer text-white m-auto  w-56 md:w-2xl rounded-md h-10 font-bold flex items-center justify-center gap-3" onClick={() => handleAddCartItem(selectedProduct)}>
+                          <button className="bg-green-500 cursor-pointer text-black m-auto  w-56 md:w-2xl rounded-md h-10 font-bold flex items-center justify-center gap-3" onClick={() => handleAddCartItem(selectedProduct)}>
                             <FaShoppingCart />
                             COMPRAR
                           </button>
@@ -204,6 +204,7 @@ const Home = () => {
           <button
             className="bg-white cursor-pointer flex items-center rounded-full shadow-lg w-8 h-8 absolute left-4 -translate-y-1/2 -translate-x-1/2 top-1/2 z-10"
             onClick={scrollPrev}
+            aria-label="Deslizar para a esquerda"
           >
             <FaCircleChevronLeft className="w-8 h-8 text-gray-600" />
           </button>
@@ -211,6 +212,7 @@ const Home = () => {
           <button
             className="bg-white cursor-pointer flex items-center rounded-full shadow-lg w-8 h-8 absolute -right-4 -translate-y-1/2 -translate-x-1/2 top-1/2 z-10"
             onClick={scrollNext}
+            aria-label="Deslizar para a direita"
           >
             <FaChevronCircleRight className="w-8 h-8 text-gray-600" />
           </button>
@@ -238,8 +240,8 @@ const Home = () => {
                 key={computer.id}
                 className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(100%/2)] lg:flex-[0_0_calc(100%/3)] px-3"
               >
-                <article className="bg-white text-white rounded-2xl p-6 space-y-2 h-full flex flex-col w-full ">
-                  <div className="bg-white text-white rounded-2xl p-6 space-y-2 h-full flex flex-col w-full " onClick={() => openModal(computer)}>
+                <article className="bg-white text-white cursor-pointer rounded-2xl p-6 space-y-2 h-full flex flex-col w-full ">
+                  <div className="bg-white text-white rounded-2xl p-1 space-y-2 h-full flex flex-col w-full " onClick={() => openModal(computer)}>
                     <div className=" flex items-start justify-between">
                       <div className="flex gap-3">
                         <h3 className="text-black font-bold text-xl mb-8">
@@ -250,24 +252,22 @@ const Home = () => {
                     <img
                       src={computer.image}
                       alt={computer.title}
-                       
-                      
-                      className="m-auto mb-16 h-28"
+                      className="m-auto mb-16 h-28 "
                     ></img>
-                    <div className="bg-green-600 flex items-center gap-2 w-32 p-0.5 mb-5 rounded-md ">
+                    <div className="bg-green-500 text-slate-800 flex items-center gap-2 w-32 p-0.5 mb-5 rounded-md ">
                       <FaTruck className="ml-2" />
                       <p>Frete Grátis</p>
                     </div>
 
 
-                    <p className="text-green-600 font-bold text-lg ">
+                    <p className="text-black font-bold text-lg ">
                       R$ {computer.price}
                     </p>
-                    <p className="text-gray-400 text-sm -mt-2">À vista no PIX</p>
+                    <p className="text-slate-800 text-sm -mt-2">À vista no PIX</p>
 
                   </div>
 
-                  <button className="bg-green-600 cursor-pointer rounded-md h-10 font-bold flex items-center justify-center gap-3"  onClick={() => handleAddCartItem(computer)}>
+                  <button className="bg-green-500 text-black cursor-pointer rounded-md h-10 font-bold flex items-center justify-center gap-3"  onClick={() => handleAddCartItem(computer)}>
                     <FaShoppingCart />
                     COMPRAR
                   </button>
@@ -280,12 +280,12 @@ const Home = () => {
                         <img
                           src={selectedProductComputer.image}
                           alt={selectedProductComputer.title}
-                          className=" mb-11 w-40 h-40 m-auto"
+                          className=" mb-11 w-40 h-40 m-auto "
                         />
                         <div>
                           <h3 className="text-center font-bold mb-8 w-56  m-auto">{selectedProductComputer.title}</h3>
                           <p className="max-w-2xl text-justify w-56 md:w-full m-auto mb-8">{selectedProductComputer.description}</p>
-                          <button className="bg-green-600 cursor-pointer text-white m-auto  w-56 md:w-2xl rounded-md h-10 font-bold flex items-center justify-center gap-3" onClick={() => handleAddCartItem(selectedProductComputer)}>
+                          <button className="bg-green-500 cursor-pointer text-black m-auto  w-56 md:w-2xl rounded-md h-10 font-bold flex items-center justify-center gap-3" onClick={() => handleAddCartItem(selectedProductComputer)}>
                             <FaShoppingCart />
                             COMPRAR
                           </button>
@@ -299,6 +299,7 @@ const Home = () => {
         <button
           className="bg-white cursor-pointer flex items-center rounded-full shadow-lg w-8 h-8 absolute left-4 -translate-y-1/2 -translate-x-1/2 top-1/2 z-10"
           onClick={scrollPrev2}
+          aria-label="Deslizar para a esquerda"
         >
           <FaCircleChevronLeft className="w-8 h-8 text-gray-600" />
         </button>
@@ -306,6 +307,7 @@ const Home = () => {
         <button
           className="bg-white cursor-pointer flex items-center rounded-full shadow-lg w-8 h-8 absolute -right-4 -translate-y-1/2 -translate-x-1/2 top-1/2 z-10"
           onClick={scrollNext2}
+          aria-label="Deslizar para a direita"
         >
           <FaChevronCircleRight className="w-8 h-8 text-gray-600" />
         </button>
@@ -315,7 +317,7 @@ const Home = () => {
         <img
           src="/images/banners/banner-announcement-discount3.png"
           alt="Imagem do banner"
-          className="m-auto h-40 md:h-52  lg:w-1xl  mt-28 mb-28"
+          className="m-auto h-40 md:h-52  lg:w-1xl  mt-28 mb-28 "
         />
       </div>
 
@@ -327,7 +329,7 @@ const Home = () => {
                 key={pc.id}
                 className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(100%/2)] lg:flex-[0_0_calc(100%/3)] px-3"
               >
-                <article className="bg-white text-white rounded-2xl p-6 space-y-2 h-full flex flex-col w-full " >
+                <article className="bg-white text-white cursor-pointer rounded-2xl p-6 space-y-2 h-full flex flex-col w-full " >
                   <div  className="h-full flex flex-col w-full " onClick={() => openModal(pc)}> 
                     <div className=" flex items-start justify-between">
                       <div className="flex gap-3">
@@ -339,22 +341,21 @@ const Home = () => {
                     <img
                       src={pc.image}
                       alt={pc.title}
-                    
-                      className="m-auto mb-16 h-28"
+                      className="m-auto mb-16 h-28 "
                     ></img>
-                    <div className="bg-green-600 flex items-center gap-2 w-32 p-0.5 mb-5 rounded-md ">
+                    <div className="bg-green-500 text-slate-800 flex items-center gap-2 w-32 p-0.5 mb-5 rounded-md ">
                       <FaTruck className="ml-2" />
                       <p>Frete Grátis</p>
                     </div>
 
-                    <p className="text-green-600 font-bold text-lg ">
+                    <p className="text-black font-bold text-lg ">
                       R$ {pc.price}
                     </p>
-                    <p className="text-gray-400 text-sm -mt-2">À vista no PIX</p>
+                    <p className="text-slate-800  text-sm -mt-2">À vista no PIX</p>
 
                   </div>
 
-                  <button className="bg-green-600 cursor-pointer rounded-md h-10 font-bold flex items-center justify-center gap-3" onClick={() => handleAddCartItem(pc)}>
+                  <button className="bg-green-500 text-black cursor-pointer rounded-md h-10 font-bold flex items-center justify-center gap-3" onClick={() => handleAddCartItem(pc)}>
                     <FaShoppingCart />
                     COMPRAR
                   </button>
@@ -372,7 +373,7 @@ const Home = () => {
                         <div>
                           <h3 className="text-center font-bold mb-8 w-56  m-auto">{selectedProductNotebook.title}</h3>
                           <p className="max-w-2xl text-justify w-56 md:w-full m-auto mb-8">{selectedProductNotebook.description}</p>
-                          <button className="bg-green-600 cursor-pointer text-white m-auto  w-56 md:w-2xl rounded-md h-10 font-bold flex items-center justify-center gap-3" onClick={() => handleAddCartItem(selectedProductNotebook)}>
+                          <button className="bg-green-500 cursor-pointer text-black m-auto  w-56 md:w-2xl rounded-md h-10 font-bold flex items-center justify-center gap-3" onClick={() => handleAddCartItem(selectedProductNotebook)}>
                             <FaShoppingCart />
                             COMPRAR
                           </button>
@@ -385,6 +386,7 @@ const Home = () => {
         <button
           className="bg-white  cursor-pointer flex items-center rounded-full shadow-lg w-8 h-8 absolute left-4 -translate-y-1/2 -translate-x-1/2 top-1/2 z-10"
           onClick={scrollPrev3}
+          aria-label="Deslizar para a esquerda"
         >
           <FaCircleChevronLeft className="w-8 h-8 text-gray-600" />
         </button>
@@ -392,6 +394,7 @@ const Home = () => {
         <button
           className="bg-white flex cursor-pointer items-center rounded-full shadow-lg w-8 h-8 absolute -right-4 -translate-y-1/2 -translate-x-1/2 top-1/2 z-10"
           onClick={scrollNext3}
+          aria-label="Deslizar para a direita"
         >
           <FaChevronCircleRight className="w-8 h-8 text-gray-600" />
         </button>
@@ -420,7 +423,7 @@ const Home = () => {
         </div>
 
         <Link to={"/launch"}>
-          <button className="bg-green-600 cursor-pointer text-white font-bold w-44 m-auto p-1 rounded-md text-center mb-8 block">
+          <button className="bg-green-500 text-black cursor-pointer  font-bold w-44 m-auto p-1 rounded-md text-center mb-8 block">
             CONHECER MAIS
           </button>
         </Link>

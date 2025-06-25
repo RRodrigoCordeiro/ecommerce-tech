@@ -11,6 +11,8 @@ import HeaderDetail from '../pages/ProductsHeaderDetail'
 import Privacy from '../pages/Privacy'
 import Security from '../pages/Security'
 import WorkWithUs from '../pages/WorkWithUs'
+import Accessibility from '../pages/Accessibility'
+import ShippingDeliveryPickup from '../pages/ShippingDeliveryPickup'
 
 const PageRoutes = () => {
   return (
@@ -26,6 +28,8 @@ const PageRoutes = () => {
           <Route path='/privacy' element={<Privacy/>} />
           <Route path='/security' element={<Security/>} />
           <Route path='/workWithUs' element={<WorkWithUs/>} />
+          <Route path='/accessibility' element={<Accessibility/>}/>
+          <Route path='/shippingDeliveryPickup' element={<ShippingDeliveryPickup/>} />
           <Route path='/header/:category/:id' element={<HeaderDetail/>} />
           <Route path='/attendantDetails/:id' element={<AttendantDetails/>} />
         </Route>

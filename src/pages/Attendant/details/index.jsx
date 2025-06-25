@@ -31,8 +31,6 @@ const AttendantDetails = () => {
               </div>
             </div>
            )}
-          
-         
     </div>
   )
 }

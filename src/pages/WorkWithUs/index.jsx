@@ -15,7 +15,6 @@ const WorkWithUs = () => {
   const {
     register,
     handleSubmit,
-    reset,
     formState: {errors},
   } = useForm({
     resolver: zodResolver(contactSchema)
@@ -42,8 +41,7 @@ const WorkWithUs = () => {
       .then(
         (response) => {
           console.log("Email enviado", response.status, response.text);
-          toast.success("O seu pedido foi enviado com sucesso!");
-          reset()
+          toast.success("O formulário foi enviado com sucesso!");
 
         },
         (err) => {
@@ -51,9 +49,7 @@ const WorkWithUs = () => {
           toast.error("Erro ao enviar o seu pedido");
           alert("Erro ao enviar email. Tente novamente.");
         }
-      );
-      
-       
+      );    
   }
  
  
@@ -61,14 +57,14 @@ const WorkWithUs = () => {
     <div>
       <Header/>
       <h2 className='text-center text-2xl font-bold mt-12 mb-3'>Por que trabalhar com a gente?</h2>
-      <p className='max-w-2xl text-justify m-auto '>Na Tech Zone, você não encontra apenas um emprego — encontra propósito, crescimento e inovação todos os dias. Nosso time é movido por tecnologia, criatividade e a vontade de transformar o futuro. Aqui, valorizamos pessoas, incentivamos novas ideias e acreditamos que cada talento merece espaço para brilhar.</p>
+      <p className='max-w-80 md:max-w-2xl text-justify m-auto '>Na Tech Zone, você não encontra apenas um emprego — encontra propósito, crescimento e inovação todos os dias. Nosso time é movido por tecnologia, criatividade e a vontade de transformar o futuro. Aqui, valorizamos pessoas, incentivamos novas ideias e acreditamos que cada talento merece espaço para brilhar.</p>
 
       <div className='flex flex-col items-center mt-8'>
         <div className='flex items-center gap-3 mb-3'>
           <FaStar className=' shadow-2xl text-yellow-800' size={28}/>
           <h3>Ambiente Colaborativo</h3>
         </div>
-        <p className='font-extralight'>Trabalhe ao lado de profissionais apaixonados e dispostos a compartilhar conhecimento.</p>
+        <p className='font-extralight w-80 md:w-full text-center'>Trabalhe ao lado de profissionais apaixonados e dispostos a compartilhar conhecimento.</p>
       </div>
 
       <div className='flex flex-col items-center mt-8'>
@@ -76,7 +72,7 @@ const WorkWithUs = () => {
           <FaRegLightbulb className=' shadow-2xl text-yellow-800' size={28}/>
           <h3>Cultura e Inovação</h3>
         </div>
-        <p className='max-w-2xl font-extralight'>Estamos sempre em busca de soluções inteligentes e descomplicadas — e você pode fazer parte dessa transformação.</p>
+        <p className='max-w-2xl font-extralight w-80 md:w-full'>Estamos sempre em busca de soluções inteligentes e descomplicadas — e você pode fazer parte dessa transformação.</p>
       </div>
 
       <div className='flex flex-col items-center mt-8'>
@@ -84,7 +80,7 @@ const WorkWithUs = () => {
           <FaHandshake className=' shadow-2xl text-yellow-800' size={28}/>
           <h3>Propóstio e Impacto</h3>
         </div>
-        <p className='font-extralight'>Na Tech Zone, cada projeto tem um impacto real na vida das pessoas. Seu trabalho importa, e muito.</p>
+        <p className='font-extralight w-80 md:w-full text-center'>Na Tech Zone, cada projeto tem um impacto real na vida das pessoas. Seu trabalho importa, e muito.</p>
       </div>
 
       <div className='flex flex-col items-center mt-12 '>
@@ -92,7 +88,7 @@ const WorkWithUs = () => {
           <IoRocket className=' shadow-2xl text-yellow-800' size={28}/> 
           <h3>Desenvolvimento Profissional</h3>
         </div>
-        <p className='max-w-2xl font-extralight'>Investimos no seu crescimento com treinamentos, feedbacks constantes e oportunidades reais de evolução na carreira.</p>
+        <p className='max-w-2xl font-extralight w-80 md:w-full'>Investimos no seu crescimento com treinamentos, feedbacks constantes e oportunidades reais de evolução na carreira.</p>
       </div>
 
       <h2 className='text-center text-2xl font-bold mt-8'>Informações adicionais sobre a Tech Zone</h2>
@@ -103,10 +99,10 @@ const WorkWithUs = () => {
           <h3> O que buscamos:</h3>
         </div>
         <ul className='list-disc '>
-          <li className='font-extralight'>Profissionais criativos e proativos;</li>
-          <li  className='font-extralight'>Vontade de aprender e evoluir constantemente;</li>
+          <li className='font-extralight '>Profissionais criativos e proativos;</li>
+          <li  className='font-extralight'>Vontade de aprender e evoluir;</li>
           <li  className='font-extralight'>Compromisso com qualidade e resultados;</li>
-          <li  className='font-extralight'>Colaboração em de equipe e responsabilidade.</li>
+          <li  className='font-extralight'>Colaboração em de equipe.</li>
         </ul>
       </div>
 
@@ -126,9 +122,9 @@ const WorkWithUs = () => {
 
       <h2 className='text-center text-2xl font-bold mt-8 mb-8'>Preencha o Formulário</h2>
 
-      <div className='border w-2xl shadow-2xl  m-auto p-16 rounded-lg'>
+      <div className='border w-88  md:w-2xl shadow-2xl  m-auto p-16 rounded-lg'>
         <form   onSubmit={handleSubmit(sendEmail)}>
-          <div className='flex items-center justify-center gap-1 mb-3 mt-3'>
+          <div className='flex flex-col md:flex-row items-center justify-center gap-1 mb-3 mt-3'>
              <div className='flex flex-col'>
                 <label htmlFor='name' className=''>Nome completo:</label>
                 <input
@@ -152,7 +148,7 @@ const WorkWithUs = () => {
                
           </div>
 
-          <div className='flex items-center justify-center gap-1 mb-3 mt-3'>
+          <div className='flex flex-col  md:flex-row  items-center justify-center gap-1 mb-3 mt-3'>
              <div className='flex flex-col'>
                 <label htmlFor='phone' className=''>Telefone:</label>
                 <InputMask
@@ -182,7 +178,7 @@ const WorkWithUs = () => {
                 <textarea
                   type='text'
                   id='message'
-                  className='border w-xl h-16'
+                  className='border w-72 md:w-xl h-16'
                   {...register("message")}
                 /> 
                 {errors.message && <span className="text-red-500 text-center">{errors.message.message}</span>}

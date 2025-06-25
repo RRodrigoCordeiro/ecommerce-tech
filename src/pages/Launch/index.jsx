@@ -39,13 +39,13 @@ const Launch = () => {
         <div className="mb-4">
           <button
             onClick={() => setFilter("launch")}
-            className="bg-blue-500 text-white py-2 px-4 rounded mr-4"
+            className="bg-blue-500 text-black py-2 px-4 rounded mr-4 cursor-pointer"
           >
             Lançamentos
           </button>
           <button
             onClick={() => setFilter("promotion")}
-            className="bg-green-500 text-white py-2 px-4 rounded"
+            className="bg-green-500 text-slate-800 py-2 px-4 rounded cursor-pointer"
           >
             Promoções
           </button>
@@ -71,20 +71,20 @@ const Launch = () => {
                     width="100"
                     className="m-auto mb-16"
                   />
-                  <div className="bg-green-600 flex items-center gap-2 w-32 p-0.5 mb-5 rounded-md">
+                  <div className="bg-green-500 text-slate-800 flex items-center gap-2 w-32 p-0.5 mb-5 rounded-md">
                     <FaTruck className="ml-2" />
                     <p>Frete Grátis</p>
                   </div>
 
                   <p className="text-gray-800 text-sm mb-4">{product.rating}</p>
-                  <p className="text-green-600 font-bold text-lg">
+                  <p className="text-black font-bold text-lg">
                     R$ {product.price}
                   </p>
-                  <p className="text-gray-400 text-sm -mt-2">À vista no PIX</p>
+                  <p className="text-slate-800 text-sm -mt-2">À vista no PIX</p>
                 </div>
 
                 <button
-                  className="bg-green-600 rounded-md h-10 font-bold flex items-center justify-center gap-3"
+                  className="bg-green-500 text-black rounded-md h-10 font-bold flex items-center justify-center gap-3 cursor-pointer"
                   onClick={() => handleAddCartItem(product)}
                 >
                   <FaShoppingCart />
@@ -111,7 +111,7 @@ const Launch = () => {
                       {selectedProduct.description}
                     </p>
                     <button
-                      className="bg-green-600 text-white m-auto  w-56 md:w-2xl rounded-md h-10 font-bold flex items-center justify-center gap-3 mb-8"
+                      className="bg-green-600 text-white m-auto  w-56 md:w-2xl rounded-md h-10 font-bold flex items-center justify-center gap-3 mb-8 cursor-pointer"
                       onClick={() => handleAddCartItem(selectedProduct)}
                     >
                       Comprar

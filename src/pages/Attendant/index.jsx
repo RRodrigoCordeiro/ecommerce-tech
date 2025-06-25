@@ -30,17 +30,6 @@ const Attendant = () => {
           </div>
         ))}
       </div>
-
-
-
-      {/* <div>
-        {attendants?.map((attendant) => (
-          <div key={attendant.id}>
-            <p>{attendant.name}</p>
-            <p>{attendant.role}</p>
-          </div>
-        ))}
-      </div> */}
     </div>
   );
 };

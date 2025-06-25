@@ -20,10 +20,11 @@ const Header = ({ searchQuery, setSearchQuery }) => {
   const isInputHidden = 
       location.pathname === '/Home' || 
       location.pathname === '/cart' || 
-      location.pathname === "/workWithUs"
+      location.pathname === "/workWithUs" ||
+      location.pathname === "/accessibility" ||
+      location.pathname === "/shippingDeliveryPickup"
       location.pathname.startsWith('/header/');
  
-
   return (
     <div>
       <div className="flex flex-col bg-green-600 items-center mb-16 justify-evenly md:bg-[#F2F2F2] md:flex-row md:mt-11">
