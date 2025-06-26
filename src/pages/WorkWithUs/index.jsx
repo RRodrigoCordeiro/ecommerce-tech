@@ -4,7 +4,7 @@ import { IoRocket } from "react-icons/io5";
 import { FaHandshake, FaTrophy,FaRegLightbulb,FaStar} from "react-icons/fa";
 import { FaSuitcase } from "react-icons/fa6";
 import toast from 'react-hot-toast'; 
-import { contactSchema } from '../../schemas/contactSchema';
+import { workWithUsSchema } from '../../schemas/workWithUsSchema';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import InputMask from 'react-input-mask';
@@ -16,8 +16,17 @@ const WorkWithUs = () => {
     register,
     handleSubmit,
     formState: {errors},
+    reset,
   } = useForm({
-    resolver: zodResolver(contactSchema)
+    resolver: zodResolver(workWithUsSchema),
+    defaultValues: {
+      // valores que os campos começam, assim evita undefined
+      name: '',
+      email: '',
+      phone: '',       
+      interest: '',
+      message: '',
+    },
   })
 
   const sendEmail = (data) => {
@@ -28,7 +37,6 @@ const WorkWithUs = () => {
       phone: data.phone,
       interest: data.interest,
       message: data.message
-    
     }
 
     emailjs
@@ -42,17 +50,16 @@ const WorkWithUs = () => {
         (response) => {
           console.log("Email enviado", response.status, response.text);
           toast.success("O formulário foi enviado com sucesso!");
+          reset();
 
         },
         (err) => {
           console.log("Erro", err);
           toast.error("Erro ao enviar o seu pedido");
-          alert("Erro ao enviar email. Tente novamente.");
         }
-      );    
+      );     
   }
- 
- 
+
   return (
     <div>
       <Header/>
@@ -123,7 +130,7 @@ const WorkWithUs = () => {
       <h2 className='text-center text-2xl font-bold mt-8 mb-8'>Preencha o Formulário</h2>
 
       <div className='border w-88  md:w-2xl shadow-2xl  m-auto p-16 rounded-lg'>
-        <form   onSubmit={handleSubmit(sendEmail)}>
+        <form  onSubmit={handleSubmit(sendEmail)}>
           <div className='flex flex-col md:flex-row items-center justify-center gap-1 mb-3 mt-3'>
              <div className='flex flex-col'>
                 <label htmlFor='name' className=''>Nome completo:</label>
@@ -150,7 +157,7 @@ const WorkWithUs = () => {
 
           <div className='flex flex-col  md:flex-row  items-center justify-center gap-1 mb-3 mt-3'>
              <div className='flex flex-col'>
-                <label htmlFor='phone' className=''>Telefone:</label>
+                <label htmlFor='phone'>Telefone:</label>
                 <InputMask
                   mask="(99) 99999-9999" 
                   type="tel" 
@@ -192,9 +199,7 @@ const WorkWithUs = () => {
               Enviar Formulário
           </button>
         </form>
-      </div>
-
-            
+      </div>      
     </div>
   )
 }

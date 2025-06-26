@@ -1,15 +1,13 @@
 import {z} from "zod";
 
-export const contactSchema = z.object({
+export const contact = z.object({
     name: z.string()
-        .min(3,"É necessário ter no minímo 3 caracteres"),
+        .min(3,"É necessário ter no minímo 3 caracteres "),
     email: z.string()
-        .email("O email é inválido"),
+        .email("O email é obrigatório"),
     phone: z.string()
         .min(11,"Número de telefone incompleto")
         .max(18,"Número de telefone inválido"),
-    interest: z.string()
-        .min(1, "É necessário ter no minímo 1 caractere"),
     message: z.string()
-        .min(1, "É necessário ter no minímo 1 caractere")
-});
+        .min(1, "É necessário ter no minímo 1 caractere")  
+})

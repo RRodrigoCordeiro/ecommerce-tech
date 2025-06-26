@@ -9,7 +9,7 @@ import Modal from "../../components/Modal";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { userSchema } from "../../schemas/userSchema";
- 
+import InputMask from "react-input-mask" 
 import { useAddress } from "../../hooks/address/useAddress";
 
 // to email do comprador do site
@@ -100,7 +100,7 @@ const Cart = () => {
         (err) => {
           console.log("Erro", err);
           toast.error("Erro ao enviar o seu pedido");
-          alert("Erro ao enviar email. Tente novamente.");
+
         }
       );
   }

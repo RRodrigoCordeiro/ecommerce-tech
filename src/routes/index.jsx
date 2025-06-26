@@ -13,6 +13,8 @@ import Security from '../pages/Security'
 import WorkWithUs from '../pages/WorkWithUs'
 import Accessibility from '../pages/Accessibility'
 import ShippingDeliveryPickup from '../pages/ShippingDeliveryPickup'
+import ReturnsAndExchanges from '../pages/ReturnsAndExchanges'
+import Contact from '../pages/Contact'
 
 const PageRoutes = () => {
   return (
@@ -30,6 +32,8 @@ const PageRoutes = () => {
           <Route path='/workWithUs' element={<WorkWithUs/>} />
           <Route path='/accessibility' element={<Accessibility/>}/>
           <Route path='/shippingDeliveryPickup' element={<ShippingDeliveryPickup/>} />
+          <Route path='/returnsAndExchanges' element={<ReturnsAndExchanges/>} />
+          <Route path='/contact' element={<Contact/>} />
           <Route path='/header/:category/:id' element={<HeaderDetail/>} />
           <Route path='/attendantDetails/:id' element={<AttendantDetails/>} />
         </Route>

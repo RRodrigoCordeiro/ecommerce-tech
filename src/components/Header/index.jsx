@@ -14,16 +14,19 @@ import TranscriptButton from "../UI/TranscriptButton";
  
 const Header = ({ searchQuery, setSearchQuery }) => {
   const [dropdownVisible, setDropdownVisible] = useState(null);
+  
   const {cartAmount} = useContext(CartContext)
   const {data:product} = useProductHeader();
   const location = useLocation()
   const isInputHidden = 
-      location.pathname === '/Home' || 
-      location.pathname === '/cart' || 
-      location.pathname === "/workWithUs" ||
-      location.pathname === "/accessibility" ||
-      location.pathname === "/shippingDeliveryPickup"
-      location.pathname.startsWith('/header/');
+    location.pathname === '/Home' || 
+    location.pathname === '/cart' || 
+    location.pathname === "/workWithUs" ||
+    location.pathname === "/accessibility" ||
+    location.pathname === "/shippingDeliveryPickup" ||
+    location.pathname === "/returnsAndExchanges" ||
+    location.pathname === "/contact"
+    location.pathname.startsWith('/header/');
  
   return (
     <div>

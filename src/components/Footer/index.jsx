@@ -64,7 +64,7 @@ const Footer = () => {
     },
     { title: "Acessibilidade", 
       content:(
-        <Link>
+        <Link to="/accessibility">
           Acessibilidade
         </Link>
       ), 
@@ -80,12 +80,12 @@ const Footer = () => {
               </Link>
             </li>
             <li> 
-              <Link to="#" className="block mb-3">
+              <Link to="/returnsAndExchanges" className="block mb-3">
                 <p>Devoluções e trocas</p>
               </Link>
             </li>
             <li> 
-              <Link to="#" className="block mb-3">
+              <Link to="/contact" className="block mb-3">
                  <p>Contate-nos</p>
               </Link>
             </li>
@@ -223,11 +223,15 @@ const Footer = () => {
               Pedidos e Compras
             </p>
             <div className="mb-8 mt-8 space-y-2">
-               <Link to="/shippingDeliveryPickup" className="block">
+              <Link to="/shippingDeliveryPickup" className="block">
                 <p>Envio, entrega e coleta</p>
               </Link>
-              <p>Devoluções e trocas</p>
-              <p>Contate-nos</p>
+              <Link to="/returnsAndExchanges" className="block">
+                <p>Devoluções e trocas</p>
+              </Link>
+              <Link to="/contact" className="block">
+                <p>Contate-nos</p>
+              </Link>
             </div>
           </div>
         </div>
