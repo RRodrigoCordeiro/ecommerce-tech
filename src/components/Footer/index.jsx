@@ -107,31 +107,43 @@ const Footer = () => {
               <img
                 src="/images/socialMedia/LogoInstagram.png"
                 alt="Logo do instagram"
+                width={192}     // largura real ou desejada em pixels
+  height={192} 
                 className="w-10 "
               />
               <img
                 src="/images/socialMedia/LogoFacebook.png"
                 alt="Logo do Facebook"
+                width={192}     // largura real ou desejada em pixels
+  height={192} 
                 className="w-10 "
               />
               <img
                 src="/images/socialMedia/LogoTwitter.png"
                 alt="Logo do Twitter"
+                width={192}     // largura real ou desejada em pixels
+  height={192} 
                 className="w-10 "
               />
               <img
                 src="/images/socialMedia/LogoYoutuber.png"
                 alt="Logo do Youtuber"
+                width={192}     // largura real ou desejada em pixels
+  height={192} 
                 className="w-10 "
               />
               <img
                 src="/images/socialMedia/Logolinkedin.png"
                 alt="Logo do Linkedin"
+                width={192}     // largura real ou desejada em pixels
+  height={192} 
                 className="w-10 "
               />
               <img
                 src="/images/socialMedia/LogoInstagram.png"
                 alt="Logo do instagram"
+                width={192}     // largura real ou desejada em pixels
+  height={192} 
                 className="w-10 "
               />
             </div>
@@ -145,10 +157,14 @@ const Footer = () => {
               <img
                 src="/images/downloadsApp/GooglePlay.png"
                 alt="Imagem da logo do Google Play"
+                width={192}     // largura real ou desejada em pixels
+  height={192} 
               />
               <img
                 src="/images/downloadsApp/AppStore.png"
                 alt="Imagem da logo da App Store"
+                width={192}     // largura real ou desejada em pixels
+  height={192} 
               />
             </div>
           </div>
@@ -264,31 +280,43 @@ const Footer = () => {
             <img
               src="/images/socialMedia/LogoInstagram.png"
               alt="Logo do instagram"
+              width={192}     // largura real ou desejada em pixels
+  height={192} 
               className="w-10 "
             />
             <img
               src="/images/socialMedia/LogoFacebook.png"
               alt="Logo do Facebook"
+              width={192}     // largura real ou desejada em pixels
+  height={192} 
               className="w-10 "
             />
             <img
               src="/images/socialMedia/LogoTwitter.png"
               alt="Logo do Twitter"
+              width={192}     // largura real ou desejada em pixels
+  height={192} 
               className="w-10 "
             />
             <img
               src="/images/socialMedia/LogoYoutuber.png"
               alt="Logo do Youtuber"
+              width={192}     // largura real ou desejada em pixels
+  height={192} 
               className="w-10 "
             />
             <img
               src="/images/socialMedia/Logolinkedin.png"
               alt="Logo do Linkedin"
+              width={192}     // largura real ou desejada em pixels
+  height={192} 
               className="w-10 "
             />
             <img
               src="/images/socialMedia/LogoInstagram.png"
               alt="Logo do instagram"
+              width={192}     // largura real ou desejada em pixels
+  height={192} 
               className="w-10 "
             />
           </div>
@@ -301,11 +329,15 @@ const Footer = () => {
             <img
               src="/images/downloadsApp/GooglePlay.png"
               alt="Logo do Google Play"
+              width={192}     // largura real ou desejada em pixels
+  height={192} 
               className="w-48"
             />
             <img
               src="/images/downloadsApp/AppStore.png"
               alt="Logo do App Store"
+              width={192}     // largura real ou desejada em pixels
+  height={192} 
               className="w-48 "
             />
           </div>

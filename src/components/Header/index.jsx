@@ -11,6 +11,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { CartContext } from "../../contexts/CartContext"; 
 import { useProductHeader } from "../../hooks/productHeader/useProductHeader";
 import TranscriptButton from "../UI/TranscriptButton";
+import MobileMenu from "./MobileMenu";
  
 const Header = ({ searchQuery, setSearchQuery }) => {
   const [dropdownVisible, setDropdownVisible] = useState(null);
@@ -32,18 +33,20 @@ const Header = ({ searchQuery, setSearchQuery }) => {
     <div>
       <div className="flex flex-col bg-green-600 items-center mb-16 justify-evenly md:bg-[#F2F2F2] md:flex-row md:mt-11">
         <div className="flex flex-row space-x-44 items-center  mt-3 mb-3 md:mt-0 md:mb-0 ">
-          <IoMdMenu size={40} className="md:hidden  text-black"  />
+       <MobileMenu />
           <Link to="/">
             <img
                 src="/images/logos/transparent-brand-logo.png"
                 alt="Logo da tech zone"
+                width={192}      
+                height={192} 
                 className="w-12 md:w-28 block "
               />
           </Link>
         </div>
         
         {!isInputHidden && (
-          <div className="relative w-80 md:ml-8 lg:w-96 space-x-4">
+          <div className="relative w-80 md:mr-8  lg:w-96 space-x-4">
             <input
               type="text"
               className="border border-text-slate-800 rounded px-4 py-4 w-80 md:ml-8 lg:w-full"

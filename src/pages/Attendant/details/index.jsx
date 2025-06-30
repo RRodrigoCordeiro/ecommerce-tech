@@ -13,12 +13,13 @@ const AttendantDetails = () => {
   return (
     <div>
       <Header/>
-         {/* <p>ID do atendente: {id} </p> */}
+        
           {attendants && (
             <div className='flex flex-col md:flex-row justify-center gap-20 mt-11 '>
               <img
                 src={attendants.image}
                 alt={attendants.name}
+          
                 className='h-48 w-48 block m-auto md:m-0 md:h-48 '
               />
               <div className='space-y-3 gap-3 text-justify m-auto md:m-0 grid  lg:grid-cols-2'>
