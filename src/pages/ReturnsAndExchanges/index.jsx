@@ -3,16 +3,16 @@ import Header from "../../components/Header";
 
 const ReturnsAndExchanges = () => {
   return (
-    <div>
+    <>
       <Header searchQuery={undefined} setSearchQuery={undefined} />
       <main>
         <section
           id="trocas-devolucoes"
           className="py-12 px-4 md:px-8 max-w-4xl mx-auto"
         >
-          <h2 className="text-3xl font-semibold mb-6 text-gray-800">
+          <h1 className="text-3xl font-semibold mb-6 text-gray-800">
             Trocas e Devoluções
-          </h2>
+          </h1>
           <p className="mb-4 text-gray-800">
             Nosso compromisso é com a sua satisfação. Se você precisar trocar ou
             devolver um produto, siga as orientações abaixo:
@@ -53,7 +53,7 @@ const ReturnsAndExchanges = () => {
           </ul>
         </section>
       </main>
-    </div>
+    </>
   );
 };
 

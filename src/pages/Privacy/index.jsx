@@ -99,41 +99,43 @@ const Privacy = () => {
   )
 
   return (
-    <div>
+    <>
       <Header searchQuery={searchTerm} setSearchQuery={setSearchTerm}/>
-      <div className='flex flex-col md:flex-row items-center justify-center mt-8 space-x-8'>
-        <img
-          src="images/logos/transparent-brand-logo.png"
-          alt='logo marca da Tech Zone'  
-          className='w-48 lg:w-72 m-auto md:m-0'
-        />
-        <div className='space-y-8'>
-          <h1 className='text-lg  font-bold text-center'>Políticas de Privacidade</h1>
-          <p className='max-w-80 md:max-w-md lg:max-w-2xl text-justify'>A Tech Zone valoriza a transparência no tratamento de seus dados pessoais e acredita ser fundamental que você entenda como utilizamos essas informações, bem como os seus direitos como titular desses dados.Esta política de privacidade se aplica a todas as pessoas que interagem com nossos serviços de comércio eletrônico, tanto em nossa plataforma web quanto em nosso aplicativo móvel.Ressaltamos que alguns dados são essenciais para a prestação dos nossos serviços. Caso você opte por não fornecê-los, poderá não ser possível utilizar integralmente nossa plataforma ou aplicativo. Outros dados são opcionais, mas, sem o seu consentimento, algumas funcionalidades ou formatos podem ser limitados</p>
-        </div>
-      </div>
+      <main>
+        <section className='flex flex-col md:flex-row items-center justify-center mt-8 space-x-8'>
+          <img
+            src="images/logos/transparent-brand-logo.png"
+            alt='logo marca da Tech Zone'  
+            className='w-48 lg:w-72 m-auto md:m-0'
+          />
+          <div className='space-y-8'>
+            <h1 className='text-lg  font-bold text-center'>Políticas de Privacidade</h1>
+            <p className='max-w-80 md:max-w-md lg:max-w-2xl text-justify'>A Tech Zone valoriza a transparência no tratamento de seus dados pessoais e acredita ser fundamental que você entenda como utilizamos essas informações, bem como os seus direitos como titular desses dados.Esta política de privacidade se aplica a todas as pessoas que interagem com nossos serviços de comércio eletrônico, tanto em nossa plataforma web quanto em nosso aplicativo móvel.Ressaltamos que alguns dados são essenciais para a prestação dos nossos serviços. Caso você opte por não fornecê-los, poderá não ser possível utilizar integralmente nossa plataforma ou aplicativo. Outros dados são opcionais, mas, sem o seu consentimento, algumas funcionalidades ou formatos podem ser limitados</p>
+          </div>
+        </section>
 
-      <div className='mt-18'>
-          {filteredItems.map((item,index) => (
-            <div
-              key={index}
-            >
-                <button 
-                  onClick={() => toggleAccordion(index)}
-                  className="flex flex-row items-center justify-between w-full px-6 py-4 bg-gray-00 hover:bg-gray-200 transition-colors"
-                >
-                  <h2 className="">{item.title}</h2>
-                  <span className='text-2xl text-gray-600'>{isOpen === index ? <GoChevronUp /> : <GoChevronDown />} </span>
-                </button>  
-                {isOpen === index && (
-                  <div>
-                    <p  className='bg-gray-200'>{item.content}</p>
-                  </div>
-                )}
-            </div> 
-          ))}
-      </div>
-    </div>
+        <section className='mt-18'>
+            {filteredItems.map((item,index) => (
+              <article
+                key={index}
+              >
+                  <button 
+                    onClick={() => toggleAccordion(index)}
+                    className="flex flex-row items-center justify-between w-full px-6 py-4 bg-gray-00 hover:bg-gray-200 transition-colors"
+                  >
+                    <span>{item.title}</span>
+                    <span className='text-2xl text-gray-600'>{isOpen === index ? <GoChevronUp /> : <GoChevronDown />} </span>
+                  </button>  
+                  {isOpen === index && (
+                    <div>
+                      <p  className='bg-gray-200'>{item.content}</p>
+                    </div>
+                  )}
+              </article> 
+            ))}
+        </section>
+      </main>
+    </>
   )
 }
 

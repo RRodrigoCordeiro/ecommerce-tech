@@ -2,7 +2,7 @@ import {z} from "zod";
 
 export const contact = z.object({
     name: z.string()
-        .min(3,"É necessário ter no minímo 3 caracteres "),
+        .min(3,"É necessário ter no minímo 3 caracteres"),
     email: z.string()
         .email("O email é obrigatório"),
     phone: z.string()

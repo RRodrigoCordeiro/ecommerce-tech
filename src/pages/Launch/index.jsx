@@ -9,7 +9,6 @@ import Modal from "../../components/Modal";
 
 const Launch = () => {
   const {
-    filter,
     setFilter,
     searchQuery,
     setSearchQuery,
@@ -35,8 +34,8 @@ const Launch = () => {
     <div>
       <Header searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
 
-      <div className="container mx-auto p-4">
-        <div className="mb-4">
+      <main className="container mx-auto p-4">
+        <nav className="mb-4">
           <button
             onClick={() => setFilter("launch")}
             className="bg-blue-500 text-black py-2 px-4 rounded mr-4 cursor-pointer"
@@ -49,11 +48,11 @@ const Launch = () => {
           >
             Promoções
           </button>
-        </div>
+        </nav>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3">
+        <section className="grid md:grid-cols-2 lg:grid-cols-3">
           {getFilteredProducts().map((product) => (
-            <div
+            <section
               key={product.id}
               className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(100%/2)] lg:flex-[0_0_calc(100%/3)]  px-3 mb-16"
             >
@@ -77,8 +76,8 @@ const Launch = () => {
                   </div>
 
                   <p className="text-gray-800 text-sm mb-4">{product.rating}</p>
-                  <p className="text-black font-bold text-lg">
-                    R$ {product.price}
+                  <p className="text-black font-bold text-lg mb-3">
+                    {product.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
                   </p>
                   <p className="text-slate-800 text-sm -mt-2">À vista no PIX</p>
                 </div>
@@ -91,13 +90,11 @@ const Launch = () => {
                   COMPRAR
                 </button>
               </article>
-
-              
-            </div>
+            </section>
           ))}
           {isOpen && selectedProduct && (
               <Modal isOpen={isOpen} setModalOpened={setModalOpened}>
-                <div>
+                <section>
                   <img
                     src={selectedProduct.image}
                     alt={selectedProduct.title}
@@ -117,11 +114,11 @@ const Launch = () => {
                       Comprar
                     </button>
                   </div>
-                </div>
+                </section>
               </Modal>
             )}
-        </div>
-      </div>
+        </section>
+      </main>
     </div>
   );
 };

@@ -15,7 +15,6 @@ const MobileMenu = () => {
 
   return (
     <>
-      {/* Botão para abrir menu */}
       <button 
         onClick={() => setMenuOpen(true)} 
         className="md:hidden"   
@@ -24,8 +23,7 @@ const MobileMenu = () => {
         <IoMdMenu size={40} className="text-black" />
       </button>
 
-      {/* Sidebar menu */}
-      <div
+      <section
         className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${
           menuOpen ? "translate-x-0" : "-translate-x-full"
         } md:hidden`}
@@ -59,9 +57,7 @@ const MobileMenu = () => {
                   <ul className="pl-4 py-2 space-y-3">
                     {listaProdutos.map((produto) => (
                       <li key={produto.id} className="text-gray-700 hover:text-green-600">
-                        {/* Se quiser usar Link para navegar, descomente abaixo: */}
                         <Link to={`/header/${categoria}/${produto.id}`}>{produto.name}</Link>
-                       
                       </li>
                     ))}
                   </ul>
@@ -69,7 +65,7 @@ const MobileMenu = () => {
               </div>
             ))}
         </nav>
-      </div>
+      </section>
     </>
   );
 };

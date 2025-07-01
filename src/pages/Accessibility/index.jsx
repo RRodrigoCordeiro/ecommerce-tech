@@ -3,16 +3,15 @@ import Header from "../../components/Header";
 
 const Accessibility = () => {
   return (
-    <div>
+    <>
       <Header searchQuery={undefined} setSearchQuery={undefined} />
       <main>
         <section
-          id="acessibilidade"
           className="py-12 px-4 md:px-8 max-w-4xl mx-auto"
         >
-          <h2 className="text-3xl font-semibold mb-6 text-gray-800">
+          <h1 className="text-3xl font-semibold mb-6 text-gray-800">
             Acessibilidade
-          </h2>
+          </h1>
           <p className="mb-4 text-black text-justify">
             Nosso site foi desenvolvido com foco em acessibilidade, buscando
             garantir que todas as pessoas — inclusive aquelas com deficiência
@@ -34,20 +33,20 @@ const Accessibility = () => {
             <li>Contraste adequado entre texto e fundo</li>
             <li>Foco visível em elementos interativos</li>
           </ul>
-          <p className="mt-6 text-black">
+          <address className="not-italic mt-6 text-black">
             Se você encontrar qualquer dificuldade ou barreira ao navegar por
             este site, por favor entre em contato com nossa equipe. Estamos à
             disposição para melhorar:
             <a
-              href="mailto:acessibilidade@seudominio.com"
-              className="text-blue-600 underline font-extralight  ml-1"
+              href="mailto:acessibilidade@techzone.com"
+              className="text-blue-600 underline font-extralight ml-1"
             >
               acessibilidade@techzone.com
             </a>
-          </p>
+          </address>
         </section>
       </main>
-    </div>
+    </>
   );
 };
 

@@ -70,10 +70,10 @@ const Sac = () => {
           content: (
             <div className="max-w-72  m-auto  md:max-w-md lg:max-w-5xl">
               <p>
-                Infelizmente, não é possível alterar o endereço de antrega após
+                Infelizmente, não é possível alterar o endereço de entrega após
                 o pedido ter sido enviado e estar em transporte.No entanto,
                 recomendamos que entre em contato com a nossa equipe de
-                atendimento ao cliente o mais rápidp possível.Vmao verificar se
+                atendimento ao cliente o mais rápido possível.Vamos verificar se
                 há alguma solução ou orientação adicional para ajudar você.
               </p>
             </div>
@@ -105,7 +105,7 @@ const Sac = () => {
                 </ol>
                 <li>
                   <span className="font-bold">Aguarde e Análise:</span> Nossa
-                  equipe analisará a solicitação e forncerá as orienteações para
+                  equipe analisará a solicitação e fornecerá  as orienteações para
                   o próximo passo"
                 </li>
               </ol>
@@ -145,7 +145,7 @@ const Sac = () => {
               </ol>
               <p className="max-w-72  m-auto md:max-w-96 mt-8">
                 Se o pedido já estiver sido enviado, você poderá recusar a
-                entrega ou inciar o processo de devolução ao recebê-lo
+                entrega ou iniciar o processo de devolução ao recebê-lo
               </p>
             </div>
           ),
@@ -205,11 +205,11 @@ const Sac = () => {
                     ou da solicitação de devolução
                   </li>
                   <li>
-                    Para pedidos pagos com cartão de crédito, o valor serpa
+                    Para pedidos pagos com cartão de crédito, o valor será
                     estornado diretamente para a fatura do cartão
                   </li>
                   <li>
-                    No caso de boleto bancário ou PIX, o estorno será feiro por
+                    No caso de boleto bancário ou PIX, o estorno será feito por
                     meio de depósito bancário na conta do cliente
                   </li>
                 </ul>
@@ -228,8 +228,8 @@ const Sac = () => {
                 </ul>
               </ol>
               <p className="max-w-80 m-auto md:max-w-2xl mt-8">
-                lembre-se de que o prazo pode cariar dependendo da operadora de
-                pagamento ou instiruição bancparia envolvida. Se o estorno não
+                lembre-se de que o prazo pode variar dependendo da operadora de
+                pagamento ou instituição bancária envolvida. Se o estorno não
                 aparecer dentro do prazo, entre em contato com nosso SAC para
                 que possamos verificar a situação.
               </p>
@@ -260,12 +260,12 @@ const Sac = () => {
                   <span className="font-bold">
                     Receba as informaçõs do PIX:
                   </span>
-                  Após selecionar o PIX, você verá um AR Code ou as informações
-                  bancárias para relizar o pagamento.
+                  Após selecionar o PIX, você verá um QR Code ou as informações
+                  bancárias para realizar o pagamento.
                 </li>
                 <li>
                   <span className="font-bold">Efetue o pagamento</span>Abra seu
-                  aplicativo bancário e utulize a opção de pagamento via PIX,
+                  aplicativo bancário e utilize a opção de pagamento via PIX,
                   escaneando o QR Code ou copiando as informações para realizar
                   a transferência.
                 </li>
@@ -305,7 +305,7 @@ const Sac = () => {
                 <li>
                   <span className="font-bold">Prazo de entrega: </span>A entrega
                   será feita somente após o produto estar disponível. O prazo
-                  estimando para encio será informado na página do produto ou na
+                  estimando para o envio será informado na página do produto ou na
                   confirmação do pedido
                 </li>
                 <li>
@@ -347,7 +347,7 @@ const Sac = () => {
                 <ul>
                   <li>
                     Se o item já foi enviado, o cancelamento não será
-                    pissível.No entando, você pode recusar a entrega ou
+                    possível.No entando, você pode recusar a entrega ou
                     solicitar a devolução após recebê-lo
                   </li>
                 </ul>
@@ -403,218 +403,121 @@ const Sac = () => {
     },
   ];
   return (
-    <div>
+    <>
       <Header searchQuery={filter} setSearchQuery={setFilter} />
 
       <h1 className="font-bold text-center mt-28 text-xl md:text-lg">
         SAC - Serviço de Atendimento ao Consumidor
       </h1>
-      <div>
+      <section>
         {filterText("MEU PEDIDO") && (
-          <div>
+          <section>
             <h2 className="mt-20 text-2xl mb-14 ml-8">MEU PEDIDO</h2>
             {items.map((item, idx) => (
               <div key={idx}>
                 {item.pedidos.map((pedido, index) => (
-                  <Accordion
-                    key={index}
-                    title={pedido.title}
-                    isOpen={openAccordion.pedidos === index}
-                    content={pedido.content}
-                    toggle={() => toggleAccordion("pedidos", index)}
-                  />
+                  <article>
+                    <Accordion
+                      key={index}
+                      title={pedido.title}
+                      isOpen={openAccordion.pedidos === index}
+                      content={pedido.content}
+                      toggle={() => toggleAccordion("pedidos", index)}
+                    />
+                  </article>
                 ))}
               </div>
             ))}
-          </div>
+          </section>
         )}
 
         {filterText("GARANTIA OU ARREPENDIMENTO") && (
-          <div>
+          <section>
             <h2 className="mt-20 text-2xl mb-14 ml-8">
               GARANTIA OU ARREPENDIMENTO
             </h2>
             {items.map((item, idx) => (
               <div key={idx}>
                 {item.garantia.map((garantia, indx) => (
-                  <Accordion
-                    key={indx}
-                    title={garantia.title}
-                    isOpen={openAccordion.garantia === indx}
-                    content={garantia.content}
-                    toggle={() => toggleAccordion("garantia", indx)}
-                  />
+                  <article>
+                    <Accordion
+                      key={indx}
+                      title={garantia.title}
+                      isOpen={openAccordion.garantia === indx}
+                      content={garantia.content}
+                      toggle={() => toggleAccordion("garantia", indx)}
+                    />
+                  </article>
                 ))}
               </div>
             ))}
-          </div>
-        )}
+          </section>
+       )}
 
         {filterText("PAGAMENTO") && (
-          <div>
+          <section>
             <h3 className="mt-20 text-2xl mb-14 ml-8">PAGAMENTO E ESTORNO</h3>
             {items.map((item, idx) => (
               <div key={idx}>
                 {item.pagamentos.map((pagamento, ind) => (
-                  <Accordion
-                    key={ind}
-                    title={pagamento.title}
-                    isOpen={openAccordion.pagamentos === ind}
-                    content={pagamento.content}
-                    toggle={() => toggleAccordion("pagamentos", ind)}
-                  />
+                  <article>
+                    <Accordion
+                      key={ind}
+                      title={pagamento.title}
+                      isOpen={openAccordion.pagamentos === ind}
+                      content={pagamento.content}
+                      toggle={() => toggleAccordion("pagamentos", ind)}
+                    />
+                  </article>
                 ))}
               </div>
             ))}
-          </div>
+          </section>
         )}
 
         {filterText("PRÉ-VENDA") && (
-          <div>
+          <section>
             <h3 className="mt-20 text-2xl mb-14 ml-8">PRODUTOS PRÉ-VENDA</h3>
             {items.map((item, idx) => (
               <div key={idx}>
                 {item.prevenda.map((prevendas, indexPrevenda) => (
-                  <Accordion
-                    key={indexPrevenda}
-                    title={prevendas.title}
-                    isOpen={openAccordion.prevenda === indexPrevenda}
-                    content={prevendas.content}
-                    toggle={() => toggleAccordion("prevenda", indexPrevenda)}
-                  />
+                  <article>
+                    <Accordion
+                      key={indexPrevenda}
+                      title={prevendas.title}
+                      isOpen={openAccordion.prevenda === indexPrevenda}
+                      content={prevendas.content}
+                      toggle={() => toggleAccordion("prevenda", indexPrevenda)}
+                    />
+                  </article>
                 ))}
               </div>
             ))}
-          </div>
+          </section>
         )}
 
         {filterText("CADASTRO") && (
-          <div>
+          <section>
             <h3 className="mt-20 text-2xl mb-14 ml-8">CADASTRO</h3>
             {items.map((item, idx) => (
               <div key={idx}>
                 {item.cadastro.map((cadastros, indexCadastro) => (
-                  <Accordion
-                    key={indexCadastro}
-                    title={cadastros.title}
-                    isOpen={openAccordion.cadastro === indexCadastro}
-                    content={cadastros.content}
-                    toggle={() => toggleAccordion("cadastro", indexCadastro)}
-                  />
+                  <article>
+                    <Accordion
+                      key={indexCadastro}
+                      title={cadastros.title}
+                      isOpen={openAccordion.cadastro === indexCadastro}
+                      content={cadastros.content}
+                      toggle={() => toggleAccordion("cadastro", indexCadastro)}
+                    />
+                  </article>
                 ))}
               </div>
             ))}
-          </div>
+          </section>
         )}
-
-        {/* <h2 className="mt-20 text-2xl mb-14 ml-8">MEU PEDIDIO</h2>
-
-        {items.map((item, idx) => (
-          <div key={idx}>
-            {item.pedidos.map((pedido, index) => (
-              <Accordion
-                key={index}
-                title={pedido.title}
-                isOpen={openAccordion.pedidos === index}
-                content={pedido.content}
-                toggle={() => toggleAccordion("pedidos", index)}
-              />
-            ))}
-
-            <h2 className="mt-20 text-2xl mb-14 ml-8">
-              GARANTIA OU ARREPENDIMENTO
-            </h2>
-
-            <div>
-              {item.garantia.map((garantia, indx) => (
-                <Accordion
-                  key={indx}
-                  title={garantia.title}
-                  isOpen={openAccordion.garantia === indx}
-                  content={garantia.content}
-                  toggle={() => toggleAccordion("garantia", indx)}
-                />
-              ))}
-            </div>
-            <h3 className="mt-20 text-2xl mb-14 ml-8">Pagamento e Estorno</h3>
-            <div>
-              {item.pagamentos.map((pagamento, ind) => (
-                <Accordion
-                  key={ind}
-                  title={pagamento.title}
-                  isOpen={openAccordion.pagamentos === ind}
-                  content={pagamento.content}
-                  toggle={() => toggleAccordion("pagamentos", ind)}
-                />
-              ))}
-            </div>
-            <h3 className="mt-20 text-2xl mb-14 ml-8">Produtos pré-venda</h3>
-            <div>
-              {item.prevenda.map((prevendas, indexPrevenda) => (
-                <Accordion
-                  key={indexPrevenda}
-                  title={prevendas.title}
-                  isOpen={openAccordion.prevenda === indexPrevenda}
-                  content={prevendas.content}
-                  toggle={() => toggleAccordion("prevenda", indexPrevenda)}
-                />
-              ))}
-            </div>
-            <h3 className="mt-20 text-2xl mb-14 ml-8">Cadastro</h3>
-            <div>
-              {item.cadastro.map((cadastros, indexCadastro) => (
-                <Accordion
-                  key={indexCadastro}
-                  title={cadastros.title}
-                  isOpen={openAccordion.cadastro === indexCadastro}
-                  content={cadastros.content}
-                  toggle={() => toggleAccordion("cadastro", indexCadastro)}
-                />
-              ))}
-            </div>
-          </div>
-        ))} */}
-      </div>
-      {/* {filtrarTexto("MEU PEDIDO") && (
-        <div>
-          <h2 className="mt-20 text-2xl mb-14 ml-8">MEU PEDIDO</h2>
-          {items.map((item, idx) => (
-            <div key={idx}>
-              {item.pedidos.map((pedido, index) => (
-                <Accordion
-                  key={index}
-                  title={pedido.title}
-                  isOpen={openAccordion.pedidos === index}
-                  content={pedido.content}
-                  toggle={() => toggleAccordion("pedidos", index)}
-                />
-              ))}
-            </div>
-          ))}
-        </div>
-      )} */}
-      {/* {filtrarTexto("GARANTIA") && (
-        <div>
-          <h2 className="mt-20 text-2xl mb-14 ml-8">
-            GARANTIA OU ARREPENDIMENTO
-          </h2>
-          {items.map((item, idx) => (
-            <div key={idx}>
-              {item.garantia.map((garantia, indx) => (
-                <Accordion
-                  key={indx}
-                  title={garantia.title}
-                  isOpen={openAccordion.garantia === indx}
-                  content={garantia.content}
-                  toggle={() => toggleAccordion("garantia", indx)}
-                />
-              ))}
-            </div>
-          ))}
-        </div>
-      )} */}
-     
-    </div>
+      </section>
+    </>
   );
 };
 export default Sac;

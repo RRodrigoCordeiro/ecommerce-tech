@@ -3,16 +3,16 @@ import Header from "../../components/Header";
 
 const ShippingDeliveryPickup = () => {
   return (
-    <div>
+    <>
       <Header searchQuery={undefined} setSearchQuery={undefined} />
       <main>
         <section 
           id="envio" 
           className="py-12 px-4 md:px-8 max-w-4xl mx-auto"
         >
-          <h2 className="text-3xl font-semibold mb-6 text-gray-800">
+          <h1 className="text-3xl font-semibold mb-6 text-gray-800">
             Envio, Entrega e Coleta
-          </h2>
+          </h1>
           <p className="mb-4 text-gray-800">
             Trabalhamos para garantir que seus pedidos cheguem com rapidez,
             segurança e transparência. Veja abaixo como funcionam as opções de
@@ -38,15 +38,12 @@ const ShippingDeliveryPickup = () => {
             </li>
             <li>
               <strong>Coleta no Ponto Físico:</strong> Para sua comodidade, você
-              pode optar pela retirada dos produtos em nossa loja física,
-              localizada no endereço:Rua Branco Cabo, 123 - Cabo Branco, CEP:
-              12345-67. O pedido ficará disponível para coleta em até 2 dias
-              úteis após a confirmação.
+              pode optar pela retirada dos produtos em nossa loja física, localizada no endereço:
+              <address className="not-italic text-gray-800 mt-1 mb-2">  Rua Branco Cabo, 123 – Cabo Branco, CEP: 12345-67 </address> 
+              O pedido ficará disponível para coleta em até 2 dias úteis após a confirmação.
             </li>
             <li>
-              <strong>Contato para Dúvidas:</strong> Se precisar de suporte
-              sobre envio ou coleta, entre em contato com nosso atendimento pelo
-              telefone email{" "}
+              <strong>Contato para Dúvidas:</strong> Se precisar de suporte sobre envio ou coleta, entre em contato com nosso atendimento pelo e-mail{" "}
               <a
                 href="mailto:suporte@techzone.com"
                 className="text-blue-600 underline"
@@ -58,7 +55,7 @@ const ShippingDeliveryPickup = () => {
           </ul>
         </section>
       </main>
-    </div>
+    </>
   );
 };
 

@@ -2,18 +2,23 @@ import React from 'react'
 import { useAttendantById } from '../../../hooks/attendant/useAttendantById'; 
 import { useParams } from 'react-router-dom';
 import Header from '../../../components/Header';
+
+
 const AttendantDetails = () => {
   const { id } = useParams();
-  const { data: attendants, isLoading, error} = useAttendantById(id);
+  
+  const { 
+    data: attendants, 
+    isLoading,
+    error
+  } = useAttendantById(id);
   
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
   
-  
   return (
     <div>
       <Header/>
-        
           {attendants && (
             <div className='flex flex-col md:flex-row justify-center gap-20 mt-11 '>
               <img

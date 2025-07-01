@@ -12,23 +12,6 @@ const Carousel = () => {
     { id: "4", image: "/images/banners/banner-notebook-and-computer.png" },
   ];
 
-  // useEffect(() => {
-  //   function handleResize() {
-  //     if (window.innerWidth < 720) {
-  //       setSlidesPerView(1);
-  //     } else {
-  //       setSlidesPerView(2);
-  //     }
-  //   }
-  //
-  //   handleResize();
-  //
-  //   window.addEventListener('resize', handleResize);
-  //
-  //   return () => {
-  //     window.removeEventListener('resize', handleResize);
-  //   };
-  // }, []);
 
   return (
     <div className="max-w-[1270px] mx-auto lg:w-full md:w-full md:mt-20  ">

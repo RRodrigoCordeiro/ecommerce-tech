@@ -3,7 +3,6 @@
 import useEmblaCarousel from "embla-carousel-react";
 import { FaCircleChevronLeft } from "react-icons/fa6";
 import { FaChevronCircleRight } from "react-icons/fa";
-import React from "react";
 import mariana from "/images/testimonialsCustomers/mariana.png";
 import ana from "/images/testimonialsCustomers/ana.png"
 import camila from "/images/testimonialsCustomers/camila.png"
@@ -80,7 +79,7 @@ const Testimonials = () => {
                         <div className="relative w-24 h-24 overflow-hidden rounded-full">
                           <img
                             src={item.image}
-                            alt={" autor do depoimento sobre atendimento"}
+                            alt={`Foto de ${item.author}`}
                             className="w-full h-full object-cover"
                           />
                         </div>
@@ -100,8 +99,7 @@ const Testimonials = () => {
             <button
               className="bg-white cursor-pointer flex items-center rounded-full shadow-lg w-8 h-8 absolute left-4 -translate-y-1/2 -translate-x-1/2 top-1/2 z-10"
               onClick={scrollPrev}
-              aria-label="Deslizar para a esquerda
-              "
+              aria-label="Deslizar para a esquerda"
             >
               <FaCircleChevronLeft className="w-8 h-8 text-gray-600" />
             </button>

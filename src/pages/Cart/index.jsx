@@ -33,7 +33,6 @@ const Cart = () => {
  const cepValue = watch("cep")?.replace(/\D/g, '');
  const { data: cep, } = useAddress(cepValue);
 
-
  useEffect(() => {
   if (cep) {
     setValue("neighborhood", cep.bairro || "");
@@ -105,16 +104,17 @@ const Cart = () => {
       );
   }
  
-  
   return (
-    <div>
+    <>
       <Header />
-      <p className="text-2xl text-center mt-28 mb-8 font-bold">
-        {hasItems ? "Carrinho de Compras" : "Carrinho de Compras está Vazio"}
-      </p>
+      <section>
+        <h1 className="text-2xl text-center mt-28 mb-8 font-bold">
+          {hasItems ? "Carrinho de Compras" : "Carrinho de Compras está Vazio"}
+        </h1>
+      </section>
 
       {cart.length === 0 && (
-        <div className="flex flex-col items-center justify-center ">
+        <section className="flex flex-col items-center justify-center ">
           <p className="font-medium mt-8 mb-8">
             Seu carrinho está vazio, vamos as compras?
           </p>
@@ -124,11 +124,11 @@ const Cart = () => {
           >
             Acessar Produtos
           </Link>
-        </div>
+        </section>
       )}
 
       {cart.map((item) => (
-        <section
+        <article
           key={item.id}
           className="flex flex-col md:flex-row items-center justify-around border-b-2 border-gray-300 space-y-10"
         >
@@ -157,11 +157,11 @@ const Cart = () => {
               currency: "BRL",
             })}
           </strong>
-        </section>
+        </article>
       ))}
 
       {cart.length !== 0 && (
-        <div>
+        <section>
           <p className="font-bold mt-4 ml-10">Total: {total.toLocaleString("pt-br",{style:"currency", currency: "BRL"})}</p>
           <p className="font-light mt-4 ml-10">
             No seu carrinho contém {cart.length} itens
@@ -172,14 +172,16 @@ const Cart = () => {
           >
             Finalizar compras
           </button>
-        </div>
+        </section>
       )}
       {isOpen && (
         <Modal isOpen={isOpen} setModalOpened={setModalOpened}>
-          <div className="flex flex-col justify-center items-center">
-            <h1 className="text-center font-medium mt-8 mb-8">
-              Preecha as informações para finalizar o pedido
-            </h1>
+          <article className="flex flex-col justify-center items-center">
+            <section>
+              <h2 className="text-center font-medium mt-8 mb-8">
+                Preecha as informações para finalizar o pedido
+              </h2>
+            </section>
             
             <form 
               className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full"  
@@ -294,15 +296,16 @@ const Cart = () => {
                 <button
                   type="submit"
                   className="bg-green-500 cursor-pointer rounded-md p-1 font-bold mt-8 mb-8  w-48 block m-auto"
+                  aria-label="Finalizar pedido com os dados informados"
                 >
                   Finalizar o pedido
                 </button>
               </div>
             </form>
-          </div>
+          </article>
         </Modal>
       )}
-    </div>
+    </>
   );
 };
 
