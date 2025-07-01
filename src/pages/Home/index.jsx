@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../../contexts/CartContext";
 import toast from "react-hot-toast";
 import Modal from "../../components/Modal";
-import Attendant from "../Attendant";
+import Attendant from "../../components/Attendant"; 
 import useFilterProductTitle from "../../hooks/filter/useSearchFilter";
 
 const Home = () => {
@@ -467,7 +467,8 @@ const Home = () => {
         </section>
 
         <Testimonials />
-        <Attendant />
+        <Attendant/>
+         
       </main>
     </>
   );
