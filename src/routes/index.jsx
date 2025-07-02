@@ -2,12 +2,12 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from "../pages/Home"
 import Launch from "../pages/Launch"
-import Sac from "../pages/Sac" 
+import Sac from "../pages/XXX" 
 import Sobre from "../pages/About"
 import Carrinho from "../pages/Cart" 
 import { Layout } from "../layout"
 import AttendantDetails from '../pages/Attendant/details'
-import HeaderDetail from '../pages/ProductsHeaderDetail'  
+import HeaderDetail from '../pages/XXXroductsHeaderDetail'  
 import Privacy from '../pages/Privacy'
 import Security from '../pages/Security'
 import WorkWithUs from '../pages/WorkWithUs'
