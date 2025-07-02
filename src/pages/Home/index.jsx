@@ -13,7 +13,7 @@ import Testimonials from "../../components/Testimonials";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../contexts/CartContext";
 import toast from "react-hot-toast";
-import Modal from "../../components/Modal";
+import Modal from "../../components/xxodal";
 import Attendant from "../../components/Attendant"; 
 import useFilterProductTitle from "../../hooks/filter/useSearchFilter";
 

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
-import Modal from "../../components/Modal";
+import Modal from "../../components/xxodal";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { userSchema } from "../../schemas/userSchema";
