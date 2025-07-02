@@ -5,7 +5,7 @@ import Header from "../../components/Header";
 import useLaunchFilter from "../../hooks/filter/useLaunchFilter";
 import { CartContext } from "../../contexts/CartContext";
 import toast from "react-hot-toast";
-import Modal from "../../components/xxodal";
+import Modal from "../../components/Modal";
 
 const Launch = () => {
   const { addItemCart } = useContext(CartContext);
