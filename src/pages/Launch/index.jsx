@@ -8,14 +8,14 @@ import toast from "react-hot-toast";
 import Modal from "../../components/Modal";
 
 const Launch = () => {
+  const { addItemCart } = useContext(CartContext);
   const {
     setFilter,
     searchQuery,
     setSearchQuery,
     getFilteredProducts,
   } = useLaunchFilter();
-
-  const { addItemCart } = useContext(CartContext);
+  
   const [isOpen, setModalOpened] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
 

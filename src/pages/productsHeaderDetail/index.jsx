@@ -7,9 +7,8 @@ import toast from "react-hot-toast";
 import { FaShoppingCart } from "react-icons/fa";
 
 const HeaderDetail = () => {
-  const { category, id } = useParams();
   const {  addItemCart } = useContext(CartContext)
-  
+  const { category, id } = useParams();
   const {
     data: product,
   } = useProductByCategoryAndId(category, id);

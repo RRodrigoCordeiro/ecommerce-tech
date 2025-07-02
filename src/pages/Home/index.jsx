@@ -25,6 +25,7 @@ const Home = () => {
   const [selectedProductComputer, setSelectedProductComputer] = useState(null);
   const [selectedProductNotebook, setSelectedProductNotebook] = useState(null);
   const [error, setError] = useState(null);
+  const { addItemCart } = useContext(CartContext);
 
   const { 
     searchTerm, 
@@ -103,7 +104,7 @@ const Home = () => {
     emblaApi3?.scrollNext();
   }
 
-  const { addItemCart } = useContext(CartContext);
+ 
 
   function handleAddCartItem(product) {
     addItemCart(product);

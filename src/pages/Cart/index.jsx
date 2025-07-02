@@ -133,7 +133,7 @@ const Cart = () => {
           className="flex flex-col md:flex-row items-center justify-around border-b-2 border-gray-300 space-y-10"
         >
           <img src={item.image} alt={item.title} className="w-28 mt-8" />
-          <strong> Preço: {item.price}</strong>
+          <strong> Preço: {item.price.toLocaleString("pt-br",{style:"currency", currency: "BRL"})}</strong>
           <div className="flex items-center justify-center gap-3 ">
             <button
               className="bg-slate-600 px-2 rounded text-white font-medium flex items-center justify-center"
