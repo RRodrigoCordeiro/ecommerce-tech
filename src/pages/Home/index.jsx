@@ -442,7 +442,7 @@ const Home = () => {
           <h1 className="font-bold text-center text-1xl ">
             CONHEÇA OS NOSSOS LANÇAMENTOS E PRODUTOS
           </h1>
-          <div className="flex flex-col md:flex-row items-center justify-center md:gap-28 mt-16 mb-16">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 mt-16 mb-16">
             <img
               src="/images/launch/computer-promotion.png"
               alt="Image computador"

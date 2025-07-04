@@ -26,8 +26,22 @@ const Cart = () => {
     handleSubmit,
     watch,
     formState: {errors},
+    reset,
   } = useForm({
-    resolver:zodResolver(userSchema)
+    resolver:zodResolver(userSchema),
+    defaultValues: {
+      // valores que os campos começam, assim evita undefined
+      user: "",
+      email: "",
+      phone: "",
+      cep: "",
+      region: "",
+      patio: "",
+      complementne: "",
+      neighborhood: "",
+      locality: "",
+      uf: ""
+    },
   })
 
  const cepValue = watch("cep")?.replace(/\D/g, '');
@@ -93,6 +107,7 @@ const Cart = () => {
         (response) => {
           console.log("Email enviado", response.status, response.text);
           toast.success("O seu pedido foi enviado com sucesso!");
+          reset();
           
 
         },

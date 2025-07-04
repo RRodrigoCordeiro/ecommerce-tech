@@ -148,11 +148,11 @@ const Footer = () => {
                 className="w-10 "
               />
               <img
-                src="/images/socialMedia/LogoInstagram.png"
-                alt="Logo do instagram"
+                src="/images/socialMedia/LogoThreads.png"
+                alt="Logo do Threads"
                 width={192} 
                 height={192} 
-                className="w-10 "
+                className="w-12"
               />
             </div>
           </section>
@@ -321,11 +321,11 @@ const Footer = () => {
               className="w-10 "
             />
             <img
-              src="/images/socialMedia/LogoInstagram.png"
-              alt="Logo do instagram"
+              src="/images/socialMedia/LogoThreads.png"
+              alt="Logo do Threads"
               width={192} 
               height={192} 
-              className="w-10 "
+              className="w-12 "
             />
           </div>
         </div>

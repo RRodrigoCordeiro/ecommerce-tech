@@ -40,7 +40,7 @@ const Security = () => {
 
           {filterText("jamais,segurança, não fazemos, link falso, cobranças") && (
             <section className="grid  md:grid-cols-2 lg:grid-cols-4 gap-3 ml-8 mr-8  mt-28 mb-28">
-              <article className="bg-white h-72   rounded-3xl text-center shadow-lg flex flex-col items-center justify-center">
+              <article className="bg-white h-72 p-3  rounded-3xl text-center shadow-lg flex flex-col items-center justify-center">
                 <FaPix
                   className="mb-8 shadow-2xl block text-yellow-800"
                   size={48}
@@ -56,7 +56,7 @@ const Security = () => {
                 </p>
               </article>
 
-              <article className="bg-white h-72  rounded-3xl text-center shadow-lg flex flex-col items-center justify-center">
+              <article className="bg-white h-72 p-3 rounded-3xl text-center shadow-lg flex flex-col items-center justify-center">
                 <FaLink className="mb-8 shadow-2xl text-yellow-800" size={48} />
                 <h3 className="text-center text-lg font-bold font-serif text-yellow-800  mb-8">
                   JAMAIS
@@ -68,7 +68,7 @@ const Security = () => {
                 </p>
               </article>
 
-              <article className="bg-white h-72 rounded-3xl text-center shadow-lg flex flex-col items-center justify-center">
+              <article className="bg-white p-3 h-72 rounded-3xl text-center shadow-lg flex flex-col items-center justify-center">
                 <FaTableCellsColumnLock
                   className="mb-8 shadow-2xl text-yellow-800"
                   size={48}
@@ -82,7 +82,7 @@ const Security = () => {
                 </p>
               </article>
 
-              <article className="bg-white h-72 rounded-3xl text-center shadow-lg flex flex-col items-center justify-center">
+              <article className="bg-white p-3 h-72 rounded-3xl text-center shadow-lg flex flex-col items-center justify-center">
                 <MdInstallDesktop
                   className="mb-8 shadow-2xl text-yellow-800"
                   size={48}
@@ -139,7 +139,7 @@ const Security = () => {
                 Como identificar um perfil de site falso:
               </h2>
               <div className="grid  md:grid-cols-2 lg:grid-cols-3 gap-3 ml-8 mr-8  mt-28 mb-40">
-                <article className="bg-white h-72   rounded-3xl text-center shadow-lg flex flex-col items-center justify-center">
+                <article className="bg-white h-72 p-3  rounded-3xl text-center shadow-lg flex flex-col items-center justify-center">
                   <FaUserSecret
                     className="mb-8 shadow-2xl text-yellow-800"
                     size={48}
@@ -154,7 +154,7 @@ const Security = () => {
                   </p>
                 </article>
 
-                <article className="bg-white h-72  rounded-3xl text-center shadow-lg flex flex-col items-center justify-center">
+                <article className="bg-white h-72 p-3  rounded-3xl text-center shadow-lg flex flex-col items-center justify-center">
                   <FaQuestionCircle
                     className="mb-8 shadow-2xl text-yellow-800"
                     size={48}
@@ -169,7 +169,7 @@ const Security = () => {
                   </p>
                 </article>
 
-                <article className="bg-white h-72 rounded-3xl text-center shadow-lg flex flex-col items-center justify-center">
+                <article className="bg-white h-72 p-3 rounded-3xl text-center shadow-lg flex flex-col items-center justify-center">
                   <FaExclamationTriangle
                     className="mb-8 shadow-2xl text-yellow-800"
                     size={48}
@@ -211,7 +211,7 @@ const Security = () => {
                 Forma de pagamento
               </h2>
               <div className="grid  md:grid-cols-2 lg:grid-cols-3 gap-3 ml-8 mr-8  mt-28 mb-28">
-                <div className="bg-white h-72   rounded-3xl text-center shadow-lg flex flex-col items-center justify-center">
+                <article className="bg-white h-72 p-3   rounded-3xl text-center shadow-lg flex flex-col items-center justify-center">
                   <FaPix
                     className="mb-8 shadow-2xl block text-yellow-800"
                     size={48}
@@ -223,9 +223,9 @@ const Security = () => {
                     Oferecemos a praticidade do Pix para você pagar de forma
                     instantânea, segura e sem nenhuma taxa adicional.
                   </p>
-                </div>
+                </article>
 
-                <div className="bg-white h-72   rounded-3xl text-center shadow-lg flex flex-col items-center justify-center">
+                <article className="bg-white h-72 p-3  rounded-3xl text-center shadow-lg flex flex-col items-center justify-center">
                   <FaRegCreditCard
                     className="mb-8 shadow-2xl block text-yellow-800"
                     size={48}
@@ -237,9 +237,9 @@ const Security = () => {
                     Pague com cartão de crédito e parcele suas compras em até 10x
                     sem juros, garantindo mais flexibilidade.
                   </p>
-                </div>
+                </article>
 
-                <div className="bg-white h-72   rounded-3xl text-center shadow-lg flex flex-col items-center justify-center">
+                <article className="bg-white h-72 p-3  rounded-3xl text-center shadow-lg flex flex-col items-center justify-center">
                   <BsCreditCard
                     className="mb-8 shadow-2xl block text-yellow-800"
                     size={48}
@@ -251,7 +251,7 @@ const Security = () => {
                     Aceitamos cartões de débito para que você realize suas compras
                     com rapidez e segurança.
                   </p>
-                </div>
+                </article>
               </div>
             </section>
           )}
@@ -261,7 +261,7 @@ const Security = () => {
               <h2 className="text-center text-2xl font-bold mt-28">
                 Entre em contato
               </h2>
-              <address className="not-italic mt-6 text-black flex justify-center text-center ">
+              <address className="not-italic mt-6 text-black flex flex-col md:flex-row  justify-center text-center ">
                 <h3>Entre em contato com o email:</h3> 
                 <a
                   href="mailto:acessibilidade@techzone.com"

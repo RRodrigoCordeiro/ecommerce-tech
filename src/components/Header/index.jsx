@@ -1,7 +1,6 @@
 import React, { useState, useContext } from "react";
 import { MdOutlineQuestionAnswer } from "react-icons/md";
 import { FaPeopleGroup } from "react-icons/fa6";
-import { BsPersonCircle } from "react-icons/bs";
 import { BsCart2 } from "react-icons/bs";
 import { IoSearchOutline } from "react-icons/io5";
 import { Link, useLocation } from 'react-router-dom'
@@ -79,10 +78,6 @@ const Header = ({ searchQuery, setSearchQuery }) => {
               <BsCart2 size={28} className="ml-4  text-black" />
               <span className="text-slate-800">Carrinho</span>
             </Link>
-          </div>
-          <div className="flex flex-col items-center  text-black ">
-            <BsPersonCircle size={28} />
-            <span className="text-slate-800">Login</span>
           </div>
         </nav>
       </div>

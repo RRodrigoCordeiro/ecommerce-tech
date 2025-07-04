@@ -14,7 +14,7 @@ const Attendant = () => {
       <h1 className="font-bold text-center text-1xl ">
         INTERAJA COM OS NOSSOS ATEDENTES VIRTUAIS
       </h1>
-      <div className="flex flex-col md:flex-row items-center justify-center md:gap-28 mt-16 mb-16">
+      <div className="flex flex-col md:flex-row items-center justify-center  gap-8 lg:gap-14 mt-16 mb-16">
         {attendants?.map((attendant) => (
           <div key={attendant.id}>
              <Link to={`/attendantDetails/${attendant.id}`}>
