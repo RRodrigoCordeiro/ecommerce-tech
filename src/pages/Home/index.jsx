@@ -38,20 +38,39 @@ const Home = () => {
     product.title.toLowerCase().includes(searchTerm.toLowerCase().trim())
   );
 
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await axios.get(
+  //         "https://fakestoreapi.com/products/category/electronics"
+  //       );
+  //       setProducts(response.data);
+  //       setLoading(false);
+  //     } catch (error) {
+  //       console.log("Erro ao buscar API", error);
+  //     }
+  //   };
+  //   fetchData();
+  // }, []);
+
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          "https://fakestoreapi.com/products/category/electronics"
-        );
-        setProducts(response.data);
-        setLoading(false);
-      } catch (error) {
-        console.log("Erro ao buscar API", error);
-      }
-    };
-    fetchData();
-  }, []);
+  const fetchData = async () => {
+    try {
+      const response = await axios.get("https://fakestoreapi.com/products");
+      // Filtra apenas produtos eletrônicos
+      const electronics = response.data.filter(
+        (product) => product.category === "electronics"
+      );
+      setProducts(electronics);
+    } catch (error) {
+      console.log("Erro ao buscar API", error);
+      setError(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+  fetchData();
+}, []);
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: false,
